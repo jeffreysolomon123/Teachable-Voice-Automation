@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TouchCaptureTest</string>
+    <string name="accessibility_service_description">Adds a tiny invisible overlay to test whether touch coordinates outside the overlay can be captured reliably, for research purposes only. No data leaves the device.</string>
+</resources>

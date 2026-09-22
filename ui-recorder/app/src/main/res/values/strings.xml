@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">UI Action Recorder</string>
+    <string name="accessibility_service_description">Captures accessibility events (clicks, scrolls, text changes, window changes) from other apps for debugging and research purposes. Recording only happens while explicitly started from the UI Action Recorder app.</string>
+</resources>

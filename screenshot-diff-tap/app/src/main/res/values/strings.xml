@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ScreenshotDiffTest</string>
+    <string name="accessibility_service_description">Takes rolling before/after screenshots and diffs them to approximate tap location. Test service only.</string>
+</resources>

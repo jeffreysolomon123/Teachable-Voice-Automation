@@ -1,0 +1,1524 @@
+{
+  "image": "zomato-1.jpeg",
+  "width": 720,
+  "height": 1600,
+  "elements": [
+    {
+      "bbox": [
+        441,
+        11,
+        689,
+        62
+      ],
+      "confidence": 0.808,
+      "id": 0,
+      "center": [
+        565,
+        36
+      ],
+      "size": [
+        248,
+        51
+      ],
+      "bbox_norm": [
+        0.6125,
+        0.0069,
+        0.9569,
+        0.0387
+      ],
+      "center_norm": [
+        0.7847,
+        0.0228
+      ],
+      "area_pct": 1.1,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "D38%",
+          "bbox": [
+            606,
+            22,
+            680,
+            48
+          ],
+          "confidence": 0.887
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "D38%",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        176,
+        15,
+        247,
+        53
+      ],
+      "confidence": 0.187,
+      "id": 1,
+      "center": [
+        212,
+        34
+      ],
+      "size": [
+        71,
+        38
+      ],
+      "bbox_norm": [
+        0.2444,
+        0.0094,
+        0.3431,
+        0.0331
+      ],
+      "center_norm": [
+        0.2938,
+        0.0213
+      ],
+      "area_pct": 0.23,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        34,
+        16,
+        142,
+        53
+      ],
+      "confidence": 0.31,
+      "id": 2,
+      "center": [
+        88,
+        34
+      ],
+      "size": [
+        108,
+        37
+      ],
+      "bbox_norm": [
+        0.0472,
+        0.01,
+        0.1972,
+        0.0331
+      ],
+      "center_norm": [
+        0.1222,
+        0.0216
+      ],
+      "area_pct": 0.35,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "10.40",
+          "bbox": [
+            42,
+            22,
+            112,
+            52
+          ],
+          "confidence": 0.997
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "10.40",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        147,
+        18,
+        178,
+        52
+      ],
+      "confidence": 0.672,
+      "id": 3,
+      "center": [
+        162,
+        35
+      ],
+      "size": [
+        31,
+        34
+      ],
+      "bbox_norm": [
+        0.2042,
+        0.0112,
+        0.2472,
+        0.0325
+      ],
+      "center_norm": [
+        0.2257,
+        0.0219
+      ],
+      "area_pct": 0.09,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        607,
+        92,
+        704,
+        190
+      ],
+      "confidence": 0.792,
+      "id": 4,
+      "center": [
+        656,
+        141
+      ],
+      "size": [
+        97,
+        98
+      ],
+      "bbox_norm": [
+        0.8431,
+        0.0575,
+        0.9778,
+        0.1187
+      ],
+      "center_norm": [
+        0.9104,
+        0.0881
+      ],
+      "area_pct": 0.83,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        13,
+        95,
+        599,
+        190
+      ],
+      "confidence": 0.945,
+      "id": 5,
+      "center": [
+        306,
+        142
+      ],
+      "size": [
+        586,
+        95
+      ],
+      "bbox_norm": [
+        0.0181,
+        0.0594,
+        0.8319,
+        0.1187
+      ],
+      "center_norm": [
+        0.425,
+        0.0891
+      ],
+      "area_pct": 4.83,
+      "region": "top-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "biryani",
+          "bbox": [
+            95,
+            125,
+            199,
+            163
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [
+        6,
+        7
+      ],
+      "parent": null,
+      "text": "biryani",
+      "cv_type": "icon",
+      "type": "container"
+    },
+    {
+      "bbox": [
+        31,
+        114,
+        85,
+        172
+      ],
+      "confidence": 0.431,
+      "id": 6,
+      "center": [
+        58,
+        143
+      ],
+      "size": [
+        54,
+        58
+      ],
+      "bbox_norm": [
+        0.0431,
+        0.0712,
+        0.1181,
+        0.1075
+      ],
+      "center_norm": [
+        0.0806,
+        0.0894
+      ],
+      "area_pct": 0.27,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 5,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        529,
+        117,
+        579,
+        173
+      ],
+      "confidence": 0.783,
+      "id": 7,
+      "center": [
+        554,
+        145
+      ],
+      "size": [
+        50,
+        56
+      ],
+      "bbox_norm": [
+        0.7347,
+        0.0731,
+        0.8042,
+        0.1081
+      ],
+      "center_norm": [
+        0.7694,
+        0.0906
+      ],
+      "area_pct": 0.24,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 5,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        213,
+        202,
+        395,
+        275
+      ],
+      "confidence": 0.933,
+      "id": 8,
+      "center": [
+        304,
+        238
+      ],
+      "size": [
+        182,
+        73
+      ],
+      "bbox_norm": [
+        0.2958,
+        0.1263,
+        0.5486,
+        0.1719
+      ],
+      "center_norm": [
+        0.4222,
+        0.1491
+      ],
+      "area_pct": 1.15,
+      "region": "top-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Chicken",
+          "bbox": [
+            276,
+            224,
+            376,
+            254
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Chicken",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        407,
+        202,
+        583,
+        274
+      ],
+      "confidence": 0.933,
+      "id": 9,
+      "center": [
+        495,
+        238
+      ],
+      "size": [
+        176,
+        72
+      ],
+      "bbox_norm": [
+        0.5653,
+        0.1263,
+        0.8097,
+        0.1713
+      ],
+      "center_norm": [
+        0.6875,
+        0.1487
+      ],
+      "area_pct": 1.1,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Kushka",
+          "bbox": [
+            470,
+            224,
+            564,
+            254
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Kushka",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        18,
+        204,
+        202,
+        275
+      ],
+      "confidence": 0.928,
+      "id": 10,
+      "center": [
+        110,
+        240
+      ],
+      "size": [
+        184,
+        71
+      ],
+      "bbox_norm": [
+        0.025,
+        0.1275,
+        0.2806,
+        0.1719
+      ],
+      "center_norm": [
+        0.1528,
+        0.1497
+      ],
+      "area_pct": 1.13,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Filters",
+          "bbox": [
+            74,
+            224,
+            154,
+            252
+          ],
+          "confidence": 0.745
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Filters",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        592,
+        204,
+        720,
+        275
+      ],
+      "confidence": 0.916,
+      "id": 11,
+      "center": [
+        656,
+        240
+      ],
+      "size": [
+        128,
+        71
+      ],
+      "bbox_norm": [
+        0.8222,
+        0.1275,
+        1.0,
+        0.1719
+      ],
+      "center_norm": [
+        0.9111,
+        0.1497
+      ],
+      "area_pct": 0.79,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Chick=",
+          "bbox": [
+            656,
+            224,
+            720,
+            252
+          ],
+          "confidence": 0.637
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Chick=",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        13,
+        285,
+        288,
+        361
+      ],
+      "confidence": 0.936,
+      "id": 12,
+      "center": [
+        150,
+        323
+      ],
+      "size": [
+        275,
+        76
+      ],
+      "bbox_norm": [
+        0.0181,
+        0.1781,
+        0.4,
+        0.2256
+      ],
+      "center_norm": [
+        0.209,
+        0.2019
+      ],
+      "area_pct": 1.81,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Highly reordered",
+          "bbox": [
+            63,
+            303,
+            269,
+            339
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Highly reordered",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        300,
+        285,
+        519,
+        362
+      ],
+      "confidence": 0.938,
+      "id": 13,
+      "center": [
+        410,
+        324
+      ],
+      "size": [
+        219,
+        77
+      ],
+      "bbox_norm": [
+        0.4167,
+        0.1781,
+        0.7208,
+        0.2263
+      ],
+      "center_norm": [
+        0.5687,
+        0.2022
+      ],
+      "area_pct": 1.46,
+      "region": "top-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Fast",
+          "bbox": [
+            440,
+            304,
+            496,
+            332
+          ],
+          "confidence": 1.0
+        },
+        {
+          "text": "Near",
+          "bbox": [
+            350,
+            306,
+            414,
+            332
+          ],
+          "confidence": 0.811
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Fast Near",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        528,
+        285,
+        720,
+        362
+      ],
+      "confidence": 0.931,
+      "id": 14,
+      "center": [
+        624,
+        324
+      ],
+      "size": [
+        192,
+        77
+      ],
+      "bbox_norm": [
+        0.7333,
+        0.1781,
+        1.0,
+        0.2263
+      ],
+      "center_norm": [
+        0.8667,
+        0.2022
+      ],
+      "area_pct": 1.28,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "No packaging",
+          "bbox": [
+            551,
+            303,
+            720,
+            339
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "No packaging",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        523,
+        380,
+        720,
+        681
+      ],
+      "confidence": 0.95,
+      "id": 15,
+      "center": [
+        622,
+        530
+      ],
+      "size": [
+        197,
+        301
+      ],
+      "bbox_norm": [
+        0.7264,
+        0.2375,
+        1.0,
+        0.4256
+      ],
+      "center_norm": [
+        0.8632,
+        0.3316
+      ],
+      "area_pct": 5.15,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "4.1",
+          "bbox": [
+            557,
+            571,
+            585,
+            591
+          ],
+          "confidence": 0.821
+        },
+        {
+          "text": "Narmada Chain",
+          "bbox": [
+            529,
+            603,
+            720,
+            632
+          ],
+          "confidence": 0.991
+        },
+        {
+          "text": "45-50 mins",
+          "bbox": [
+            560,
+            642,
+            682,
+            668
+          ],
+          "confidence": 0.803
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "4.1 Narmada Chain 45-50 mins",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        267,
+        381,
+        516,
+        679
+      ],
+      "confidence": 0.946,
+      "id": 16,
+      "center": [
+        392,
+        530
+      ],
+      "size": [
+        249,
+        298
+      ],
+      "bbox_norm": [
+        0.3708,
+        0.2381,
+        0.7167,
+        0.4244
+      ],
+      "center_norm": [
+        0.5437,
+        0.3312
+      ],
+      "area_pct": 6.44,
+      "region": "top-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Items starting at ?199",
+          "bbox": [
+            280,
+            414,
+            476,
+            440
+          ],
+          "confidence": 0.757
+        },
+        {
+          "text": "4.2",
+          "bbox": [
+            301,
+            571,
+            331,
+            591
+          ],
+          "confidence": 0.797
+        },
+        {
+          "text": "RNR Biryani",
+          "bbox": [
+            273,
+            602,
+            424,
+            638
+          ],
+          "confidence": 0.938
+        },
+        {
+          "text": "Tast",
+          "bbox": [
+            438,
+            603,
+            496,
+            633
+          ],
+          "confidence": 0.324
+        },
+        {
+          "text": "40-45 mins",
+          "bbox": [
+            306,
+            642,
+            428,
+            668
+          ],
+          "confidence": 0.962
+        }
+      ],
+      "children": [
+        18
+      ],
+      "parent": null,
+      "text": "Items starting at ?199 4.2 RNR Biryani Tast 40-45 mins",
+      "cv_type": "icon",
+      "type": "container"
+    },
+    {
+      "bbox": [
+        12,
+        386,
+        260,
+        679
+      ],
+      "confidence": 0.957,
+      "id": 17,
+      "center": [
+        136,
+        532
+      ],
+      "size": [
+        248,
+        293
+      ],
+      "bbox_norm": [
+        0.0167,
+        0.2412,
+        0.3611,
+        0.4244
+      ],
+      "center_norm": [
+        0.1889,
+        0.3328
+      ],
+      "area_pct": 6.31,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "8150 OFF above ?299",
+          "bbox": [
+            25,
+            415,
+            213,
+            435
+          ],
+          "confidence": 0.572
+        },
+        {
+          "text": "3.6",
+          "bbox": [
+            45,
+            571,
+            75,
+            591
+          ],
+          "confidence": 0.81
+        },
+        {
+          "text": "Salem RR Biriyani",
+          "bbox": [
+            17,
+            603,
+            237,
+            639
+          ],
+          "confidence": 0.916
+        },
+        {
+          "text": "15-20 mins",
+          "bbox": [
+            50,
+            642,
+            168,
+            668
+          ],
+          "confidence": 0.92
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "8150 OFF above ?299 3.6 Salem RR Biriyani 15-20 mins",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        271,
+        639,
+        302,
+        675
+      ],
+      "confidence": 0.051,
+      "id": 18,
+      "center": [
+        286,
+        657
+      ],
+      "size": [
+        31,
+        36
+      ],
+      "bbox_norm": [
+        0.3764,
+        0.3994,
+        0.4194,
+        0.4219
+      ],
+      "center_norm": [
+        0.3979,
+        0.4106
+      ],
+      "area_pct": 0.1,
+      "region": "middle-center",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 16,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        12,
+        696,
+        260,
+        981
+      ],
+      "confidence": 0.961,
+      "id": 19,
+      "center": [
+        136,
+        838
+      ],
+      "size": [
+        248,
+        285
+      ],
+      "bbox_norm": [
+        0.0167,
+        0.435,
+        0.3611,
+        0.6131
+      ],
+      "center_norm": [
+        0.1889,
+        0.5241
+      ],
+      "area_pct": 6.14,
+      "region": "middle-left",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Items at =235",
+          "bbox": [
+            26,
+            718,
+            150,
+            742
+          ],
+          "confidence": 0.756
+        },
+        {
+          "text": "4.0",
+          "bbox": [
+            45,
+            877,
+            77,
+            897
+          ],
+          "confidence": 0.998
+        },
+        {
+          "text": "Nandhana Palace",
+          "bbox": [
+            18,
+            910,
+            234,
+            940
+          ],
+          "confidence": 0.942
+        },
+        {
+          "text": "25-30 mins",
+          "bbox": [
+            50,
+            948,
+            170,
+            974
+          ],
+          "confidence": 0.998
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Items at =235 4.0 Nandhana Palace 25-30 mins",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        269,
+        697,
+        513,
+        979
+      ],
+      "confidence": 0.479,
+      "id": 20,
+      "center": [
+        391,
+        838
+      ],
+      "size": [
+        244,
+        282
+      ],
+      "bbox_norm": [
+        0.3736,
+        0.4356,
+        0.7125,
+        0.6119
+      ],
+      "center_norm": [
+        0.5431,
+        0.5238
+      ],
+      "area_pct": 5.97,
+      "region": "middle-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "starting at <129",
+          "bbox": [
+            333,
+            716,
+            474,
+            746
+          ],
+          "confidence": 0.606
+        },
+        {
+          "text": "Items",
+          "bbox": [
+            283,
+            723,
+            337,
+            741
+          ],
+          "confidence": 0.737
+        },
+        {
+          "text": "4.0",
+          "bbox": [
+            301,
+            877,
+            333,
+            897
+          ],
+          "confidence": 0.646
+        },
+        {
+          "text": "Behrouz Biryani",
+          "bbox": [
+            272,
+            907,
+            469,
+            945
+          ],
+          "confidence": 1.0
+        },
+        {
+          "text": "30-35 mins",
+          "bbox": [
+            304,
+            948,
+            424,
+            974
+          ],
+          "confidence": 0.599
+        }
+      ],
+      "children": [
+        22
+      ],
+      "parent": null,
+      "text": "starting at <129 Items 4.0 Behrouz Biryani 30-35 mins",
+      "cv_type": "icon",
+      "type": "container"
+    },
+    {
+      "bbox": [
+        523,
+        697,
+        720,
+        984
+      ],
+      "confidence": 0.94,
+      "id": 21,
+      "center": [
+        622,
+        840
+      ],
+      "size": [
+        197,
+        287
+      ],
+      "bbox_norm": [
+        0.7264,
+        0.4356,
+        1.0,
+        0.615
+      ],
+      "center_norm": [
+        0.8632,
+        0.5253
+      ],
+      "area_pct": 4.91,
+      "region": "middle-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "3.9",
+          "bbox": [
+            557,
+            877,
+            587,
+            897
+          ],
+          "confidence": 0.598
+        },
+        {
+          "text": "Faruuzi Multicuis",
+          "bbox": [
+            530,
+            908,
+            720,
+            940
+          ],
+          "confidence": 0.86
+        },
+        {
+          "text": "40-45 mins",
+          "bbox": [
+            562,
+            946,
+            684,
+            974
+          ],
+          "confidence": 0.93
+        }
+      ],
+      "children": [
+        23
+      ],
+      "parent": null,
+      "text": "3.9 Faruuzi Multicuis 40-45 mins",
+      "cv_type": "icon",
+      "type": "container"
+    },
+    {
+      "bbox": [
+        273,
+        946,
+        303,
+        978
+      ],
+      "confidence": 0.054,
+      "id": 22,
+      "center": [
+        288,
+        962
+      ],
+      "size": [
+        30,
+        32
+      ],
+      "bbox_norm": [
+        0.3792,
+        0.5913,
+        0.4208,
+        0.6112
+      ],
+      "center_norm": [
+        0.4,
+        0.6012
+      ],
+      "area_pct": 0.08,
+      "region": "middle-center",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 20,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        527,
+        946,
+        559,
+        980
+      ],
+      "confidence": 0.057,
+      "id": 23,
+      "center": [
+        543,
+        963
+      ],
+      "size": [
+        32,
+        34
+      ],
+      "bbox_norm": [
+        0.7319,
+        0.5913,
+        0.7764,
+        0.6125
+      ],
+      "center_norm": [
+        0.7542,
+        0.6019
+      ],
+      "area_pct": 0.09,
+      "region": "middle-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 21,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "id": 28,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        18,
+        1038,
+        74,
+        1064
+      ],
+      "center": [
+        46,
+        1051
+      ],
+      "size": [
+        56,
+        26
+      ],
+      "confidence": 1.0,
+      "text": "ALL",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 29,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        82,
+        1038,
+        286,
+        1064
+      ],
+      "center": [
+        184,
+        1051
+      ],
+      "size": [
+        204,
+        26
+      ],
+      "confidence": 0.984,
+      "text": "RESTAURANTS",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        9,
+        1090,
+        704,
+        1600
+      ],
+      "confidence": 0.388,
+      "id": 24,
+      "center": [
+        356,
+        1345
+      ],
+      "size": [
+        695,
+        510
+      ],
+      "bbox_norm": [
+        0.0125,
+        0.6813,
+        0.9778,
+        1.0
+      ],
+      "center_norm": [
+        0.4951,
+        0.8406
+      ],
+      "area_pct": 30.77,
+      "region": "bottom-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Supreme Bon_",
+          "bbox": [
+            219,
+            1115,
+            376,
+            1147
+          ],
+          "confidence": 0.603
+        },
+        {
+          "text": "High Protein",
+          "bbox": [
+            74,
+            1116,
+            208,
+            1144
+          ],
+          "confidence": 1.0
+        },
+        {
+          "text": "7235 =299",
+          "bbox": [
+            390,
+            1116,
+            496,
+            1142
+          ],
+          "confidence": 0.517
+        },
+        {
+          "text": "Nandhana Palace",
+          "bbox": [
+            41,
+            1512,
+            355,
+            1551
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [
+        25,
+        26,
+        27
+      ],
+      "parent": null,
+      "text": "Supreme Bon_ High Protein 7235 =299 Nandhana Palace",
+      "cv_type": "icon",
+      "type": "container"
+    },
+    {
+      "bbox": [
+        624,
+        1101,
+        687,
+        1166
+      ],
+      "confidence": 0.322,
+      "id": 25,
+      "center": [
+        656,
+        1134
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "bbox_norm": [
+        0.8667,
+        0.6881,
+        0.9542,
+        0.7288
+      ],
+      "center_norm": [
+        0.9104,
+        0.7084
+      ],
+      "area_pct": 0.36,
+      "region": "bottom-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 24,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        562,
+        1103,
+        615,
+        1162
+      ],
+      "confidence": 0.057,
+      "id": 26,
+      "center": [
+        588,
+        1132
+      ],
+      "size": [
+        53,
+        59
+      ],
+      "bbox_norm": [
+        0.7806,
+        0.6894,
+        0.8542,
+        0.7262
+      ],
+      "center_norm": [
+        0.8174,
+        0.7078
+      ],
+      "area_pct": 0.27,
+      "region": "bottom-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 24,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        582,
+        1516,
+        687,
+        1573
+      ],
+      "confidence": 0.251,
+      "id": 27,
+      "center": [
+        634,
+        1544
+      ],
+      "size": [
+        105,
+        57
+      ],
+      "bbox_norm": [
+        0.8083,
+        0.9475,
+        0.9542,
+        0.9831
+      ],
+      "center_norm": [
+        0.8812,
+        0.9653
+      ],
+      "area_pct": 0.52,
+      "region": "bottom-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "4.0",
+          "bbox": [
+            626,
+            1526,
+            668,
+            1552
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [],
+      "parent": 24,
+      "text": "4.0",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    }
+  ]
+}

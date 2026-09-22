@@ -1,0 +1,282 @@
+{
+  "image": "C:/Users/fixadmin/Downloads/Home - Incoming Shipments.png",
+  "width": 1206,
+  "height": 5395,
+  "elements": [
+    {
+      "type": "icon",
+      "bbox": [
+        1004,
+        1,
+        1148,
+        72
+      ],
+      "confidence": 0.069,
+      "id": 0
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        38,
+        3,
+        1177,
+        264
+      ],
+      "confidence": 0.709,
+      "id": 1
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        41,
+        80,
+        177,
+        219
+      ],
+      "confidence": 0.187,
+      "id": 2
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        31,
+        288,
+        1170,
+        596
+      ],
+      "confidence": 0.938,
+      "id": 3
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        34,
+        616,
+        1013,
+        768
+      ],
+      "confidence": 0.85,
+      "id": 4
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        1017,
+        619,
+        1168,
+        764
+      ],
+      "confidence": 0.835,
+      "id": 5
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        456,
+        797,
+        1018,
+        903
+      ],
+      "confidence": 0.493,
+      "id": 6
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        41,
+        800,
+        446,
+        899
+      ],
+      "confidence": 0.723,
+      "id": 7
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        35,
+        940,
+        1168,
+        1133
+      ],
+      "confidence": 0.165,
+      "id": 8
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        1036,
+        989,
+        1135,
+        1090
+      ],
+      "confidence": 0.425,
+      "id": 9
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        88,
+        1398,
+        407,
+        1492
+      ],
+      "confidence": 0.531,
+      "id": 10
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        406,
+        1400,
+        783,
+        1488
+      ],
+      "confidence": 0.147,
+      "id": 11
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        87,
+        1497,
+        456,
+        1590
+      ],
+      "confidence": 0.211,
+      "id": 12
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        704,
+        1846,
+        1115,
+        1937
+      ],
+      "confidence": 0.859,
+      "id": 13
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        75,
+        2149,
+        1131,
+        2242
+      ],
+      "confidence": 0.084,
+      "id": 14
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        89,
+        2252,
+        469,
+        2347
+      ],
+      "confidence": 0.07,
+      "id": 15
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        675,
+        2376,
+        1106,
+        2473
+      ],
+      "confidence": 0.081,
+      "id": 16
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        709,
+        2603,
+        1115,
+        2697
+      ],
+      "confidence": 0.846,
+      "id": 17
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        81,
+        2912,
+        877,
+        3003
+      ],
+      "confidence": 0.052,
+      "id": 18
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        509,
+        3013,
+        890,
+        3105
+      ],
+      "confidence": 0.364,
+      "id": 19
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        90,
+        3015,
+        507,
+        3105
+      ],
+      "confidence": 0.382,
+      "id": 20
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        92,
+        3739,
+        548,
+        3826
+      ],
+      "confidence": 0.052,
+      "id": 21
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        88,
+        4455,
+        704,
+        4554
+      ],
+      "confidence": 0.5,
+      "id": 22
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        93,
+        4555,
+        607,
+        4648
+      ],
+      "confidence": 0.126,
+      "id": 23
+    },
+    {
+      "type": "icon",
+      "bbox": [
+        249,
+        4990,
+        956,
+        5134
+      ],
+      "confidence": 0.762,
+      "id": 24
+    }
+  ]
+}

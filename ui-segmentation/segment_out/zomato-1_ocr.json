@@ -1,0 +1,847 @@
+{
+  "image": "zomato-1.jpeg",
+  "width": 720,
+  "height": 1600,
+  "texts": [
+    {
+      "type": "text",
+      "text": "10.40",
+      "bbox": [
+        42,
+        22,
+        112,
+        52
+      ],
+      "center": [
+        77,
+        37
+      ],
+      "size": [
+        70,
+        30
+      ],
+      "confidence": 0.997,
+      "id": 0
+    },
+    {
+      "type": "text",
+      "text": "D38%",
+      "bbox": [
+        606,
+        22,
+        680,
+        48
+      ],
+      "center": [
+        643,
+        35
+      ],
+      "size": [
+        74,
+        26
+      ],
+      "confidence": 0.887,
+      "id": 1
+    },
+    {
+      "type": "text",
+      "text": "biryani",
+      "bbox": [
+        95,
+        125,
+        199,
+        163
+      ],
+      "center": [
+        147,
+        144
+      ],
+      "size": [
+        104,
+        38
+      ],
+      "confidence": 1.0,
+      "id": 2
+    },
+    {
+      "type": "text",
+      "text": "Filters",
+      "bbox": [
+        74,
+        224,
+        154,
+        252
+      ],
+      "center": [
+        114,
+        238
+      ],
+      "size": [
+        80,
+        28
+      ],
+      "confidence": 0.745,
+      "id": 3
+    },
+    {
+      "type": "text",
+      "text": "Chicken",
+      "bbox": [
+        276,
+        224,
+        376,
+        254
+      ],
+      "center": [
+        326,
+        239
+      ],
+      "size": [
+        100,
+        30
+      ],
+      "confidence": 1.0,
+      "id": 4
+    },
+    {
+      "type": "text",
+      "text": "Kushka",
+      "bbox": [
+        470,
+        224,
+        564,
+        254
+      ],
+      "center": [
+        517,
+        239
+      ],
+      "size": [
+        94,
+        30
+      ],
+      "confidence": 1.0,
+      "id": 5
+    },
+    {
+      "type": "text",
+      "text": "Chick=",
+      "bbox": [
+        656,
+        224,
+        720,
+        252
+      ],
+      "center": [
+        688,
+        238
+      ],
+      "size": [
+        64,
+        28
+      ],
+      "confidence": 0.637,
+      "id": 6
+    },
+    {
+      "type": "text",
+      "text": "Highly reordered",
+      "bbox": [
+        63,
+        303,
+        269,
+        339
+      ],
+      "center": [
+        166,
+        321
+      ],
+      "size": [
+        206,
+        36
+      ],
+      "confidence": 1.0,
+      "id": 7
+    },
+    {
+      "type": "text",
+      "text": "No packaging",
+      "bbox": [
+        551,
+        303,
+        720,
+        339
+      ],
+      "center": [
+        636,
+        321
+      ],
+      "size": [
+        169,
+        36
+      ],
+      "confidence": 1.0,
+      "id": 8
+    },
+    {
+      "type": "text",
+      "text": "Fast",
+      "bbox": [
+        440,
+        304,
+        496,
+        332
+      ],
+      "center": [
+        468,
+        318
+      ],
+      "size": [
+        56,
+        28
+      ],
+      "confidence": 1.0,
+      "id": 9
+    },
+    {
+      "type": "text",
+      "text": "Near",
+      "bbox": [
+        350,
+        306,
+        414,
+        332
+      ],
+      "center": [
+        382,
+        319
+      ],
+      "size": [
+        64,
+        26
+      ],
+      "confidence": 0.811,
+      "id": 10
+    },
+    {
+      "type": "text",
+      "text": "Items starting at ?199",
+      "bbox": [
+        280,
+        414,
+        476,
+        440
+      ],
+      "center": [
+        378,
+        427
+      ],
+      "size": [
+        196,
+        26
+      ],
+      "confidence": 0.757,
+      "id": 11
+    },
+    {
+      "type": "text",
+      "text": "8150 OFF above ?299",
+      "bbox": [
+        25,
+        415,
+        213,
+        435
+      ],
+      "center": [
+        119,
+        425
+      ],
+      "size": [
+        188,
+        20
+      ],
+      "confidence": 0.572,
+      "id": 12
+    },
+    {
+      "type": "text",
+      "text": "3.6",
+      "bbox": [
+        45,
+        571,
+        75,
+        591
+      ],
+      "center": [
+        60,
+        581
+      ],
+      "size": [
+        30,
+        20
+      ],
+      "confidence": 0.81,
+      "id": 13
+    },
+    {
+      "type": "text",
+      "text": "4.2",
+      "bbox": [
+        301,
+        571,
+        331,
+        591
+      ],
+      "center": [
+        316,
+        581
+      ],
+      "size": [
+        30,
+        20
+      ],
+      "confidence": 0.797,
+      "id": 14
+    },
+    {
+      "type": "text",
+      "text": "4.1",
+      "bbox": [
+        557,
+        571,
+        585,
+        591
+      ],
+      "center": [
+        571,
+        581
+      ],
+      "size": [
+        28,
+        20
+      ],
+      "confidence": 0.821,
+      "id": 15
+    },
+    {
+      "type": "text",
+      "text": "RNR Biryani",
+      "bbox": [
+        273,
+        602,
+        424,
+        638
+      ],
+      "center": [
+        348,
+        620
+      ],
+      "size": [
+        151,
+        36
+      ],
+      "confidence": 0.938,
+      "id": 16
+    },
+    {
+      "type": "text",
+      "text": "Salem RR Biriyani",
+      "bbox": [
+        17,
+        603,
+        237,
+        639
+      ],
+      "center": [
+        127,
+        621
+      ],
+      "size": [
+        220,
+        36
+      ],
+      "confidence": 0.916,
+      "id": 17
+    },
+    {
+      "type": "text",
+      "text": "Tast",
+      "bbox": [
+        438,
+        603,
+        496,
+        633
+      ],
+      "center": [
+        467,
+        618
+      ],
+      "size": [
+        58,
+        30
+      ],
+      "confidence": 0.324,
+      "id": 18
+    },
+    {
+      "type": "text",
+      "text": "Narmada Chain",
+      "bbox": [
+        529,
+        603,
+        720,
+        632
+      ],
+      "center": [
+        624,
+        618
+      ],
+      "size": [
+        191,
+        29
+      ],
+      "confidence": 0.991,
+      "id": 19
+    },
+    {
+      "type": "text",
+      "text": "15-20 mins",
+      "bbox": [
+        50,
+        642,
+        168,
+        668
+      ],
+      "center": [
+        109,
+        655
+      ],
+      "size": [
+        118,
+        26
+      ],
+      "confidence": 0.92,
+      "id": 20
+    },
+    {
+      "type": "text",
+      "text": "40-45 mins",
+      "bbox": [
+        306,
+        642,
+        428,
+        668
+      ],
+      "center": [
+        367,
+        655
+      ],
+      "size": [
+        122,
+        26
+      ],
+      "confidence": 0.962,
+      "id": 21
+    },
+    {
+      "type": "text",
+      "text": "45-50 mins",
+      "bbox": [
+        560,
+        642,
+        682,
+        668
+      ],
+      "center": [
+        621,
+        655
+      ],
+      "size": [
+        122,
+        26
+      ],
+      "confidence": 0.803,
+      "id": 22
+    },
+    {
+      "type": "text",
+      "text": "starting at <129",
+      "bbox": [
+        333,
+        716,
+        474,
+        746
+      ],
+      "center": [
+        404,
+        731
+      ],
+      "size": [
+        141,
+        30
+      ],
+      "confidence": 0.606,
+      "id": 23
+    },
+    {
+      "type": "text",
+      "text": "Items at =235",
+      "bbox": [
+        26,
+        718,
+        150,
+        742
+      ],
+      "center": [
+        88,
+        730
+      ],
+      "size": [
+        124,
+        24
+      ],
+      "confidence": 0.756,
+      "id": 24
+    },
+    {
+      "type": "text",
+      "text": "Items",
+      "bbox": [
+        283,
+        723,
+        337,
+        741
+      ],
+      "center": [
+        310,
+        732
+      ],
+      "size": [
+        54,
+        18
+      ],
+      "confidence": 0.737,
+      "id": 25
+    },
+    {
+      "type": "text",
+      "text": "4.0",
+      "bbox": [
+        45,
+        877,
+        77,
+        897
+      ],
+      "center": [
+        61,
+        887
+      ],
+      "size": [
+        32,
+        20
+      ],
+      "confidence": 0.998,
+      "id": 26
+    },
+    {
+      "type": "text",
+      "text": "4.0",
+      "bbox": [
+        301,
+        877,
+        333,
+        897
+      ],
+      "center": [
+        317,
+        887
+      ],
+      "size": [
+        32,
+        20
+      ],
+      "confidence": 0.646,
+      "id": 27
+    },
+    {
+      "type": "text",
+      "text": "3.9",
+      "bbox": [
+        557,
+        877,
+        587,
+        897
+      ],
+      "center": [
+        572,
+        887
+      ],
+      "size": [
+        30,
+        20
+      ],
+      "confidence": 0.598,
+      "id": 28
+    },
+    {
+      "type": "text",
+      "text": "Behrouz Biryani",
+      "bbox": [
+        272,
+        907,
+        469,
+        945
+      ],
+      "center": [
+        370,
+        926
+      ],
+      "size": [
+        197,
+        38
+      ],
+      "confidence": 1.0,
+      "id": 29
+    },
+    {
+      "type": "text",
+      "text": "Faruuzi Multicuis",
+      "bbox": [
+        530,
+        908,
+        720,
+        940
+      ],
+      "center": [
+        625,
+        924
+      ],
+      "size": [
+        190,
+        32
+      ],
+      "confidence": 0.86,
+      "id": 30
+    },
+    {
+      "type": "text",
+      "text": "Nandhana Palace",
+      "bbox": [
+        18,
+        910,
+        234,
+        940
+      ],
+      "center": [
+        126,
+        925
+      ],
+      "size": [
+        216,
+        30
+      ],
+      "confidence": 0.942,
+      "id": 31
+    },
+    {
+      "type": "text",
+      "text": "40-45 mins",
+      "bbox": [
+        562,
+        946,
+        684,
+        974
+      ],
+      "center": [
+        623,
+        960
+      ],
+      "size": [
+        122,
+        28
+      ],
+      "confidence": 0.93,
+      "id": 32
+    },
+    {
+      "type": "text",
+      "text": "25-30 mins",
+      "bbox": [
+        50,
+        948,
+        170,
+        974
+      ],
+      "center": [
+        110,
+        961
+      ],
+      "size": [
+        120,
+        26
+      ],
+      "confidence": 0.998,
+      "id": 33
+    },
+    {
+      "type": "text",
+      "text": "30-35 mins",
+      "bbox": [
+        304,
+        948,
+        424,
+        974
+      ],
+      "center": [
+        364,
+        961
+      ],
+      "size": [
+        120,
+        26
+      ],
+      "confidence": 0.599,
+      "id": 34
+    },
+    {
+      "type": "text",
+      "text": "ALL",
+      "bbox": [
+        18,
+        1038,
+        74,
+        1064
+      ],
+      "center": [
+        46,
+        1051
+      ],
+      "size": [
+        56,
+        26
+      ],
+      "confidence": 1.0,
+      "id": 35
+    },
+    {
+      "type": "text",
+      "text": "RESTAURANTS",
+      "bbox": [
+        82,
+        1038,
+        286,
+        1064
+      ],
+      "center": [
+        184,
+        1051
+      ],
+      "size": [
+        204,
+        26
+      ],
+      "confidence": 0.984,
+      "id": 36
+    },
+    {
+      "type": "text",
+      "text": "Supreme Bon_",
+      "bbox": [
+        219,
+        1115,
+        376,
+        1147
+      ],
+      "center": [
+        298,
+        1131
+      ],
+      "size": [
+        157,
+        32
+      ],
+      "confidence": 0.603,
+      "id": 37
+    },
+    {
+      "type": "text",
+      "text": "High Protein",
+      "bbox": [
+        74,
+        1116,
+        208,
+        1144
+      ],
+      "center": [
+        141,
+        1130
+      ],
+      "size": [
+        134,
+        28
+      ],
+      "confidence": 1.0,
+      "id": 38
+    },
+    {
+      "type": "text",
+      "text": "7235 =299",
+      "bbox": [
+        390,
+        1116,
+        496,
+        1142
+      ],
+      "center": [
+        443,
+        1129
+      ],
+      "size": [
+        106,
+        26
+      ],
+      "confidence": 0.517,
+      "id": 39
+    },
+    {
+      "type": "text",
+      "text": "Nandhana Palace",
+      "bbox": [
+        41,
+        1512,
+        355,
+        1551
+      ],
+      "center": [
+        198,
+        1532
+      ],
+      "size": [
+        314,
+        39
+      ],
+      "confidence": 1.0,
+      "id": 40
+    },
+    {
+      "type": "text",
+      "text": "4.0",
+      "bbox": [
+        626,
+        1526,
+        668,
+        1552
+      ],
+      "center": [
+        647,
+        1539
+      ],
+      "size": [
+        42,
+        26
+      ],
+      "confidence": 1.0,
+      "id": 41
+    }
+  ]
+}

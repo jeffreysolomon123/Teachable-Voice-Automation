@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TouchCaptureTest2</string>
+    <string name="accessibility_service_description">Observes raw touchscreen down-events via the platform motion-event API to test whether tap coordinates can be captured reliably and safely, for research purposes only. No data leaves the device.</string>
+</resources>

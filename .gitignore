@@ -1,0 +1,33 @@
+# Secrets / credentials
+.env
+.env.*
+*.traineddata
+teachablevoiceautomation-*.json
+local.properties
+
+# Android / Gradle
+.gradle/
+.kotlin/
+build/
+*.apk
+*.aab
+.idea/
+*.iml
+captures/
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Third-party clone (has its own git repo)
+appagent/AppAgent/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
