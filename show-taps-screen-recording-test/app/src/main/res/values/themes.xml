@@ -1,0 +1,7 @@
+<resources>
+    <!-- Platform DayNight theme; the UI itself is 100% Compose. -->
+    <style name="Theme.TapScreenRecorder" parent="@android:style/Theme.DeviceDefault.DayNight">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

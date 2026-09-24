@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "tap_x": 731,
+    "tap_y": 2288,
+    "touch_ms": 24965.2,
+    "duration_ms": 352.3,
+    "before": "taps/tap_001_before.png",
+    "touch": "taps/tap_001_touch.png",
+    "after": "taps/tap_001_after.png"
+  },
+  {
+    "id": 2,
+    "tap_x": 645,
+    "tap_y": 2330,
+    "touch_ms": 28960.8,
+    "duration_ms": 24.5,
+    "before": "taps/tap_002_before.png",
+    "touch": "taps/tap_002_touch.png",
+    "after": "taps/tap_002_after.png"
+  },
+  {
+    "id": 3,
+    "tap_x": 693,
+    "tap_y": 2205,
+    "touch_ms": 29730.9,
+    "duration_ms": 208.5,
+    "before": "taps/tap_003_before.png",
+    "touch": "taps/tap_003_touch.png",
+    "after": "taps/tap_003_after.png"
+  }
+]

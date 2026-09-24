@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TapScreenRecorder</string>
+    <string name="tap_logger_label">TapScreenRecorder tap logger</string>
+    <string name="tap_logger_description">Logs taps, scrolls and text changes (never password fields) only while TapScreenRecorder is recording. The log stays on your phone and is saved next to the video as a JSON file that only you export.</string>
+</resources>

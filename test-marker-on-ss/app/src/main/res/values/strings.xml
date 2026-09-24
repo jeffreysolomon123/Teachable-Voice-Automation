@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_service_description">Test only: when you click something in another app, briefly marks the clicked element and saves a screenshot with the marker in it.</string>
+</resources>

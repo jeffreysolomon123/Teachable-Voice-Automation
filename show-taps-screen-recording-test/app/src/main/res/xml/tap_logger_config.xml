@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- notificationTimeout=0: deliver every event immediately instead of batching them.
+     canRetrieveWindowContent + flagRetrieveInteractiveWindows: needed for element bounds
+     (event.source) in other apps and for the keyboard window. -->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeAllMask"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagReportViewIds|flagRetrieveInteractiveWindows|flagIncludeNotImportantViews"
+    android:canRetrieveWindowContent="true"
+    android:notificationTimeout="0"
+    android:description="@string/tap_logger_description"
+    android:isAccessibilityTool="false" />

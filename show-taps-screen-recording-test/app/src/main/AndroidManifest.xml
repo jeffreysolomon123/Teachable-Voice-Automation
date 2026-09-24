@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Any foreground service needs this. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Android 14+: a service that holds a MediaProjection must declare this specific type permission. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <!-- Android 13+: runtime permission, needed for the ongoing notification (with the Stop button) to be visible. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Deliberately NO RECORD_AUDIO: the video is recorded without sound. -->
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TapScreenRecorder">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- foregroundServiceType="mediaProjection" is mandatory on Android 10+ for a service that
+             captures the screen; without it startForeground()/getMediaProjection() throw. -->
+        <service
+            android:name=".RecorderService"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection" />
+
+        <!-- Accessibility service that logs UI events while recording. The user switches it on in
+             Settings > Accessibility; BIND_ACCESSIBILITY_SERVICE ensures only the system can bind it. -->
+        <service
+            android:name=".TapLoggerService"
+            android:exported="true"
+            android:label="@string/tap_logger_label"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/tap_logger_config" />
+        </service>
+    </application>
+</manifest>
