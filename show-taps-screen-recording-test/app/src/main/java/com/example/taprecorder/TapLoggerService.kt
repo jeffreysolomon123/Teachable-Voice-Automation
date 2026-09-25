@@ -27,6 +27,9 @@ class TapLoggerService : AccessibilityService() {
 
     private var lastKeyboardSignature: Int? = null
     private var lastKeyboardSnapshotUptime = 0L
+    // Debounce for WINDOW_CONTENT_CHANGED, which is ~80% of all events and never marks a tap.
+    private var lastContentChangeKey: Int? = null
+    private var lastContentChangeUptime = 0L
 
     override fun onServiceConnected() {
         TapLog.onServiceState(true, "connected", SystemClock.uptimeMillis())
@@ -44,6 +47,10 @@ class TapLoggerService : AccessibilityService() {
     override fun onAccessibilityEvent(event: AccessibilityEvent) {
         val start = TapLog.sessionStartUptime() ?: return
         val type = event.eventType
+        if (type == AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED && isRepeatedContentChange(event)) {
+            TapLog.countDebounced()
+            return
+        }
         val source = event.source
         val password = event.isPassword || source?.isPassword == true
 
@@ -99,6 +106,22 @@ class TapLoggerService : AccessibilityService() {
         if (type == AccessibilityEvent.TYPE_WINDOWS_CHANGED || type == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) {
             snapshotKeyboard(start)
         }
+    }
+
+    /**
+     * True if [event] repeats the previous WINDOW_CONTENT_CHANGED (same package, window and
+     * change types) within [CONTENT_CHANGE_DEBOUNCE_MS]. Animations and live content (timers,
+     * video, loading spinners) fire these continuously; one per burst is enough.
+     */
+    private fun isRepeatedContentChange(event: AccessibilityEvent): Boolean {
+        val key = listOf(event.packageName?.toString(), event.windowId, event.contentChangeTypes).hashCode()
+        val repeated = key == lastContentChangeKey &&
+            event.eventTime - lastContentChangeUptime < CONTENT_CHANGE_DEBOUNCE_MS
+        if (!repeated) {
+            lastContentChangeKey = key
+            lastContentChangeUptime = event.eventTime
+        }
+        return repeated
     }
 
     /**
@@ -180,6 +203,7 @@ class TapLoggerService : AccessibilityService() {
 
     companion object {
         private const val MAX_KEYS = 400
+        private const val CONTENT_CHANGE_DEBOUNCE_MS = 250L
 
         /** Whether the user has switched this service on in Settings > Accessibility. */
         fun isEnabled(context: Context): Boolean {

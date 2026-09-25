@@ -1,0 +1,21 @@
+[
+  {"type": "TAP", "approx_time_s": 3.5, "x": 427, "y": 2079, "source": "click", "label": "Zomato card (recent apps)"},
+  {"type": "TAP", "approx_time_s": 9.5, "x": 90, "y": 263, "source": "click", "label": "Back arrow"},
+  {"type": "TAP", "approx_time_s": 17.6, "x": 914, "y": 1654, "source": "window_change", "label": "Restaurant card"},
+  {"type": "TAP", "approx_time_s": 21.4, "x": 618, "y": 1394, "source": "window_change", "label": "Pop-up X"},
+  {"type": "TAP", "approx_time_s": 23.3, "x": 728, "y": 214, "source": "click", "label": "Search field"},
+  {"type": "TAP", "approx_time_s": 25.0, "x": 730, "y": 2288, "source": "keyboard", "label": "Key b"},
+  {"type": "TAP", "approx_time_s": 25.25, "x": 933, "y": 1910, "source": "keyboard", "label": "Key i"},
+  {"type": "TAP", "approx_time_s": 25.45, "x": 428, "y": 1979, "source": "keyboard", "label": "Key r"},
+  {"type": "TAP", "approx_time_s": 25.62, "x": 641, "y": 1962, "source": "keyboard", "label": "Key y"},
+  {"type": "TAP", "approx_time_s": 25.87, "x": 75, "y": 2148, "source": "keyboard", "label": "Key a"},
+  {"type": "TAP", "approx_time_s": 26.15, "x": 827, "y": 2298, "source": "keyboard", "label": "Key n"},
+  {"type": "TAP", "approx_time_s": 26.45, "x": 891, "y": 1925, "source": "keyboard", "label": "Key i"},
+  {"type": "TAP", "approx_time_s": 30.7, "x": 920, "y": 1769, "source": "click", "label": "TapScreenRecorder card (recent apps)"},
+  {"type": "TAP", "approx_time_s": 31.7, "x": 706, "y": 1487, "source": "unlogged", "label": "Stop button (not in this log; see recorder app change)"},
+  {"type": "SWIPE", "approx_time_s": 1.9, "label": "Swipe up 1.5-2.4 s"},
+  {"type": "SWIPE", "approx_time_s": 12.7, "label": "Back gesture"},
+  {"type": "SWIPE", "approx_time_s": 15.9, "label": "Scrolls 14.7-17.2 s"},
+  {"type": "SWIPE", "approx_time_s": 29.1, "label": "Swipe up 28.8-29.5 s"},
+  {"type": "SWIPE", "approx_time_s": 30.15, "label": "Recent-apps swipe 30.0-30.3 s"}
+]

@@ -161,6 +161,32 @@ class CircleDetector:
         dets = self._detect_template(small) if self._templates else self._detect_hough(small)
         return non_max_suppression(dets, self.cfg.nms_distance_factor * self.radius)
 
+    def score_map(self, small: np.ndarray) -> np.ndarray:
+        """Best template score (over all scales) for a circle centred at each pixel of ``small``.
+
+        ``small`` is grayscale, already resized by :attr:`scale`. Pixels where no template
+        fits (near the border) get -1. Requires a template (not the Hough fallback).
+        """
+        img = small.astype(np.float32)
+        img_sq = img * img
+        out = np.full(small.shape, -1.0, np.float32)
+        for t in self._templates:
+            th, tw = t.zero_mean.shape
+            if th > small.shape[0] or tw > small.shape[1]:
+                continue
+            res = masked_ccoeff_normed(img, img_sq, t)
+            oy, ox = round(t.cy), round(t.cx)
+            view = out[oy:oy + res.shape[0], ox:ox + res.shape[1]]
+            np.maximum(view, res[:view.shape[0], :view.shape[1]], out=view)
+        return out
+
+    @property
+    def template_extent(self) -> int:
+        """Largest distance (px, original resolution) from a circle centre to its template's edge."""
+        if not self._templates:
+            return int(np.ceil(self.radius * 1.2))
+        return int(np.ceil(max(max(t.zero_mean.shape) for t in self._templates) / self.scale))
+
     def _detect_template(self, small: np.ndarray) -> list[Detection]:
         """Multi-scale masked TM_CCOEFF_NORMED matching; local maxima above the threshold."""
         k = self.scale

@@ -26,6 +26,18 @@ class VideoInfo:
     duration_ms: float | None
 
 
+# Pixel formats whose first plane is the 8-bit luma image (full range for the "j" variants).
+_LUMA_FIRST = {"yuv420p", "yuvj420p", "yuv422p", "yuvj422p", "yuv444p", "yuvj444p", "nv12", "nv21"}
+
+
+def _to_array(frame: av.VideoFrame, fmt: str) -> np.ndarray:
+    """Convert ``frame`` to a numpy array; "gray" copies the luma plane directly when possible."""
+    if fmt == "gray" and frame.format.name in _LUMA_FIRST:
+        plane = frame.planes[0]
+        return np.frombuffer(plane, np.uint8).reshape(plane.height, plane.line_size)[:, :frame.width].copy()
+    return frame.to_ndarray(format=fmt)
+
+
 def _check_path(path: str | Path) -> Path:
     """Return ``path`` as a Path, raising VideoError if the file does not exist."""
     p = Path(path)
@@ -93,15 +105,29 @@ class VideoReader:
         for ts, frame in self._decode_from(0.0):
             yield ts, frame.to_ndarray(format="bgr24")
 
-    def frames_between(self, start_ms: float, end_ms: float) -> list[tuple[float, np.ndarray]]:
-        """Return all frames with ``start_ms <= ts <= end_ms`` (small windows only)."""
+    def frames_between(
+        self, start_ms: float, end_ms: float, fmt: str = "bgr24"
+    ) -> list[tuple[float, np.ndarray]]:
+        """Return all frames with ``start_ms <= ts <= end_ms`` (small windows only).
+
+        ``fmt="gray"`` returns the luma plane only, which is much cheaper to convert.
+        """
         out: list[tuple[float, np.ndarray]] = []
         for ts, frame in self._decode_from(start_ms):
             if ts > end_ms + 0.5:
                 break
             if ts >= start_ms - 0.5:
-                out.append((ts, frame.to_ndarray(format="bgr24")))
+                out.append((ts, _to_array(frame, fmt)))
         return out
+
+    def timestamps(self) -> list[float]:
+        """Timestamps (ms) of every frame, in order, read from packets without decoding."""
+        ts: list[float] = []
+        self._container.seek(self._start_pts, stream=self._stream, backward=True, any_frame=False)
+        for packet in self._container.demux(self._stream):
+            if packet.pts is not None:
+                ts.append((packet.pts - self._start_pts) * self._time_base * 1000.0)
+        return sorted(ts)
 
     def frame_at(self, ts_ms: float) -> tuple[float, np.ndarray]:
         """Return the frame on screen at ``ts_ms``: the last frame with ts <= ts_ms.

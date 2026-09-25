@@ -9,6 +9,7 @@ import android.media.projection.MediaProjectionManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.SystemClock
 import android.provider.Settings
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -46,7 +47,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.boundsInWindow
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -159,15 +163,31 @@ private fun RecorderScreen() {
             Spacer(Modifier.height(16.dp))
 
             val recordingOrStarting = ui.phase == Phase.Countdown || ui.phase == Phase.Recording
+            // Screen bounds of the button, so the Stop tap can be logged with where it was.
+            val view = LocalView.current
+            var buttonBounds by remember { mutableStateOf<android.graphics.Rect?>(null) }
             Button(
-                onClick = { if (recordingOrStarting) RecorderService.stop(context) else onStartClicked() },
+                onClick = {
+                    if (recordingOrStarting) {
+                        RecorderService.stop(context, SystemClock.uptimeMillis(), buttonBounds)
+                    } else {
+                        onStartClicked()
+                    }
+                },
                 enabled = ui.phase != Phase.Saving,
                 shape = CircleShape,
                 colors = ButtonDefaults.buttonColors(
                     containerColor = if (recordingOrStarting) Color(0xFF616161) else Color(0xFFE53935),
                     contentColor = Color.White,
                 ),
-                modifier = Modifier.size(150.dp),
+                modifier = Modifier.size(150.dp).onGloballyPositioned { coords ->
+                    val b = coords.boundsInWindow()
+                    val origin = IntArray(2).also { view.getLocationOnScreen(it) }
+                    buttonBounds = android.graphics.Rect(
+                        origin[0] + b.left.toInt(), origin[1] + b.top.toInt(),
+                        origin[0] + b.right.toInt(), origin[1] + b.bottom.toInt(),
+                    )
+                },
             ) {
                 Text(if (recordingOrStarting) "Stop" else "Start", fontSize = 26.sp)
             }

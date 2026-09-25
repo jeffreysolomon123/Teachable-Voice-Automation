@@ -1,5 +1,8 @@
 """Self-test: build a synthetic show-taps video and check the swipe/tap/long-press labels.
 
+Runs both modes: video only, and --log with a synthetic tap log (a click on the tap, a
+new screen after the swipe, and a click nowhere near any circle).
+
 Usage: python selftest.py [--work selftest_out]
 """
 
@@ -17,7 +20,7 @@ import numpy as np
 import calibrate
 import evaluate
 from config import Config
-from extractor import extract_taps
+from extractor import extract_taps, extract_taps_with_log
 
 W, H, FPS, RADIUS = 540, 960, 30, 20
 
@@ -66,6 +69,52 @@ def make_video(path: Path) -> None:
     writer.release()
 
 
+def make_log(path: Path, video: Path) -> None:
+    """Write a tap log for the synthetic video: the tap's click, a new screen after the swipe
+    (low confidence, whole screen), and a click with no circle anywhere near it."""
+    def event(t_s: float, etype: str, **extra: object) -> dict:
+        return {"videoTimeMs": round(t_s * 1000), "type": etype, "packageName": "com.example.app", **extra}
+
+    tap = GESTURES[1]
+    x, y = tap[3]
+    events = [
+        event(tap[2] + 0.05, "VIEW_CLICKED", className="android.widget.Button", text=["OK"],
+              source={"className": "android.widget.Button", "text": "OK",
+                      "bounds": {"left": x - 60, "top": y - 30, "right": x + 60, "bottom": y + 30}}),
+        event(1.2, "WINDOW_STATE_CHANGED", className="com.example.app.Second", contentChangeTypes=0),
+        event(5.5, "VIEW_CLICKED", className="android.widget.Button",
+              source={"className": "android.widget.Button",
+                      "bounds": {"left": 20, "top": 20, "right": 120, "bottom": 80}}),
+    ]
+    data = {
+        "schemaVersion": 1,
+        "video": {"fileName": video.name, "width": W, "height": H},
+        "logger": {"enabledAtStart": True, "eventCount": len(events)},
+        "events": events,
+        "keyboardSnapshots": [],
+    }
+    path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+
+
+def check_log_mode(video: Path, calib_dir: Path, work: Path) -> bool:
+    """Run --log mode on the synthetic video and check its labels and tap position."""
+    log_path = work / "synthetic.json"
+    make_log(log_path, video)
+    result = extract_taps_with_log(video, log_path, work / "out_log", Config(calibration_dir=calib_dir))
+    labels = [(e["source"], e["label"]) for e in result.events_report]
+    print("\n--log mode events:", labels)
+    ok = labels == [("window_change", "SWIPE"), ("click", "TAP"), ("click", "NOT_FOUND")]
+    if len(result.taps) == 1:
+        tap, (_, _, _, (x, y), _) = result.taps[0], GESTURES[1]
+        err = ((tap.tap_x - x) ** 2 + (tap.tap_y - y) ** 2) ** 0.5
+        print(f"--log mode tap at ({tap.tap_x}, {tap.tap_y}), {err:.1f} px from truth, "
+              f"touch {tap.touch_ms:.0f} ms (true {GESTURES[1][1] * 1000:.0f} ms)")
+        ok = ok and err <= 3 and abs(tap.touch_ms - GESTURES[1][1] * 1000) <= 1000 / FPS + 1
+    else:
+        ok = False
+    return ok
+
+
 def main(argv: list[str] | None = None) -> int:
     """Generate, calibrate, extract and verify. Returns 0 if all labels are correct."""
     parser = argparse.ArgumentParser(description=__doc__)
@@ -97,6 +146,7 @@ def main(argv: list[str] | None = None) -> int:
     for tap in result.taps:
         before = cv2.imread(str(work / "out" / tap.before))
         ok = ok and before is not None
+    ok = check_log_mode(video, calib_dir, work) and ok
     print("\nSELF-TEST", "PASSED" if ok else "FAILED")
     return 0 if ok else 1
 

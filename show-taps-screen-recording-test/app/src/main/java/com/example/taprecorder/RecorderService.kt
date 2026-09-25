@@ -8,6 +8,7 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ServiceInfo
+import android.graphics.Rect
 import android.hardware.display.DisplayManager
 import android.hardware.display.VirtualDisplay
 import android.media.MediaRecorder
@@ -87,7 +88,10 @@ class RecorderService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.action) {
             ACTION_START -> begin(intent)
-            ACTION_STOP -> stopRequested()
+            ACTION_STOP -> {
+                logStopTap(intent)
+                stopRequested()
+            }
         }
         // Do not let the system restart us after being killed: the projection token is gone by then.
         return START_NOT_STICKY
@@ -142,6 +146,9 @@ class RecorderService : Service() {
             r.setVideoEncodingBitRate(8_000_000)
             r.setOutputFile(out.pfd.fileDescriptor)
             r.prepare()
+            // MediaRecorder cannot report when it received its first frame, so bracket the
+            // clock anchor instead: the first frame arrives after start() is called.
+            val startCalledUptime = SystemClock.uptimeMillis()
 
             // Callback was registered in begin(). Android 14+ allows only one VirtualDisplay per projection.
             display = projection!!.createVirtualDisplay(
@@ -151,7 +158,7 @@ class RecorderService : Service() {
             r.start()
             // Anchor the tap log to the video: event times are converted to ms since this instant.
             val startUptime = SystemClock.uptimeMillis()
-            TapLog.begin(startUptime, sessionMeta(out.name, width, height, startUptime))
+            TapLog.begin(startUptime, sessionMeta(out.name, width, height, startUptime, startCalledUptime))
 
             startedAt = SystemClock.elapsedRealtime()
             RecorderState.update { it.copy(phase = Phase.Recording, elapsedSeconds = 0) }
@@ -160,6 +167,20 @@ class RecorderService : Service() {
         } catch (e: Exception) {
             fail("Could not start recording: ${e.message}")
         }
+    }
+
+    /**
+     * Logs the Stop tap (app button or notification action) before the session ends. The
+     * accessibility service cannot: its click event arrives after [TapLog.end]. Button taps carry
+     * their own time and bounds; for the notification we only know when the intent arrived.
+     */
+    private fun logStopTap(intent: Intent) {
+        if (RecorderState.state.value.phase != Phase.Recording) return
+        val source = intent.getStringExtra(EXTRA_STOP_SOURCE) ?: return
+        val uptime = intent.getLongExtra(EXTRA_STOP_UPTIME, SystemClock.uptimeMillis())
+        val b = intent.getIntArrayExtra(EXTRA_STOP_BOUNDS)
+        val bounds = if (b != null && b.size == 4) Rect(b[0], b[1], b[2], b[3]) else null
+        TapLog.recordStopTap(uptime, packageName, source, bounds)
     }
 
     /** Stop button (notification or app) or projection revoked by the system. */
@@ -262,7 +283,9 @@ class RecorderService : Service() {
     }
 
     /** Header of the tap-log JSON: what was recorded, on which device, and the clock anchors. */
-    private fun sessionMeta(videoName: String, width: Int, height: Int, startUptime: Long): JSONObject {
+    private fun sessionMeta(
+        videoName: String, width: Int, height: Int, startUptime: Long, startCalledUptime: Long,
+    ): JSONObject {
         val rotation = getSystemService(DisplayManager::class.java).getDisplay(Display.DEFAULT_DISPLAY)?.rotation
         return JSONObject()
             .put("schemaVersion", TapLog.SCHEMA_VERSION)
@@ -278,11 +301,14 @@ class RecorderService : Service() {
             .put(
                 "clock", JSONObject()
                     .put("recordingStartUptimeMs", startUptime)
+                    .put("recorderStartCalledUptimeMs", startCalledUptime)
                     .put("recordingStartWallClockMs", System.currentTimeMillis())
                     .put(
                         "note",
                         "videoTimeMs = eventUptimeMs - recordingStartUptimeMs. Anchored right after " +
-                            "MediaRecorder.start(); the first video frame can lag this by a few tens of ms. " +
+                            "MediaRecorder.start() (called at recorderStartCalledUptimeMs); the first video " +
+                            "frame can lag this by a few tens of ms. MediaRecorder cannot report the exact " +
+                            "first-frame time. " +
                             "Bounds are screen pixels, which equal video pixels (video is recorded at native size).",
                     ),
             )
@@ -308,7 +334,8 @@ class RecorderService : Service() {
 
     private fun buildNotification(text: String): Notification {
         val stop = PendingIntent.getService(
-            this, 0, Intent(this, RecorderService::class.java).setAction(ACTION_STOP),
+            this, 0,
+            Intent(this, RecorderService::class.java).setAction(ACTION_STOP).putExtra(EXTRA_STOP_SOURCE, "notification"),
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT,
         )
         val open = PendingIntent.getActivity(
@@ -330,6 +357,9 @@ class RecorderService : Service() {
         private const val ACTION_STOP = "com.example.taprecorder.STOP"
         private const val EXTRA_RESULT_CODE = "result_code"
         private const val EXTRA_RESULT_DATA = "result_data"
+        private const val EXTRA_STOP_SOURCE = "stop_source"
+        private const val EXTRA_STOP_UPTIME = "stop_uptime"
+        private const val EXTRA_STOP_BOUNDS = "stop_bounds"
         private const val CHANNEL_ID = "recording"
         private const val NOTIFICATION_ID = 1
         private const val COUNTDOWN_SECONDS = 3
@@ -343,8 +373,19 @@ class RecorderService : Service() {
             ContextCompat.startForegroundService(context, intent)
         }
 
-        fun stop(context: Context) {
-            context.startService(Intent(context, RecorderService::class.java).setAction(ACTION_STOP))
+        /**
+         * Stops recording. [tapUptimeMs] and [tapBounds] (screen pixels) describe the in-app Stop
+         * button tap so it can be logged; pass null when stopping for another reason.
+         */
+        fun stop(context: Context, tapUptimeMs: Long? = null, tapBounds: Rect? = null) {
+            val intent = Intent(context, RecorderService::class.java).setAction(ACTION_STOP)
+            if (tapUptimeMs != null) {
+                intent.putExtra(EXTRA_STOP_SOURCE, "button").putExtra(EXTRA_STOP_UPTIME, tapUptimeMs)
+                tapBounds?.let {
+                    intent.putExtra(EXTRA_STOP_BOUNDS, intArrayOf(it.left, it.top, it.right, it.bottom))
+                }
+            }
+            context.startService(intent)
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.taprecorder
 
+import android.graphics.Rect
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -31,6 +32,7 @@ object TapLog {
         val keyboardSnapshots = JSONArray()
         val loggerMarkers = JSONArray()
         var droppedEvents = 0
+        var debouncedContentChanges = 0
     }
 
     /** Starts a new session; [meta] holds video/device/clock info written at the top of the JSON. */
@@ -46,6 +48,42 @@ object TapLog {
             val s = session ?: return
             if (s.events.length() >= MAX_EVENTS) s.droppedEvents++ else s.events.put(event)
         }
+    }
+
+    /**
+     * Records the tap on our own Stop control, which the accessibility service cannot log in
+     * time: the session ends before the click event reaches it. Must be called before [end].
+     *
+     * [uptimeMs] is when the tap was handled (finger-up, like VIEW_CLICKED); [stopSource] is
+     * "button" or "notification"; [bounds] is the tapped control in screen pixels, if known.
+     */
+    fun recordStopTap(uptimeMs: Long, packageName: String, stopSource: String, bounds: Rect?) {
+        synchronized(lock) {
+            val s = session ?: return
+            val event = JSONObject()
+                .put("videoTimeMs", uptimeMs - s.startUptimeMs)
+                .put("eventUptimeMs", uptimeMs)
+                .put("type", "APP_STOP_TAPPED")
+                .put("packageName", packageName)
+                .put("stopSource", stopSource)
+            if (bounds != null && !bounds.isEmpty) {
+                event.put(
+                    "source", JSONObject()
+                        .put("className", "StopButton")
+                        .put("text", "Stop")
+                        .put(
+                            "bounds", JSONObject().put("left", bounds.left).put("top", bounds.top)
+                                .put("right", bounds.right).put("bottom", bounds.bottom),
+                        ),
+                )
+            }
+            s.events.put(event)
+        }
+    }
+
+    /** Counts a WINDOW_CONTENT_CHANGED event dropped as a near-duplicate (see [TapLoggerService]). */
+    fun countDebounced() {
+        synchronized(lock) { session?.let { it.debouncedContentChanges++ } }
     }
 
     fun recordKeyboard(snapshot: JSONObject) {
@@ -74,6 +112,7 @@ object TapLog {
             .put("connectedAtEnd", serviceConnected)
             .put("eventCount", s.events.length())
             .put("droppedEvents", s.droppedEvents)
+            .put("debouncedContentChanges", s.debouncedContentChanges)
             .put("markers", s.loggerMarkers)
         s.meta.put("events", s.events).put("keyboardSnapshots", s.keyboardSnapshots)
     }

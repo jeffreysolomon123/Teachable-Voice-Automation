@@ -73,6 +73,55 @@ class Config:
     # Constant output FPS of debug/annotated.mp4 (source frames are held so timing is real).
     debug_fps: float = 30.0
 
+    # --- Log-guided mode (--log) ---------------------------------------------
+    # Package of the recorder app itself; its events are ignored (except the Stop tap).
+    own_package: str = "com.example.taprecorder"
+    # Padding added around an element's box before searching it (at 1080 px width).
+    box_padding_px: float = 60.0
+    # Search windows relative to the log event time [t - before, t + after] per source.
+    click_window_ms: tuple[float, float] = (800.0, 150.0)
+    keyboard_window_ms: tuple[float, float] = (600.0, 150.0)
+    window_change_window_ms: tuple[float, float] = (1000.0, 0.0)
+    # A click fires on finger-up, so the touch of a VIEW_CLICKED ends at most this long
+    # after the event (clock-anchor slack); this cuts off the circle's fade-out.
+    click_lift_slack_ms: float = 50.0
+    # A new screen only becomes a candidate if no click/key candidate is this close before it.
+    window_change_click_gap_ms: float = 1000.0
+    # Candidates closer than this in time that point to the same place are merged.
+    merge_ms: float = 150.0
+    # Minimum masked-correlation score of the circle (its best frame) to accept a touch.
+    # Low on purpose: the template is learned on one background and scores ~0.5 on light
+    # ones; the appearance test below is what rejects look-alikes.
+    local_match_threshold: float = 0.45
+    # The finger has lifted once the score falls this far below its highest value so far
+    # (the circle fades out after lift instead of vanishing). The touch-down frame itself
+    # may score this much below local_match_threshold (busy backgrounds lower the score).
+    lift_drop: float = 0.15
+    # Touch-down = the frame where a circle *appears*: at least appear_min_inside of the
+    # pixels inside the disk and along its edge changed by more than appear_pixel_delta grey
+    # levels since the previous frame, while at most appear_max_outside of a ring just
+    # outside it (1.15-2.2 radii) did. Screen transitions, animations and moving or scaling
+    # icons change the surroundings too; a static UI feature (a key glyph under the
+    # circle) does not change at all.
+    appear_min_inside: float = 0.6
+    appear_max_outside: float = 0.2
+    appear_pixel_delta: int = 8
+    # ... and the template score must jump by at least this much in that frame (a fading
+    # circle also changes its whole disk, but its score falls).
+    onset_min_jump: float = 0.10
+    # At most this many coarse appearance spots per frame are checked (best first).
+    max_onsets_per_frame: int = 8
+    # While following a moving touch (swipe), the circle may move at most this far between
+    # frames (at 1080 px width), and its score there must rise at least local_min_rise over
+    # the previous frame, so the trace cannot jump onto a static look-alike.
+    walk_max_step_px: float = 120.0
+    local_min_rise: float = 0.20
+    # Frames decoded after the search window so the lift can be traced past its end.
+    walk_margin_ms: float = 600.0
+    # Onsets are first screened on frame differences at 1/change_downscale size (the same
+    # appearance test, on a coarse grid); only spots that pass are template-matched.
+    change_downscale: int = 4
+
     def scaled(self, value_px: float, video_width: int) -> float:
         """Scale a pixel threshold defined at ``reference_width`` to ``video_width``."""
         return value_px * video_width / self.reference_width

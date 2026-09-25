@@ -1,6 +1,10 @@
 """CLI: extract tap frames from an Android "Show taps" screen recording.
 
 Usage: python extract_taps.py video.mp4 --out output_dir [--debug] [--calibration calibration]
+       python extract_taps.py video.mp4 --log video.json --out output_dir [--debug]
+
+With --log, the accessibility log from TapScreenRecorder says where and when to look,
+and the circle is searched only there (much more reliable and faster).
 """
 
 from __future__ import annotations
@@ -12,7 +16,8 @@ from pathlib import Path
 
 from config import Config
 from detector import CalibrationError
-from extractor import NoCirclesError, extract_taps
+from extractor import NoCirclesError, extract_taps, extract_taps_with_log
+from log_io import LogError
 from video_io import VideoError
 
 
@@ -21,6 +26,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("video", type=Path, help="screen recording (.mp4)")
     parser.add_argument("--out", type=Path, required=True, help="output directory")
+    parser.add_argument("--log", type=Path, help="tap log JSON saved by TapScreenRecorder for this video")
     parser.add_argument("--debug", action="store_true", help="also write debug/annotated.mp4")
     parser.add_argument("--calibration", type=Path, default=Path("calibration"),
                         help="calibration directory written by calibrate.py (default: calibration)")
@@ -29,8 +35,11 @@ def main(argv: list[str] | None = None) -> int:
 
     cfg = Config(calibration_dir=args.calibration)
     try:
-        result = extract_taps(args.video, args.out, cfg, debug=args.debug)
-    except (VideoError, CalibrationError, NoCirclesError) as exc:
+        if args.log:
+            result = extract_taps_with_log(args.video, args.log, args.out, cfg, debug=args.debug)
+        else:
+            result = extract_taps(args.video, args.out, cfg, debug=args.debug)
+    except (VideoError, CalibrationError, NoCirclesError, LogError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1
 
