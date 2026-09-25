@@ -1,0 +1,9 @@
+# Stages 1-2 (tap extractor, flow builder)
+opencv-python>=4.8
+numpy>=1.24
+av>=12.0
+Pillow>=10.0
+# Stages 3-4 (UI segmentation, grounding)
+ultralytics
+huggingface_hub
+easyocr

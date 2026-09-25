@@ -1,0 +1,507 @@
+{
+  "image": "C:\\Users\\fixadmin\\AppData\\Local\\Temp\\claude\\C--Jeffrey-Projects-teachable-agentic-ai-show-taps-screen-recorder-script\\1a166c47-f9a3-4f2f-b988-999c54536586\\scratchpad\\gf\\flow_frames\\step_007_before.png",
+  "width": 1220,
+  "height": 2712,
+  "texts": [
+    {
+      "type": "text",
+      "text": "4.10",
+      "bbox": [
+        71,
+        35,
+        161,
+        79
+      ],
+      "center": [
+        116,
+        57
+      ],
+      "size": [
+        90,
+        44
+      ],
+      "confidence": 0.906,
+      "id": 0
+    },
+    {
+      "type": "text",
+      "text": "Hotel Saravana Bhavan",
+      "bbox": [
+        150,
+        184,
+        604,
+        236
+      ],
+      "center": [
+        377,
+        210
+      ],
+      "size": [
+        454,
+        52
+      ],
+      "confidence": 0.792,
+      "id": 1
+    },
+    {
+      "type": "text",
+      "text": "Applied",
+      "bbox": [
+        983,
+        512,
+        1126,
+        563
+      ],
+      "center": [
+        1054,
+        538
+      ],
+      "size": [
+        143,
+        51
+      ],
+      "confidence": 1.0,
+      "id": 2
+    },
+    {
+      "type": "text",
+      "text": "720 extra off above coupons",
+      "bbox": [
+        188,
+        515,
+        730,
+        569
+      ],
+      "center": [
+        459,
+        542
+      ],
+      "size": [
+        542,
+        54
+      ],
+      "confidence": 0.64,
+      "id": 3
+    },
+    {
+      "type": "text",
+      "text": "736 saved with free delivery",
+      "bbox": [
+        187,
+        670,
+        714,
+        730
+      ],
+      "center": [
+        450,
+        700
+      ],
+      "size": [
+        527,
+        60
+      ],
+      "confidence": 0.514,
+      "id": 4
+    },
+    {
+      "type": "text",
+      "text": "Applied",
+      "bbox": [
+        983,
+        671,
+        1126,
+        722
+      ],
+      "center": [
+        1054,
+        696
+      ],
+      "size": [
+        143,
+        51
+      ],
+      "confidence": 0.999,
+      "id": 5
+    },
+    {
+      "type": "text",
+      "text": "Tip",
+      "bbox": [
+        571,
+        886,
+        645,
+        943
+      ],
+      "center": [
+        608,
+        914
+      ],
+      "size": [
+        74,
+        57
+      ],
+      "confidence": 1.0,
+      "id": 6
+    },
+    {
+      "type": "text",
+      "text": "Delivery Type",
+      "bbox": [
+        132,
+        889,
+        372,
+        941
+      ],
+      "center": [
+        252,
+        915
+      ],
+      "size": [
+        240,
+        52
+      ],
+      "confidence": 0.858,
+      "id": 7
+    },
+    {
+      "type": "text",
+      "text": "Instructions",
+      "bbox": [
+        865,
+        895,
+        1072,
+        935
+      ],
+      "center": [
+        968,
+        915
+      ],
+      "size": [
+        207,
+        40
+      ],
+      "confidence": 1.0,
+      "id": 8
+    },
+    {
+      "type": "text",
+      "text": "Standard",
+      "bbox": [
+        189,
+        1030,
+        371,
+        1070
+      ],
+      "center": [
+        280,
+        1050
+      ],
+      "size": [
+        182,
+        40
+      ],
+      "confidence": 0.998,
+      "id": 9
+    },
+    {
+      "type": "text",
+      "text": "Add address to check delivery time",
+      "bbox": [
+        188,
+        1077,
+        792,
+        1130
+      ],
+      "center": [
+        490,
+        1104
+      ],
+      "size": [
+        604,
+        53
+      ],
+      "confidence": 0.57,
+      "id": 10
+    },
+    {
+      "type": "text",
+      "text": "Eco Saver",
+      "bbox": [
+        189,
+        1234,
+        380,
+        1274
+      ],
+      "center": [
+        284,
+        1254
+      ],
+      "size": [
+        191,
+        40
+      ],
+      "confidence": 0.931,
+      "id": 11
+    },
+    {
+      "type": "text",
+      "text": "Add address to check delivery time",
+      "bbox": [
+        188,
+        1283,
+        793,
+        1333
+      ],
+      "center": [
+        490,
+        1308
+      ],
+      "size": [
+        605,
+        50
+      ],
+      "confidence": 0.741,
+      "id": 12
+    },
+    {
+      "type": "text",
+      "text": "Pay",
+      "bbox": [
+        233,
+        1476,
+        321,
+        1534
+      ],
+      "center": [
+        277,
+        1505
+      ],
+      "size": [
+        88,
+        58
+      ],
+      "confidence": 0.996,
+      "id": 13
+    },
+    {
+      "type": "text",
+      "text": "2253 ?183",
+      "bbox": [
+        319,
+        1480,
+        509,
+        1524
+      ],
+      "center": [
+        414,
+        1502
+      ],
+      "size": [
+        190,
+        44
+      ],
+      "confidence": 0.333,
+      "id": 14
+    },
+    {
+      "type": "text",
+      "text": "To",
+      "bbox": [
+        189,
+        1484,
+        238,
+        1524
+      ],
+      "center": [
+        214,
+        1504
+      ],
+      "size": [
+        49,
+        40
+      ],
+      "confidence": 1.0,
+      "id": 15
+    },
+    {
+      "type": "text",
+      "text": "=",
+      "bbox": [
+        112,
+        1489,
+        141,
+        1527
+      ],
+      "center": [
+        126,
+        1508
+      ],
+      "size": [
+        29,
+        38
+      ],
+      "confidence": 0.464,
+      "id": 16
+    },
+    {
+      "type": "text",
+      "text": "?70 saved on the totall",
+      "bbox": [
+        187,
+        1537,
+        585,
+        1575
+      ],
+      "center": [
+        386,
+        1556
+      ],
+      "size": [
+        398,
+        38
+      ],
+      "confidence": 0.809,
+      "id": 17
+    },
+    {
+      "type": "text",
+      "text": "FREE Delivery on your order!",
+      "bbox": [
+        104,
+        1631,
+        582,
+        1682
+      ],
+      "center": [
+        343,
+        1656
+      ],
+      "size": [
+        478,
+        51
+      ],
+      "confidence": 0.892,
+      "id": 18
+    },
+    {
+      "type": "text",
+      "text": "Cancellation policy:",
+      "bbox": [
+        67,
+        1803,
+        420,
+        1854
+      ],
+      "center": [
+        244,
+        1828
+      ],
+      "size": [
+        353,
+        51
+      ],
+      "confidence": 0.935,
+      "id": 19
+    },
+    {
+      "type": "text",
+      "text": "Please double-check your order and address details. Orders",
+      "bbox": [
+        68,
+        1858,
+        1097,
+        1906
+      ],
+      "center": [
+        582,
+        1882
+      ],
+      "size": [
+        1029,
+        48
+      ],
+      "confidence": 0.594,
+      "id": 20
+    },
+    {
+      "type": "text",
+      "text": "are non-refundable once placed:",
+      "bbox": [
+        69,
+        1912,
+        640,
+        1956
+      ],
+      "center": [
+        354,
+        1934
+      ],
+      "size": [
+        571,
+        44
+      ],
+      "confidence": 0.74,
+      "id": 21
+    },
+    {
+      "type": "text",
+      "text": "Almost There",
+      "bbox": [
+        46,
+        2239,
+        369,
+        2296
+      ],
+      "center": [
+        208,
+        2268
+      ],
+      "size": [
+        323,
+        57
+      ],
+      "confidence": 0.808,
+      "id": 22
+    },
+    {
+      "type": "text",
+      "text": "Login/ Create Account quickly to place order",
+      "bbox": [
+        41,
+        2317,
+        813,
+        2374
+      ],
+      "center": [
+        427,
+        2346
+      ],
+      "size": [
+        772,
+        57
+      ],
+      "confidence": 0.904,
+      "id": 23
+    },
+    {
+      "type": "text",
+      "text": "Proceed with Phone Number",
+      "bbox": [
+        267,
+        2492,
+        958,
+        2554
+      ],
+      "center": [
+        612,
+        2523
+      ],
+      "size": [
+        691,
+        62
+      ],
+      "confidence": 0.89,
+      "id": 24
+    }
+  ]
+}

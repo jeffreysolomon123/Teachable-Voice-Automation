@@ -1,0 +1,667 @@
+{
+  "image": "C:\\Users\\fixadmin\\AppData\\Local\\Temp\\claude\\C--Jeffrey-Projects-teachable-agentic-ai-show-taps-screen-recorder-script\\1a166c47-f9a3-4f2f-b988-999c54536586\\scratchpad\\gf\\flow_frames\\step_001_before.png",
+  "width": 1220,
+  "height": 2712,
+  "texts": [
+    {
+      "type": "text",
+      "text": "X,?C51%",
+      "bbox": [
+        830,
+        36,
+        1152,
+        88
+      ],
+      "center": [
+        991,
+        62
+      ],
+      "size": [
+        322,
+        52
+      ],
+      "confidence": 0.318,
+      "id": 0
+    },
+    {
+      "type": "text",
+      "text": "4.09",
+      "bbox": [
+        71,
+        39,
+        161,
+        83
+      ],
+      "center": [
+        116,
+        61
+      ],
+      "size": [
+        90,
+        44
+      ],
+      "confidence": 0.998,
+      "id": 1
+    },
+    {
+      "type": "text",
+      "text": "Play",
+      "bbox": [
+        527,
+        961,
+        624,
+        1021
+      ],
+      "center": [
+        576,
+        991
+      ],
+      "size": [
+        97,
+        60
+      ],
+      "confidence": 0.819,
+      "id": 2
+    },
+    {
+      "type": "text",
+      "text": "Search for \"Swig'",
+      "bbox": [
+        173,
+        963,
+        481,
+        1019
+      ],
+      "center": [
+        327,
+        991
+      ],
+      "size": [
+        308,
+        56
+      ],
+      "confidence": 0.993,
+      "id": 3
+    },
+    {
+      "type": "text",
+      "text": "in",
+      "bbox": [
+        492,
+        971,
+        534,
+        1011
+      ],
+      "center": [
+        513,
+        991
+      ],
+      "size": [
+        42,
+        40
+      ],
+      "confidence": 0.999,
+      "id": 4
+    },
+    {
+      "type": "text",
+      "text": "Store",
+      "bbox": [
+        619,
+        971,
+        725,
+        1011
+      ],
+      "center": [
+        672,
+        991
+      ],
+      "size": [
+        106,
+        40
+      ],
+      "confidence": 0.793,
+      "id": 5
+    },
+    {
+      "type": "text",
+      "text": "Local apps",
+      "bbox": [
+        61,
+        1085,
+        281,
+        1141
+      ],
+      "center": [
+        171,
+        1113
+      ],
+      "size": [
+        220,
+        56
+      ],
+      "confidence": 0.999,
+      "id": 6
+    },
+    {
+      "type": "text",
+      "text": "Swiggy",
+      "bbox": [
+        114,
+        1366,
+        245,
+        1417
+      ],
+      "center": [
+        180,
+        1392
+      ],
+      "size": [
+        131,
+        51
+      ],
+      "confidence": 1.0,
+      "id": 7
+    },
+    {
+      "type": "text",
+      "text": "Swig",
+      "bbox": [
+        224,
+        1540,
+        349,
+        1612
+      ],
+      "center": [
+        286,
+        1576
+      ],
+      "size": [
+        125,
+        72
+      ],
+      "confidence": 0.744,
+      "id": 8
+    },
+    {
+      "type": "text",
+      "text": "Swiggy",
+      "bbox": [
+        506,
+        1732,
+        705,
+        1820
+      ],
+      "center": [
+        606,
+        1776
+      ],
+      "size": [
+        199,
+        88
+      ],
+      "confidence": 1.0,
+      "id": 9
+    },
+    {
+      "type": "text",
+      "text": "Swig",
+      "bbox": [
+        216,
+        1739,
+        347,
+        1811
+      ],
+      "center": [
+        282,
+        1775
+      ],
+      "size": [
+        131,
+        72
+      ],
+      "confidence": 0.989,
+      "id": 10
+    },
+    {
+      "type": "text",
+      "text": "Swing",
+      "bbox": [
+        849,
+        1739,
+        1010,
+        1811
+      ],
+      "center": [
+        930,
+        1775
+      ],
+      "size": [
+        161,
+        72
+      ],
+      "confidence": 1.0,
+      "id": 11
+    },
+    {
+      "type": "text",
+      "text": "5",
+      "bbox": [
+        575,
+        1869,
+        596,
+        1899
+      ],
+      "center": [
+        586,
+        1884
+      ],
+      "size": [
+        21,
+        30
+      ],
+      "confidence": 1.0,
+      "id": 12
+    },
+    {
+      "type": "text",
+      "text": "2",
+      "bbox": [
+        210,
+        1871,
+        231,
+        1899
+      ],
+      "center": [
+        220,
+        1885
+      ],
+      "size": [
+        21,
+        28
+      ],
+      "confidence": 0.999,
+      "id": 13
+    },
+    {
+      "type": "text",
+      "text": "8",
+      "bbox": [
+        937,
+        1871,
+        956,
+        1897
+      ],
+      "center": [
+        946,
+        1884
+      ],
+      "size": [
+        19,
+        26
+      ],
+      "confidence": 1.0,
+      "id": 14
+    },
+    {
+      "type": "text",
+      "text": "t",
+      "bbox": [
+        530,
+        1897,
+        568,
+        1956
+      ],
+      "center": [
+        549,
+        1926
+      ],
+      "size": [
+        38,
+        59
+      ],
+      "confidence": 1.0,
+      "id": 15
+    },
+    {
+      "type": "text",
+      "text": "U",
+      "bbox": [
+        767,
+        1898,
+        815,
+        1959
+      ],
+      "center": [
+        791,
+        1928
+      ],
+      "size": [
+        48,
+        61
+      ],
+      "confidence": 0.986,
+      "id": 16
+    },
+    {
+      "type": "text",
+      "text": "e",
+      "bbox": [
+        279,
+        1900,
+        334,
+        1959
+      ],
+      "center": [
+        306,
+        1930
+      ],
+      "size": [
+        55,
+        59
+      ],
+      "confidence": 0.969,
+      "id": 17
+    },
+    {
+      "type": "text",
+      "text": "q",
+      "bbox": [
+        42,
+        1902,
+        90,
+        1965
+      ],
+      "center": [
+        66,
+        1934
+      ],
+      "size": [
+        48,
+        63
+      ],
+      "confidence": 0.983,
+      "id": 18
+    },
+    {
+      "type": "text",
+      "text": "W",
+      "bbox": [
+        157,
+        1902,
+        222,
+        1959
+      ],
+      "center": [
+        190,
+        1930
+      ],
+      "size": [
+        65,
+        57
+      ],
+      "confidence": 0.68,
+      "id": 19
+    },
+    {
+      "type": "text",
+      "text": "p",
+      "bbox": [
+        1125,
+        1902,
+        1179,
+        1974
+      ],
+      "center": [
+        1152,
+        1938
+      ],
+      "size": [
+        54,
+        72
+      ],
+      "confidence": 1.0,
+      "id": 20
+    },
+    {
+      "type": "text",
+      "text": "y",
+      "bbox": [
+        642,
+        1907,
+        690,
+        1972
+      ],
+      "center": [
+        666,
+        1940
+      ],
+      "size": [
+        48,
+        65
+      ],
+      "confidence": 0.989,
+      "id": 21
+    },
+    {
+      "type": "text",
+      "text": "d",
+      "bbox": [
+        341,
+        2061,
+        395,
+        2135
+      ],
+      "center": [
+        368,
+        2098
+      ],
+      "size": [
+        54,
+        74
+      ],
+      "confidence": 1.0,
+      "id": 22
+    },
+    {
+      "type": "text",
+      "text": "h",
+      "bbox": [
+        703,
+        2063,
+        754,
+        2133
+      ],
+      "center": [
+        728,
+        2098
+      ],
+      "size": [
+        51,
+        70
+      ],
+      "confidence": 1.0,
+      "id": 23
+    },
+    {
+      "type": "text",
+      "text": "k",
+      "bbox": [
+        943,
+        2063,
+        995,
+        2133
+      ],
+      "center": [
+        969,
+        2098
+      ],
+      "size": [
+        52,
+        70
+      ],
+      "confidence": 0.999,
+      "id": 24
+    },
+    {
+      "type": "text",
+      "text": "f",
+      "bbox": [
+        469,
+        2064,
+        507,
+        2130
+      ],
+      "center": [
+        488,
+        2097
+      ],
+      "size": [
+        38,
+        66
+      ],
+      "confidence": 1.0,
+      "id": 25
+    },
+    {
+      "type": "text",
+      "text": "g",
+      "bbox": [
+        580,
+        2076,
+        635,
+        2152
+      ],
+      "center": [
+        608,
+        2114
+      ],
+      "size": [
+        55,
+        76
+      ],
+      "confidence": 0.789,
+      "id": 26
+    },
+    {
+      "type": "text",
+      "text": "S",
+      "bbox": [
+        222,
+        2078,
+        270,
+        2135
+      ],
+      "center": [
+        246,
+        2106
+      ],
+      "size": [
+        48,
+        57
+      ],
+      "confidence": 0.979,
+      "id": 27
+    },
+    {
+      "type": "text",
+      "text": "a",
+      "bbox": [
+        107,
+        2083,
+        149,
+        2132
+      ],
+      "center": [
+        128,
+        2108
+      ],
+      "size": [
+        42,
+        49
+      ],
+      "confidence": 1.0,
+      "id": 28
+    },
+    {
+      "type": "text",
+      "text": "m",
+      "bbox": [
+        937,
+        2251,
+        1007,
+        2314
+      ],
+      "center": [
+        972,
+        2282
+      ],
+      "size": [
+        70,
+        63
+      ],
+      "confidence": 1.0,
+      "id": 29
+    },
+    {
+      "type": "text",
+      "text": "C",
+      "bbox": [
+        462,
+        2254,
+        512,
+        2309
+      ],
+      "center": [
+        487,
+        2282
+      ],
+      "size": [
+        50,
+        55
+      ],
+      "confidence": 0.991,
+      "id": 30
+    },
+    {
+      "type": "text",
+      "text": "n",
+      "bbox": [
+        824,
+        2254,
+        872,
+        2309
+      ],
+      "center": [
+        848,
+        2282
+      ],
+      "size": [
+        48,
+        55
+      ],
+      "confidence": 1.0,
+      "id": 31
+    },
+    {
+      "type": "text",
+      "text": "2123",
+      "bbox": [
+        38,
+        2430,
+        158,
+        2487
+      ],
+      "center": [
+        98,
+        2458
+      ],
+      "size": [
+        120,
+        57
+      ],
+      "confidence": 0.783,
+      "id": 32
+    }
+  ]
+}

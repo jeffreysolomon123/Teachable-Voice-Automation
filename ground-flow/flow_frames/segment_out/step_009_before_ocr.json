@@ -1,0 +1,527 @@
+{
+  "image": "C:\\Users\\fixadmin\\AppData\\Local\\Temp\\claude\\C--Jeffrey-Projects-teachable-agentic-ai-show-taps-screen-recorder-script\\1a166c47-f9a3-4f2f-b988-999c54536586\\scratchpad\\gf\\flow_frames\\step_009_before.png",
+  "width": 1220,
+  "height": 2712,
+  "texts": [
+    {
+      "type": "text",
+      "text": "4:10",
+      "bbox": [
+        71,
+        35,
+        164,
+        79
+      ],
+      "center": [
+        118,
+        57
+      ],
+      "size": [
+        93,
+        44
+      ],
+      "confidence": 0.42,
+      "id": 0
+    },
+    {
+      "type": "text",
+      "text": "Swiggy",
+      "bbox": [
+        164,
+        939,
+        319,
+        1003
+      ],
+      "center": [
+        242,
+        971
+      ],
+      "size": [
+        155,
+        64
+      ],
+      "confidence": 1.0,
+      "id": 1
+    },
+    {
+      "type": "text",
+      "text": "TapScreenRec:",
+      "bbox": [
+        750,
+        943,
+        1042,
+        997
+      ],
+      "center": [
+        896,
+        970
+      ],
+      "size": [
+        292,
+        54
+      ],
+      "confidence": 0.838,
+      "id": 2
+    },
+    {
+      "type": "text",
+      "text": "Hotel Saravana Bhavan",
+      "bbox": [
+        119,
+        1100,
+        316,
+        1121
+      ],
+      "center": [
+        218,
+        1110
+      ],
+      "size": [
+        197,
+        21
+      ],
+      "confidence": 0.999,
+      "id": 3
+    },
+    {
+      "type": "text",
+      "text": "770 Saved with",
+      "bbox": [
+        117,
+        1149,
+        236,
+        1168
+      ],
+      "center": [
+        176,
+        1158
+      ],
+      "size": [
+        119,
+        19
+      ],
+      "confidence": 0.541,
+      "id": 4
+    },
+    {
+      "type": "text",
+      "text": "Sto19",
+      "bbox": [
+        255,
+        1151,
+        295,
+        1166
+      ],
+      "center": [
+        275,
+        1158
+      ],
+      "size": [
+        40,
+        15
+      ],
+      "confidence": 0.36,
+      "id": 5
+    },
+    {
+      "type": "text",
+      "text": "Applied",
+      "bbox": [
+        478,
+        1239,
+        544,
+        1264
+      ],
+      "center": [
+        511,
+        1252
+      ],
+      "size": [
+        66,
+        25
+      ],
+      "confidence": 0.819,
+      "id": 6
+    },
+    {
+      "type": "text",
+      "text": "<20 extra off above coupons",
+      "bbox": [
+        135,
+        1241,
+        370,
+        1266
+      ],
+      "center": [
+        252,
+        1254
+      ],
+      "size": [
+        235,
+        25
+      ],
+      "confidence": 0.728,
+      "id": 7
+    },
+    {
+      "type": "text",
+      "text": "Applied",
+      "bbox": [
+        478,
+        1309,
+        544,
+        1334
+      ],
+      "center": [
+        511,
+        1322
+      ],
+      "size": [
+        66,
+        25
+      ],
+      "confidence": 0.705,
+      "id": 8
+    },
+    {
+      "type": "text",
+      "text": "{36 saved with free delivery",
+      "bbox": [
+        133,
+        1310,
+        364,
+        1337
+      ],
+      "center": [
+        248,
+        1324
+      ],
+      "size": [
+        231,
+        27
+      ],
+      "confidence": 0.667,
+      "id": 9
+    },
+    {
+      "type": "text",
+      "text": "Recording",
+      "bbox": [
+        816,
+        1395,
+        990,
+        1449
+      ],
+      "center": [
+        903,
+        1422
+      ],
+      "size": [
+        174,
+        54
+      ],
+      "confidence": 0.997,
+      "id": 10
+    },
+    {
+      "type": "text",
+      "text": "Delivery Type",
+      "bbox": [
+        109,
+        1404,
+        215,
+        1430
+      ],
+      "center": [
+        162,
+        1417
+      ],
+      "size": [
+        106,
+        26
+      ],
+      "confidence": 1.0,
+      "id": 11
+    },
+    {
+      "type": "text",
+      "text": "Tip",
+      "bbox": [
+        306,
+        1407,
+        333,
+        1426
+      ],
+      "center": [
+        320,
+        1416
+      ],
+      "size": [
+        27,
+        19
+      ],
+      "confidence": 0.999,
+      "id": 12
+    },
+    {
+      "type": "text",
+      "text": "Instructions",
+      "bbox": [
+        431,
+        1407,
+        520,
+        1426
+      ],
+      "center": [
+        476,
+        1416
+      ],
+      "size": [
+        89,
+        19
+      ],
+      "confidence": 1.0,
+      "id": 13
+    },
+    {
+      "type": "text",
+      "text": "00:02",
+      "bbox": [
+        814,
+        1450,
+        992,
+        1515
+      ],
+      "center": [
+        903,
+        1482
+      ],
+      "size": [
+        178,
+        65
+      ],
+      "confidence": 0.437,
+      "id": 14
+    },
+    {
+      "type": "text",
+      "text": "Login",
+      "bbox": [
+        72,
+        1462,
+        137,
+        1491
+      ],
+      "center": [
+        104,
+        1476
+      ],
+      "size": [
+        65,
+        29
+      ],
+      "confidence": 1.0,
+      "id": 15
+    },
+    {
+      "type": "text",
+      "text": "Enter your phone number to proceed",
+      "bbox": [
+        75,
+        1492,
+        342,
+        1511
+      ],
+      "center": [
+        208,
+        1502
+      ],
+      "size": [
+        267,
+        19
+      ],
+      "confidence": 0.811,
+      "id": 16
+    },
+    {
+      "type": "text",
+      "text": "+91",
+      "bbox": [
+        104,
+        1560,
+        140,
+        1581
+      ],
+      "center": [
+        122,
+        1570
+      ],
+      "size": [
+        36,
+        21
+      ],
+      "confidence": 1.0,
+      "id": 17
+    },
+    {
+      "type": "text",
+      "text": "Mobile Number",
+      "bbox": [
+        189,
+        1560,
+        329,
+        1581
+      ],
+      "center": [
+        259,
+        1570
+      ],
+      "size": [
+        140,
+        21
+      ],
+      "confidence": 0.943,
+      "id": 18
+    },
+    {
+      "type": "text",
+      "text": "Stop",
+      "bbox": [
+        859,
+        1616,
+        945,
+        1664
+      ],
+      "center": [
+        902,
+        1640
+      ],
+      "size": [
+        86,
+        48
+      ],
+      "confidence": 1.0,
+      "id": 19
+    },
+    {
+      "type": "text",
+      "text": "CONTINUE",
+      "bbox": [
+        270,
+        1645,
+        369,
+        1666
+      ],
+      "center": [
+        320,
+        1656
+      ],
+      "size": [
+        99,
+        21
+      ],
+      "confidence": 0.999,
+      "id": 20
+    },
+    {
+      "type": "text",
+      "text": "By clicking;",
+      "bbox": [
+        72,
+        1706,
+        170,
+        1733
+      ],
+      "center": [
+        121,
+        1720
+      ],
+      "size": [
+        98,
+        27
+      ],
+      "confidence": 0.769,
+      "id": 21
+    },
+    {
+      "type": "text",
+      "text": "accept the Privacy policy, Swiggy terms of use",
+      "bbox": [
+        175,
+        1707,
+        565,
+        1736
+      ],
+      "center": [
+        370,
+        1722
+      ],
+      "size": [
+        390,
+        29
+      ],
+      "confidence": 0.761,
+      "id": 22
+    },
+    {
+      "type": "text",
+      "text": "and Instamart terms of use",
+      "bbox": [
+        208,
+        1740,
+        433,
+        1759
+      ],
+      "center": [
+        320,
+        1750
+      ],
+      "size": [
+        225,
+        19
+      ],
+      "confidence": 0.928,
+      "id": 23
+    },
+    {
+      "type": "text",
+      "text": "Tap logger: ON",
+      "bbox": [
+        837,
+        1767,
+        970,
+        1794
+      ],
+      "center": [
+        904,
+        1780
+      ],
+      "size": [
+        133,
+        27
+      ],
+      "confidence": 0.772,
+      "id": 24
+    },
+    {
+      "type": "text",
+      "text": "Enable Show taps in Developer options before recording",
+      "bbox": [
+        665,
+        1822,
+        1137,
+        1852
+      ],
+      "center": [
+        901,
+        1837
+      ],
+      "size": [
+        472,
+        30
+      ],
+      "confidence": 0.676,
+      "id": 25
+    }
+  ]
+}

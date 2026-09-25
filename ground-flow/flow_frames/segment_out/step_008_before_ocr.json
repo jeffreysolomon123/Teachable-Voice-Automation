@@ -1,0 +1,607 @@
+{
+  "image": "C:\\Users\\fixadmin\\AppData\\Local\\Temp\\claude\\C--Jeffrey-Projects-teachable-agentic-ai-show-taps-screen-recorder-script\\1a166c47-f9a3-4f2f-b988-999c54536586\\scratchpad\\gf\\flow_frames\\step_008_before.png",
+  "width": 1220,
+  "height": 2712,
+  "texts": [
+    {
+      "type": "text",
+      "text": "4:10",
+      "bbox": [
+        71,
+        35,
+        164,
+        79
+      ],
+      "center": [
+        118,
+        57
+      ],
+      "size": [
+        93,
+        44
+      ],
+      "confidence": 0.822,
+      "id": 0
+    },
+    {
+      "type": "text",
+      "text": "Hotel Saravana Bhavan",
+      "bbox": [
+        150,
+        184,
+        604,
+        236
+      ],
+      "center": [
+        377,
+        210
+      ],
+      "size": [
+        454,
+        52
+      ],
+      "confidence": 0.935,
+      "id": 1
+    },
+    {
+      "type": "text",
+      "text": "<70 Saved with Sostor@",
+      "bbox": [
+        141,
+        295,
+        553,
+        337
+      ],
+      "center": [
+        347,
+        316
+      ],
+      "size": [
+        412,
+        42
+      ],
+      "confidence": 0.314,
+      "id": 2
+    },
+    {
+      "type": "text",
+      "text": "Applied",
+      "bbox": [
+        983,
+        512,
+        1126,
+        563
+      ],
+      "center": [
+        1054,
+        538
+      ],
+      "size": [
+        143,
+        51
+      ],
+      "confidence": 0.754,
+      "id": 3
+    },
+    {
+      "type": "text",
+      "text": "<20 extra off above coupons",
+      "bbox": [
+        188,
+        515,
+        728,
+        569
+      ],
+      "center": [
+        458,
+        542
+      ],
+      "size": [
+        540,
+        54
+      ],
+      "confidence": 0.581,
+      "id": 4
+    },
+    {
+      "type": "text",
+      "text": "736 saved with free delivery",
+      "bbox": [
+        187,
+        670,
+        714,
+        730
+      ],
+      "center": [
+        450,
+        700
+      ],
+      "size": [
+        527,
+        60
+      ],
+      "confidence": 0.646,
+      "id": 5
+    },
+    {
+      "type": "text",
+      "text": "Applied",
+      "bbox": [
+        983,
+        671,
+        1126,
+        722
+      ],
+      "center": [
+        1054,
+        696
+      ],
+      "size": [
+        143,
+        51
+      ],
+      "confidence": 0.716,
+      "id": 6
+    },
+    {
+      "type": "text",
+      "text": "Login",
+      "bbox": [
+        41,
+        829,
+        191,
+        894
+      ],
+      "center": [
+        116,
+        862
+      ],
+      "size": [
+        150,
+        65
+      ],
+      "confidence": 1.0,
+      "id": 7
+    },
+    {
+      "type": "text",
+      "text": "phone number to proceed",
+      "bbox": [
+        216,
+        892,
+        666,
+        944
+      ],
+      "center": [
+        441,
+        918
+      ],
+      "size": [
+        450,
+        52
+      ],
+      "confidence": 0.865,
+      "id": 8
+    },
+    {
+      "type": "text",
+      "text": "Enter",
+      "bbox": [
+        45,
+        899,
+        138,
+        937
+      ],
+      "center": [
+        92,
+        918
+      ],
+      "size": [
+        93,
+        38
+      ],
+      "confidence": 1.0,
+      "id": 9
+    },
+    {
+      "type": "text",
+      "text": "your",
+      "bbox": [
+        135,
+        899,
+        219,
+        941
+      ],
+      "center": [
+        177,
+        920
+      ],
+      "size": [
+        84,
+        42
+      ],
+      "confidence": 1.0,
+      "id": 10
+    },
+    {
+      "type": "text",
+      "text": "Mobile Number",
+      "bbox": [
+        315,
+        1055,
+        635,
+        1103
+      ],
+      "center": [
+        475,
+        1079
+      ],
+      "size": [
+        320,
+        48
+      ],
+      "confidence": 1.0,
+      "id": 11
+    },
+    {
+      "type": "text",
+      "text": "+91",
+      "bbox": [
+        122,
+        1060,
+        197,
+        1104
+      ],
+      "center": [
+        160,
+        1082
+      ],
+      "size": [
+        75,
+        44
+      ],
+      "confidence": 1.0,
+      "id": 12
+    },
+    {
+      "type": "text",
+      "text": "CONTINUE",
+      "bbox": [
+        497,
+        1253,
+        725,
+        1297
+      ],
+      "center": [
+        611,
+        1275
+      ],
+      "size": [
+        228,
+        44
+      ],
+      "confidence": 0.999,
+      "id": 13
+    },
+    {
+      "type": "text",
+      "text": "By clicking,",
+      "bbox": [
+        43,
+        1393,
+        265,
+        1456
+      ],
+      "center": [
+        154,
+        1424
+      ],
+      "size": [
+        222,
+        63
+      ],
+      "confidence": 0.599,
+      "id": 14
+    },
+    {
+      "type": "text",
+      "text": "accept the Privacy policy; Swiggy terms ofuse",
+      "bbox": [
+        281,
+        1393,
+        1176,
+        1460
+      ],
+      "center": [
+        728,
+        1426
+      ],
+      "size": [
+        895,
+        67
+      ],
+      "confidence": 0.686,
+      "id": 15
+    },
+    {
+      "type": "text",
+      "text": "and Instamart terms of use",
+      "bbox": [
+        354,
+        1470,
+        874,
+        1518
+      ],
+      "center": [
+        614,
+        1494
+      ],
+      "size": [
+        520,
+        48
+      ],
+      "confidence": 0.639,
+      "id": 16
+    },
+    {
+      "type": "text",
+      "text": "phone number",
+      "bbox": [
+        360,
+        1768,
+        836,
+        1868
+      ],
+      "center": [
+        598,
+        1818
+      ],
+      "size": [
+        476,
+        100
+      ],
+      "confidence": 0.698,
+      "id": 17
+    },
+    {
+      "type": "text",
+      "text": "Choose a",
+      "bbox": [
+        67,
+        1781,
+        364,
+        1854
+      ],
+      "center": [
+        216,
+        1818
+      ],
+      "size": [
+        297,
+        73
+      ],
+      "confidence": 0.992,
+      "id": 18
+    },
+    {
+      "type": "text",
+      "text": "phone number that's assigned to",
+      "bbox": [
+        417,
+        1889,
+        1083,
+        1958
+      ],
+      "center": [
+        750,
+        1924
+      ],
+      "size": [
+        666,
+        69
+      ],
+      "confidence": 0.993,
+      "id": 19
+    },
+    {
+      "type": "text",
+      "text": "You can choose a",
+      "bbox": [
+        68,
+        1897,
+        421,
+        1950
+      ],
+      "center": [
+        244,
+        1924
+      ],
+      "size": [
+        353,
+        53
+      ],
+      "confidence": 0.987,
+      "id": 20
+    },
+    {
+      "type": "text",
+      "text": "your phone, and Google will share it only with this",
+      "bbox": [
+        61,
+        1959,
+        1060,
+        2021
+      ],
+      "center": [
+        560,
+        1990
+      ],
+      "size": [
+        999,
+        62
+      ],
+      "confidence": 0.943,
+      "id": 21
+    },
+    {
+      "type": "text",
+      "text": "app.",
+      "bbox": [
+        65,
+        2036,
+        162,
+        2084
+      ],
+      "center": [
+        114,
+        2060
+      ],
+      "size": [
+        97,
+        48
+      ],
+      "confidence": 0.892,
+      "id": 22
+    },
+    {
+      "type": "text",
+      "text": "phone number you share with",
+      "bbox": [
+        523,
+        2105,
+        1125,
+        2174
+      ],
+      "center": [
+        824,
+        2140
+      ],
+      "size": [
+        602,
+        69
+      ],
+      "confidence": 0.706,
+      "id": 23
+    },
+    {
+      "type": "text",
+      "text": "Google won't store the",
+      "bbox": [
+        65,
+        2114,
+        527,
+        2171
+      ],
+      "center": [
+        296,
+        2142
+      ],
+      "size": [
+        462,
+        57
+      ],
+      "confidence": 0.764,
+      "id": 24
+    },
+    {
+      "type": "text",
+      "text": "this app in your Google account",
+      "bbox": [
+        63,
+        2178,
+        710,
+        2235
+      ],
+      "center": [
+        386,
+        2206
+      ],
+      "size": [
+        647,
+        57
+      ],
+      "confidence": 0.974,
+      "id": 25
+    },
+    {
+      "type": "text",
+      "text": "093849 77055",
+      "bbox": [
+        239,
+        2326,
+        531,
+        2374
+      ],
+      "center": [
+        385,
+        2350
+      ],
+      "size": [
+        292,
+        48
+      ],
+      "confidence": 0.945,
+      "id": 26
+    },
+    {
+      "type": "text",
+      "text": "update your phone number sharing",
+      "bbox": [
+        226,
+        2460,
+        940,
+        2533
+      ],
+      "center": [
+        583,
+        2496
+      ],
+      "size": [
+        714,
+        73
+      ],
+      "confidence": 0.962,
+      "id": 27
+    },
+    {
+      "type": "text",
+      "text": "You can",
+      "bbox": [
+        66,
+        2474,
+        231,
+        2522
+      ],
+      "center": [
+        148,
+        2498
+      ],
+      "size": [
+        165,
+        48
+      ],
+      "confidence": 0.955,
+      "id": 28
+    },
+    {
+      "type": "text",
+      "text": "preference in your device settings:",
+      "bbox": [
+        63,
+        2528,
+        756,
+        2594
+      ],
+      "center": [
+        410,
+        2561
+      ],
+      "size": [
+        693,
+        66
+      ],
+      "confidence": 0.645,
+      "id": 29
+    }
+  ]
+}

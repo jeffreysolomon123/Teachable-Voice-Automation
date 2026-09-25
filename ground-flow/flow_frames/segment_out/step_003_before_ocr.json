@@ -1,0 +1,1007 @@
+{
+  "image": "C:\\Users\\fixadmin\\AppData\\Local\\Temp\\claude\\C--Jeffrey-Projects-teachable-agentic-ai-show-taps-screen-recorder-script\\1a166c47-f9a3-4f2f-b988-999c54536586\\scratchpad\\gf\\flow_frames\\step_003_before.png",
+  "width": 1220,
+  "height": 2712,
+  "texts": [
+    {
+      "type": "text",
+      "text": "4.09",
+      "bbox": [
+        71,
+        35,
+        161,
+        79
+      ],
+      "center": [
+        116,
+        57
+      ],
+      "size": [
+        90,
+        44
+      ],
+      "confidence": 0.995,
+      "id": 0
+    },
+    {
+      "type": "text",
+      "text": "Showing results in Food",
+      "bbox": [
+        368,
+        148,
+        852,
+        215
+      ],
+      "center": [
+        610,
+        182
+      ],
+      "size": [
+        484,
+        67
+      ],
+      "confidence": 0.872,
+      "id": 1
+    },
+    {
+      "type": "text",
+      "text": "X",
+      "bbox": [
+        950,
+        302,
+        1019,
+        363
+      ],
+      "center": [
+        984,
+        332
+      ],
+      "size": [
+        69,
+        61
+      ],
+      "confidence": 0.983,
+      "id": 2
+    },
+    {
+      "type": "text",
+      "text": "Dosa",
+      "bbox": [
+        93,
+        307,
+        213,
+        355
+      ],
+      "center": [
+        153,
+        331
+      ],
+      "size": [
+        120,
+        48
+      ],
+      "confidence": 1.0,
+      "id": 3
+    },
+    {
+      "type": "text",
+      "text": "Dishes",
+      "bbox": [
+        351,
+        472,
+        499,
+        525
+      ],
+      "center": [
+        425,
+        498
+      ],
+      "size": [
+        148,
+        53
+      ],
+      "confidence": 1.0,
+      "id": 4
+    },
+    {
+      "type": "text",
+      "text": "Restaurants",
+      "bbox": [
+        44,
+        474,
+        311,
+        529
+      ],
+      "center": [
+        178,
+        502
+      ],
+      "size": [
+        267,
+        55
+      ],
+      "confidence": 0.909,
+      "id": 5
+    },
+    {
+      "type": "text",
+      "text": "Stor",
+      "bbox": [
+        453,
+        614,
+        586,
+        667
+      ],
+      "center": [
+        520,
+        640
+      ],
+      "size": [
+        133,
+        53
+      ],
+      "confidence": 0.928,
+      "id": 6
+    },
+    {
+      "type": "text",
+      "text": "by",
+      "bbox": [
+        158,
+        615,
+        231,
+        678
+      ],
+      "center": [
+        194,
+        646
+      ],
+      "size": [
+        73,
+        63
+      ],
+      "confidence": 0.994,
+      "id": 7
+    },
+    {
+      "type": "text",
+      "text": "Veg",
+      "bbox": [
+        1135,
+        615,
+        1220,
+        678
+      ],
+      "center": [
+        1178,
+        646
+      ],
+      "size": [
+        85,
+        63
+      ],
+      "confidence": 1.0,
+      "id": 8
+    },
+    {
+      "type": "text",
+      "text": "Bolt",
+      "bbox": [
+        700,
+        619,
+        782,
+        661
+      ],
+      "center": [
+        741,
+        640
+      ],
+      "size": [
+        82,
+        42
+      ],
+      "confidence": 1.0,
+      "id": 9
+    },
+    {
+      "type": "text",
+      "text": "Sort",
+      "bbox": [
+        79,
+        622,
+        168,
+        666
+      ],
+      "center": [
+        124,
+        644
+      ],
+      "size": [
+        89,
+        44
+      ],
+      "confidence": 0.584,
+      "id": 10
+    },
+    {
+      "type": "text",
+      "text": "15 mins",
+      "bbox": [
+        816,
+        622,
+        962,
+        666
+      ],
+      "center": [
+        889,
+        644
+      ],
+      "size": [
+        146,
+        44
+      ],
+      "confidence": 0.915,
+      "id": 11
+    },
+    {
+      "type": "text",
+      "text": "Pure",
+      "bbox": [
+        1052,
+        624,
+        1142,
+        666
+      ],
+      "center": [
+        1097,
+        645
+      ],
+      "size": [
+        90,
+        42
+      ],
+      "confidence": 0.998,
+      "id": 12
+    },
+    {
+      "type": "text",
+      "text": "+",
+      "bbox": [
+        1114,
+        739,
+        1162,
+        787
+      ],
+      "center": [
+        1138,
+        763
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "confidence": 0.9,
+      "id": 13
+    },
+    {
+      "type": "text",
+      "text": "Masala",
+      "bbox": [
+        270,
+        740,
+        416,
+        784
+      ],
+      "center": [
+        343,
+        762
+      ],
+      "size": [
+        146,
+        44
+      ],
+      "confidence": 1.0,
+      "id": 14
+    },
+    {
+      "type": "text",
+      "text": "Ghee",
+      "bbox": [
+        698,
+        740,
+        810,
+        784
+      ],
+      "center": [
+        754,
+        762
+      ],
+      "size": [
+        112,
+        44
+      ],
+      "confidence": 0.999,
+      "id": 15
+    },
+    {
+      "type": "text",
+      "text": "Onion",
+      "bbox": [
+        899,
+        740,
+        1020,
+        784
+      ],
+      "center": [
+        960,
+        762
+      ],
+      "size": [
+        121,
+        44
+      ],
+      "confidence": 1.0,
+      "id": 16
+    },
+    {
+      "type": "text",
+      "text": "Mc",
+      "bbox": [
+        1175,
+        740,
+        1220,
+        784
+      ],
+      "center": [
+        1198,
+        762
+      ],
+      "size": [
+        45,
+        44
+      ],
+      "confidence": 0.781,
+      "id": 17
+    },
+    {
+      "type": "text",
+      "text": "Plain",
+      "bbox": [
+        79,
+        742,
+        180,
+        784
+      ],
+      "center": [
+        130,
+        763
+      ],
+      "size": [
+        101,
+        42
+      ],
+      "confidence": 1.0,
+      "id": 18
+    },
+    {
+      "type": "text",
+      "text": "Rava",
+      "bbox": [
+        505,
+        744,
+        608,
+        784
+      ],
+      "center": [
+        556,
+        764
+      ],
+      "size": [
+        103,
+        40
+      ],
+      "confidence": 1.0,
+      "id": 19
+    },
+    {
+      "type": "text",
+      "text": "AD",
+      "bbox": [
+        853,
+        896,
+        900,
+        927
+      ],
+      "center": [
+        876,
+        912
+      ],
+      "size": [
+        47,
+        31
+      ],
+      "confidence": 0.997,
+      "id": 20
+    },
+    {
+      "type": "text",
+      "text": "Items @69",
+      "bbox": [
+        66,
+        901,
+        250,
+        943
+      ],
+      "center": [
+        158,
+        922
+      ],
+      "size": [
+        184,
+        42
+      ],
+      "confidence": 0.992,
+      "id": 21
+    },
+    {
+      "type": "text",
+      "text": "GET 50% OF",
+      "bbox": [
+        1011,
+        901,
+        1220,
+        943
+      ],
+      "center": [
+        1116,
+        922
+      ],
+      "size": [
+        209,
+        42
+      ],
+      "confidence": 0.767,
+      "id": 22
+    },
+    {
+      "type": "text",
+      "text": "Millet E",
+      "bbox": [
+        1024,
+        1312,
+        1220,
+        1375
+      ],
+      "center": [
+        1122,
+        1344
+      ],
+      "size": [
+        196,
+        63
+      ],
+      "confidence": 0.959,
+      "id": 23
+    },
+    {
+      "type": "text",
+      "text": "Hotel Saravana Bhavan",
+      "bbox": [
+        79,
+        1314,
+        727,
+        1382
+      ],
+      "center": [
+        403,
+        1348
+      ],
+      "size": [
+        648,
+        68
+      ],
+      "confidence": 0.87,
+      "id": 24
+    },
+    {
+      "type": "text",
+      "text": "44",
+      "bbox": [
+        1062,
+        1397,
+        1132,
+        1439
+      ],
+      "center": [
+        1097,
+        1418
+      ],
+      "size": [
+        70,
+        42
+      ],
+      "confidence": 0.974,
+      "id": 25
+    },
+    {
+      "type": "text",
+      "text": "Veg",
+      "bbox": [
+        653,
+        1398,
+        728,
+        1445
+      ],
+      "center": [
+        690,
+        1422
+      ],
+      "size": [
+        75,
+        47
+      ],
+      "confidence": 0.674,
+      "id": 26
+    },
+    {
+      "type": "text",
+      "text": "4.0",
+      "bbox": [
+        122,
+        1399,
+        191,
+        1439
+      ],
+      "center": [
+        156,
+        1419
+      ],
+      "size": [
+        69,
+        40
+      ],
+      "confidence": 0.984,
+      "id": 27
+    },
+    {
+      "type": "text",
+      "text": "25-30 mins",
+      "bbox": [
+        208,
+        1399,
+        411,
+        1439
+      ],
+      "center": [
+        310,
+        1419
+      ],
+      "size": [
+        203,
+        40
+      ],
+      "confidence": 0.974,
+      "id": 28
+    },
+    {
+      "type": "text",
+      "text": "30-",
+      "bbox": [
+        1151,
+        1399,
+        1220,
+        1439
+      ],
+      "center": [
+        1186,
+        1419
+      ],
+      "size": [
+        69,
+        40
+      ],
+      "confidence": 0.997,
+      "id": 29
+    },
+    {
+      "type": "text",
+      "text": "Best In Pure",
+      "bbox": [
+        484,
+        1401,
+        661,
+        1439
+      ],
+      "center": [
+        572,
+        1420
+      ],
+      "size": [
+        177,
+        38
+      ],
+      "confidence": 0.991,
+      "id": 30
+    },
+    {
+      "type": "text",
+      "text": "Veg",
+      "bbox": [
+        622,
+        1700,
+        710,
+        1758
+      ],
+      "center": [
+        666,
+        1729
+      ],
+      "size": [
+        88,
+        58
+      ],
+      "confidence": 1.0,
+      "id": 31
+    },
+    {
+      "type": "text",
+      "text": "Pure",
+      "bbox": [
+        539,
+        1706,
+        634,
+        1748
+      ],
+      "center": [
+        586,
+        1727
+      ],
+      "size": [
+        95,
+        42
+      ],
+      "confidence": 1.0,
+      "id": 32
+    },
+    {
+      "type": "text",
+      "text": "Tiffin Shastra",
+      "bbox": [
+        498,
+        1773,
+        826,
+        1828
+      ],
+      "center": [
+        662,
+        1800
+      ],
+      "size": [
+        328,
+        55
+      ],
+      "confidence": 0.741,
+      "id": 33
+    },
+    {
+      "type": "text",
+      "text": "4.3 (2.4K+)",
+      "bbox": [
+        557,
+        1843,
+        766,
+        1893
+      ],
+      "center": [
+        662,
+        1868
+      ],
+      "size": [
+        209,
+        50
+      ],
+      "confidence": 0.633,
+      "id": 34
+    },
+    {
+      "type": "text",
+      "text": "30-35 mins",
+      "bbox": [
+        793,
+        1846,
+        1015,
+        1890
+      ],
+      "center": [
+        904,
+        1868
+      ],
+      "size": [
+        222,
+        44
+      ],
+      "confidence": 0.852,
+      "id": 35
+    },
+    {
+      "type": "text",
+      "text": "South Indian; Breakfast; North Ind",
+      "bbox": [
+        498,
+        1904,
+        1146,
+        1958
+      ],
+      "center": [
+        822,
+        1931
+      ],
+      "size": [
+        648,
+        54
+      ],
+      "confidence": 0.663,
+      "id": 36
+    },
+    {
+      "type": "text",
+      "text": "Sholinganallur",
+      "bbox": [
+        496,
+        1961,
+        783,
+        2022
+      ],
+      "center": [
+        640,
+        1992
+      ],
+      "size": [
+        287,
+        61
+      ],
+      "confidence": 1.0,
+      "id": 37
+    },
+    {
+      "type": "text",
+      "text": "6.9 km",
+      "bbox": [
+        806,
+        1965,
+        931,
+        2009
+      ],
+      "center": [
+        868,
+        1987
+      ],
+      "size": [
+        125,
+        44
+      ],
+      "confidence": 0.803,
+      "id": 38
+    },
+    {
+      "type": "text",
+      "text": "AD",
+      "bbox": [
+        379,
+        2036,
+        427,
+        2069
+      ],
+      "center": [
+        403,
+        2052
+      ],
+      "size": [
+        48,
+        33
+      ],
+      "confidence": 1.0,
+      "id": 39
+    },
+    {
+      "type": "text",
+      "text": "Best in Indian Sweets",
+      "bbox": [
+        562,
+        2289,
+        974,
+        2338
+      ],
+      "center": [
+        768,
+        2314
+      ],
+      "size": [
+        412,
+        49
+      ],
+      "confidence": 1.0,
+      "id": 40
+    },
+    {
+      "type": "text",
+      "text": "A2B",
+      "bbox": [
+        502,
+        2360,
+        605,
+        2413
+      ],
+      "center": [
+        554,
+        2386
+      ],
+      "size": [
+        103,
+        53
+      ],
+      "confidence": 0.86,
+      "id": 41
+    },
+    {
+      "type": "text",
+      "text": "Adyar Ananda Bha_",
+      "bbox": [
+        649,
+        2361,
+        1163,
+        2426
+      ],
+      "center": [
+        906,
+        2394
+      ],
+      "size": [
+        514,
+        65
+      ],
+      "confidence": 0.828,
+      "id": 42
+    },
+    {
+      "type": "text",
+      "text": "4.3 (4.3K+)",
+      "bbox": [
+        557,
+        2432,
+        767,
+        2483
+      ],
+      "center": [
+        662,
+        2458
+      ],
+      "size": [
+        210,
+        51
+      ],
+      "confidence": 0.728,
+      "id": 43
+    },
+    {
+      "type": "text",
+      "text": "30-35 mins",
+      "bbox": [
+        795,
+        2435,
+        1017,
+        2479
+      ],
+      "center": [
+        906,
+        2457
+      ],
+      "size": [
+        222,
+        44
+      ],
+      "confidence": 0.687,
+      "id": 44
+    },
+    {
+      "type": "text",
+      "text": "Chinese, South Indian; Beverages;.",
+      "bbox": [
+        496,
+        2492,
+        1152,
+        2552
+      ],
+      "center": [
+        824,
+        2522
+      ],
+      "size": [
+        656,
+        60
+      ],
+      "confidence": 0.583,
+      "id": 45
+    },
+    {
+      "type": "text",
+      "text": "ITEMS",
+      "bbox": [
+        71,
+        2552,
+        195,
+        2596
+      ],
+      "center": [
+        133,
+        2574
+      ],
+      "size": [
+        124,
+        44
+      ],
+      "confidence": 0.993,
+      "id": 46
+    },
+    {
+      "type": "text",
+      "text": "Kottivakkam",
+      "bbox": [
+        499,
+        2554,
+        740,
+        2598
+      ],
+      "center": [
+        620,
+        2576
+      ],
+      "size": [
+        241,
+        44
+      ],
+      "confidence": 0.979,
+      "id": 47
+    },
+    {
+      "type": "text",
+      "text": "3.0 km",
+      "bbox": [
+        770,
+        2554,
+        901,
+        2596
+      ],
+      "center": [
+        836,
+        2575
+      ],
+      "size": [
+        131,
+        42
+      ],
+      "confidence": 0.629,
+      "id": 48
+    },
+    {
+      "type": "text",
+      "text": "AT ?59",
+      "bbox": [
+        76,
+        2606,
+        243,
+        2663
+      ],
+      "center": [
+        160,
+        2634
+      ],
+      "size": [
+        167,
+        57
+      ],
+      "confidence": 0.857,
+      "id": 49
+    }
+  ]
+}

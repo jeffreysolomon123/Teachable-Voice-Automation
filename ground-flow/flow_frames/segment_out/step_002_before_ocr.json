@@ -1,0 +1,927 @@
+{
+  "image": "C:\\Users\\fixadmin\\AppData\\Local\\Temp\\claude\\C--Jeffrey-Projects-teachable-agentic-ai-show-taps-screen-recorder-script\\1a166c47-f9a3-4f2f-b988-999c54536586\\scratchpad\\gf\\flow_frames\\step_002_before.png",
+  "width": 1220,
+  "height": 2712,
+  "texts": [
+    {
+      "type": "text",
+      "text": "8,?C51%",
+      "bbox": [
+        830,
+        29,
+        1152,
+        84
+      ],
+      "center": [
+        991,
+        56
+      ],
+      "size": [
+        322,
+        55
+      ],
+      "confidence": 0.433,
+      "id": 0
+    },
+    {
+      "type": "text",
+      "text": "4.09",
+      "bbox": [
+        69,
+        35,
+        161,
+        79
+      ],
+      "center": [
+        115,
+        57
+      ],
+      "size": [
+        92,
+        44
+      ],
+      "confidence": 0.988,
+      "id": 1
+    },
+    {
+      "type": "text",
+      "text": "Sumathi Apartments",
+      "bbox": [
+        41,
+        145,
+        573,
+        212
+      ],
+      "center": [
+        307,
+        178
+      ],
+      "size": [
+        532,
+        67
+      ],
+      "confidence": 0.658,
+      "id": 2
+    },
+    {
+      "type": "text",
+      "text": "=",
+      "bbox": [
+        1085,
+        173,
+        1137,
+        222
+      ],
+      "center": [
+        1111,
+        198
+      ],
+      "size": [
+        52,
+        49
+      ],
+      "confidence": 0.923,
+      "id": 3
+    },
+    {
+      "type": "text",
+      "text": "Ramappa Nagar; Kandhanchavadi;",
+      "bbox": [
+        42,
+        203,
+        740,
+        264
+      ],
+      "center": [
+        391,
+        234
+      ],
+      "size": [
+        698,
+        61
+      ],
+      "confidence": 0.921,
+      "id": 4
+    },
+    {
+      "type": "text",
+      "text": "Per _",
+      "bbox": [
+        749,
+        210,
+        822,
+        250
+      ],
+      "center": [
+        786,
+        230
+      ],
+      "size": [
+        73,
+        40
+      ],
+      "confidence": 0.817,
+      "id": 5
+    },
+    {
+      "type": "text",
+      "text": "16 mins",
+      "bbox": [
+        416,
+        431,
+        547,
+        471
+      ],
+      "center": [
+        482,
+        451
+      ],
+      "size": [
+        131,
+        40
+      ],
+      "confidence": 0.893,
+      "id": 6
+    },
+    {
+      "type": "text",
+      "text": "Food",
+      "bbox": [
+        130,
+        480,
+        223,
+        517
+      ],
+      "center": [
+        176,
+        498
+      ],
+      "size": [
+        93,
+        37
+      ],
+      "confidence": 1.0,
+      "id": 7
+    },
+    {
+      "type": "text",
+      "text": "Instamart",
+      "bbox": [
+        395,
+        480,
+        568,
+        517
+      ],
+      "center": [
+        482,
+        498
+      ],
+      "size": [
+        173,
+        37
+      ],
+      "confidence": 1.0,
+      "id": 8
+    },
+    {
+      "type": "text",
+      "text": "Dineout",
+      "bbox": [
+        691,
+        480,
+        835,
+        517
+      ],
+      "center": [
+        763,
+        498
+      ],
+      "size": [
+        144,
+        37
+      ],
+      "confidence": 1.0,
+      "id": 9
+    },
+    {
+      "type": "text",
+      "text": "Scenes",
+      "bbox": [
+        978,
+        483,
+        1107,
+        516
+      ],
+      "center": [
+        1042,
+        500
+      ],
+      "size": [
+        129,
+        33
+      ],
+      "confidence": 0.621,
+      "id": 10
+    },
+    {
+      "type": "text",
+      "text": "Search for 'EatRight'",
+      "bbox": [
+        172,
+        645,
+        615,
+        706
+      ],
+      "center": [
+        394,
+        676
+      ],
+      "size": [
+        443,
+        61
+      ],
+      "confidence": 0.779,
+      "id": 11
+    },
+    {
+      "type": "text",
+      "text": "WEEKEND",
+      "bbox": [
+        352,
+        844,
+        869,
+        935
+      ],
+      "center": [
+        610,
+        890
+      ],
+      "size": [
+        517,
+        91
+      ],
+      "confidence": 0.998,
+      "id": 12
+    },
+    {
+      "type": "text",
+      "text": "BINGE",
+      "bbox": [
+        502,
+        936,
+        713,
+        989
+      ],
+      "center": [
+        608,
+        962
+      ],
+      "size": [
+        211,
+        53
+      ],
+      "confidence": 0.999,
+      "id": 13
+    },
+    {
+      "type": "text",
+      "text": "Get",
+      "bbox": [
+        145,
+        1073,
+        223,
+        1113
+      ],
+      "center": [
+        184,
+        1093
+      ],
+      "size": [
+        78,
+        40
+      ],
+      "confidence": 0.626,
+      "id": 14
+    },
+    {
+      "type": "text",
+      "text": "Get A",
+      "bbox": [
+        467,
+        1073,
+        575,
+        1113
+      ],
+      "center": [
+        521,
+        1093
+      ],
+      "size": [
+        108,
+        40
+      ],
+      "confidence": 0.91,
+      "id": 15
+    },
+    {
+      "type": "text",
+      "text": "Purattasi",
+      "bbox": [
+        778,
+        1073,
+        947,
+        1115
+      ],
+      "center": [
+        862,
+        1094
+      ],
+      "size": [
+        169,
+        42
+      ],
+      "confidence": 1.0,
+      "id": 16
+    },
+    {
+      "type": "text",
+      "text": "Flavol_",
+      "bbox": [
+        1105,
+        1075,
+        1220,
+        1113
+      ],
+      "center": [
+        1162,
+        1094
+      ],
+      "size": [
+        115,
+        38
+      ],
+      "confidence": 0.636,
+      "id": 17
+    },
+    {
+      "type": "text",
+      "text": "Specials",
+      "bbox": [
+        779,
+        1114,
+        942,
+        1165
+      ],
+      "center": [
+        860,
+        1140
+      ],
+      "size": [
+        163,
+        51
+      ],
+      "confidence": 1.0,
+      "id": 18
+    },
+    {
+      "type": "text",
+      "text": "70% OFF",
+      "bbox": [
+        100,
+        1115,
+        263,
+        1157
+      ],
+      "center": [
+        182,
+        1136
+      ],
+      "size": [
+        163,
+        42
+      ],
+      "confidence": 0.999,
+      "id": 19
+    },
+    {
+      "type": "text",
+      "text": "Free Treat",
+      "bbox": [
+        427,
+        1117,
+        615,
+        1157
+      ],
+      "center": [
+        521,
+        1137
+      ],
+      "size": [
+        188,
+        40
+      ],
+      "confidence": 0.823,
+      "id": 20
+    },
+    {
+      "type": "text",
+      "text": "Dea",
+      "bbox": [
+        1143,
+        1117,
+        1220,
+        1157
+      ],
+      "center": [
+        1182,
+        1137
+      ],
+      "size": [
+        77,
+        40
+      ],
+      "confidence": 1.0,
+      "id": 21
+    },
+    {
+      "type": "text",
+      "text": "% %",
+      "bbox": [
+        100,
+        1218,
+        270,
+        1323
+      ],
+      "center": [
+        185,
+        1270
+      ],
+      "size": [
+        170,
+        105
+      ],
+      "confidence": 0.738,
+      "id": 22
+    },
+    {
+      "type": "text",
+      "text": "MIN",
+      "bbox": [
+        1171,
+        1222,
+        1220,
+        1254
+      ],
+      "center": [
+        1196,
+        1238
+      ],
+      "size": [
+        49,
+        32
+      ],
+      "confidence": 0.999,
+      "id": 23
+    },
+    {
+      "type": "text",
+      "text": "{2C",
+      "bbox": [
+        1102,
+        1248,
+        1220,
+        1344
+      ],
+      "center": [
+        1161,
+        1296
+      ],
+      "size": [
+        118,
+        96
+      ],
+      "confidence": 0.55,
+      "id": 24
+    },
+    {
+      "type": "text",
+      "text": "OFF",
+      "bbox": [
+        1171,
+        1345,
+        1220,
+        1377
+      ],
+      "center": [
+        1196,
+        1361
+      ],
+      "size": [
+        49,
+        32
+      ],
+      "confidence": 0.687,
+      "id": 25
+    },
+    {
+      "type": "text",
+      "text": "Bolt",
+      "bbox": [
+        95,
+        1568,
+        194,
+        1616
+      ],
+      "center": [
+        144,
+        1592
+      ],
+      "size": [
+        99,
+        48
+      ],
+      "confidence": 1.0,
+      "id": 26
+    },
+    {
+      "type": "text",
+      "text": "Food In 15 Minsl",
+      "bbox": [
+        247,
+        1571,
+        541,
+        1615
+      ],
+      "center": [
+        394,
+        1593
+      ],
+      "size": [
+        294,
+        44
+      ],
+      "confidence": 0.728,
+      "id": 27
+    },
+    {
+      "type": "text",
+      "text": "crisp",
+      "bbox": [
+        327,
+        1633,
+        437,
+        1693
+      ],
+      "center": [
+        382,
+        1663
+      ],
+      "size": [
+        110,
+        60
+      ],
+      "confidence": 1.0,
+      "id": 28
+    },
+    {
+      "type": "text",
+      "text": "Fresh, hot &",
+      "bbox": [
+        96,
+        1641,
+        331,
+        1685
+      ],
+      "center": [
+        214,
+        1663
+      ],
+      "size": [
+        235,
+        44
+      ],
+      "confidence": 0.919,
+      "id": 29
+    },
+    {
+      "type": "text",
+      "text": "delights for you:",
+      "bbox": [
+        93,
+        1682,
+        408,
+        1735
+      ],
+      "center": [
+        250,
+        1708
+      ],
+      "size": [
+        315,
+        53
+      ],
+      "confidence": 0.869,
+      "id": 30
+    },
+    {
+      "type": "text",
+      "text": "ORDER NOW",
+      "bbox": [
+        129,
+        1785,
+        339,
+        1828
+      ],
+      "center": [
+        234,
+        1806
+      ],
+      "size": [
+        210,
+        43
+      ],
+      "confidence": 0.713,
+      "id": 31
+    },
+    {
+      "type": "text",
+      "text": "MIN Rs. 100 OFF",
+      "bbox": [
+        200,
+        2011,
+        475,
+        2051
+      ],
+      "center": [
+        338,
+        2031
+      ],
+      "size": [
+        275,
+        40
+      ],
+      "confidence": 0.852,
+      "id": 32
+    },
+    {
+      "type": "text",
+      "text": "FAST DELIVERY",
+      "bbox": [
+        755,
+        2011,
+        1011,
+        2051
+      ],
+      "center": [
+        883,
+        2031
+      ],
+      "size": [
+        256,
+        40
+      ],
+      "confidence": 0.815,
+      "id": 33
+    },
+    {
+      "type": "text",
+      "text": "ITEMS",
+      "bbox": [
+        452,
+        2408,
+        577,
+        2452
+      ],
+      "center": [
+        514,
+        2430
+      ],
+      "size": [
+        125,
+        44
+      ],
+      "confidence": 0.999,
+      "id": 34
+    },
+    {
+      "type": "text",
+      "text": "ITEMS",
+      "bbox": [
+        831,
+        2408,
+        958,
+        2452
+      ],
+      "center": [
+        894,
+        2430
+      ],
+      "size": [
+        127,
+        44
+      ],
+      "confidence": 0.999,
+      "id": 35
+    },
+    {
+      "type": "text",
+      "text": "70% OFF",
+      "bbox": [
+        69,
+        2431,
+        272,
+        2486
+      ],
+      "center": [
+        170,
+        2458
+      ],
+      "size": [
+        203,
+        55
+      ],
+      "confidence": 0.999,
+      "id": 36
+    },
+    {
+      "type": "text",
+      "text": "Pick Your",
+      "bbox": [
+        1055,
+        2553,
+        1177,
+        2584
+      ],
+      "center": [
+        1116,
+        2568
+      ],
+      "size": [
+        122,
+        31
+      ],
+      "confidence": 0.964,
+      "id": 37
+    },
+    {
+      "type": "text",
+      "text": "NEW",
+      "bbox": [
+        684,
+        2572,
+        737,
+        2597
+      ],
+      "center": [
+        710,
+        2584
+      ],
+      "size": [
+        53,
+        25
+      ],
+      "confidence": 0.998,
+      "id": 38
+    },
+    {
+      "type": "text",
+      "text": "'15 MIN",
+      "bbox": [
+        271,
+        2574,
+        338,
+        2599
+      ],
+      "center": [
+        304,
+        2586
+      ],
+      "size": [
+        67,
+        25
+      ],
+      "confidence": 0.548,
+      "id": 39
+    },
+    {
+      "type": "text",
+      "text": "Offerl",
+      "bbox": [
+        1052,
+        2581,
+        1185,
+        2619
+      ],
+      "center": [
+        1118,
+        2600
+      ],
+      "size": [
+        133,
+        38
+      ],
+      "confidence": 0.56,
+      "id": 40
+    },
+    {
+      "type": "text",
+      "text": "EatRight",
+      "bbox": [
+        646,
+        2609,
+        776,
+        2650
+      ],
+      "center": [
+        711,
+        2630
+      ],
+      "size": [
+        130,
+        41
+      ],
+      "confidence": 1.0,
+      "id": 41
+    },
+    {
+      "type": "text",
+      "text": "Food",
+      "bbox": [
+        65,
+        2612,
+        141,
+        2644
+      ],
+      "center": [
+        103,
+        2628
+      ],
+      "size": [
+        76,
+        32
+      ],
+      "confidence": 1.0,
+      "id": 42
+    },
+    {
+      "type": "text",
+      "text": "Bolt",
+      "bbox": [
+        275,
+        2612,
+        338,
+        2644
+      ],
+      "center": [
+        306,
+        2628
+      ],
+      "size": [
+        63,
+        32
+      ],
+      "confidence": 1.0,
+      "id": 43
+    },
+    {
+      "type": "text",
+      "text": "99 store",
+      "bbox": [
+        449,
+        2612,
+        565,
+        2641
+      ],
+      "center": [
+        507,
+        2626
+      ],
+      "size": [
+        116,
+        29
+      ],
+      "confidence": 0.704,
+      "id": 44
+    },
+    {
+      "type": "text",
+      "text": "Reorder",
+      "bbox": [
+        856,
+        2612,
+        972,
+        2641
+      ],
+      "center": [
+        914,
+        2626
+      ],
+      "size": [
+        116,
+        29
+      ],
+      "confidence": 1.0,
+      "id": 45
+    }
+  ]
+}

@@ -1,0 +1,1251 @@
+{
+  "image": "C:\\Users\\fixadmin\\AppData\\Local\\Temp\\claude\\C--Jeffrey-Projects-teachable-agentic-ai-show-taps-screen-recorder-script\\1a166c47-f9a3-4f2f-b988-999c54536586\\scratchpad\\gf\\flow_frames\\step_008_before.png",
+  "width": 1220,
+  "height": 2712,
+  "elements": [
+    {
+      "bbox": [
+        1001,
+        27,
+        1073,
+        83
+      ],
+      "confidence": 0.294,
+      "id": 0,
+      "center": [
+        1037,
+        55
+      ],
+      "size": [
+        72,
+        56
+      ],
+      "bbox_norm": [
+        0.8205,
+        0.01,
+        0.8795,
+        0.0306
+      ],
+      "center_norm": [
+        0.85,
+        0.0203
+      ],
+      "area_pct": 0.12,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        832,
+        28,
+        995,
+        85
+      ],
+      "confidence": 0.236,
+      "id": 1,
+      "center": [
+        914,
+        56
+      ],
+      "size": [
+        163,
+        57
+      ],
+      "bbox_norm": [
+        0.682,
+        0.0103,
+        0.8156,
+        0.0313
+      ],
+      "center_norm": [
+        0.7488,
+        0.0208
+      ],
+      "area_pct": 0.28,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        74,
+        29,
+        213,
+        81
+      ],
+      "confidence": 0.208,
+      "id": 2,
+      "center": [
+        144,
+        55
+      ],
+      "size": [
+        139,
+        52
+      ],
+      "bbox_norm": [
+        0.0607,
+        0.0107,
+        0.1746,
+        0.0299
+      ],
+      "center_norm": [
+        0.1176,
+        0.0203
+      ],
+      "area_pct": 0.22,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "4:10",
+          "bbox": [
+            71,
+            35,
+            164,
+            79
+          ],
+          "confidence": 0.822
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "4:10",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        225,
+        32,
+        272,
+        79
+      ],
+      "confidence": 0.447,
+      "id": 3,
+      "center": [
+        248,
+        56
+      ],
+      "size": [
+        47,
+        47
+      ],
+      "bbox_norm": [
+        0.1844,
+        0.0118,
+        0.223,
+        0.0291
+      ],
+      "center_norm": [
+        0.2037,
+        0.0205
+      ],
+      "area_pct": 0.07,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        282,
+        32,
+        328,
+        80
+      ],
+      "confidence": 0.614,
+      "id": 4,
+      "center": [
+        305,
+        56
+      ],
+      "size": [
+        46,
+        48
+      ],
+      "bbox_norm": [
+        0.2311,
+        0.0118,
+        0.2689,
+        0.0295
+      ],
+      "center_norm": [
+        0.25,
+        0.0206
+      ],
+      "area_pct": 0.07,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        333,
+        32,
+        385,
+        81
+      ],
+      "confidence": 0.528,
+      "id": 5,
+      "center": [
+        359,
+        56
+      ],
+      "size": [
+        52,
+        49
+      ],
+      "bbox_norm": [
+        0.273,
+        0.0118,
+        0.3156,
+        0.0299
+      ],
+      "center_norm": [
+        0.2943,
+        0.0208
+      ],
+      "area_pct": 0.08,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        39,
+        156,
+        140,
+        266
+      ],
+      "confidence": 0.265,
+      "id": 6,
+      "center": [
+        90,
+        211
+      ],
+      "size": [
+        101,
+        110
+      ],
+      "bbox_norm": [
+        0.032,
+        0.0575,
+        0.1148,
+        0.0981
+      ],
+      "center_norm": [
+        0.0734,
+        0.0778
+      ],
+      "area_pct": 0.34,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "id": 16,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        150,
+        184,
+        604,
+        236
+      ],
+      "center": [
+        377,
+        210
+      ],
+      "size": [
+        454,
+        52
+      ],
+      "confidence": 0.935,
+      "text": "Hotel Saravana Bhavan",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        49,
+        272,
+        1181,
+        373
+      ],
+      "confidence": 0.419,
+      "id": 7,
+      "center": [
+        615,
+        322
+      ],
+      "size": [
+        1132,
+        101
+      ],
+      "bbox_norm": [
+        0.0402,
+        0.1003,
+        0.968,
+        0.1375
+      ],
+      "center_norm": [
+        0.5041,
+        0.1189
+      ],
+      "area_pct": 3.46,
+      "region": "top-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "<70 Saved with Sostor@",
+          "bbox": [
+            141,
+            295,
+            553,
+            337
+          ],
+          "confidence": 0.314
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "<70 Saved with Sostor@",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        925,
+        510,
+        1128,
+        563
+      ],
+      "confidence": 0.711,
+      "id": 8,
+      "center": [
+        1026,
+        536
+      ],
+      "size": [
+        203,
+        53
+      ],
+      "bbox_norm": [
+        0.7582,
+        0.1881,
+        0.9246,
+        0.2076
+      ],
+      "center_norm": [
+        0.8414,
+        0.1978
+      ],
+      "area_pct": 0.33,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Applied",
+          "bbox": [
+            983,
+            512,
+            1126,
+            563
+          ],
+          "confidence": 0.754
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Applied",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "id": 17,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        188,
+        515,
+        728,
+        569
+      ],
+      "center": [
+        458,
+        542
+      ],
+      "size": [
+        540,
+        54
+      ],
+      "confidence": 0.581,
+      "text": "<20 extra off above coupons",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        928,
+        664,
+        1129,
+        723
+      ],
+      "confidence": 0.587,
+      "id": 9,
+      "center": [
+        1028,
+        694
+      ],
+      "size": [
+        201,
+        59
+      ],
+      "bbox_norm": [
+        0.7607,
+        0.2448,
+        0.9254,
+        0.2666
+      ],
+      "center_norm": [
+        0.843,
+        0.2557
+      ],
+      "area_pct": 0.36,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Applied",
+          "bbox": [
+            983,
+            671,
+            1126,
+            722
+          ],
+          "confidence": 0.716
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Applied",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "id": 18,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        187,
+        670,
+        714,
+        730
+      ],
+      "center": [
+        450,
+        700
+      ],
+      "size": [
+        527,
+        60
+      ],
+      "confidence": 0.646,
+      "text": "736 saved with free delivery",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 19,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        41,
+        829,
+        191,
+        894
+      ],
+      "center": [
+        116,
+        862
+      ],
+      "size": [
+        150,
+        65
+      ],
+      "confidence": 1.0,
+      "text": "Login",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 20,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        216,
+        892,
+        666,
+        944
+      ],
+      "center": [
+        441,
+        918
+      ],
+      "size": [
+        450,
+        52
+      ],
+      "confidence": 0.865,
+      "text": "phone number to proceed",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 21,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        45,
+        899,
+        138,
+        937
+      ],
+      "center": [
+        92,
+        918
+      ],
+      "size": [
+        93,
+        38
+      ],
+      "confidence": 1.0,
+      "text": "Enter",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 22,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        135,
+        899,
+        219,
+        941
+      ],
+      "center": [
+        177,
+        920
+      ],
+      "size": [
+        84,
+        42
+      ],
+      "confidence": 1.0,
+      "text": "your",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        27,
+        1041,
+        276,
+        1126
+      ],
+      "confidence": 0.373,
+      "id": 10,
+      "center": [
+        152,
+        1084
+      ],
+      "size": [
+        249,
+        85
+      ],
+      "bbox_norm": [
+        0.0221,
+        0.3838,
+        0.2262,
+        0.4152
+      ],
+      "center_norm": [
+        0.1242,
+        0.3995
+      ],
+      "area_pct": 0.64,
+      "region": "middle-left",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "+91",
+          "bbox": [
+            122,
+            1060,
+            197,
+            1104
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "+91",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "id": 23,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        315,
+        1055,
+        635,
+        1103
+      ],
+      "center": [
+        475,
+        1079
+      ],
+      "size": [
+        320,
+        48
+      ],
+      "confidence": 1.0,
+      "text": "Mobile Number",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        43,
+        1205,
+        1181,
+        1356
+      ],
+      "confidence": 0.85,
+      "id": 11,
+      "center": [
+        612,
+        1280
+      ],
+      "size": [
+        1138,
+        151
+      ],
+      "bbox_norm": [
+        0.0352,
+        0.4443,
+        0.968,
+        0.5
+      ],
+      "center_norm": [
+        0.5016,
+        0.4722
+      ],
+      "area_pct": 5.19,
+      "region": "middle-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "CONTINUE",
+          "bbox": [
+            497,
+            1253,
+            725,
+            1297
+          ],
+          "confidence": 0.999
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "CONTINUE",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "id": 24,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        43,
+        1393,
+        265,
+        1456
+      ],
+      "center": [
+        154,
+        1424
+      ],
+      "size": [
+        222,
+        63
+      ],
+      "confidence": 0.599,
+      "text": "By clicking,",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 25,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        281,
+        1393,
+        1176,
+        1460
+      ],
+      "center": [
+        728,
+        1426
+      ],
+      "size": [
+        895,
+        67
+      ],
+      "confidence": 0.686,
+      "text": "accept the Privacy policy; Swiggy terms ofuse",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        503,
+        1393,
+        774,
+        1456
+      ],
+      "confidence": 0.187,
+      "id": 12,
+      "center": [
+        638,
+        1424
+      ],
+      "size": [
+        271,
+        63
+      ],
+      "bbox_norm": [
+        0.4123,
+        0.5136,
+        0.6344,
+        0.5369
+      ],
+      "center_norm": [
+        0.5234,
+        0.5253
+      ],
+      "area_pct": 0.52,
+      "region": "middle-center",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "id": 26,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        354,
+        1470,
+        874,
+        1518
+      ],
+      "center": [
+        614,
+        1494
+      ],
+      "size": [
+        520,
+        48
+      ],
+      "confidence": 0.639,
+      "text": "and Instamart terms of use",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        1071,
+        1650,
+        1150,
+        1731
+      ],
+      "confidence": 0.473,
+      "id": 13,
+      "center": [
+        1110,
+        1690
+      ],
+      "size": [
+        79,
+        81
+      ],
+      "bbox_norm": [
+        0.8779,
+        0.6084,
+        0.9426,
+        0.6383
+      ],
+      "center_norm": [
+        0.9102,
+        0.6233
+      ],
+      "area_pct": 0.19,
+      "region": "middle-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "id": 27,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        360,
+        1768,
+        836,
+        1868
+      ],
+      "center": [
+        598,
+        1818
+      ],
+      "size": [
+        476,
+        100
+      ],
+      "confidence": 0.698,
+      "text": "phone number",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 28,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        67,
+        1781,
+        364,
+        1854
+      ],
+      "center": [
+        216,
+        1818
+      ],
+      "size": [
+        297,
+        73
+      ],
+      "confidence": 0.992,
+      "text": "Choose a",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 29,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        417,
+        1889,
+        1083,
+        1958
+      ],
+      "center": [
+        750,
+        1924
+      ],
+      "size": [
+        666,
+        69
+      ],
+      "confidence": 0.993,
+      "text": "phone number that's assigned to",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 30,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        68,
+        1897,
+        421,
+        1950
+      ],
+      "center": [
+        244,
+        1924
+      ],
+      "size": [
+        353,
+        53
+      ],
+      "confidence": 0.987,
+      "text": "You can choose a",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 31,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        61,
+        1959,
+        1060,
+        2021
+      ],
+      "center": [
+        560,
+        1990
+      ],
+      "size": [
+        999,
+        62
+      ],
+      "confidence": 0.943,
+      "text": "your phone, and Google will share it only with this",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 32,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        65,
+        2036,
+        162,
+        2084
+      ],
+      "center": [
+        114,
+        2060
+      ],
+      "size": [
+        97,
+        48
+      ],
+      "confidence": 0.892,
+      "text": "app.",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 33,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        523,
+        2105,
+        1125,
+        2174
+      ],
+      "center": [
+        824,
+        2140
+      ],
+      "size": [
+        602,
+        69
+      ],
+      "confidence": 0.706,
+      "text": "phone number you share with",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 34,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        65,
+        2114,
+        527,
+        2171
+      ],
+      "center": [
+        296,
+        2142
+      ],
+      "size": [
+        462,
+        57
+      ],
+      "confidence": 0.764,
+      "text": "Google won't store the",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 35,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        63,
+        2178,
+        710,
+        2235
+      ],
+      "center": [
+        386,
+        2206
+      ],
+      "size": [
+        647,
+        57
+      ],
+      "confidence": 0.974,
+      "text": "this app in your Google account",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        60,
+        2263,
+        1156,
+        2449
+      ],
+      "confidence": 0.696,
+      "id": 14,
+      "center": [
+        608,
+        2356
+      ],
+      "size": [
+        1096,
+        186
+      ],
+      "bbox_norm": [
+        0.0492,
+        0.8344,
+        0.9475,
+        0.903
+      ],
+      "center_norm": [
+        0.4984,
+        0.8687
+      ],
+      "area_pct": 6.16,
+      "region": "bottom-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "093849 77055",
+          "bbox": [
+            239,
+            2326,
+            531,
+            2374
+          ],
+          "confidence": 0.945
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "093849 77055",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "id": 36,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        226,
+        2460,
+        940,
+        2533
+      ],
+      "center": [
+        583,
+        2496
+      ],
+      "size": [
+        714,
+        73
+      ],
+      "confidence": 0.962,
+      "text": "update your phone number sharing",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 37,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        66,
+        2474,
+        231,
+        2522
+      ],
+      "center": [
+        148,
+        2498
+      ],
+      "size": [
+        165,
+        48
+      ],
+      "confidence": 0.955,
+      "text": "You can",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 38,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        63,
+        2528,
+        756,
+        2594
+      ],
+      "center": [
+        410,
+        2561
+      ],
+      "size": [
+        693,
+        66
+      ],
+      "confidence": 0.645,
+      "text": "preference in your device settings:",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        443,
+        2528,
+        746,
+        2591
+      ],
+      "confidence": 0.761,
+      "id": 15,
+      "center": [
+        594,
+        2560
+      ],
+      "size": [
+        303,
+        63
+      ],
+      "bbox_norm": [
+        0.3631,
+        0.9322,
+        0.6115,
+        0.9554
+      ],
+      "center_norm": [
+        0.4873,
+        0.9438
+      ],
+      "area_pct": 0.58,
+      "region": "bottom-center",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    }
+  ]
+}

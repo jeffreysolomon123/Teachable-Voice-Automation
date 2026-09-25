@@ -1,0 +1,707 @@
+{
+  "image": "C:\\Users\\fixadmin\\AppData\\Local\\Temp\\claude\\C--Jeffrey-Projects-teachable-agentic-ai-show-taps-screen-recorder-script\\1a166c47-f9a3-4f2f-b988-999c54536586\\scratchpad\\gf\\flow_frames\\step_004_before.png",
+  "width": 1220,
+  "height": 2712,
+  "texts": [
+    {
+      "type": "text",
+      "text": "4.09",
+      "bbox": [
+        71,
+        35,
+        161,
+        79
+      ],
+      "center": [
+        116,
+        57
+      ],
+      "size": [
+        90,
+        44
+      ],
+      "confidence": 0.995,
+      "id": 0
+    },
+    {
+      "type": "text",
+      "text": "Hotel Saravana Bhavan",
+      "bbox": [
+        178,
+        178,
+        698,
+        228
+      ],
+      "center": [
+        438,
+        203
+      ],
+      "size": [
+        520,
+        50
+      ],
+      "confidence": 0.702,
+      "id": 1
+    },
+    {
+      "type": "text",
+      "text": "25-30 mins",
+      "bbox": [
+        724,
+        178,
+        974,
+        228
+      ],
+      "center": [
+        849,
+        203
+      ],
+      "size": [
+        250,
+        50
+      ],
+      "confidence": 0.947,
+      "id": 2
+    },
+    {
+      "type": "text",
+      "text": "NO CODE REQUIRED",
+      "bbox": [
+        225,
+        312,
+        621,
+        356
+      ],
+      "center": [
+        423,
+        334
+      ],
+      "size": [
+        396,
+        44
+      ],
+      "confidence": 0.8,
+      "id": 3
+    },
+    {
+      "type": "text",
+      "text": "ABOVE *99",
+      "bbox": [
+        645,
+        312,
+        863,
+        356
+      ],
+      "center": [
+        754,
+        334
+      ],
+      "size": [
+        218,
+        44
+      ],
+      "confidence": 0.873,
+      "id": 4
+    },
+    {
+      "type": "text",
+      "text": "Q",
+      "bbox": [
+        939,
+        537,
+        1019,
+        604
+      ],
+      "center": [
+        979,
+        570
+      ],
+      "size": [
+        80,
+        67
+      ],
+      "confidence": 0.941,
+      "id": 5
+    },
+    {
+      "type": "text",
+      "text": "Search for dishes",
+      "bbox": [
+        412,
+        544,
+        792,
+        599
+      ],
+      "center": [
+        602,
+        572
+      ],
+      "size": [
+        380,
+        55
+      ],
+      "confidence": 0.886,
+      "id": 6
+    },
+    {
+      "type": "text",
+      "text": "Ratings 4.O+",
+      "bbox": [
+        695,
+        702,
+        943,
+        769
+      ],
+      "center": [
+        819,
+        736
+      ],
+      "size": [
+        248,
+        67
+      ],
+      "confidence": 0.718,
+      "id": 7
+    },
+    {
+      "type": "text",
+      "text": "Pure Veg",
+      "bbox": [
+        112,
+        710,
+        290,
+        766
+      ],
+      "center": [
+        201,
+        738
+      ],
+      "size": [
+        178,
+        56
+      ],
+      "confidence": 0.806,
+      "id": 8
+    },
+    {
+      "type": "text",
+      "text": "EatRight",
+      "bbox": [
+        440,
+        710,
+        612,
+        762
+      ],
+      "center": [
+        526,
+        736
+      ],
+      "size": [
+        172,
+        52
+      ],
+      "confidence": 1.0,
+      "id": 9
+    },
+    {
+      "type": "text",
+      "text": "Bestseller",
+      "bbox": [
+        1030,
+        711,
+        1217,
+        755
+      ],
+      "center": [
+        1124,
+        733
+      ],
+      "size": [
+        187,
+        44
+      ],
+      "confidence": 0.729,
+      "id": 10
+    },
+    {
+      "type": "text",
+      "text": "Because you searched for \"dosa\" (10)",
+      "bbox": [
+        42,
+        872,
+        956,
+        937
+      ],
+      "center": [
+        499,
+        904
+      ],
+      "size": [
+        914,
+        65
+      ],
+      "confidence": 0.472,
+      "id": 11
+    },
+    {
+      "type": "text",
+      "text": "LOW",
+      "bbox": [
+        1067,
+        1063,
+        1124,
+        1091
+      ],
+      "center": [
+        1096,
+        1077
+      ],
+      "size": [
+        57,
+        28
+      ],
+      "confidence": 0.538,
+      "id": 12
+    },
+    {
+      "type": "text",
+      "text": "LOw",
+      "bbox": [
+        481,
+        1065,
+        538,
+        1091
+      ],
+      "center": [
+        510,
+        1078
+      ],
+      "size": [
+        57,
+        26
+      ],
+      "confidence": 0.589,
+      "id": 13
+    },
+    {
+      "type": "text",
+      "text": "CAL",
+      "bbox": [
+        485,
+        1087,
+        535,
+        1112
+      ],
+      "center": [
+        510,
+        1100
+      ],
+      "size": [
+        50,
+        25
+      ],
+      "confidence": 1.0,
+      "id": 14
+    },
+    {
+      "type": "text",
+      "text": "CAL",
+      "bbox": [
+        1072,
+        1087,
+        1122,
+        1112
+      ],
+      "center": [
+        1097,
+        1100
+      ],
+      "size": [
+        50,
+        25
+      ],
+      "confidence": 1.0,
+      "id": 15
+    },
+    {
+      "type": "text",
+      "text": "3.6 (9)",
+      "bbox": [
+        1054,
+        1530,
+        1161,
+        1575
+      ],
+      "center": [
+        1108,
+        1552
+      ],
+      "size": [
+        107,
+        45
+      ],
+      "confidence": 0.998,
+      "id": 16
+    },
+    {
+      "type": "text",
+      "text": "3.7 (2.1K+)",
+      "bbox": [
+        408,
+        1535,
+        575,
+        1575
+      ],
+      "center": [
+        492,
+        1555
+      ],
+      "size": [
+        167,
+        40
+      ],
+      "confidence": 0.789,
+      "id": 17
+    },
+    {
+      "type": "text",
+      "text": "DOSAI",
+      "bbox": [
+        45,
+        1588,
+        176,
+        1632
+      ],
+      "center": [
+        110,
+        1610
+      ],
+      "size": [
+        131,
+        44
+      ],
+      "confidence": 0.999,
+      "id": 18
+    },
+    {
+      "type": "text",
+      "text": "PODI DOSAI",
+      "bbox": [
+        632,
+        1588,
+        871,
+        1632
+      ],
+      "center": [
+        752,
+        1610
+      ],
+      "size": [
+        239,
+        44
+      ],
+      "confidence": 0.974,
+      "id": 19
+    },
+    {
+      "type": "text",
+      "text": "294 kcal",
+      "bbox": [
+        632,
+        1645,
+        778,
+        1685
+      ],
+      "center": [
+        705,
+        1665
+      ],
+      "size": [
+        146,
+        40
+      ],
+      "confidence": 1.0,
+      "id": 20
+    },
+    {
+      "type": "text",
+      "text": "294 kcal",
+      "bbox": [
+        45,
+        1647,
+        189,
+        1685
+      ],
+      "center": [
+        117,
+        1666
+      ],
+      "size": [
+        144,
+        38
+      ],
+      "confidence": 0.866,
+      "id": 21
+    },
+    {
+      "type": "text",
+      "text": "3153",
+      "bbox": [
+        632,
+        1711,
+        714,
+        1748
+      ],
+      "center": [
+        673,
+        1730
+      ],
+      "size": [
+        82,
+        37
+      ],
+      "confidence": 0.944,
+      "id": 22
+    },
+    {
+      "type": "text",
+      "text": "ADD",
+      "bbox": [
+        416,
+        1747,
+        509,
+        1789
+      ],
+      "center": [
+        462,
+        1768
+      ],
+      "size": [
+        93,
+        42
+      ],
+      "confidence": 1.0,
+      "id": 23
+    },
+    {
+      "type": "text",
+      "text": "ADD",
+      "bbox": [
+        1003,
+        1747,
+        1096,
+        1789
+      ],
+      "center": [
+        1050,
+        1768
+      ],
+      "size": [
+        93,
+        42
+      ],
+      "confidence": 1.0,
+      "id": 24
+    },
+    {
+      "type": "text",
+      "text": "{109",
+      "bbox": [
+        54,
+        1764,
+        142,
+        1808
+      ],
+      "center": [
+        98,
+        1786
+      ],
+      "size": [
+        88,
+        44
+      ],
+      "confidence": 0.617,
+      "id": 25
+    },
+    {
+      "type": "text",
+      "text": "{135",
+      "bbox": [
+        643,
+        1764,
+        729,
+        1808
+      ],
+      "center": [
+        686,
+        1786
+      ],
+      "size": [
+        86,
+        44
+      ],
+      "confidence": 0.335,
+      "id": 26
+    },
+    {
+      "type": "text",
+      "text": "LOw",
+      "bbox": [
+        1067,
+        1991,
+        1127,
+        2019
+      ],
+      "center": [
+        1097,
+        2005
+      ],
+      "size": [
+        60,
+        28
+      ],
+      "confidence": 0.504,
+      "id": 27
+    },
+    {
+      "type": "text",
+      "text": "CAL",
+      "bbox": [
+        1072,
+        2015,
+        1122,
+        2040
+      ],
+      "center": [
+        1097,
+        2028
+      ],
+      "size": [
+        50,
+        25
+      ],
+      "confidence": 1.0,
+      "id": 28
+    },
+    {
+      "type": "text",
+      "text": "3.6 (2.2K+)",
+      "bbox": [
+        399,
+        2463,
+        575,
+        2503
+      ],
+      "center": [
+        487,
+        2483
+      ],
+      "size": [
+        176,
+        40
+      ],
+      "confidence": 0.935,
+      "id": 29
+    },
+    {
+      "type": "text",
+      "text": "MASALA DOSAI",
+      "bbox": [
+        45,
+        2516,
+        348,
+        2560
+      ],
+      "center": [
+        196,
+        2538
+      ],
+      "size": [
+        303,
+        44
+      ],
+      "confidence": 0.997,
+      "id": 30
+    },
+    {
+      "type": "text",
+      "text": "RAVA DOSAI",
+      "bbox": [
+        632,
+        2516,
+        878,
+        2560
+      ],
+      "center": [
+        755,
+        2538
+      ],
+      "size": [
+        246,
+        44
+      ],
+      "confidence": 0.979,
+      "id": 31
+    },
+    {
+      "type": "text",
+      "text": "ITEMS",
+      "bbox": [
+        982,
+        2533,
+        1089,
+        2570
+      ],
+      "center": [
+        1036,
+        2552
+      ],
+      "size": [
+        107,
+        37
+      ],
+      "confidence": 1.0,
+      "id": 32
+    },
+    {
+      "type": "text",
+      "text": "364 kcal",
+      "bbox": [
+        632,
+        2575,
+        778,
+        2613
+      ],
+      "center": [
+        705,
+        2594
+      ],
+      "size": [
+        146,
+        38
+      ],
+      "confidence": 1.0,
+      "id": 33
+    },
+    {
+      "type": "text",
+      "text": "3157",
+      "bbox": [
+        44,
+        2640,
+        127,
+        2669
+      ],
+      "center": [
+        86,
+        2654
+      ],
+      "size": [
+        83,
+        29
+      ],
+      "confidence": 0.569,
+      "id": 34
+    }
+  ]
+}

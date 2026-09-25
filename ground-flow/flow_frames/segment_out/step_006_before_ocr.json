@@ -1,0 +1,827 @@
+{
+  "image": "C:\\Users\\fixadmin\\AppData\\Local\\Temp\\claude\\C--Jeffrey-Projects-teachable-agentic-ai-show-taps-screen-recorder-script\\1a166c47-f9a3-4f2f-b988-999c54536586\\scratchpad\\gf\\flow_frames\\step_006_before.png",
+  "width": 1220,
+  "height": 2712,
+  "texts": [
+    {
+      "type": "text",
+      "text": "4.09",
+      "bbox": [
+        71,
+        35,
+        161,
+        79
+      ],
+      "center": [
+        116,
+        57
+      ],
+      "size": [
+        90,
+        44
+      ],
+      "confidence": 0.995,
+      "id": 0
+    },
+    {
+      "type": "text",
+      "text": "Search in Hotel Saravana Bhavan",
+      "bbox": [
+        175,
+        173,
+        907,
+        230
+      ],
+      "center": [
+        541,
+        202
+      ],
+      "size": [
+        732,
+        57
+      ],
+      "confidence": 0.812,
+      "id": 1
+    },
+    {
+      "type": "text",
+      "text": "Ratings 4.O+",
+      "bbox": [
+        695,
+        325,
+        943,
+        392
+      ],
+      "center": [
+        819,
+        358
+      ],
+      "size": [
+        248,
+        67
+      ],
+      "confidence": 0.68,
+      "id": 2
+    },
+    {
+      "type": "text",
+      "text": "EatRight",
+      "bbox": [
+        438,
+        329,
+        615,
+        390
+      ],
+      "center": [
+        526,
+        360
+      ],
+      "size": [
+        177,
+        61
+      ],
+      "confidence": 1.0,
+      "id": 3
+    },
+    {
+      "type": "text",
+      "text": "Veg",
+      "bbox": [
+        200,
+        330,
+        291,
+        390
+      ],
+      "center": [
+        246,
+        360
+      ],
+      "size": [
+        91,
+        60
+      ],
+      "confidence": 1.0,
+      "id": 4
+    },
+    {
+      "type": "text",
+      "text": "Bestseller",
+      "bbox": [
+        1029,
+        332,
+        1218,
+        381
+      ],
+      "center": [
+        1124,
+        356
+      ],
+      "size": [
+        189,
+        49
+      ],
+      "confidence": 1.0,
+      "id": 5
+    },
+    {
+      "type": "text",
+      "text": "Pure",
+      "bbox": [
+        115,
+        338,
+        206,
+        378
+      ],
+      "center": [
+        160,
+        358
+      ],
+      "size": [
+        91,
+        40
+      ],
+      "confidence": 1.0,
+      "id": 6
+    },
+    {
+      "type": "text",
+      "text": "Because you searched for \"dosa\" (10)",
+      "bbox": [
+        45,
+        479,
+        754,
+        533
+      ],
+      "center": [
+        400,
+        506
+      ],
+      "size": [
+        709,
+        54
+      ],
+      "confidence": 0.846,
+      "id": 7
+    },
+    {
+      "type": "text",
+      "text": "3.6 (9)",
+      "bbox": [
+        1054,
+        713,
+        1161,
+        757
+      ],
+      "center": [
+        1108,
+        735
+      ],
+      "size": [
+        107,
+        44
+      ],
+      "confidence": 0.953,
+      "id": 8
+    },
+    {
+      "type": "text",
+      "text": "3.7 (2.1K+)",
+      "bbox": [
+        405,
+        715,
+        575,
+        757
+      ],
+      "center": [
+        490,
+        736
+      ],
+      "size": [
+        170,
+        42
+      ],
+      "confidence": 0.868,
+      "id": 9
+    },
+    {
+      "type": "text",
+      "text": "DOSAI",
+      "bbox": [
+        45,
+        770,
+        176,
+        814
+      ],
+      "center": [
+        110,
+        792
+      ],
+      "size": [
+        131,
+        44
+      ],
+      "confidence": 1.0,
+      "id": 10
+    },
+    {
+      "type": "text",
+      "text": "PODI DOSAI",
+      "bbox": [
+        630,
+        770,
+        871,
+        814
+      ],
+      "center": [
+        750,
+        792
+      ],
+      "size": [
+        241,
+        44
+      ],
+      "confidence": 0.791,
+      "id": 11
+    },
+    {
+      "type": "text",
+      "text": "294 kcal",
+      "bbox": [
+        45,
+        827,
+        189,
+        867
+      ],
+      "center": [
+        117,
+        847
+      ],
+      "size": [
+        144,
+        40
+      ],
+      "confidence": 0.598,
+      "id": 12
+    },
+    {
+      "type": "text",
+      "text": "294 kcal",
+      "bbox": [
+        632,
+        827,
+        778,
+        867
+      ],
+      "center": [
+        705,
+        847
+      ],
+      "size": [
+        146,
+        40
+      ],
+      "confidence": 1.0,
+      "id": 13
+    },
+    {
+      "type": "text",
+      "text": "723",
+      "bbox": [
+        43,
+        893,
+        125,
+        933
+      ],
+      "center": [
+        84,
+        913
+      ],
+      "size": [
+        82,
+        40
+      ],
+      "confidence": 0.767,
+      "id": 14
+    },
+    {
+      "type": "text",
+      "text": "3153",
+      "bbox": [
+        632,
+        893,
+        714,
+        931
+      ],
+      "center": [
+        673,
+        912
+      ],
+      "size": [
+        82,
+        38
+      ],
+      "confidence": 0.61,
+      "id": 15
+    },
+    {
+      "type": "text",
+      "text": "ADD",
+      "bbox": [
+        1003,
+        927,
+        1098,
+        971
+      ],
+      "center": [
+        1050,
+        949
+      ],
+      "size": [
+        95,
+        44
+      ],
+      "confidence": 1.0,
+      "id": 16
+    },
+    {
+      "type": "text",
+      "text": "{109",
+      "bbox": [
+        54,
+        946,
+        142,
+        990
+      ],
+      "center": [
+        98,
+        968
+      ],
+      "size": [
+        88,
+        44
+      ],
+      "confidence": 0.651,
+      "id": 17
+    },
+    {
+      "type": "text",
+      "text": "{135",
+      "bbox": [
+        643,
+        946,
+        729,
+        990
+      ],
+      "center": [
+        686,
+        968
+      ],
+      "size": [
+        86,
+        44
+      ],
+      "confidence": 0.403,
+      "id": 18
+    },
+    {
+      "type": "text",
+      "text": "pair",
+      "bbox": [
+        404,
+        1116,
+        522,
+        1191
+      ],
+      "center": [
+        463,
+        1154
+      ],
+      "size": [
+        118,
+        75
+      ],
+      "confidence": 0.99,
+      "id": 19
+    },
+    {
+      "type": "text",
+      "text": "People usually",
+      "bbox": [
+        42,
+        1121,
+        407,
+        1190
+      ],
+      "center": [
+        224,
+        1156
+      ],
+      "size": [
+        365,
+        69
+      ],
+      "confidence": 0.998,
+      "id": 20
+    },
+    {
+      "type": "text",
+      "text": "this with",
+      "bbox": [
+        515,
+        1123,
+        732,
+        1175
+      ],
+      "center": [
+        624,
+        1149
+      ],
+      "size": [
+        217,
+        52
+      ],
+      "confidence": 0.996,
+      "id": 21
+    },
+    {
+      "type": "text",
+      "text": "Bestseller",
+      "bbox": [
+        167,
+        1320,
+        302,
+        1351
+      ],
+      "center": [
+        234,
+        1336
+      ],
+      "size": [
+        135,
+        31
+      ],
+      "confidence": 0.985,
+      "id": 22
+    },
+    {
+      "type": "text",
+      "text": "MINI TIFFIN",
+      "bbox": [
+        75,
+        1367,
+        291,
+        1411
+      ],
+      "center": [
+        183,
+        1389
+      ],
+      "size": [
+        216,
+        44
+      ],
+      "confidence": 0.999,
+      "id": 23
+    },
+    {
+      "type": "text",
+      "text": "POORI",
+      "bbox": [
+        1011,
+        1367,
+        1149,
+        1411
+      ],
+      "center": [
+        1080,
+        1389
+      ],
+      "size": [
+        138,
+        44
+      ],
+      "confidence": 0.993,
+      "id": 24
+    },
+    {
+      "type": "text",
+      "text": "3",
+      "bbox": [
+        1178,
+        1373,
+        1211,
+        1410
+      ],
+      "center": [
+        1194,
+        1392
+      ],
+      "size": [
+        33,
+        37
+      ],
+      "confidence": 1.0,
+      "id": 25
+    },
+    {
+      "type": "text",
+      "text": "8231",
+      "bbox": [
+        73,
+        1456,
+        159,
+        1498
+      ],
+      "center": [
+        116,
+        1477
+      ],
+      "size": [
+        86,
+        42
+      ],
+      "confidence": 0.509,
+      "id": 26
+    },
+    {
+      "type": "text",
+      "text": "{157",
+      "bbox": [
+        1013,
+        1458,
+        1097,
+        1500
+      ],
+      "center": [
+        1055,
+        1479
+      ],
+      "size": [
+        84,
+        42
+      ],
+      "confidence": 0.72,
+      "id": 27
+    },
+    {
+      "type": "text",
+      "text": "4.1(5.OK+)",
+      "bbox": [
+        208,
+        1461,
+        380,
+        1500
+      ],
+      "center": [
+        294,
+        1480
+      ],
+      "size": [
+        172,
+        39
+      ],
+      "confidence": 0.769,
+      "id": 28
+    },
+    {
+      "type": "text",
+      "text": "3.8",
+      "bbox": [
+        1145,
+        1461,
+        1204,
+        1498
+      ],
+      "center": [
+        1174,
+        1480
+      ],
+      "size": [
+        59,
+        37
+      ],
+      "confidence": 0.999,
+      "id": 29
+    },
+    {
+      "type": "text",
+      "text": "~Bestselle",
+      "bbox": [
+        1076,
+        1674,
+        1220,
+        1718
+      ],
+      "center": [
+        1148,
+        1696
+      ],
+      "size": [
+        144,
+        44
+      ],
+      "confidence": 0.95,
+      "id": 30
+    },
+    {
+      "type": "text",
+      "text": "Bestseller",
+      "bbox": [
+        167,
+        1680,
+        302,
+        1711
+      ],
+      "center": [
+        234,
+        1696
+      ],
+      "size": [
+        135,
+        31
+      ],
+      "confidence": 0.991,
+      "id": 31
+    },
+    {
+      "type": "text",
+      "text": "GHEE PONGAL",
+      "bbox": [
+        75,
+        1728,
+        361,
+        1772
+      ],
+      "center": [
+        218,
+        1750
+      ],
+      "size": [
+        286,
+        44
+      ],
+      "confidence": 0.878,
+      "id": 32
+    },
+    {
+      "type": "text",
+      "text": "CHAPPATH",
+      "bbox": [
+        1011,
+        1728,
+        1220,
+        1772
+      ],
+      "center": [
+        1116,
+        1750
+      ],
+      "size": [
+        209,
+        44
+      ],
+      "confidence": 0.982,
+      "id": 33
+    },
+    {
+      "type": "text",
+      "text": "3.8 (43)",
+      "bbox": [
+        117,
+        1791,
+        246,
+        1835
+      ],
+      "center": [
+        182,
+        1813
+      ],
+      "size": [
+        129,
+        44
+      ],
+      "confidence": 0.793,
+      "id": 34
+    },
+    {
+      "type": "text",
+      "text": "(49)",
+      "bbox": [
+        1081,
+        1791,
+        1155,
+        1835
+      ],
+      "center": [
+        1118,
+        1813
+      ],
+      "size": [
+        74,
+        44
+      ],
+      "confidence": 0.991,
+      "id": 35
+    },
+    {
+      "type": "text",
+      "text": "4",
+      "bbox": [
+        1059,
+        1798,
+        1084,
+        1826
+      ],
+      "center": [
+        1072,
+        1812
+      ],
+      "size": [
+        25,
+        28
+      ],
+      "confidence": 0.944,
+      "id": 36
+    },
+    {
+      "type": "text",
+      "text": "{135 3157",
+      "bbox": [
+        1014,
+        1874,
+        1185,
+        1911
+      ],
+      "center": [
+        1100,
+        1892
+      ],
+      "size": [
+        171,
+        37
+      ],
+      "confidence": 0.446,
+      "id": 37
+    },
+    {
+      "type": "text",
+      "text": "ITEMS",
+      "bbox": [
+        982,
+        2317,
+        1089,
+        2354
+      ],
+      "center": [
+        1036,
+        2336
+      ],
+      "size": [
+        107,
+        37
+      ],
+      "confidence": 1.0,
+      "id": 38
+    },
+    {
+      "type": "text",
+      "text": "1 Item added",
+      "bbox": [
+        72,
+        2530,
+        366,
+        2580
+      ],
+      "center": [
+        219,
+        2555
+      ],
+      "size": [
+        294,
+        50
+      ],
+      "confidence": 0.752,
+      "id": 39
+    },
+    {
+      "type": "text",
+      "text": "View Cart >",
+      "bbox": [
+        877,
+        2530,
+        1139,
+        2578
+      ],
+      "center": [
+        1008,
+        2554
+      ],
+      "size": [
+        262,
+        48
+      ],
+      "confidence": 0.999,
+      "id": 40
+    }
+  ]
+}

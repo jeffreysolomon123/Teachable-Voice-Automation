@@ -31,3 +31,23 @@ appagent/AppAgent/
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Media (images / videos) — never commit
+*.png
+*.PNG
+*.jpg
+*.JPG
+*.jpeg
+*.JPEG
+*.gif
+*.bmp
+*.webp
+*.tif
+*.tiff
+*.mp4
+*.MP4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.3gp

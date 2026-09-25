@@ -143,17 +143,30 @@ to `flow.json`.
 
 | Field | Meaning |
 |---|---|
-| `text` | Typed string, one character per keystroke, in log-time order |
+| `text` | Text typed in this step: keystrokes replayed in log order (`type` appends, `delete` removes the last character, `set_field` replaces everything) |
+| `deleted_existing_chars` | Backspaces that removed text already in the field before the step (e.g. clearing "Tap" before typing) |
+| `field_text_before` / `field_text_after` | Field text before the first and after the last keystroke, from the log (`null` if unknown) |
 | `start_ms` / `end_ms` | `touch_ms` of the first keystroke / `lift_ms` of the last |
 | `before_frame` / `after_frame` | Before frame of the first keystroke / after frame of the last |
 | `source_tap_ids` | ids of the merged taps in `taps.json` |
-| `characters` | `[{char, source_tap_id, log_event_ms, reconstructed_from_log}]` |
-| `reconstructed_from_log` | `true` if any character came from the log alone |
+| `characters` | `[{action, char, source_tap_id, log_event_ms, reconstructed_from_log}]`; `action` is `type`, `delete` (backspace) or `set_field` (a suggestion or autocomplete) |
+| `reconstructed_from_log` | `true` if any keystroke came from the log alone |
 
-A keyboard event that `events_report.json` marks `NOT_FOUND`, and whose `log_event_ms` falls
-inside `start_ms … end_ms`, is spliced into `text` at its log-time position. It gets
-`source_tap_id: null` and `reconstructed_from_log: true`, and has no frame. A single keystroke
-that is not next to another one stays a `tap` step.
+Keyboard log events that did not become a tap are added back at their log-time position if
+their `log_event_ms` falls inside `start_ms … end_ms`. That covers events `NOT_FOUND` in the
+video, events found but labelled `LONG_PRESS`/`SWIPE`, and events merged into another touch
+(`merged_log_events`: the second press of a double letter, where the circle never disappears
+between presses). They get `source_tap_id: null` and `reconstructed_from_log: true`, and have
+no frame. A single keystroke that is not next to another one stays a `tap` step.
+
+A click `element` also has `bounds` (the clicked element's box in video pixels, from the log;
+`null` if the log had none). In `taps.json` and `events_report.json`, a keyboard `element` also has `field_before` and
+`field_after`, and a single-character deletion has `className: "backspace"` with `text: null`.
+The backspace key has no label in the keyboard snapshot, so its box is taken as the bottom
+letter row to the right of "m" (QWERTY layout). A keystroke's touch is cut
+`keyboard_lift_slack_ms` (50 ms) after its log event, because the key's text change fires on
+key-up. Without that cut, a trace can run on past the lift, since key glyphs look like the
+circle to the template.
 
 **`tap`**: any other tap, passed through as it is.
 

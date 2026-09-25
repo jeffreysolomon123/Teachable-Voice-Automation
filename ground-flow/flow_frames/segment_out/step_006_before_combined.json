@@ -1,0 +1,1558 @@
+{
+  "image": "C:\\Users\\fixadmin\\AppData\\Local\\Temp\\claude\\C--Jeffrey-Projects-teachable-agentic-ai-show-taps-screen-recorder-script\\1a166c47-f9a3-4f2f-b988-999c54536586\\scratchpad\\gf\\flow_frames\\step_006_before.png",
+  "width": 1220,
+  "height": 2712,
+  "elements": [
+    {
+      "bbox": [
+        59,
+        14,
+        167,
+        100
+      ],
+      "confidence": 0.32,
+      "id": 0,
+      "center": [
+        113,
+        57
+      ],
+      "size": [
+        108,
+        86
+      ],
+      "bbox_norm": [
+        0.0484,
+        0.0052,
+        0.1369,
+        0.0369
+      ],
+      "center_norm": [
+        0.0926,
+        0.021
+      ],
+      "area_pct": 0.28,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "4.09",
+          "bbox": [
+            71,
+            35,
+            161,
+            79
+          ],
+          "confidence": 0.995
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "4.09",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        818,
+        20,
+        1160,
+        93
+      ],
+      "confidence": 0.364,
+      "id": 1,
+      "center": [
+        989,
+        56
+      ],
+      "size": [
+        342,
+        73
+      ],
+      "bbox_norm": [
+        0.6705,
+        0.0074,
+        0.9508,
+        0.0343
+      ],
+      "center_norm": [
+        0.8107,
+        0.0208
+      ],
+      "area_pct": 0.75,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        332,
+        26,
+        389,
+        90
+      ],
+      "confidence": 0.542,
+      "id": 2,
+      "center": [
+        360,
+        58
+      ],
+      "size": [
+        57,
+        64
+      ],
+      "bbox_norm": [
+        0.2721,
+        0.0096,
+        0.3189,
+        0.0332
+      ],
+      "center_norm": [
+        0.2955,
+        0.0214
+      ],
+      "area_pct": 0.11,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        168,
+        28,
+        220,
+        90
+      ],
+      "confidence": 0.667,
+      "id": 3,
+      "center": [
+        194,
+        59
+      ],
+      "size": [
+        52,
+        62
+      ],
+      "bbox_norm": [
+        0.1377,
+        0.0103,
+        0.1803,
+        0.0332
+      ],
+      "center_norm": [
+        0.159,
+        0.0218
+      ],
+      "area_pct": 0.1,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        221,
+        28,
+        276,
+        88
+      ],
+      "confidence": 0.681,
+      "id": 4,
+      "center": [
+        248,
+        58
+      ],
+      "size": [
+        55,
+        60
+      ],
+      "bbox_norm": [
+        0.1811,
+        0.0103,
+        0.2262,
+        0.0324
+      ],
+      "center_norm": [
+        0.2037,
+        0.0214
+      ],
+      "area_pct": 0.1,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        1153,
+        28,
+        1220,
+        84
+      ],
+      "confidence": 0.082,
+      "id": 5,
+      "center": [
+        1186,
+        56
+      ],
+      "size": [
+        67,
+        56
+      ],
+      "bbox_norm": [
+        0.9451,
+        0.0103,
+        1.0,
+        0.031
+      ],
+      "center_norm": [
+        0.9725,
+        0.0206
+      ],
+      "area_pct": 0.11,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        276,
+        29,
+        330,
+        89
+      ],
+      "confidence": 0.693,
+      "id": 6,
+      "center": [
+        303,
+        59
+      ],
+      "size": [
+        54,
+        60
+      ],
+      "bbox_norm": [
+        0.2262,
+        0.0107,
+        0.2705,
+        0.0328
+      ],
+      "center_norm": [
+        0.2484,
+        0.0218
+      ],
+      "area_pct": 0.1,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        1048,
+        134,
+        1169,
+        263
+      ],
+      "confidence": 0.837,
+      "id": 7,
+      "center": [
+        1108,
+        198
+      ],
+      "size": [
+        121,
+        129
+      ],
+      "bbox_norm": [
+        0.859,
+        0.0494,
+        0.9582,
+        0.097
+      ],
+      "center_norm": [
+        0.9086,
+        0.0732
+      ],
+      "area_pct": 0.47,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        1194,
+        135,
+        1220,
+        262
+      ],
+      "confidence": 0.084,
+      "id": 8,
+      "center": [
+        1207,
+        198
+      ],
+      "size": [
+        26,
+        127
+      ],
+      "bbox_norm": [
+        0.9787,
+        0.0498,
+        1.0,
+        0.0966
+      ],
+      "center_norm": [
+        0.9893,
+        0.0732
+      ],
+      "area_pct": 0.1,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        42,
+        136,
+        1044,
+        264
+      ],
+      "confidence": 0.841,
+      "id": 9,
+      "center": [
+        543,
+        200
+      ],
+      "size": [
+        1002,
+        128
+      ],
+      "bbox_norm": [
+        0.0344,
+        0.0501,
+        0.8557,
+        0.0973
+      ],
+      "center_norm": [
+        0.4451,
+        0.0737
+      ],
+      "area_pct": 3.88,
+      "region": "top-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Search in Hotel Saravana Bhavan",
+          "bbox": [
+            175,
+            173,
+            907,
+            230
+          ],
+          "confidence": 0.812
+        }
+      ],
+      "children": [
+        10,
+        11
+      ],
+      "parent": null,
+      "text": "Search in Hotel Saravana Bhavan",
+      "cv_type": "icon",
+      "type": "container"
+    },
+    {
+      "bbox": [
+        930,
+        155,
+        1017,
+        250
+      ],
+      "confidence": 0.65,
+      "id": 10,
+      "center": [
+        974,
+        202
+      ],
+      "size": [
+        87,
+        95
+      ],
+      "bbox_norm": [
+        0.7623,
+        0.0572,
+        0.8336,
+        0.0922
+      ],
+      "center_norm": [
+        0.798,
+        0.0747
+      ],
+      "area_pct": 0.25,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 9,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        74,
+        158,
+        166,
+        252
+      ],
+      "confidence": 0.248,
+      "id": 11,
+      "center": [
+        120,
+        205
+      ],
+      "size": [
+        92,
+        94
+      ],
+      "bbox_norm": [
+        0.0607,
+        0.0583,
+        0.1361,
+        0.0929
+      ],
+      "center_norm": [
+        0.0984,
+        0.0756
+      ],
+      "area_pct": 0.26,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 9,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        661,
+        299,
+        980,
+        414
+      ],
+      "confidence": 0.921,
+      "id": 12,
+      "center": [
+        820,
+        356
+      ],
+      "size": [
+        319,
+        115
+      ],
+      "bbox_norm": [
+        0.5418,
+        0.1103,
+        0.8033,
+        0.1527
+      ],
+      "center_norm": [
+        0.6725,
+        0.1315
+      ],
+      "area_pct": 1.11,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Ratings 4.O+",
+          "bbox": [
+            695,
+            325,
+            943,
+            392
+          ],
+          "confidence": 0.68
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Ratings 4.O+",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        38,
+        300,
+        324,
+        414
+      ],
+      "confidence": 0.899,
+      "id": 13,
+      "center": [
+        181,
+        357
+      ],
+      "size": [
+        286,
+        114
+      ],
+      "bbox_norm": [
+        0.0311,
+        0.1106,
+        0.2656,
+        0.1527
+      ],
+      "center_norm": [
+        0.1484,
+        0.1316
+      ],
+      "area_pct": 0.99,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Veg",
+          "bbox": [
+            200,
+            330,
+            291,
+            390
+          ],
+          "confidence": 1.0
+        },
+        {
+          "text": "Pure",
+          "bbox": [
+            115,
+            338,
+            206,
+            378
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Veg Pure",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        991,
+        300,
+        1220,
+        419
+      ],
+      "confidence": 0.901,
+      "id": 14,
+      "center": [
+        1106,
+        360
+      ],
+      "size": [
+        229,
+        119
+      ],
+      "bbox_norm": [
+        0.8123,
+        0.1106,
+        1.0,
+        0.1545
+      ],
+      "center_norm": [
+        0.9061,
+        0.1326
+      ],
+      "area_pct": 0.82,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Bestseller",
+          "bbox": [
+            1029,
+            332,
+            1218,
+            381
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Bestseller",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        340,
+        301,
+        651,
+        414
+      ],
+      "confidence": 0.916,
+      "id": 15,
+      "center": [
+        496,
+        358
+      ],
+      "size": [
+        311,
+        113
+      ],
+      "bbox_norm": [
+        0.2787,
+        0.111,
+        0.5336,
+        0.1527
+      ],
+      "center_norm": [
+        0.4061,
+        0.1318
+      ],
+      "area_pct": 1.06,
+      "region": "top-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "EatRight",
+          "bbox": [
+            438,
+            329,
+            615,
+            390
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "EatRight",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "id": 29,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        45,
+        479,
+        754,
+        533
+      ],
+      "center": [
+        400,
+        506
+      ],
+      "size": [
+        709,
+        54
+      ],
+      "confidence": 0.846,
+      "text": "Because you searched for \"dosa\" (10)",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        35,
+        703,
+        97,
+        776
+      ],
+      "confidence": 0.225,
+      "id": 16,
+      "center": [
+        66,
+        740
+      ],
+      "size": [
+        62,
+        73
+      ],
+      "bbox_norm": [
+        0.0287,
+        0.2592,
+        0.0795,
+        0.2861
+      ],
+      "center_norm": [
+        0.0541,
+        0.2727
+      ],
+      "area_pct": 0.14,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        623,
+        707,
+        680,
+        771
+      ],
+      "confidence": 0.092,
+      "id": 17,
+      "center": [
+        652,
+        739
+      ],
+      "size": [
+        57,
+        64
+      ],
+      "bbox_norm": [
+        0.5107,
+        0.2607,
+        0.5574,
+        0.2843
+      ],
+      "center_norm": [
+        0.534,
+        0.2725
+      ],
+      "area_pct": 0.11,
+      "region": "top-center",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "id": 30,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        1054,
+        713,
+        1161,
+        757
+      ],
+      "center": [
+        1108,
+        735
+      ],
+      "size": [
+        107,
+        44
+      ],
+      "confidence": 0.953,
+      "text": "3.6 (9)",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 31,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        405,
+        715,
+        575,
+        757
+      ],
+      "center": [
+        490,
+        736
+      ],
+      "size": [
+        170,
+        42
+      ],
+      "confidence": 0.868,
+      "text": "3.7 (2.1K+)",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        6,
+        756,
+        1162,
+        1225
+      ],
+      "confidence": 0.192,
+      "id": 18,
+      "center": [
+        584,
+        990
+      ],
+      "size": [
+        1156,
+        469
+      ],
+      "bbox_norm": [
+        0.0049,
+        0.2788,
+        0.9525,
+        0.4517
+      ],
+      "center_norm": [
+        0.4787,
+        0.3652
+      ],
+      "area_pct": 16.39,
+      "region": "middle-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "DOSAI",
+          "bbox": [
+            45,
+            770,
+            176,
+            814
+          ],
+          "confidence": 1.0
+        },
+        {
+          "text": "PODI DOSAI",
+          "bbox": [
+            630,
+            770,
+            871,
+            814
+          ],
+          "confidence": 0.791
+        },
+        {
+          "text": "294 kcal",
+          "bbox": [
+            45,
+            827,
+            189,
+            867
+          ],
+          "confidence": 0.598
+        },
+        {
+          "text": "294 kcal",
+          "bbox": [
+            632,
+            827,
+            778,
+            867
+          ],
+          "confidence": 1.0
+        },
+        {
+          "text": "723",
+          "bbox": [
+            43,
+            893,
+            125,
+            933
+          ],
+          "confidence": 0.767
+        },
+        {
+          "text": "3153",
+          "bbox": [
+            632,
+            893,
+            714,
+            931
+          ],
+          "confidence": 0.61
+        },
+        {
+          "text": "{109",
+          "bbox": [
+            54,
+            946,
+            142,
+            990
+          ],
+          "confidence": 0.651
+        },
+        {
+          "text": "{135",
+          "bbox": [
+            643,
+            946,
+            729,
+            990
+          ],
+          "confidence": 0.403
+        },
+        {
+          "text": "pair",
+          "bbox": [
+            404,
+            1116,
+            522,
+            1191
+          ],
+          "confidence": 0.99
+        },
+        {
+          "text": "People usually",
+          "bbox": [
+            42,
+            1121,
+            407,
+            1190
+          ],
+          "confidence": 0.998
+        },
+        {
+          "text": "this with",
+          "bbox": [
+            515,
+            1123,
+            732,
+            1175
+          ],
+          "confidence": 0.996
+        }
+      ],
+      "children": [
+        19,
+        20
+      ],
+      "parent": null,
+      "text": "DOSAI PODI DOSAI 294 kcal 294 kcal 723 3153 {109 {135 pair People usually this with",
+      "cv_type": "icon",
+      "type": "container"
+    },
+    {
+      "bbox": [
+        931,
+        900,
+        1171,
+        1007
+      ],
+      "confidence": 0.873,
+      "id": 19,
+      "center": [
+        1051,
+        954
+      ],
+      "size": [
+        240,
+        107
+      ],
+      "bbox_norm": [
+        0.7631,
+        0.3319,
+        0.9598,
+        0.3713
+      ],
+      "center_norm": [
+        0.8615,
+        0.3516
+      ],
+      "area_pct": 0.78,
+      "region": "middle-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "ADD",
+          "bbox": [
+            1003,
+            927,
+            1098,
+            971
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [],
+      "parent": 18,
+      "text": "ADD",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        989,
+        1085,
+        1079,
+        1192
+      ],
+      "confidence": 0.062,
+      "id": 20,
+      "center": [
+        1034,
+        1138
+      ],
+      "size": [
+        90,
+        107
+      ],
+      "bbox_norm": [
+        0.8107,
+        0.4001,
+        0.8844,
+        0.4395
+      ],
+      "center_norm": [
+        0.8475,
+        0.4198
+      ],
+      "area_pct": 0.29,
+      "region": "middle-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 18,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        1093,
+        1107,
+        1203,
+        1213
+      ],
+      "confidence": 0.192,
+      "id": 21,
+      "center": [
+        1148,
+        1160
+      ],
+      "size": [
+        110,
+        106
+      ],
+      "bbox_norm": [
+        0.8959,
+        0.4082,
+        0.9861,
+        0.4473
+      ],
+      "center_norm": [
+        0.941,
+        0.4277
+      ],
+      "area_pct": 0.35,
+      "region": "middle-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        979,
+        1226,
+        1220,
+        1616
+      ],
+      "confidence": 0.435,
+      "id": 22,
+      "center": [
+        1100,
+        1421
+      ],
+      "size": [
+        241,
+        390
+      ],
+      "bbox_norm": [
+        0.8025,
+        0.4521,
+        1.0,
+        0.5959
+      ],
+      "center_norm": [
+        0.9012,
+        0.524
+      ],
+      "area_pct": 2.84,
+      "region": "middle-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "POORI",
+          "bbox": [
+            1011,
+            1367,
+            1149,
+            1411
+          ],
+          "confidence": 0.993
+        },
+        {
+          "text": "3",
+          "bbox": [
+            1178,
+            1373,
+            1211,
+            1410
+          ],
+          "confidence": 1.0
+        },
+        {
+          "text": "{157",
+          "bbox": [
+            1013,
+            1458,
+            1097,
+            1500
+          ],
+          "confidence": 0.72
+        },
+        {
+          "text": "3.8",
+          "bbox": [
+            1145,
+            1461,
+            1204,
+            1498
+          ],
+          "confidence": 0.999
+        }
+      ],
+      "children": [
+        24
+      ],
+      "parent": null,
+      "text": "POORI 3 {157 3.8",
+      "cv_type": "icon",
+      "type": "container"
+    },
+    {
+      "bbox": [
+        43,
+        1227,
+        972,
+        1612
+      ],
+      "confidence": 0.834,
+      "id": 23,
+      "center": [
+        508,
+        1420
+      ],
+      "size": [
+        929,
+        385
+      ],
+      "bbox_norm": [
+        0.0352,
+        0.4524,
+        0.7967,
+        0.5944
+      ],
+      "center_norm": [
+        0.416,
+        0.5234
+      ],
+      "area_pct": 10.81,
+      "region": "middle-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Bestseller",
+          "bbox": [
+            167,
+            1320,
+            302,
+            1351
+          ],
+          "confidence": 0.985
+        },
+        {
+          "text": "MINI TIFFIN",
+          "bbox": [
+            75,
+            1367,
+            291,
+            1411
+          ],
+          "confidence": 0.999
+        },
+        {
+          "text": "8231",
+          "bbox": [
+            73,
+            1456,
+            159,
+            1498
+          ],
+          "confidence": 0.509
+        },
+        {
+          "text": "4.1(5.OK+)",
+          "bbox": [
+            208,
+            1461,
+            380,
+            1500
+          ],
+          "confidence": 0.769
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Bestseller MINI TIFFIN 8231 4.1(5.OK+)",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        993,
+        1294,
+        1076,
+        1380
+      ],
+      "confidence": 0.469,
+      "id": 24,
+      "center": [
+        1034,
+        1337
+      ],
+      "size": [
+        83,
+        86
+      ],
+      "bbox_norm": [
+        0.8139,
+        0.4771,
+        0.882,
+        0.5088
+      ],
+      "center_norm": [
+        0.848,
+        0.493
+      ],
+      "area_pct": 0.22,
+      "region": "middle-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 22,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        35,
+        1642,
+        1220,
+        2064
+      ],
+      "confidence": 0.157,
+      "id": 25,
+      "center": [
+        628,
+        1853
+      ],
+      "size": [
+        1185,
+        422
+      ],
+      "bbox_norm": [
+        0.0287,
+        0.6055,
+        1.0,
+        0.7611
+      ],
+      "center_norm": [
+        0.5143,
+        0.6833
+      ],
+      "area_pct": 15.11,
+      "region": "bottom-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "~Bestselle",
+          "bbox": [
+            1076,
+            1674,
+            1220,
+            1718
+          ],
+          "confidence": 0.95
+        },
+        {
+          "text": "Bestseller",
+          "bbox": [
+            167,
+            1680,
+            302,
+            1711
+          ],
+          "confidence": 0.991
+        },
+        {
+          "text": "GHEE PONGAL",
+          "bbox": [
+            75,
+            1728,
+            361,
+            1772
+          ],
+          "confidence": 0.878
+        },
+        {
+          "text": "CHAPPATH",
+          "bbox": [
+            1011,
+            1728,
+            1220,
+            1772
+          ],
+          "confidence": 0.982
+        },
+        {
+          "text": "3.8 (43)",
+          "bbox": [
+            117,
+            1791,
+            246,
+            1835
+          ],
+          "confidence": 0.793
+        },
+        {
+          "text": "(49)",
+          "bbox": [
+            1081,
+            1791,
+            1155,
+            1835
+          ],
+          "confidence": 0.991
+        },
+        {
+          "text": "4",
+          "bbox": [
+            1059,
+            1798,
+            1084,
+            1826
+          ],
+          "confidence": 0.944
+        },
+        {
+          "text": "{135 3157",
+          "bbox": [
+            1014,
+            1874,
+            1185,
+            1911
+          ],
+          "confidence": 0.446
+        }
+      ],
+      "children": [
+        26
+      ],
+      "parent": null,
+      "text": "~Bestselle Bestseller GHEE PONGAL CHAPPATH 3.8 (43) (49) 4 {135 3157",
+      "cv_type": "icon",
+      "type": "container"
+    },
+    {
+      "bbox": [
+        65,
+        1850,
+        153,
+        1945
+      ],
+      "confidence": 0.155,
+      "id": 26,
+      "center": [
+        109,
+        1898
+      ],
+      "size": [
+        88,
+        95
+      ],
+      "bbox_norm": [
+        0.0533,
+        0.6822,
+        0.1254,
+        0.7172
+      ],
+      "center_norm": [
+        0.0893,
+        0.6997
+      ],
+      "area_pct": 0.25,
+      "region": "bottom-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 25,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        916,
+        2137,
+        1159,
+        2412
+      ],
+      "confidence": 0.689,
+      "id": 27,
+      "center": [
+        1038,
+        2274
+      ],
+      "size": [
+        243,
+        275
+      ],
+      "bbox_norm": [
+        0.7508,
+        0.788,
+        0.95,
+        0.8894
+      ],
+      "center_norm": [
+        0.8504,
+        0.8387
+      ],
+      "area_pct": 2.02,
+      "region": "bottom-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "ITEMS",
+          "bbox": [
+            982,
+            2317,
+            1089,
+            2354
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "ITEMS",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        13,
+        2462,
+        1207,
+        2665
+      ],
+      "confidence": 0.95,
+      "id": 28,
+      "center": [
+        610,
+        2564
+      ],
+      "size": [
+        1194,
+        203
+      ],
+      "bbox_norm": [
+        0.0107,
+        0.9078,
+        0.9893,
+        0.9827
+      ],
+      "center_norm": [
+        0.5,
+        0.9452
+      ],
+      "area_pct": 7.33,
+      "region": "bottom-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "1 Item added",
+          "bbox": [
+            72,
+            2530,
+            366,
+            2580
+          ],
+          "confidence": 0.752
+        },
+        {
+          "text": "View Cart >",
+          "bbox": [
+            877,
+            2530,
+            1139,
+            2578
+          ],
+          "confidence": 0.999
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "1 Item added View Cart >",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    }
+  ]
+}

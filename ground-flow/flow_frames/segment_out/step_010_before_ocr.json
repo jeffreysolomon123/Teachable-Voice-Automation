@@ -1,0 +1,147 @@
+{
+  "image": "C:\\Users\\fixadmin\\AppData\\Local\\Temp\\claude\\C--Jeffrey-Projects-teachable-agentic-ai-show-taps-screen-recorder-script\\1a166c47-f9a3-4f2f-b988-999c54536586\\scratchpad\\gf\\flow_frames\\step_010_before.png",
+  "width": 1220,
+  "height": 2712,
+  "texts": [
+    {
+      "type": "text",
+      "text": "4:10",
+      "bbox": [
+        69,
+        35,
+        164,
+        79
+      ],
+      "center": [
+        116,
+        57
+      ],
+      "size": [
+        95,
+        44
+      ],
+      "confidence": 0.78,
+      "id": 0
+    },
+    {
+      "type": "text",
+      "text": "Recording",
+      "bbox": [
+        415,
+        875,
+        808,
+        987
+      ],
+      "center": [
+        612,
+        931
+      ],
+      "size": [
+        393,
+        112
+      ],
+      "confidence": 1.0,
+      "id": 1
+    },
+    {
+      "type": "text",
+      "text": "00.52",
+      "bbox": [
+        416,
+        995,
+        807,
+        1136
+      ],
+      "center": [
+        612,
+        1066
+      ],
+      "size": [
+        391,
+        141
+      ],
+      "confidence": 0.503,
+      "id": 2
+    },
+    {
+      "type": "text",
+      "text": "Stop",
+      "bbox": [
+        517,
+        1380,
+        704,
+        1481
+      ],
+      "center": [
+        610,
+        1430
+      ],
+      "size": [
+        187,
+        101
+      ],
+      "confidence": 1.0,
+      "id": 3
+    },
+    {
+      "type": "text",
+      "text": "Tap",
+      "bbox": [
+        454,
+        1722,
+        548,
+        1784
+      ],
+      "center": [
+        501,
+        1753
+      ],
+      "size": [
+        94,
+        62
+      ],
+      "confidence": 1.0,
+      "id": 4
+    },
+    {
+      "type": "text",
+      "text": "logger: ON",
+      "bbox": [
+        537,
+        1725,
+        761,
+        1786
+      ],
+      "center": [
+        649,
+        1756
+      ],
+      "size": [
+        224,
+        61
+      ],
+      "confidence": 0.956,
+      "id": 5
+    },
+    {
+      "type": "text",
+      "text": "Enable Show taps in Developer options before recording",
+      "bbox": [
+        69,
+        1850,
+        1152,
+        1917
+      ],
+      "center": [
+        610,
+        1884
+      ],
+      "size": [
+        1083,
+        67
+      ],
+      "confidence": 0.887,
+      "id": 6
+    }
+  ]
+}

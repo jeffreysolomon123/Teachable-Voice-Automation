@@ -1,0 +1,1119 @@
+{
+  "image": "C:\\Users\\fixadmin\\AppData\\Local\\Temp\\claude\\C--Jeffrey-Projects-teachable-agentic-ai-show-taps-screen-recorder-script\\1a166c47-f9a3-4f2f-b988-999c54536586\\scratchpad\\gf\\flow_frames\\step_007_before.png",
+  "width": 1220,
+  "height": 2712,
+  "elements": [
+    {
+      "bbox": [
+        825,
+        18,
+        1162,
+        91
+      ],
+      "confidence": 0.209,
+      "id": 0,
+      "center": [
+        994,
+        54
+      ],
+      "size": [
+        337,
+        73
+      ],
+      "bbox_norm": [
+        0.6762,
+        0.0066,
+        0.9525,
+        0.0336
+      ],
+      "center_norm": [
+        0.8143,
+        0.0201
+      ],
+      "area_pct": 0.74,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        69,
+        28,
+        183,
+        84
+      ],
+      "confidence": 0.313,
+      "id": 1,
+      "center": [
+        126,
+        56
+      ],
+      "size": [
+        114,
+        56
+      ],
+      "bbox_norm": [
+        0.0566,
+        0.0103,
+        0.15,
+        0.031
+      ],
+      "center_norm": [
+        0.1033,
+        0.0206
+      ],
+      "area_pct": 0.19,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "4.10",
+          "bbox": [
+            71,
+            35,
+            161,
+            79
+          ],
+          "confidence": 0.906
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "4.10",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        174,
+        30,
+        214,
+        84
+      ],
+      "confidence": 0.688,
+      "id": 2,
+      "center": [
+        194,
+        57
+      ],
+      "size": [
+        40,
+        54
+      ],
+      "bbox_norm": [
+        0.1426,
+        0.0111,
+        0.1754,
+        0.031
+      ],
+      "center_norm": [
+        0.159,
+        0.021
+      ],
+      "area_pct": 0.07,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        226,
+        30,
+        273,
+        85
+      ],
+      "confidence": 0.687,
+      "id": 3,
+      "center": [
+        250,
+        58
+      ],
+      "size": [
+        47,
+        55
+      ],
+      "bbox_norm": [
+        0.1852,
+        0.0111,
+        0.2238,
+        0.0313
+      ],
+      "center_norm": [
+        0.2045,
+        0.0212
+      ],
+      "area_pct": 0.08,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        280,
+        30,
+        328,
+        85
+      ],
+      "confidence": 0.672,
+      "id": 4,
+      "center": [
+        304,
+        58
+      ],
+      "size": [
+        48,
+        55
+      ],
+      "bbox_norm": [
+        0.2295,
+        0.0111,
+        0.2689,
+        0.0313
+      ],
+      "center_norm": [
+        0.2492,
+        0.0212
+      ],
+      "area_pct": 0.08,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        333,
+        30,
+        387,
+        86
+      ],
+      "confidence": 0.385,
+      "id": 5,
+      "center": [
+        360,
+        58
+      ],
+      "size": [
+        54,
+        56
+      ],
+      "bbox_norm": [
+        0.273,
+        0.0111,
+        0.3172,
+        0.0317
+      ],
+      "center_norm": [
+        0.2951,
+        0.0214
+      ],
+      "area_pct": 0.09,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        37,
+        161,
+        137,
+        257
+      ],
+      "confidence": 0.51,
+      "id": 6,
+      "center": [
+        87,
+        209
+      ],
+      "size": [
+        100,
+        96
+      ],
+      "bbox_norm": [
+        0.0303,
+        0.0594,
+        0.1123,
+        0.0948
+      ],
+      "center_norm": [
+        0.0713,
+        0.0771
+      ],
+      "area_pct": 0.29,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "id": 20,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        150,
+        184,
+        604,
+        236
+      ],
+      "center": [
+        377,
+        210
+      ],
+      "size": [
+        454,
+        52
+      ],
+      "confidence": 0.792,
+      "text": "Hotel Saravana Bhavan",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        57,
+        268,
+        1182,
+        376
+      ],
+      "confidence": 0.27,
+      "id": 7,
+      "center": [
+        620,
+        322
+      ],
+      "size": [
+        1125,
+        108
+      ],
+      "bbox_norm": [
+        0.0467,
+        0.0988,
+        0.9689,
+        0.1386
+      ],
+      "center_norm": [
+        0.5078,
+        0.1187
+      ],
+      "area_pct": 3.67,
+      "region": "top-center",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        55,
+        461,
+        1171,
+        628
+      ],
+      "confidence": 0.092,
+      "id": 8,
+      "center": [
+        613,
+        544
+      ],
+      "size": [
+        1116,
+        167
+      ],
+      "bbox_norm": [
+        0.0451,
+        0.17,
+        0.9598,
+        0.2316
+      ],
+      "center_norm": [
+        0.5025,
+        0.2008
+      ],
+      "area_pct": 5.63,
+      "region": "top-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "720 extra off above coupons",
+          "bbox": [
+            188,
+            515,
+            730,
+            569
+          ],
+          "confidence": 0.64
+        }
+      ],
+      "children": [
+        9
+      ],
+      "parent": null,
+      "text": "720 extra off above coupons",
+      "cv_type": "icon",
+      "type": "container"
+    },
+    {
+      "bbox": [
+        930,
+        501,
+        1131,
+        574
+      ],
+      "confidence": 0.323,
+      "id": 9,
+      "center": [
+        1030,
+        538
+      ],
+      "size": [
+        201,
+        73
+      ],
+      "bbox_norm": [
+        0.7623,
+        0.1847,
+        0.927,
+        0.2117
+      ],
+      "center_norm": [
+        0.8447,
+        0.1982
+      ],
+      "area_pct": 0.44,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Applied",
+          "bbox": [
+            983,
+            512,
+            1126,
+            563
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "children": [],
+      "parent": 8,
+      "text": "Applied",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        73,
+        645,
+        178,
+        771
+      ],
+      "confidence": 0.102,
+      "id": 10,
+      "center": [
+        126,
+        708
+      ],
+      "size": [
+        105,
+        126
+      ],
+      "bbox_norm": [
+        0.0598,
+        0.2378,
+        0.1459,
+        0.2843
+      ],
+      "center_norm": [
+        0.1029,
+        0.2611
+      ],
+      "area_pct": 0.4,
+      "region": "top-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": null,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        922,
+        645,
+        1161,
+        767
+      ],
+      "confidence": 0.245,
+      "id": 11,
+      "center": [
+        1042,
+        706
+      ],
+      "size": [
+        239,
+        122
+      ],
+      "bbox_norm": [
+        0.7557,
+        0.2378,
+        0.9516,
+        0.2828
+      ],
+      "center_norm": [
+        0.8537,
+        0.2603
+      ],
+      "area_pct": 0.88,
+      "region": "top-right",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Applied",
+          "bbox": [
+            983,
+            671,
+            1126,
+            722
+          ],
+          "confidence": 0.999
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Applied",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "id": 21,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        187,
+        670,
+        714,
+        730
+      ],
+      "center": [
+        450,
+        700
+      ],
+      "size": [
+        527,
+        60
+      ],
+      "confidence": 0.514,
+      "text": "736 saved with free delivery",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        77,
+        862,
+        423,
+        968
+      ],
+      "confidence": 0.84,
+      "id": 12,
+      "center": [
+        250,
+        915
+      ],
+      "size": [
+        346,
+        106
+      ],
+      "bbox_norm": [
+        0.0631,
+        0.3178,
+        0.3467,
+        0.3569
+      ],
+      "center_norm": [
+        0.2049,
+        0.3374
+      ],
+      "area_pct": 1.11,
+      "region": "middle-left",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Delivery Type",
+          "bbox": [
+            132,
+            889,
+            372,
+            941
+          ],
+          "confidence": 0.858
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Delivery Type",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "id": 22,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        571,
+        886,
+        645,
+        943
+      ],
+      "center": [
+        608,
+        914
+      ],
+      "size": [
+        74,
+        57
+      ],
+      "confidence": 1.0,
+      "text": "Tip",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 23,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        865,
+        895,
+        1072,
+        935
+      ],
+      "center": [
+        968,
+        915
+      ],
+      "size": [
+        207,
+        40
+      ],
+      "confidence": 1.0,
+      "text": "Instructions",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        70,
+        979,
+        1153,
+        1179
+      ],
+      "confidence": 0.335,
+      "id": 13,
+      "center": [
+        612,
+        1079
+      ],
+      "size": [
+        1083,
+        200
+      ],
+      "bbox_norm": [
+        0.0574,
+        0.361,
+        0.9451,
+        0.4347
+      ],
+      "center_norm": [
+        0.5012,
+        0.3979
+      ],
+      "area_pct": 6.55,
+      "region": "middle-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Standard",
+          "bbox": [
+            189,
+            1030,
+            371,
+            1070
+          ],
+          "confidence": 0.998
+        },
+        {
+          "text": "Add address to check delivery time",
+          "bbox": [
+            188,
+            1077,
+            792,
+            1130
+          ],
+          "confidence": 0.57
+        }
+      ],
+      "children": [
+        14
+      ],
+      "parent": null,
+      "text": "Standard Add address to check delivery time",
+      "cv_type": "icon",
+      "type": "container"
+    },
+    {
+      "bbox": [
+        94,
+        1030,
+        157,
+        1098
+      ],
+      "confidence": 0.203,
+      "id": 14,
+      "center": [
+        126,
+        1064
+      ],
+      "size": [
+        63,
+        68
+      ],
+      "bbox_norm": [
+        0.077,
+        0.3798,
+        0.1287,
+        0.4049
+      ],
+      "center_norm": [
+        0.1029,
+        0.3923
+      ],
+      "area_pct": 0.13,
+      "region": "middle-left",
+      "source": "cv",
+      "texts": [],
+      "children": [],
+      "parent": 13,
+      "text": "",
+      "cv_type": "icon",
+      "type": "icon_or_image"
+    },
+    {
+      "bbox": [
+        53,
+        1179,
+        1167,
+        1387
+      ],
+      "confidence": 0.085,
+      "id": 15,
+      "center": [
+        610,
+        1283
+      ],
+      "size": [
+        1114,
+        208
+      ],
+      "bbox_norm": [
+        0.0434,
+        0.4347,
+        0.9566,
+        0.5114
+      ],
+      "center_norm": [
+        0.5,
+        0.4731
+      ],
+      "area_pct": 7.0,
+      "region": "middle-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Eco Saver",
+          "bbox": [
+            189,
+            1234,
+            380,
+            1274
+          ],
+          "confidence": 0.931
+        },
+        {
+          "text": "Add address to check delivery time",
+          "bbox": [
+            188,
+            1283,
+            793,
+            1333
+          ],
+          "confidence": 0.741
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Eco Saver Add address to check delivery time",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        77,
+        1459,
+        175,
+        1573
+      ],
+      "confidence": 0.055,
+      "id": 16,
+      "center": [
+        126,
+        1516
+      ],
+      "size": [
+        98,
+        114
+      ],
+      "bbox_norm": [
+        0.0631,
+        0.538,
+        0.1434,
+        0.58
+      ],
+      "center_norm": [
+        0.1033,
+        0.559
+      ],
+      "area_pct": 0.34,
+      "region": "middle-left",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "=",
+          "bbox": [
+            112,
+            1489,
+            141,
+            1527
+          ],
+          "confidence": 0.464
+        }
+      ],
+      "children": [],
+      "parent": 17,
+      "text": "=",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        58,
+        1467,
+        1161,
+        1700
+      ],
+      "confidence": 0.096,
+      "id": 17,
+      "center": [
+        610,
+        1584
+      ],
+      "size": [
+        1103,
+        233
+      ],
+      "bbox_norm": [
+        0.0475,
+        0.5409,
+        0.9516,
+        0.6268
+      ],
+      "center_norm": [
+        0.4996,
+        0.5839
+      ],
+      "area_pct": 7.77,
+      "region": "middle-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Pay",
+          "bbox": [
+            233,
+            1476,
+            321,
+            1534
+          ],
+          "confidence": 0.996
+        },
+        {
+          "text": "2253 ?183",
+          "bbox": [
+            319,
+            1480,
+            509,
+            1524
+          ],
+          "confidence": 0.333
+        },
+        {
+          "text": "To",
+          "bbox": [
+            189,
+            1484,
+            238,
+            1524
+          ],
+          "confidence": 1.0
+        },
+        {
+          "text": "?70 saved on the totall",
+          "bbox": [
+            187,
+            1537,
+            585,
+            1575
+          ],
+          "confidence": 0.809
+        },
+        {
+          "text": "FREE Delivery on your order!",
+          "bbox": [
+            104,
+            1631,
+            582,
+            1682
+          ],
+          "confidence": 0.892
+        }
+      ],
+      "children": [
+        16
+      ],
+      "parent": null,
+      "text": "Pay 2253 ?183 To ?70 saved on the totall FREE Delivery on your order!",
+      "cv_type": "icon",
+      "type": "container"
+    },
+    {
+      "id": 24,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        67,
+        1803,
+        420,
+        1854
+      ],
+      "center": [
+        244,
+        1828
+      ],
+      "size": [
+        353,
+        51
+      ],
+      "confidence": 0.935,
+      "text": "Cancellation policy:",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 25,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        68,
+        1858,
+        1097,
+        1906
+      ],
+      "center": [
+        582,
+        1882
+      ],
+      "size": [
+        1029,
+        48
+      ],
+      "confidence": 0.594,
+      "text": "Please double-check your order and address details. Orders",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "id": 26,
+      "source": "ocr",
+      "type": "text",
+      "cv_type": null,
+      "bbox": [
+        69,
+        1912,
+        640,
+        1956
+      ],
+      "center": [
+        354,
+        1934
+      ],
+      "size": [
+        571,
+        44
+      ],
+      "confidence": 0.74,
+      "text": "are non-refundable once placed:",
+      "texts": [],
+      "children": [],
+      "parent": null
+    },
+    {
+      "bbox": [
+        36,
+        2189,
+        1215,
+        2440
+      ],
+      "confidence": 0.225,
+      "id": 18,
+      "center": [
+        626,
+        2314
+      ],
+      "size": [
+        1179,
+        251
+      ],
+      "bbox_norm": [
+        0.0295,
+        0.8072,
+        0.9959,
+        0.8997
+      ],
+      "center_norm": [
+        0.5127,
+        0.8534
+      ],
+      "area_pct": 8.94,
+      "region": "bottom-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Almost There",
+          "bbox": [
+            46,
+            2239,
+            369,
+            2296
+          ],
+          "confidence": 0.808
+        },
+        {
+          "text": "Login/ Create Account quickly to place order",
+          "bbox": [
+            41,
+            2317,
+            813,
+            2374
+          ],
+          "confidence": 0.904
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Almost There Login/ Create Account quickly to place order",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    },
+    {
+      "bbox": [
+        39,
+        2440,
+        1186,
+        2612
+      ],
+      "confidence": 0.964,
+      "id": 19,
+      "center": [
+        612,
+        2526
+      ],
+      "size": [
+        1147,
+        172
+      ],
+      "bbox_norm": [
+        0.032,
+        0.8997,
+        0.9721,
+        0.9631
+      ],
+      "center_norm": [
+        0.502,
+        0.9314
+      ],
+      "area_pct": 5.96,
+      "region": "bottom-center",
+      "source": "cv",
+      "texts": [
+        {
+          "text": "Proceed with Phone Number",
+          "bbox": [
+            267,
+            2492,
+            958,
+            2554
+          ],
+          "confidence": 0.89
+        }
+      ],
+      "children": [],
+      "parent": null,
+      "text": "Proceed with Phone Number",
+      "cv_type": "icon",
+      "type": "labeled_element"
+    }
+  ]
+}
