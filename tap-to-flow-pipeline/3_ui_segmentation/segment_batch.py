@@ -4,7 +4,9 @@ Writes exactly what the three scripts write per image (<stem>.json, <stem>_ocr.j
 <stem>_combined.json and their annotated PNGs, plus crops with --crops). Loading YOLO and
 EasyOCR dominates a single-image run, so batching saves most of the time.
 
-Usage:  python segment_batch.py a.png b.png ... [-o out_dir] [--crops] [--conf 0.05] [--gpu]
+With --ocr-only, only <stem>_ocr.json (and its annotated PNG) is written: no YOLO, no combine.
+
+Usage:  python segment_batch.py a.png b.png ... [-o out_dir] [--crops] [--conf 0.05] [--gpu] [--ocr-only]
 """
 import argparse
 import sys
@@ -28,6 +30,7 @@ def main():
     ap.add_argument("--imgsz", type=int, default=1280)
     ap.add_argument("--device", default=None)
     ap.add_argument("--crops", action="store_true")
+    ap.add_argument("--ocr-only", action="store_true", help="only run OCR (skip segmentation and combine)")
     ap.add_argument("--lang", nargs="+", default=["en"])
     ap.add_argument("--gpu", action="store_true")
     ap.add_argument("--min-conf", type=float, default=0.3)
@@ -35,12 +38,17 @@ def main():
     args = ap.parse_args()
 
     t0 = time.perf_counter()
-    model = load_model(args.weights)
+    model = None if args.ocr_only else load_model(args.weights)
     reader = easyocr.Reader(args.lang, gpu=args.gpu)
     print(f"models loaded in {time.perf_counter() - t0:.1f}s", flush=True)
 
     for i, image in enumerate(args.images, start=1):
         t = time.perf_counter()
+        if args.ocr_only:
+            texts = ocr_image(reader, image, args.out_dir, args.min_conf)
+            print(f"[{i}/{len(args.images)}] {Path(image).name}: {len(texts)} text boxes "
+                  f"in {time.perf_counter() - t:.1f}s", flush=True)
+            continue
         segment_image(model, image, args.out_dir, args.conf, args.iou, args.imgsz, args.device, args.crops)
         ocr_image(reader, image, args.out_dir, args.min_conf)
         elements = combine_image(image, args.out_dir, args.contain)

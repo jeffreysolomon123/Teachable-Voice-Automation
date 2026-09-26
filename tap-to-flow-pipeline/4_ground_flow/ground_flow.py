@@ -6,6 +6,10 @@ frame) and the tap point is matched against the detected element boxes. The chos
 attached as ``grounded_element``; the step's original ``element`` / ``element_trustworthy``
 are left untouched so downstream code can compare both sources. ``type_text`` steps pass
 through unchanged. Pure geometry: no LLM, no network.
+
+Every ``tap`` step also gets ``before_text`` and ``after_text``: the OCR text lines found on its
+before/after frame (reading order, from the frame's ``_ocr.json``). After frames are only
+OCR'd (segment_batch.py --ocr-only), not segmented.
 """
 
 from __future__ import annotations
@@ -185,6 +189,41 @@ def run_segmentation_batch(frames: list[Path], scripts_dir: Path, python: str) -
             raise GroundingError(f"{BATCH_SCRIPT} succeeded but wrote no combined result for {missing[0]}")
 
 
+def ocr_path_for(frame: Path) -> Path:
+    """Where ocr_text.py writes the OCR result for ``frame``."""
+    return frame.parent / SEGMENT_OUT / f"{frame.stem}_ocr.json"
+
+
+def run_ocr_batch(frames: list[Path], scripts_dir: Path, python: str) -> None:
+    """OCR several frames (models loaded once) with ``segment_batch.py --ocr-only``."""
+    script = scripts_dir / BATCH_SCRIPT
+    if not script.is_file():
+        raise GroundingError(f"OCR of after frames needs {script}")
+    env = {**os.environ, "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1"}
+    groups: dict[Path, list[Path]] = {}
+    for f in frames:
+        groups.setdefault(f.parent / SEGMENT_OUT, []).append(f)
+    for out_dir, group in groups.items():
+        cmd = [python, str(script), *map(str, group), "--ocr-only", "-o", str(out_dir)]
+        proc = subprocess.run(cmd, cwd=scripts_dir, env=env, capture_output=True, text=True,
+                              encoding="utf-8", errors="replace")
+        if proc.returncode != 0:
+            print(f"--- {BATCH_SCRIPT} --ocr-only stderr ---\n{proc.stderr.rstrip()}\n---", file=sys.stderr)
+            raise GroundingError(f"{BATCH_SCRIPT} --ocr-only failed (exit {proc.returncode}) in {out_dir}")
+        missing = [f for f in group if not ocr_path_for(f).is_file()]
+        if missing:
+            raise GroundingError(f"{BATCH_SCRIPT} --ocr-only wrote no OCR result for {missing[0]}")
+
+
+def load_ocr_lines(path: Path) -> list[str]:
+    """Text lines from an ``*_ocr.json`` (already in top-to-bottom, left-to-right order)."""
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return [t["text"] for t in data["texts"]]
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError, KeyError, TypeError) as exc:
+        raise GroundingError(f"cannot read OCR output {path}: {exc!r}") from exc
+
+
 # --------------------------------------------------------------------------- geometry
 
 def _contains(bbox: list[float], x: float, y: float) -> bool:
@@ -321,6 +360,31 @@ def ground_flow(flow_path: Path, out_path: Path, scripts_dir: Path, *, python: s
             for f in pending:
                 run_segmentation(f, scripts_dir, python)
     cache = {f: load_combined(combined_path_for(f)) for f in unique}
+
+    # before/after OCR text for every tap step (also ones skipped by --only-untrustworthy).
+    def resolve(step: dict[str, Any], key: str) -> Path:
+        frame = Path(step[key])
+        return (frame if frame.is_absolute() else base / frame).resolve()
+
+    taps = [s for s in steps if s["type"] == "tap"]
+    ocr_frames: dict[tuple[int, str], Path] = {}
+    for s in taps:
+        for key in ("before_frame", "after_frame"):
+            if not s.get(key):
+                continue
+            frame = resolve(s, key)
+            if not frame.is_file():
+                raise GroundingError(f"step {s['step_index']}: {key} not found: {frame}")
+            ocr_frames[(id(s), key)] = frame
+    need_ocr = list(dict.fromkeys(f for f in ocr_frames.values()
+                                  if not ocr_path_for(f).is_file() or (force_rerun and f not in cache)))
+    if need_ocr:
+        print(f"  OCR of {len(need_ocr)} frame(s) ...", file=sys.stderr, flush=True)
+        run_ocr_batch(need_ocr, scripts_dir, python)
+    for s in taps:
+        for key, field_name in (("before_frame", "before_text"), ("after_frame", "after_text")):
+            frame = ocr_frames.get((id(s), key))
+            s[field_name] = load_ocr_lines(ocr_path_for(frame)) if frame else None
 
     for s in todo:
         frame = frames[id(s)]
