@@ -52,7 +52,6 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  frames segmented / reused: {result.segmented_frames} / {result.reused_frames}")
     print(f"  grounded 'contained':        {result.contained}")
     print(f"  grounded 'fallback_nearest': {result.fallback_nearest}")
-    print(f"  grounded 'log_bounds':       {result.log_bounds}  (detector missed the clicked element; logged bounds used)")
     if result.skipped:
         print(f"  skipped (trustworthy):       {result.skipped}")
     print()

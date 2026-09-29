@@ -52,6 +52,8 @@ async function probeBackend(url) {
 async function autoDetectBackend() {
   const custom = localStorage.getItem("backend_url");
   const candidates = [];
+  // Served by the backend itself (Android WebView loads <backend>/mobile/): same origin first.
+  if (location.protocol === "http:" || location.protocol === "https:") candidates.push(location.origin);
   if (custom) candidates.push(custom);
   candidates.push("http://192.168.1.3:8000");
   candidates.push("http://10.0.2.2:8000");
@@ -1063,6 +1065,7 @@ function handleResponse(data) {
   } else if (intent === "REPLAY") {
     lockAllPlanActionButtons("confirm");
     hideFloatingTeachHud();
+    startNativeReplay(data, decision);
   } else if (intent === "CONFIRM_PLAN") {
     const planMode = (data.extracted_plan || decision.extracted_plan || {}).mode;
     if (planMode === "TEACH" || planMode === "ORDER") {
@@ -1237,8 +1240,60 @@ function simulateUtterance(text) {
   sendTextToServer(text);
 }
 
+// ---------------------------------------------------------------------------
+// Native execution bridge (Android app). The assistant decides WHAT to do; the confirmed plan
+// (Slot JSON) goes to the native replay engine, which asks the backend HOW, screen by screen.
+// ---------------------------------------------------------------------------
+function hasNativeBridge() {
+  return !!(window.AndroidBridge && window.AndroidBridge.startReplay);
+}
+
+function startNativeReplay(data, decision) {
+  const plan = Object.assign({}, data.extracted_plan || decision.extracted_plan || {});
+  const slots = Object.assign({}, plan.slots || {}, decision.effective_slots || {});
+  const payload = {
+    mode: "ORDER",
+    flow_id: decision.matched_flow_id || plan.flow_id || null,
+    app_name: plan.app_name || slots.app || null,
+    summary: plan.summary || data.transcript || "",
+    confirmed: true,
+    slots: slots,
+    metadata: { raw_query: data.transcript || "", requires_user_confirmation: false }
+  };
+  if (!hasNativeBridge()) {
+    appendMessage("assistant", "Execution runs in the Android app; this browser can only plan the task.",
+                  "badge-unknown", "EXECUTION");
+    return;
+  }
+  const result = window.AndroidBridge.startReplay(JSON.stringify(payload));
+  if (result !== "started") {
+    appendMessage("assistant", `Couldn't start on the device: ${result}`, "badge-unknown", "EXECUTION");
+    speakBrowserTTS(`I couldn't start the task on your phone. ${result}`);
+  }
+}
+
+// Called by the Android app with replay progress: {type, text}.
+// type: status | ask | completed | failed | stopped
+window.onReplayEvent = function (evt) {
+  if (!evt || !evt.text) return;
+  if (evt.type === "status") {
+    const s = document.getElementById("statusText");
+    if (s) s.textContent = evt.text.slice(0, 40);
+    return;
+  }
+  const badge = { ask: "badge-ambiguity", completed: "badge-replay", failed: "badge-unknown",
+                  stopped: "badge-unknown" }[evt.type] || "badge-replay";
+  appendMessage("assistant", evt.text, badge, "EXECUTION");
+};
+
+function openDeviceSetup() {
+  if (window.AndroidBridge && window.AndroidBridge.openSetup) window.AndroidBridge.openSetup();
+}
+
 // Settings modal
 function openSettings() {
+  const setupBtn = document.getElementById("deviceSetupBtn");
+  if (setupBtn) setupBtn.style.display = (window.AndroidBridge && window.AndroidBridge.openSetup) ? "block" : "none";
   document.getElementById("serverUrlInput").value = backendUrl;
   document.getElementById("settingsModal").classList.add("open");
 }

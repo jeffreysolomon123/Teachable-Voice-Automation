@@ -115,6 +115,9 @@
         <button class="plan-btn-confirm" onclick="saveSettings()">Save & Connect</button>
         <button class="plan-btn-cancel" onclick="closeSettings()">Close</button>
       </div>
+      <!-- Android app only: backend URL, permissions, accessibility service -->
+      <button id="deviceSetupBtn" class="plan-btn-mode" style="display: none; margin-top: 8px; width: 100%;"
+              onclick="closeSettings(); openDeviceSetup()">📱 Device setup (server, permissions)</button>
     </div>
   </div>
 

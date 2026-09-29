@@ -8,7 +8,6 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ServiceInfo
-import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.PixelFormat
 import android.graphics.drawable.GradientDrawable
@@ -22,28 +21,27 @@ import android.view.Gravity
 import android.view.MotionEvent
 import android.view.View
 import android.view.WindowManager
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.ServiceCompat
 import androidx.core.content.ContextCompat
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
-/** Foreground service hosting the floating status pill and running the LLM readiness check. */
+/** Foreground service hosting the floating status pill (replay progress and ASK_USER prompts). */
 class OverlayService : Service() {
 
     companion object {
         private const val TAG = "OverlayService"
         private const val CHANNEL_ID = "overlay_status"
         private const val NOTIFICATION_ID = 1
-        private const val READY_AUTO_HIDE_MS = 4000L
+        private const val DONE_AUTO_HIDE_MS = 5000L
 
         fun start(context: Context) {
             ContextCompat.startForegroundService(context, Intent(context, OverlayService::class.java))
@@ -54,10 +52,11 @@ class OverlayService : Service() {
     private lateinit var windowManager: WindowManager
     private lateinit var pill: LinearLayout
     private lateinit var label: TextView
+    private lateinit var buttons: LinearLayout
+    private lateinit var close: TextView
     private lateinit var params: WindowManager.LayoutParams
     private var attached = false
     private var autoHideJob: Job? = null
-    private var checkJob: Job? = null
 
     override fun onBind(intent: Intent?): IBinder? = null
 
@@ -66,20 +65,14 @@ class OverlayService : Service() {
         startAsForeground()
         windowManager = getSystemService(WINDOW_SERVICE) as WindowManager
         buildPill()
-
         scope.launch { OverlayBus.state.collect { render(it) } }
-        scope.launch {
-            OverlayBus.capturing.collect { capturing ->
-                pill.visibility = if (capturing) View.INVISIBLE else View.VISIBLE
-            }
-        }
-        scope.launch { OverlayBus.screenshots.collect { runCheck(it) } }
+        scope.launch { OverlayBus.hideForInput.collect { setHiddenForInput(it) } }
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (!Settings.canDrawOverlays(this)) {
             Log.e(TAG, "Overlay permission not granted; stopping")
-            Toast.makeText(this, "Overlay permission missing — cannot show status bar", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Overlay permission missing — cannot show status", Toast.LENGTH_LONG).show()
             stopSelf()
         }
         return START_NOT_STICKY
@@ -95,7 +88,7 @@ class OverlayService : Service() {
         )
         val notification: Notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setSmallIcon(android.R.drawable.ic_dialog_info)
-            .setContentTitle("FlowLauncherTest overlay active")
+            .setContentTitle("Visual automation running")
             .setSilent(true)
             .setOngoing(true)
             .setPriority(NotificationCompat.PRIORITY_MIN)
@@ -115,23 +108,40 @@ class OverlayService : Service() {
     private fun buildPill() {
         label = TextView(this).apply {
             setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f)
-            maxLines = 2
+            maxLines = 6
             ellipsize = TextUtils.TruncateAt.END
             maxWidth = (resources.displayMetrics.widthPixels * 0.75).toInt()
         }
-        val close = TextView(this).apply {
+        close = TextView(this).apply {
             text = "✕"
             setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f)
             setPadding(dp(12), dp(2), dp(4), dp(2))
             setOnClickListener { dismiss() }
         }
-        pill = LinearLayout(this).apply {
+        val top = LinearLayout(this).apply {
             orientation = LinearLayout.HORIZONTAL
             gravity = Gravity.CENTER_VERTICAL
-            setPadding(dp(16), dp(10), dp(10), dp(10))
-            elevation = dp(6).toFloat()
             addView(label)
             addView(close)
+        }
+        buttons = LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            visibility = View.GONE
+            addView(Button(context).apply {
+                text = "Confirm"
+                setOnClickListener { ReplayController.answer(true) }
+            })
+            addView(Button(context).apply {
+                text = "Stop"
+                setOnClickListener { ReplayController.answer(false) }
+            })
+        }
+        pill = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(dp(16), dp(10), dp(10), dp(10))
+            elevation = dp(6).toFloat()
+            addView(top)
+            addView(buttons)
         }
         params = WindowManager.LayoutParams(
             WindowManager.LayoutParams.WRAP_CONTENT,
@@ -170,53 +180,43 @@ class OverlayService : Service() {
             stopSelf()
             return
         }
-
         val (text, bg, fg) = when (state) {
-            is OverlayState.Launching -> Triple("Launching ${state.app}…", 0xFF1E88E5.toInt(), Color.WHITE)
-            is OverlayState.Waiting -> Triple("Waiting for ${state.app} to load…", 0xFF3949AB.toInt(), Color.WHITE)
-            OverlayState.Checking -> Triple("Checking screen…", 0xFF8E24AA.toInt(), Color.WHITE)
-            OverlayState.Ready -> Triple("Ready ✓", 0xFF2E7D32.toInt(), Color.WHITE)
-            is OverlayState.Blocked -> Triple("Blocked: ${state.reason}", 0xFFFFB300.toInt(), Color.BLACK)
-            is OverlayState.TimedOut -> Triple("Timed out waiting for ${state.app} to open", 0xFFC62828.toInt(), Color.WHITE)
-            is OverlayState.NotInstalled -> Triple("${state.app}: App not installed", 0xFFC62828.toInt(), Color.WHITE)
+            is OverlayState.Status -> Triple(state.text, 0xFF3949AB.toInt(), Color.WHITE)
+            is OverlayState.Asking -> Triple(state.reason, 0xFFFFB300.toInt(), Color.BLACK)
+            OverlayState.Ready -> Triple("Done ✓", 0xFF2E7D32.toInt(), Color.WHITE)
+            is OverlayState.Blocked -> Triple("Stopped: ${state.reason}", 0xFFC62828.toInt(), Color.WHITE)
             OverlayState.Hidden -> error("handled above")
         }
         label.text = text
         label.setTextColor(fg)
-        (pill.getChildAt(1) as TextView).setTextColor(fg)
+        close.setTextColor(fg)
+        buttons.visibility = if (state is OverlayState.Asking) View.VISIBLE else View.GONE
         pill.background = GradientDrawable().apply {
-            cornerRadius = dp(28).toFloat()
+            cornerRadius = dp(24).toFloat()
             setColor(bg)
         }
         attach()
-
-        if (state is OverlayState.Ready) {
+        if (state is OverlayState.Ready || state is OverlayState.Blocked) {
             autoHideJob = scope.launch {
-                delay(READY_AUTO_HIDE_MS)
+                delay(DONE_AUTO_HIDE_MS)
                 OverlayBus.state.value = OverlayState.Hidden
             }
         }
     }
 
-    private fun runCheck(screenshot: Bitmap) {
-        checkJob?.cancel()
-        checkJob = scope.launch {
-            val key = Prefs.groqApiKey(this@OverlayService)
-            val result = withContext(Dispatchers.IO) { GroqVisionClient(key).checkReadiness(screenshot) }
-            Log.i(TAG, "Readiness result: $result")
-            OverlayBus.state.value = when (result) {
-                GroqVisionClient.Result.Ready -> OverlayState.Ready
-                is GroqVisionClient.Result.Blocked -> OverlayState.Blocked(result.blocker)
-                is GroqVisionClient.Result.Failed -> OverlayState.Blocked("check failed (${result.error})")
-            }
+    private fun setHiddenForInput(hidden: Boolean) {
+        pill.visibility = if (hidden) View.INVISIBLE else View.VISIBLE
+        params.flags = if (hidden) {
+            params.flags or WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE
+        } else {
+            params.flags and WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE.inv()
         }
+        if (attached) runCatching { windowManager.updateViewLayout(pill, params) }
     }
 
     private fun dismiss() {
-        Log.i(TAG, "Overlay dismissed by user")
-        checkJob?.cancel()
-        WindowWatcherAccessibilityService.watched.value = null
-        OverlayBus.state.value = OverlayState.Hidden
+        Log.i(TAG, "Overlay dismissed by user; stopping replay")
+        ReplayController.stop()
     }
 
     private fun attach() {

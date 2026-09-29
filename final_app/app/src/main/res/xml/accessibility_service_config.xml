@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  No accessibility-tree access: canRetrieveWindowContent is false, so the system never hands this
+  service any AccessibilityNodeInfo. UI elements are resolved by the backend from screenshots.
+  The service is used only for:
+    - window-state events (package name) to know when a launched app has settled
+    - takeScreenshot()                               (canTakeScreenshot, API 30+)
+    - dispatchGesture() coordinate taps/swipes       (canPerformGestures)
+    - performGlobalAction(GLOBAL_ACTION_BACK)
+    - InputMethod.commitText() into the focused field (flagInputMethodEditor, API 33+)
+-->
 <accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
     android:accessibilityEventTypes="typeWindowStateChanged"
     android:accessibilityFeedbackType="feedbackGeneric"
-    android:accessibilityFlags="flagDefault"
-    android:canRetrieveWindowContent="true"
+    android:accessibilityFlags="flagDefault|flagInputMethodEditor"
+    android:canRetrieveWindowContent="false"
+    android:canPerformGestures="true"
     android:canTakeScreenshot="true"
     android:notificationTimeout="0"
     android:description="@string/accessibility_description" />

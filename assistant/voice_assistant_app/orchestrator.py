@@ -77,6 +77,33 @@ SYSTEM_PROMPT = """You are Ava, a highly capable, articulate, and natural execut
 Output ONLY a single valid JSON object adhering strictly to the decision schema. No markdown code blocks, no backticks, no prose outside JSON.
 """
 
+_NUMBER_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6}
+
+
+def _spoken_order_slots(text: str) -> Dict[str, Any]:
+    """item / restaurant / app / quantity stated in an order utterance, e.g.
+    "I want to order two Margherita pizzas from Domino's on Zomato". Same patterns as the
+    rule-based fallback; only slots that are actually present are returned."""
+    out: Dict[str, Any] = {}
+    m_item = re.search(r"(?:order|get me|buy)\s+(?:a\s+|an\s+)?(.+?)\s+from\s", text, re.IGNORECASE)
+    m_rest = re.search(r"\sfrom\s+([a-zA-Z0-9\s'\.&]+?)(?:\s+on\s|\s+at\s|\s+via\s|\s+using\s|[.?!]?\s*$)", text, re.IGNORECASE)
+    m_app = re.search(r"\s(?:on|via|using)\s+([a-zA-Z0-9]+)", text, re.IGNORECASE)
+    if m_item:
+        item = m_item.group(1).strip()
+        m_qty = re.match(r"(\d+|one|two|three|four|five|six)\s+(.+)$", item, re.IGNORECASE)
+        if m_qty:
+            q = m_qty.group(1).lower()
+            out["quantity"] = int(q) if q.isdigit() else _NUMBER_WORDS[q]
+            item = m_qty.group(2).strip()
+        if item:
+            out["item"] = item
+    if m_rest and m_rest.group(1).strip():
+        out["restaurant"] = m_rest.group(1).strip()
+    if m_app:
+        out["app"] = m_app.group(1).strip().capitalize()
+    return out
+
+
 class VoiceOrchestrator:
     """Intelligent Conversational Orchestrator with Multi-Turn Memory, Mode Resolution & Plan Extraction."""
 
@@ -565,6 +592,15 @@ Respond with ONLY the JSON object representing the decision adhering strictly to
             app_n = wf.get("app_name", "App")
             slots = dict(wf.get("default_slots", {}))
             slot_overrides = {}
+
+            # What the user actually said overrides the stored defaults ("Margherita pizza", not the
+            # workflow's generic "pizza"); the specific rules below still apply on top.
+            for key, value in _spoken_order_slots(transcript).items():
+                if key == "app" and not slots.get("app"):
+                    continue
+                if str(slots.get(key, "")).lower() != str(value).lower():
+                    slot_overrides[key] = value
+                    slots[key] = value
 
             if "farmhouse" in text_lower:
                 slot_overrides["item"] = "Farmhouse pizza"
@@ -1077,7 +1113,7 @@ Respond with ONLY the JSON object representing the decision adhering strictly to
                 return AmbiguityClarification(**res) if parse_to_obj else json.dumps(res)
 
             extracted_slots = {"item": item, "restaurant": restaurant, "app": app_name, "quantity": 1}
-            flow_id = "order_dominos_zomato" if ("domino" in restaurant.lower() and "zomato" in app_name.lower()) else f"order_{restaurant.lower().replace('\'', '').replace(' ', '_')}_{app_name.lower()}"
+            flow_id = "order_dominos_zomato" if ("domino" in restaurant.lower() and "zomato" in app_name.lower()) else "order_{}_{}".format(restaurant.lower().replace("'", "").replace(" ", "_"), app_name.lower())
             summary = f"Order {item} from {restaurant} on {app_name}"
 
             if is_explicit_teach:

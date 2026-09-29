@@ -1,0 +1,14 @@
+# API
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+pydantic-settings>=2.3
+python-multipart>=0.0.9
+httpx>=0.27
+pillow>=10.0
+# Segmentation provider "hf_space" (the default): calls the Gradio Space over HTTPS
+gradio_client>=1.0
+# Voice assistant (assistant/voice_assistant_app, mounted at /api/voice): STT/LLM via Groq, Edge TTS
+groq>=0.9
+edge-tts>=6.1
+python-dotenv>=1.0

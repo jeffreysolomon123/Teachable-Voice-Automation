@@ -17,7 +17,7 @@ recording.mp4 + recording.json (tap log)
 | 1 | `1_tap_extractor/` | Finds each tap's exact touch frame and finger point in the video, using the log to know when and where to look. Writes before/touch/after frames. See its `README.md` and `ARCHITECTURE.md`. |
 | 2 | `2_flow_builder/` | Merges runs of keystrokes into `type_text` steps (and adds back keystrokes the video missed, using the log). Other taps become `tap` steps. Marks `window_change` taps `element_trustworthy: false`. Copies each step's frames into `flow_frames/`. |
 | 3 | `3_ui_segmentation/` | Screenshot → UI elements (YOLO/OmniParser boxes + EasyOCR text + containment hierarchy). See its `README.md`. `segment_batch.py` runs all three scripts on many frames with the models loaded once; stage 4 uses it. |
-| 4 | `4_ground_flow/` | For each `tap` step, segments its `before_frame` and picks the element under the tap point (deepest, then smallest box containing it, or the nearest center as a fallback). For clicks the log also gives the clicked element's bounds (`element.bounds`): a segmented element matching them (IoU ≥ 0.5) wins; if the vision pick is far smaller than them, the detector missed the target, so the logged bounds are used (`grounded_confidence: "log_bounds"`, vision pick kept as `inner_element`). Adds the result as `grounded_element` next to the original `element`, and flags steps where the two texts disagree. Every tap step also gets `before_text` / `after_text`: the OCR'd text lines of its before/after frame (after frames are only OCR'd, via `segment_batch.py --ocr-only`). |
+| 4 | `4_ground_flow/` | For each `tap` step, segments its `before_frame` and picks the element under the tap point (deepest, then smallest box containing it, or the nearest center as a fallback). Grounding is vision-only: the tap log's accessibility bounds (`element.bounds`) are not used to pick the element. Adds the result as `grounded_element` next to the original `element`, and flags steps where the two texts disagree. Every tap step also gets `before_text` / `after_text`: the OCR'd text lines of its before/after frame (after frames are only OCR'd, via `segment_batch.py --ocr-only`). |
 
 All stages are plain data/CV transforms: no LLM calls, no network (apart from the
 one-time download of the OmniParser weights from Hugging Face in stage 3).
@@ -81,8 +81,7 @@ resets. Space IDs are called through `https://<user>-<name>.hf.space`, which als
 
   The full schema is in `1_tap_extractor/README.md`, section 4.
 - **`grounded_flow.json`**: `flow.json` plus, on each grounded `tap` step:
-  `grounded_element: {id, type, text, bbox, center, grounded_confidence: "contained" | "fallback_nearest" | "log_bounds"}`
-  (plus `inner_element` for `log_bounds`).
+  `grounded_element: {id, type, text, bbox, center, grounded_confidence: "contained" | "fallback_nearest"}`.
   Frame paths are relative to the JSON file. `runs/` is git-ignored.
 
 ## Origin

@@ -1,0 +1,6 @@
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+# The repo root ignores .env.*; the template has no secrets and must be committed.
+!.env.example

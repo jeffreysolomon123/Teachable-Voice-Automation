@@ -1,0 +1,33 @@
+# Render Blueprint. One Python service: visual replay backend + voice assistant (/api/voice, /mobile/).
+# Segmentation runs on the Hugging Face Space (SEGMENTATION_PROVIDER=hf_space), LLM/STT calls go to Groq.
+# No rootDir: the service imports ../assistant (voice assistant) from the repository.
+services:
+  - type: web
+    name: ui-agent-backend
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: APP_ENV
+        value: production
+      - key: SEGMENTATION_PROVIDER
+        value: hf_space
+      - key: HF_SPACE
+        sync: false
+      - key: HF_TOKEN
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: TEXT_MODEL
+        sync: false
+      - key: VISION_MODEL
+        sync: false
+      - key: TEXT_REASONING_EFFORT
+        value: low
+      - key: VISION_REASONING_EFFORT
+        value: none
+      - key: CORS_ORIGINS
+        value: ""

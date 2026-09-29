@@ -1,0 +1,7 @@
+# Only for SEGMENTATION_PROVIDER=local (models run inside the backend; needs ~2-3 GB RAM).
+-r requirements.txt
+ultralytics
+huggingface_hub
+easyocr
+opencv-python-headless>=4.8
+numpy>=1.24

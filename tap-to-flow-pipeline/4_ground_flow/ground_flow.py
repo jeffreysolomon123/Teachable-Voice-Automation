@@ -29,14 +29,9 @@ from typing import Any
 SEGMENT_OUT = "segment_out"
 CONTAINED = "contained"
 FALLBACK_NEAREST = "fallback_nearest"
-LOG_BOUNDS = "log_bounds"
 BATCH_SCRIPT = "segment_batch.py"
 CLOUD_SCRIPT = "cloud_segment.py"
 PROGRESS_PREFIXES = ("[", "models loaded", "connected to", "  retry")
-# A logged click's bounds match a segmented element when their IoU is at least this.
-LOG_BOUNDS_MIN_IOU = 0.5
-# The vision pick is "too deep" when its area is below this fraction of the logged bounds.
-LOG_BOUNDS_MIN_AREA_RATIO = 0.25
 REQUIRED_TAP_KEYS = ("step_index", "tap_x", "tap_y", "before_frame")
 
 
@@ -68,7 +63,6 @@ class GroundResult:
     steps: list[dict[str, Any]]
     contained: int = 0
     fallback_nearest: int = 0
-    log_bounds: int = 0
     skipped: int = 0
     segmented_frames: int = 0
     reused_frames: int = 0
@@ -265,56 +259,20 @@ def _ancestors(el: dict[str, Any], by_id: dict[Any, dict[str, Any]]) -> set[Any]
     return seen
 
 
-def _iou(a: list[float], b: list[float]) -> float:
-    ix = max(0.0, min(a[2], b[2]) - max(a[0], b[0]))
-    iy = max(0.0, min(a[3], b[3]) - max(a[1], b[1]))
-    inter = ix * iy
-    union = _area(a) + _area(b) - inter
-    return inter / union if union > 0 else 0.0
-
-
-def _inside_frac(inner: list[float], outer: list[float]) -> float:
-    ix = max(0.0, min(inner[2], outer[2]) - max(inner[0], outer[0]))
-    iy = max(0.0, min(inner[3], outer[3]) - max(inner[1], outer[1]))
-    a = _area(inner)
-    return ix * iy / a if a > 0 else 0.0
-
-
-def _log_bounds_element(elements: list[dict[str, Any]], bounds: list[float]) -> dict[str, Any]:
-    """A pseudo-element for the logged click bounds, carrying the text segmented inside them."""
-    inside = sorted((e for e in elements if e["text"] and _inside_frac(e["bbox"], bounds) >= 0.9),
-                    key=lambda e: (e["bbox"][1], e["bbox"][0]))
-    x1, y1, x2, y2 = bounds
-    return {"id": None, "type": "log_bounds", "text": " ".join(e["text"] for e in inside) or None,
-            "bbox": [round(v) for v in bounds], "center": [round((x1 + x2) / 2), round((y1 + y2) / 2)]}
-
-
-def pick_element(elements: list[dict[str, Any]], x: float, y: float,
-                 log_bounds: list[float] | None = None) -> tuple[dict[str, Any], str] | None:
+def pick_element(elements: list[dict[str, Any]], x: float, y: float) -> tuple[dict[str, Any], str] | None:
     """Choose the element for a tap at (x, y); returns (element, confidence) or None if empty.
 
     Among elements whose bbox contains the point, any that is an ancestor of another match is
     dropped (children are more specific, regardless of area); the smallest-area survivor wins.
     With no containing element, the element whose center is nearest the point is used.
 
-    ``log_bounds`` (the clicked element's bounds from the tap log, when known) refines this:
-    a containing element whose IoU with them is at least LOG_BOUNDS_MIN_IOU wins outright;
-    and if the vision pick is far smaller than them (or only a nearest-center fallback), the
-    detector missed the real target, so a ``log_bounds`` pseudo-element is returned instead.
+    Vision only: the tap log's accessibility bounds are deliberately not used (UI elements are
+    identified from screenshots, never from the accessibility tree).
     """
     if not elements:
         return None
     matches = [e for e in elements if _contains(e["bbox"], x, y)]
-    if log_bounds is not None and matches:
-        best = max(matches, key=lambda e: _iou(e["bbox"], log_bounds))
-        if _iou(best["bbox"], log_bounds) >= LOG_BOUNDS_MIN_IOU:
-            return best, CONTAINED
-    picked = _pick_geometric(elements, matches, x, y)
-    if log_bounds is not None and _contains(log_bounds, x, y) and (
-            picked[1] == FALLBACK_NEAREST
-            or _area(picked[0]["bbox"]) < LOG_BOUNDS_MIN_AREA_RATIO * _area(log_bounds)):
-        return _log_bounds_element(elements, log_bounds), LOG_BOUNDS
-    return picked
+    return _pick_geometric(elements, matches, x, y)
 
 
 def _pick_geometric(elements: list[dict[str, Any]], matches: list[dict[str, Any]],
@@ -418,10 +376,8 @@ def ground_flow(flow_path: Path, out_path: Path, scripts_dir: Path, *, python: s
 
     for s in todo:
         frame = frames[id(s)]
-        bounds = (s.get("element") or {}).get("bounds")
-        bounds = [float(v) for v in bounds] if isinstance(bounds, list) and len(bounds) == 4 else None
         x, y = float(s["tap_x"]), float(s["tap_y"])
-        picked = pick_element(cache[frame], x, y, bounds)
+        picked = pick_element(cache[frame], x, y)
         if picked is None:
             raise GroundingError(f"step {s['step_index']}: segmentation found no elements in {frame}")
         el, confidence = picked
@@ -429,12 +385,7 @@ def ground_flow(flow_path: Path, out_path: Path, scripts_dir: Path, *, python: s
             "id": el["id"], "type": el["type"], "text": el["text"],
             "bbox": el["bbox"], "center": el["center"], "grounded_confidence": confidence,
         }
-        if confidence == LOG_BOUNDS:
-            matches = [e for e in cache[frame] if _contains(e["bbox"], x, y)]
-            inner, _ = _pick_geometric(cache[frame], matches, x, y)
-            s["grounded_element"]["inner_element"] = {k: inner[k] for k in ("id", "type", "text", "bbox", "center")}
-            result.log_bounds += 1
-        elif confidence == CONTAINED:
+        if confidence == CONTAINED:
             result.contained += 1
         else:
             result.fallback_nearest += 1

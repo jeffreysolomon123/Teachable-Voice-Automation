@@ -18,7 +18,8 @@ ALTERNATIVE_VOICE = os.getenv("ALTERNATIVE_VOICE", "en-IN-NeerjaExpressiveNeural
 
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "groq").lower()
 
-DATA_DIR = BASE_DIR / "data"
+# VOICE_DATA_DIR relocates workflow/session memory (tests, or a persistent disk on Render).
+DATA_DIR = Path(os.getenv("VOICE_DATA_DIR") or (BASE_DIR / "data"))
 DATA_DIR.mkdir(exist_ok=True, parents=True)
 
 WORKFLOWS_JSON_PATH = DATA_DIR / "workflows.json"
