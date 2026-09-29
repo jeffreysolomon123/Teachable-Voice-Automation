@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FlowLauncherTest</string>
+    <string name="accessibility_label">FlowLauncherTest window watcher</string>
+    <string name="accessibility_description">Watches for the target app\'s window to settle after launch, then takes a screenshot so FlowLauncherTest can check whether the app is ready.</string>
+</resources>

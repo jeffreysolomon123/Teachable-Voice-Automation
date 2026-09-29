@@ -2,6 +2,7 @@
 
 Usage: python ground_flow_cli.py flow.json --out grounded_flow.json --segmentation-dir DIR
                                  [--force-rerun] [--only-untrustworthy] [--python PYTHON]
+                                 [--cloud SPACE [--cloud-concurrency N]]
 
 Each tap step's before_frame is run through DIR's segment_ui.py / ocr_text.py /
 combine_results.py (cached in segment_out/ next to the frame), and the element under the
@@ -14,7 +15,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from ground_flow import GroundingError, ground_flow
+from ground_flow import CloudConfig, GroundingError, ground_flow
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -29,12 +30,20 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--only-untrustworthy", action="store_true",
                         help="only ground tap steps with element_trustworthy == false")
     parser.add_argument("--python", help="interpreter for the segmentation scripts "
-                                         "(needs ultralytics + easyocr; default: this one)")
+                                         "(needs ultralytics + easyocr, or gradio_client with --cloud; "
+                                         "default: this one)")
+    parser.add_argument("--cloud", metavar="SPACE",
+                        help="segment on this cloud GPU Gradio Space (user/name or URL) instead of "
+                             "locally; set HF_TOKEN in the environment for a private Space")
+    parser.add_argument("--cloud-concurrency", type=int, default=4,
+                        help="parallel requests to the Space (default: 4)")
     args = parser.parse_args(argv)
 
+    cloud = CloudConfig(args.cloud, args.cloud_concurrency) if args.cloud else None
     try:
         result = ground_flow(args.flow, args.out, args.segmentation_dir, python=args.python,
-                             force_rerun=args.force_rerun, only_untrustworthy=args.only_untrustworthy)
+                             force_rerun=args.force_rerun, only_untrustworthy=args.only_untrustworthy,
+                             cloud=cloud)
     except GroundingError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1

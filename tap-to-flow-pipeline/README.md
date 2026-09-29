@@ -48,6 +48,28 @@ Stage 4 options: `--only-untrustworthy` grounds only `element_trustworthy == fal
 `--force-rerun` ignores cached segmentation, and `--python PATH` picks the interpreter that runs
 stage 3 (it needs ultralytics and easyocr; the default is the current one).
 
+### Cloud GPU segmentation (optional)
+
+`--cloud SPACE` runs stage 3 on a Hugging Face ZeroGPU Space (see
+`../cloud_gpu_ui_segmentation/hf_space/`) via `3_ui_segmentation/cloud_segment.py` instead of
+locally, and writes the same `segment_out/` files, so everything downstream is unchanged. Needs
+only `gradio_client`. Frames are uploaded as full-resolution JPEG q90 (~4x smaller than PNG; tap
+grounding was identical in testing). If the Space has the `/segment_batch` endpoint, before and
+after frames are split into `--cloud-concurrency` (default 4) batches, one GPU call each, all in
+flight at once; older Spaces fall back to one `/segment_ui` request per frame.
+
+```
+$env:HF_TOKEN = "hf_..."     # bash: export HF_TOKEN=hf_...   (never put it on the command line)
+python 4_ground_flow/ground_flow_cli.py runs/rec/flow.json --out runs/rec/grounded_flow.json --segmentation-dir 3_ui_segmentation --cloud user/ui-segmentation
+```
+
+Zomato recording, 14 tap steps: 100 s on the cloud (14 before + 14 after frames) vs 215 s locally
+on CPU. Per request it's ~7-9 s warm (upload + GPU queue), so the gain comes from parallelism.
+A free HF account's daily ZeroGPU quota is only a few minutes of GPU time, which is roughly
+one run like this; after that, requests fail with "exceeded your free ZeroGPU quota" until it
+resets. Space IDs are called through `https://<user>-<name>.hf.space`, which also works where
+`huggingface.co` itself is blocked. Frames are uploaded to whoever owns the Space.
+
 ## Outputs
 
 - **`flow.json`**: list of steps, each with `step_index` and `type`:

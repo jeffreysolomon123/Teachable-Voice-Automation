@@ -7,3 +7,5 @@ Pillow>=10.0
 ultralytics
 huggingface_hub
 easyocr
+# Stage 3 on a cloud GPU Space (ground_flow_cli.py --cloud)
+gradio_client

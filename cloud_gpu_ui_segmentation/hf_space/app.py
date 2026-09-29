@@ -40,34 +40,20 @@ log = logging.getLogger("hf_ui_segmentation")
 HF_REPO = "microsoft/OmniParser-v2.0"
 HF_FILE = "icon_detect/model.pt"
 
-# Global model cache
-YOLO_MODEL = None
-OCR_READER = None
+# Models are loaded once at startup. ZeroGPU runs each @spaces.GPU call in a worker process,
+# so models created lazily inside a call are not kept and would be reloaded on every request.
+import torch
+import easyocr
+from huggingface_hub import hf_hub_download
+from ultralytics import YOLO
+
+log.info(f"Loading OmniParser v2 from {HF_REPO} and EasyOCR...")
+YOLO_MODEL = YOLO(hf_hub_download(HF_REPO, HF_FILE))
+OCR_READER = easyocr.Reader(["en"], gpu=torch.cuda.is_available())
 
 
-def get_models():
-    """Lazy load models on the GPU when needed."""
-    global YOLO_MODEL, OCR_READER
-    import torch
-
-    device = "cuda:0" if torch.cuda.is_available() else "cpu"
-
-    if YOLO_MODEL is None:
-        from huggingface_hub import hf_hub_download
-        from ultralytics import YOLO
-
-        log.info(f"Loading OmniParser v2 from {HF_REPO} on {device}...")
-        weights = hf_hub_download(HF_REPO, HF_FILE)
-        YOLO_MODEL = YOLO(weights)
-
-    if OCR_READER is None:
-        import easyocr
-
-        log.info(f"Loading EasyOCR on {device}...")
-        use_gpu = torch.cuda.is_available()
-        OCR_READER = easyocr.Reader(["en"], gpu=use_gpu)
-
-    return YOLO_MODEL, OCR_READER
+def gpu_device() -> str:
+    return "cuda:0" if torch.cuda.is_available() else "cpu"
 
 
 def compute_area(b: List[int]) -> int:
@@ -178,32 +164,9 @@ def draw_annotated_image(img_pil: Image.Image, elements: List[Dict[str, Any]]) -
     return out
 
 
-# Decorate with ZeroGPU allocation: attaches H100 GPU dynamically for up to 60s
-@spaces.GPU(duration=60)
-def segment_ui(
-    image: Image.Image,
-    conf: float = 0.05,
-    iou: float = 0.1,
-    min_conf: float = 0.3,
-    contain: float = 0.6,
-) -> Tuple[Dict[str, Any], Image.Image]:
-    """Runs OmniParser v2 + EasyOCR on ZeroGPU (H100) and returns structured JSON + annotated image."""
-    if image is None:
-        return {}, None
-
-    img_rgb = image.convert("RGB")
-    w, h = img_rgb.size
-    img_np = np.array(img_rgb)
-
-    yolo_model, ocr_reader = get_models()
-    import torch
-
-    device = "cuda:0" if torch.cuda.is_available() else "cpu"
-
-    # 1. YOLO OmniParser detection
-    res = yolo_model.predict(
-        img_np, conf=conf, iou=iou, imgsz=1280, device=device, verbose=False
-    )[0]
+def segment_array(img_np: np.ndarray, res: Any, min_conf: float, contain: float) -> Dict[str, Any]:
+    """OCR + merge for one image, given its YOLO result; returns the elements/texts/combined dict."""
+    h, w = img_np.shape[:2]
     names = res.names
     cv_elements = []
     for box in res.boxes:
@@ -227,7 +190,7 @@ def segment_ui(
         add_location_metadata(e, w, h)
 
     # 2. EasyOCR
-    ocr_results = ocr_reader.readtext(img_np, paragraph=False)
+    ocr_results = OCR_READER.readtext(img_np, paragraph=False)
     texts = []
     for pts, text_str, ocr_conf in ocr_results:
         text_str = text_str.strip()
@@ -252,18 +215,49 @@ def segment_ui(
 
     # 3. Geometric Merge
     combined = merge_hierarchy_and_text(cv_elements, texts, contain=contain)
+    return {"width": w, "height": h, "elements": cv_elements, "texts": texts, "combined": combined}
 
-    # 4. Annotated Image
-    annotated = draw_annotated_image(img_rgb, combined)
 
-    result_json = {
-        "width": w,
-        "height": h,
-        "elements": cv_elements,
-        "texts": texts,
-        "combined": combined,
-    }
-    return json.dumps(result_json, indent=2), annotated
+@spaces.GPU(duration=20)
+def segment_ui(
+    image: Image.Image,
+    conf: float = 0.05,
+    iou: float = 0.1,
+    min_conf: float = 0.3,
+    contain: float = 0.6,
+) -> Tuple[str, Image.Image]:
+    """One screenshot -> structured JSON + annotated image (web UI and single-image clients)."""
+    if image is None:
+        return "{}", None
+    img_rgb = image.convert("RGB")
+    img_np = np.array(img_rgb)
+    res = YOLO_MODEL.predict(img_np, conf=conf, iou=iou, imgsz=1280, device=gpu_device(), verbose=False)[0]
+    result = segment_array(img_np, res, min_conf, contain)
+    return json.dumps(result, indent=2), draw_annotated_image(img_rgb, result["combined"])
+
+
+def _batch_duration(files, conf=0.05, iou=0.1, min_conf=0.3, contain=0.6) -> int:
+    # ZeroGPU reserves this much quota up front; keep it close to the real need (~0.5 s/image).
+    return min(120, 5 + 2 * len(files or []))
+
+
+@spaces.GPU(duration=_batch_duration)
+def segment_batch(
+    files: List[str],
+    conf: float = 0.05,
+    iou: float = 0.1,
+    min_conf: float = 0.3,
+    contain: float = 0.6,
+) -> List[Dict[str, Any]]:
+    """Many screenshots in one GPU call (batched YOLO, no annotated images); results in input order."""
+    if not files:
+        return []
+    arrays = [np.array(Image.open(f).convert("RGB")) for f in files]
+    t0 = time.perf_counter()
+    yolo_results = YOLO_MODEL.predict(arrays, conf=conf, iou=iou, imgsz=1280, device=gpu_device(), verbose=False)
+    out = [segment_array(a, r, min_conf, contain) for a, r in zip(arrays, yolo_results)]
+    log.info(f"segment_batch: {len(files)} images in {time.perf_counter() - t0:.2f}s on {gpu_device()}")
+    return out
 
 
 # Build Gradio UI + API
@@ -295,6 +289,20 @@ with gr.Blocks(title="UI Segmentation - ZeroGPU H100") as demo:
         outputs=[json_out, annotated_out],
         api_name="segment_ui",
     )
+
+    with gr.Accordion("Batch (many screenshots in one GPU call)", open=False):
+        batch_files = gr.File(file_count="multiple", type="filepath", label="Screenshots")
+        batch_btn = gr.Button("Segment Batch")
+        batch_out = gr.JSON(label="Results (one per screenshot, in upload order)")
+    batch_btn.click(
+        fn=segment_batch,
+        inputs=[batch_files, conf_slider, iou_slider, min_conf_slider, contain_slider],
+        outputs=batch_out,
+        api_name="segment_batch",
+    )
+
+# Gradio runs one request per endpoint at a time by default; let batches from one run overlap.
+demo.queue(default_concurrency_limit=8)
 
 if __name__ == "__main__":
     demo.launch(server_name="0.0.0.0", server_port=7860)

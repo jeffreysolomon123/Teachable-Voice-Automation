@@ -10,6 +10,9 @@ through unchanged. Pure geometry: no LLM, no network.
 Every ``tap`` step also gets ``before_text`` and ``after_text``: the OCR text lines found on its
 before/after frame (reading order, from the frame's ``_ocr.json``). After frames are only
 OCR'd (segment_batch.py --ocr-only), not segmented.
+
+With a ``CloudConfig``, segmentation runs on a cloud GPU Space instead (cloud_segment.py):
+before and after frames are sent together in one parallel batch; the rest is unchanged.
 """
 
 from __future__ import annotations
@@ -28,6 +31,8 @@ CONTAINED = "contained"
 FALLBACK_NEAREST = "fallback_nearest"
 LOG_BOUNDS = "log_bounds"
 BATCH_SCRIPT = "segment_batch.py"
+CLOUD_SCRIPT = "cloud_segment.py"
+PROGRESS_PREFIXES = ("[", "models loaded", "connected to", "  retry")
 # A logged click's bounds match a segmented element when their IoU is at least this.
 LOG_BOUNDS_MIN_IOU = 0.5
 # The vision pick is "too deep" when its area is below this fraction of the logged bounds.
@@ -37,6 +42,14 @@ REQUIRED_TAP_KEYS = ("step_index", "tap_x", "tap_y", "before_frame")
 
 class GroundingError(Exception):
     """Raised for missing/malformed inputs or a failed segmentation script."""
+
+
+@dataclass
+class CloudConfig:
+    """Run segmentation on this Gradio Space (ID or URL); the token comes from HF_TOKEN."""
+
+    space: str
+    concurrency: int = 4
 
 
 @dataclass
@@ -158,20 +171,26 @@ def run_segmentation(frame: Path, scripts_dir: Path, python: str) -> Path:
     return combined
 
 
-def run_segmentation_batch(frames: list[Path], scripts_dir: Path, python: str) -> None:
-    """Segment several frames in one process (models loaded once) with segment_batch.py.
+def run_segmentation_batch(frames: list[Path], scripts_dir: Path, python: str,
+                           cloud: CloudConfig | None = None) -> None:
+    """Segment several frames in one process: segment_batch.py (models loaded once), or
+    cloud_segment.py (parallel requests to a GPU Space) when ``cloud`` is given.
 
     Frames are grouped by folder so each group writes to its own ``segment_out/``. Progress
     lines are echoed to stderr; on failure the tail of the output is printed and a
     GroundingError is raised.
     """
-    script = scripts_dir / BATCH_SCRIPT
+    name = CLOUD_SCRIPT if cloud else BATCH_SCRIPT
+    script = scripts_dir / name
+    if not script.is_file():
+        raise GroundingError(f"segmentation script not found: {script}")
+    extra = ["--space", cloud.space, "--concurrency", str(cloud.concurrency)] if cloud else ["--crops"]
     env = {**os.environ, "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1"}
     groups: dict[Path, list[Path]] = {}
     for f in frames:
         groups.setdefault(f.parent / SEGMENT_OUT, []).append(f)
     for out_dir, group in groups.items():
-        cmd = [python, str(script), *map(str, group), "--crops", "-o", str(out_dir)]
+        cmd = [python, str(script), *map(str, group), *extra, "-o", str(out_dir)]
         proc = subprocess.Popen(cmd, cwd=scripts_dir, env=env, stdout=subprocess.PIPE,
                                 stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace")
         tail: list[str] = []
@@ -179,14 +198,14 @@ def run_segmentation_batch(frames: list[Path], scripts_dir: Path, python: str) -
         for line in proc.stdout:
             line = line.rstrip()
             tail = (tail + [line])[-40:]
-            if line.startswith("[") or line.startswith("models loaded"):
+            if line.startswith(PROGRESS_PREFIXES):
                 print(f"  {line}", file=sys.stderr, flush=True)
         if proc.wait() != 0:
-            print(f"--- {BATCH_SCRIPT} output (last lines) ---\n" + "\n".join(tail) + "\n---", file=sys.stderr)
-            raise GroundingError(f"{BATCH_SCRIPT} failed (exit {proc.returncode}) on {len(group)} frame(s) in {out_dir}")
+            print(f"--- {name} output (last lines) ---\n" + "\n".join(tail) + "\n---", file=sys.stderr)
+            raise GroundingError(f"{name} failed (exit {proc.returncode}) on {len(group)} frame(s) in {out_dir}")
         missing = [f for f in group if not combined_path_for(f).is_file()]
         if missing:
-            raise GroundingError(f"{BATCH_SCRIPT} succeeded but wrote no combined result for {missing[0]}")
+            raise GroundingError(f"{name} succeeded but wrote no combined result for {missing[0]}")
 
 
 def ocr_path_for(frame: Path) -> Path:
@@ -323,11 +342,13 @@ def texts_disagree(a: str | None, b: str | None) -> bool:
 # --------------------------------------------------------------------------- driver
 
 def ground_flow(flow_path: Path, out_path: Path, scripts_dir: Path, *, python: str | None = None,
-                force_rerun: bool = False, only_untrustworthy: bool = False) -> GroundResult:
+                force_rerun: bool = False, only_untrustworthy: bool = False,
+                cloud: CloudConfig | None = None) -> GroundResult:
     """Ground every tap step of ``flow_path`` and write the result to ``out_path``.
 
     ``before_frame`` paths are resolved relative to flow.json's folder. ``python`` is the
-    interpreter used for the segmentation scripts (default: the current one).
+    interpreter used for the segmentation scripts (default: the current one). ``cloud``
+    sends segmentation to a GPU Space instead of running it locally.
     """
     if not scripts_dir.is_dir():
         raise GroundingError(f"segmentation dir not found: {scripts_dir}")
@@ -347,20 +368,6 @@ def ground_flow(flow_path: Path, out_path: Path, scripts_dir: Path, *, python: s
             raise GroundingError(f"step {s['step_index']}: before_frame not found: {frame}")
         frames[id(s)] = frame
 
-    result = GroundResult(steps=steps)
-    result.skipped = sum(1 for s in steps if s["type"] == "tap") - len(todo)
-    unique = list(dict.fromkeys(frames.values()))
-    pending = [f for f in unique if force_rerun or not combined_path_for(f).is_file()]
-    result.segmented_frames, result.reused_frames = len(pending), len(unique) - len(pending)
-    if pending:
-        print(f"  segmenting {len(pending)} frame(s) ...", file=sys.stderr, flush=True)
-        if (scripts_dir / BATCH_SCRIPT).is_file():
-            run_segmentation_batch(pending, scripts_dir, python)
-        else:  # older segmentation folder: three scripts per frame
-            for f in pending:
-                run_segmentation(f, scripts_dir, python)
-    cache = {f: load_combined(combined_path_for(f)) for f in unique}
-
     # before/after OCR text for every tap step (also ones skipped by --only-untrustworthy).
     def resolve(step: dict[str, Any], key: str) -> Path:
         frame = Path(step[key])
@@ -376,11 +383,34 @@ def ground_flow(flow_path: Path, out_path: Path, scripts_dir: Path, *, python: s
             if not frame.is_file():
                 raise GroundingError(f"step {s['step_index']}: {key} not found: {frame}")
             ocr_frames[(id(s), key)] = frame
-    need_ocr = list(dict.fromkeys(f for f in ocr_frames.values()
-                                  if not ocr_path_for(f).is_file() or (force_rerun and f not in cache)))
-    if need_ocr:
-        print(f"  OCR of {len(need_ocr)} frame(s) ...", file=sys.stderr, flush=True)
-        run_ocr_batch(need_ocr, scripts_dir, python)
+
+    result = GroundResult(steps=steps)
+    result.skipped = sum(1 for s in steps if s["type"] == "tap") - len(todo)
+    unique = list(dict.fromkeys(frames.values()))
+    pending = [f for f in unique if force_rerun or not combined_path_for(f).is_file()]
+    result.segmented_frames, result.reused_frames = len(pending), len(unique) - len(pending)
+    # Segmenting a frame also OCRs it, so pending frames never need a separate OCR pass.
+    pending_set, unique_set = set(pending), set(unique)
+    need_ocr = [f for f in dict.fromkeys(ocr_frames.values()) if f not in pending_set
+                and (not ocr_path_for(f).is_file() or (force_rerun and f not in unique_set))]
+
+    if cloud and (pending or need_ocr):
+        print(f"  cloud-segmenting {len(pending)} frame(s) + OCR of {len(need_ocr)} frame(s) "
+              f"on {cloud.space} ...", file=sys.stderr, flush=True)
+        run_segmentation_batch(pending + need_ocr, scripts_dir, python, cloud)
+    else:
+        if pending:
+            print(f"  segmenting {len(pending)} frame(s) ...", file=sys.stderr, flush=True)
+            if (scripts_dir / BATCH_SCRIPT).is_file():
+                run_segmentation_batch(pending, scripts_dir, python)
+            else:  # older segmentation folder: three scripts per frame
+                for f in pending:
+                    run_segmentation(f, scripts_dir, python)
+        if need_ocr:
+            print(f"  OCR of {len(need_ocr)} frame(s) ...", file=sys.stderr, flush=True)
+            run_ocr_batch(need_ocr, scripts_dir, python)
+    cache = {f: load_combined(combined_path_for(f)) for f in unique}
+
     for s in taps:
         for key, field_name in (("before_frame", "before_text"), ("after_frame", "after_text")):
             frame = ocr_frames.get((id(s), key))
