@@ -1,0 +1,41 @@
+{
+  "session_id": "test_http_sess",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-27T19:31:27.842475",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Executing Margherita pizza order from Domino's on Zomato.",
+      "timestamp": "2026-09-27T19:31:27.881988",
+      "metadata": {
+        "intent": "REPLAY"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is teach mode?",
+      "timestamp": "2026-09-27T19:32:01.185574",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "In TEACH mode, you demonstrate the actions on your phone screen while I record and learn each tap and input. In ORDER mode, I autonomously execute a previously learned workflow for you. Which would you prefer?",
+      "timestamp": "2026-09-27T19:32:01.236900",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": {
+    "missing_parameter": "mode",
+    "candidate_flow_ids": []
+  },
+  "draft_plan": null,
+  "current_topic": null,
+  "created_at": "2026-09-27T19:31:20.071788"
+}

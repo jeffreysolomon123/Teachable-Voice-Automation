@@ -1,0 +1,235 @@
+{
+  "session_id": "test_non_regression",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "What can you do?",
+      "timestamp": "2026-09-29T19:43:51.571385",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows across apps on your phone! You can teach me new flows by demonstrating them on your screen, or tell me to run flows like ordering food on Zomato or shopping on Amazon.",
+      "timestamp": "2026-09-29T19:43:51.585393",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T20:13:42.661404",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order a Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:13:45.365137",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach mode",
+      "timestamp": "2026-09-29T20:13:46.501581",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan for Zomato: Order a Margherita pizza from Domino's on Zomato. Shall I proceed?",
+      "timestamp": "2026-09-29T20:13:55.210979",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, start recording",
+      "timestamp": "2026-09-29T20:13:56.072576",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Learned: Order Margherita pizza from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.",
+      "timestamp": "2026-09-29T20:14:06.499262",
+      "metadata": {
+        "intent": "TEACH"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Finish demonstration",
+      "timestamp": "2026-09-29T20:14:07.330631",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Demonstration captured and saved! I've learned the steps for Zomato. You can now execute it anytime in ORDER mode.",
+      "timestamp": "2026-09-29T20:14:07.404567",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thank you Ava",
+      "timestamp": "2026-09-29T20:14:08.108626",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "You're welcome! Let me know if there's anything else I can help with.",
+      "timestamp": "2026-09-29T20:14:17.935704",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hello again",
+      "timestamp": "2026-09-29T20:14:22.216346",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Welcome back! How can I help you today?",
+      "timestamp": "2026-09-29T20:14:28.303321",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What can you do?",
+      "timestamp": "2026-09-29T20:14:32.634992",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can help you automate tasks on your Android phone. You can teach me new workflows by demonstrating them, then run them later in ORDER mode. For example, I can order food, search products, book rides, send messages, set reminders, and more. Just let me know what you’d like to do.",
+      "timestamp": "2026-09-29T20:14:37.796785",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T20:31:39.019929",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:31:45.905108",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach mode",
+      "timestamp": "2026-09-29T20:31:46.740988",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan for Zomato: Order Margherita pizza from Domino's. Shall I proceed?",
+      "timestamp": "2026-09-29T20:32:03.585564",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, start recording",
+      "timestamp": "2026-09-29T20:32:11.137362",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Learned: Order Margherita pizza from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.",
+      "timestamp": "2026-09-29T20:32:21.027759",
+      "metadata": {
+        "intent": "TEACH"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Finish demonstration",
+      "timestamp": "2026-09-29T20:32:21.887525",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Demonstration captured and saved! I've learned the steps for Zomato. You can now execute it anytime in ORDER mode.",
+      "timestamp": "2026-09-29T20:32:21.943885",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thank you Ava",
+      "timestamp": "2026-09-29T20:32:23.138564",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "You're very welcome! Let me know if you need anything else.",
+      "timestamp": "2026-09-29T20:32:39.760837",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hello again",
+      "timestamp": "2026-09-29T20:32:40.497966",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello again! It's good to see you. How can I assist you today?",
+      "timestamp": "2026-09-29T20:32:58.112057",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What can you do?",
+      "timestamp": "2026-09-29T20:33:04.909997",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows on your phone. For example, I can help you order food on Zomato or shop on Amazon by recording your steps in teach mode and executing them later in order mode.",
+      "timestamp": "2026-09-29T20:33:15.651032",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    }
+  ],
+  "user_preferences": {
+    "last_completed_plan": {
+      "mode": "TEACH",
+      "stage": "COMPLETED",
+      "app_name": "Zomato",
+      "flow_id": "order_dominos_zomato",
+      "slots": {
+        "item": "Margherita pizza",
+        "restaurant": "Domino's",
+        "app": "Zomato"
+      },
+      "summary": "Order Margherita pizza from Domino's on Zomato",
+      "confirmed": false,
+      "status": "completed"
+    }
+  },
+  "pending_clarification": null,
+  "draft_plan": null,
+  "current_topic": null,
+  "created_at": "2026-09-27T21:37:29.190054"
+}

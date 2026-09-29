@@ -1,0 +1,235 @@
+{
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "speed.",
+      "timestamp": "2026-09-27T17:43:40.442006",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant or item would you like to order?",
+      "timestamp": "2026-09-27T17:43:40.887473",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Adyar Anandabhavan.",
+      "timestamp": "2026-09-27T17:43:51.792829",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your ORDER plan for Zomato: Order Large biryani from Adyar Anandabhavan. Should I proceed?",
+      "timestamp": "2026-09-27T17:43:52.577978",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Proceed.",
+      "timestamp": "2026-09-27T17:44:10.688798",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Confirmed. Executing Order Large biryani from Adyar Anandabhavan on Zomato on Zomato now.",
+      "timestamp": "2026-09-27T17:44:10.861810",
+      "metadata": {
+        "intent": "REPLAY"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hi, can you hear me?",
+      "timestamp": "2026-09-27T18:08:39.252948",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I can hear you clearly. How can I help you today?",
+      "timestamp": "2026-09-27T18:08:39.694257",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I want to order a pizza",
+      "timestamp": "2026-09-27T18:08:55.817829",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I hear you! How can I help you teach a workflow or order something on your phone?",
+      "timestamp": "2026-09-27T18:08:56.467360",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I want to order a pizza",
+      "timestamp": "2026-09-27T18:09:11.604965",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I hear you! How can I help you teach a workflow or order something on your phone?",
+      "timestamp": "2026-09-27T18:09:12.439245",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hi, can you hear me?",
+      "timestamp": "2026-09-27T18:09:28.965471",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I can hear you clearly. How can I help you today?",
+      "timestamp": "2026-09-27T18:09:29.382869",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I want to order something",
+      "timestamp": "2026-09-27T18:09:40.893666",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I hear you! How can I help you teach a workflow or order something on your phone?",
+      "timestamp": "2026-09-27T18:09:41.451592",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I want to order pizza from Zomato.",
+      "timestamp": "2026-09-27T18:09:55.862560",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order pizza from Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-27T18:09:56.546541",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach more",
+      "timestamp": "2026-09-27T18:10:22.500277",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Great, TEACH mode selected for Zomato. Plan: Order pizza from Zomato. Ready to start recording the demonstration?",
+      "timestamp": "2026-09-27T18:10:22.532321",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes",
+      "timestamp": "2026-09-27T18:10:42.795495",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Learned: Order pizza from Zomato. Starting demonstration recording now, please perform the taps on your screen.",
+      "timestamp": "2026-09-27T18:10:42.858028",
+      "metadata": {
+        "intent": "TEACH"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hello",
+      "timestamp": "2026-09-27T18:11:05.995663",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I am still recording your demonstration for the Zomato pizza order. Please continue performing the taps on your screen when you are ready.",
+      "timestamp": "2026-09-27T18:11:06.470706",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "No cancel that",
+      "timestamp": "2026-09-27T18:11:28.400991",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Understood, I have cancelled the recording session for the Zomato pizza order. How can I help you next?",
+      "timestamp": "2026-09-27T18:11:28.848277",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Just, I want to teach you something.",
+      "timestamp": "2026-09-27T18:11:50.605024",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I hear you! How can I help you teach a workflow or order something on your phone?",
+      "timestamp": "2026-09-27T18:11:51.188630",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T19:55:16.785866",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Executing pizza on Zomato.",
+      "timestamp": "2026-09-29T19:55:18.716796",
+      "metadata": {
+        "intent": "REPLAY"
+      }
+    }
+  ],
+  "user_preferences": {
+    "last_completed_plan": {
+      "mode": "ORDER",
+      "stage": "STAGE_3_EXECUTION",
+      "app_name": "Zomato",
+      "flow_id": "order_dominos_zomato",
+      "slots": {
+        "item": "pizza",
+        "restaurant": "Domino's",
+        "app": "Zomato",
+        "quantity": 1
+      },
+      "summary": "Executing pizza on Zomato",
+      "confirmed": true,
+      "status": "executing"
+    },
+    "office_address": "Cyber City"
+  },
+  "pending_clarification": null,
+  "current_topic": null,
+  "draft_plan": null
+}

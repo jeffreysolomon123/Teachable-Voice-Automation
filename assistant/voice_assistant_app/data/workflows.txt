@@ -1,0 +1,87 @@
+======================================================================
+           TEACHABLE VOICE AUTOMATION - WORKFLOW MEMORY
+======================================================================
+Generated: 2026-09-29 20:42:20
+Total Learned Workflows: 7
+
+--- [LEARNED WORKFLOW REGISTRY] ---
+
+[1] FLOW ID: order_mcdonalds_chicken_burger
+    App: McDonald's
+    Description: Auto-learned flow for McDonald's
+    Trigger Phrases:
+      - "chicken burger"
+    Default Parameters (Slots):
+      * item: chicken burger
+      * restaurant: McDonald's
+
+[2] FLOW ID: order_margherita_pizza_zomato
+    App: Zomato
+    Description: Auto-learned flow for Zomato
+    Trigger Phrases:
+      - "Can you hear me?  I want to order a. Margarita pizza. From Zomato."
+    Default Parameters (Slots):
+      * item: Margherita pizza
+      * platform: Zomato
+
+[3] FLOW ID: order_dominos_zomato
+    App: Zomato
+    Description: Order pizza from Domino's on Zomato
+    Trigger Phrases:
+      - "Order Margherita pizza from Domino's on Zomato"
+      - "Order pizza from Domino's on Zomato"
+    Default Parameters (Slots):
+      * item: pizza
+      * restaurant: Domino's
+      * app: Zomato
+      * quantity: 1
+
+[4] FLOW ID: order_pizza_zomato
+    App: Zomato
+    Description: Order pizza from Zomato
+    Trigger Phrases:
+      - "Order pizza from Zomato"
+    Default Parameters (Slots):
+      * item: pizza
+      * platform: Zomato
+
+[5] FLOW ID: 
+    App: Zomato
+    Description: Order biryani on Zomato
+    Trigger Phrases:
+      - "Order biryani on Zomato"
+    Default Parameters (Slots):
+
+[6] FLOW ID: flow_app
+    App: App
+    Description: Order item
+    Trigger Phrases:
+      - "Finish demonstration"
+      - "Order item"
+      - "Order a Margherita pizza from Domino's on App"
+      - "Get me a margherita from dominos"
+      - "finish"
+    Default Parameters (Slots):
+
+[7] FLOW ID: order_blue_ginger_swiggy
+    App: Swiggy
+    Description: Order pad thai from Blue Ginger on Swiggy
+    Trigger Phrases:
+      - "Order pad thai from Blue Ginger"
+      - "Get me a margherita from dominos"
+      - "Order a Margherita pizza from Domino's on Swiggy"
+      - "Search for earbuds on Amazon and add the first result to cart"
+      - "Order pad thai from Blue Ginger on Swiggy"
+      - "yes"
+    Default Parameters (Slots):
+      * item: pad thai
+      * restaurant: Blue Ginger
+      * app: Swiggy
+
+--- [LAST RUN TELEMETRY / STATUS] ---
+  Flow ID:      order_dominos_zomato
+  Status:       IN_PROGRESS
+  Stopped At:   started
+  Timestamp:    2026-09-29T19:55:18.705780
+  Details:      Executing with slots: {'item': 'pizza', 'restaurant': "Domino's", 'app': 'Zomato', 'quantity': 1}
+======================================================================

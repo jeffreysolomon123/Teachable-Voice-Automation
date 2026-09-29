@@ -1,0 +1,13 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: smoke_test)
+======================================================================
+Last Updated: 2026-09-29 19:09:40
+Stored Dialogue Turns: 2
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [19:09:40] USER: Order a Margherita pizza from Domino's on Zomato
+  [19:09:40] ASSISTANT: Executing Zomato order for Order a Margherita pizza from Domino's on Zomato.
+======================================================================

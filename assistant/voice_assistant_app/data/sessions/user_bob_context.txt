@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: user_bob)
+======================================================================
+Last Updated: 2026-09-29 20:46:30
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [19:00:54] ASSISTANT: I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [19:02:38] USER: Search for wireless earbuds on Amazon
+  [19:02:38] ASSISTANT: I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [19:10:41] USER: Search for wireless earbuds on Amazon
+  [19:10:41] ASSISTANT: I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [19:21:24] USER: Search for wireless earbuds on Amazon
+  [19:21:24] ASSISTANT: I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [19:41:43] USER: Search for wireless earbuds on Amazon
+  [19:41:43] ASSISTANT: I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:09:16] USER: Search for wireless earbuds on Amazon
+  [20:09:26] ASSISTANT: I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:24:59] USER: Search for wireless earbuds on Amazon
+  [20:25:00] ASSISTANT: I've extracted your request: Search for wireless earbuds on Amazon. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:46:13] USER: Search for wireless earbuds on Amazon
+  [20:46:30] ASSISTANT: I've extracted your request: Search for wireless earbuds on Amazon. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+======================================================================

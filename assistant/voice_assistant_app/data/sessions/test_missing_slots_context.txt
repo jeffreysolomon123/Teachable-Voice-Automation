@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_missing_slots)
+======================================================================
+Last Updated: 2026-09-29 20:38:47
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  • last_completed_plan: {'mode': 'TEACH', 'stage': 'STAGE_3_EXECUTION', 'app_name': 'Zomato', 'flow_id': 'order_dominos_zomato', 'slots': {'item': 'pizza', 'restaurant': "Domino's", 'app': 'Zomato'}, 'summary': "Order pizza from Domino's on Zomato", 'confirmed': True, 'status': 'recording'}
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [19:43:35] ASSISTANT: I've prepared your TEACH plan: Order pizza from Domino's on Zomato. Ready to start recording the demonstration?
+  [19:43:36] USER: Yes, proceed
+  [19:43:36] ASSISTANT: Learned: Order pizza from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.
+  [20:13:13] USER: Order pizza
+  [20:13:16] ASSISTANT: We’re still in the middle of teaching the pizza order workflow. Please say “finish” when you’re done, and then I can place the order for you.
+  [20:30:51] USER: Order pizza
+  [20:30:57] ASSISTANT: I'm still recording your demonstration. Please complete the steps on your screen and say 'finish' when you're done.
+  [20:38:42] USER: Order pizza
+  [20:38:42] ASSISTANT: Which restaurant would you like to order from, Domino's or somewhere else?
+  [20:38:43] USER: Teach mode
+  [20:38:44] ASSISTANT: Which restaurant would you like to order from, Domino's or somewhere else?
+  [20:38:44] USER: From Domino's on Zomato
+  [20:38:45] ASSISTANT: I've prepared your TEACH plan for Zomato: Order pizza from Domino's on Zomato. Ready to proceed?
+  [20:38:46] USER: Yes, proceed
+  [20:38:47] ASSISTANT: Learned: Order pizza from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.
+======================================================================

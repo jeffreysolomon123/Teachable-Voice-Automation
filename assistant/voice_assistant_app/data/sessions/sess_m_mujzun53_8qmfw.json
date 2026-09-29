@@ -1,0 +1,150 @@
+{
+  "session_id": "sess_m_mujzun53_8qmfw",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Hi",
+      "timestamp": "2026-09-27T21:19:43.018413",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I'm Ava, your executive voice assistant. I'm ready to help you automate tasks on your phone. What would you like to do today?",
+      "timestamp": "2026-09-27T21:19:43.474444",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I'd like to order something from Zomato",
+      "timestamp": "2026-09-27T21:20:05.741839",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant or item would you like to order?",
+      "timestamp": "2026-09-27T21:20:06.301646",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I would like to go for biryani",
+      "timestamp": "2026-09-27T21:20:19.478466",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Got it: 'I would like to go for biryani'. Would you like to demonstrate this in TEACH mode, or execute an existing order?",
+      "timestamp": "2026-09-27T21:20:20.080576",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "execute it actually",
+      "timestamp": "2026-09-27T21:20:52.840666",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant or item would you like to order?",
+      "timestamp": "2026-09-27T21:20:53.450035",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I would like to order a biryani",
+      "timestamp": "2026-09-27T21:21:05.292639",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Got it: 'I would like to order a biryani'. Would you like to demonstrate this in TEACH mode, or execute an existing order?",
+      "timestamp": "2026-09-27T21:21:05.856083",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I would like to demonstrate this",
+      "timestamp": "2026-09-27T21:21:25.103069",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan for Zomato: Order biryani. Shall I proceed?",
+      "timestamp": "2026-09-27T21:21:25.652354",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Seat",
+      "timestamp": "2026-09-27T21:21:38.645182",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant or item would you like to order?",
+      "timestamp": "2026-09-27T21:21:39.245232",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, proceed",
+      "timestamp": "2026-09-27T21:21:51.404418",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Learned: Order biryani on Zomato. Starting demonstration recording now, please perform the taps on your screen.",
+      "timestamp": "2026-09-27T21:21:51.531338",
+      "metadata": {
+        "intent": "TEACH"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Finish demonstration",
+      "timestamp": "2026-09-27T21:22:12.593630",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Demonstration captured and saved! I've learned the steps for your app. You can now execute it anytime in ORDER mode.",
+      "timestamp": "2026-09-27T21:22:12.625331",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thank you and then we will have to go to the next slide.",
+      "timestamp": "2026-09-27T21:22:31.294515",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "You're welcome! I'm ready for the next slide whenever you are.",
+      "timestamp": "2026-09-27T21:22:31.779693",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": null,
+  "draft_plan": null,
+  "current_topic": null,
+  "created_at": "2026-09-27T21:19:43.008429"
+}

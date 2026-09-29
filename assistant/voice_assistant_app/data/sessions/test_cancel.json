@@ -1,0 +1,220 @@
+{
+  "session_id": "test_cancel",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T19:21:31.622471",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order a Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T19:21:31.685358",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Cancel",
+      "timestamp": "2026-09-29T19:21:32.633915",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Workflow cancelled. What would you like to do instead?",
+      "timestamp": "2026-09-29T19:21:32.658890",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What can you do?",
+      "timestamp": "2026-09-29T19:21:33.389996",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows across apps on your phone! You can teach me new flows by demonstrating them on your screen, or tell me to run flows like ordering food on Zomato or shopping on Amazon.",
+      "timestamp": "2026-09-29T19:21:33.413995",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T19:41:50.333721",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order a Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T19:41:50.387049",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Cancel",
+      "timestamp": "2026-09-29T19:41:51.312546",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Workflow cancelled. What would you like to do instead?",
+      "timestamp": "2026-09-29T19:41:51.363551",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What can you do?",
+      "timestamp": "2026-09-29T19:41:52.029819",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows across apps on your phone! You can teach me new flows by demonstrating them on your screen, or tell me to run flows like ordering food on Zomato or shopping on Amazon.",
+      "timestamp": "2026-09-29T19:41:52.042825",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T20:09:49.171094",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order a Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:09:52.315986",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Cancel",
+      "timestamp": "2026-09-29T20:09:53.207538",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Workflow cancelled. What would you like to do instead?",
+      "timestamp": "2026-09-29T20:09:53.233538",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What can you do?",
+      "timestamp": "2026-09-29T20:09:54.126446",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can help you automate tasks on your phone. You can teach me new workflows by demonstrating the steps on your screen, and later run them in ORDER mode. For example, I can place orders on Zomato, shop on Amazon, book rides, control settings, or any app you show me. Just let me know what you’d like to automate.",
+      "timestamp": "2026-09-29T20:10:01.992285",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T20:25:19.833897",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order a Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:25:20.681677",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Cancel",
+      "timestamp": "2026-09-29T20:25:21.554772",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Workflow cancelled. What would you like to do instead?",
+      "timestamp": "2026-09-29T20:25:21.603774",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What can you do?",
+      "timestamp": "2026-09-29T20:25:22.320065",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows on your phone. For example, I can help you order food on Zomato, shop on Amazon, or navigate other apps. You can teach me new tasks by demonstrating the steps on your screen, and then I can execute them for you later.",
+      "timestamp": "2026-09-29T20:25:33.995476",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T20:46:50.941074",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order a Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:47:03.781191",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Cancel",
+      "timestamp": "2026-09-29T20:47:04.529736",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Workflow cancelled. What would you like to do instead?",
+      "timestamp": "2026-09-29T20:47:04.561864",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What can you do?",
+      "timestamp": "2026-09-29T20:47:05.199536",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows on your phone. For example, I can help you order food on Zomato, shop on Amazon, or navigate other apps. You can teach me new tasks by demonstrating the steps on your screen, and then I can execute them for you later.",
+      "timestamp": "2026-09-29T20:47:18.887293",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": null,
+  "draft_plan": null,
+  "current_topic": null,
+  "created_at": "2026-09-27T18:26:23.892530"
+}

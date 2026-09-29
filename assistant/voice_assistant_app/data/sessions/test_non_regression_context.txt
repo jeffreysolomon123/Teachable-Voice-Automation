@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_non_regression)
+======================================================================
+Last Updated: 2026-09-29 20:33:15
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  • last_completed_plan: {'mode': 'TEACH', 'stage': 'COMPLETED', 'app_name': 'Zomato', 'flow_id': 'order_dominos_zomato', 'slots': {'item': 'Margherita pizza', 'restaurant': "Domino's", 'app': 'Zomato'}, 'summary': "Order Margherita pizza from Domino's on Zomato", 'confirmed': False, 'status': 'completed'}
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [20:14:37] ASSISTANT: I can help you automate tasks on your Android phone. You can teach me new workflows by demonstrating them, then run them later in ORDER mode. For example, I can order food, search products, book rides, send messages, set reminders, and more. Just let me know what you’d like to do.
+  [20:31:39] USER: Order a Margherita pizza from Domino's on Zomato
+  [20:31:45] ASSISTANT: I've extracted your request: Order Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:31:46] USER: Teach mode
+  [20:32:03] ASSISTANT: I've prepared your TEACH plan for Zomato: Order Margherita pizza from Domino's. Shall I proceed?
+  [20:32:11] USER: Yes, start recording
+  [20:32:21] ASSISTANT: Learned: Order Margherita pizza from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.
+  [20:32:21] USER: Finish demonstration
+  [20:32:21] ASSISTANT: Demonstration captured and saved! I've learned the steps for Zomato. You can now execute it anytime in ORDER mode.
+  [20:32:23] USER: Thank you Ava
+  [20:32:39] ASSISTANT: You're very welcome! Let me know if you need anything else.
+  [20:32:40] USER: Hello again
+  [20:32:58] ASSISTANT: Hello again! It's good to see you. How can I assist you today?
+  [20:33:04] USER: What can you do?
+  [20:33:15] ASSISTANT: I can learn and replay automated workflows on your phone. For example, I can help you order food on Zomato or shop on Amazon by recording your steps in teach mode and executing them later in order mode.
+======================================================================

@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: sess_m_mujzun53_8qmfw)
+======================================================================
+Last Updated: 2026-09-27 21:22:31
+Stored Dialogue Turns: 20
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [21:20:20] ASSISTANT: Got it: 'I would like to go for biryani'. Would you like to demonstrate this in TEACH mode, or execute an existing order?
+  [21:20:52] USER: execute it actually
+  [21:20:53] ASSISTANT: Which restaurant or item would you like to order?
+  [21:21:05] USER: I would like to order a biryani
+  [21:21:05] ASSISTANT: Got it: 'I would like to order a biryani'. Would you like to demonstrate this in TEACH mode, or execute an existing order?
+  [21:21:25] USER: I would like to demonstrate this
+  [21:21:25] ASSISTANT: I've prepared your TEACH plan for Zomato: Order biryani. Shall I proceed?
+  [21:21:38] USER: Seat
+  [21:21:39] ASSISTANT: Which restaurant or item would you like to order?
+  [21:21:51] USER: Yes, proceed
+  [21:21:51] ASSISTANT: Learned: Order biryani on Zomato. Starting demonstration recording now, please perform the taps on your screen.
+  [21:22:12] USER: Finish demonstration
+  [21:22:12] ASSISTANT: Demonstration captured and saved! I've learned the steps for your app. You can now execute it anytime in ORDER mode.
+  [21:22:31] USER: Thank you and then we will have to go to the next slide.
+  [21:22:31] ASSISTANT: You're welcome! I'm ready for the next slide whenever you are.
+======================================================================

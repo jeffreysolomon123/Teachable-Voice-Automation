@@ -1,0 +1,13 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: final_smoke_test)
+======================================================================
+Last Updated: 2026-09-29 19:24:15
+Stored Dialogue Turns: 2
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [19:24:15] USER: Order garlic bread from Domino's on Zomato
+  [19:24:15] ASSISTANT: Executing Zomato order for Order garlic bread from Domino's on Zomato.
+======================================================================

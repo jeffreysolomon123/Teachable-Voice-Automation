@@ -1,0 +1,15 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_http_sess)
+======================================================================
+Last Updated: 2026-09-27 19:32:01
+Stored Dialogue Turns: 4
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [19:31:27] USER: Order a Margherita pizza from Domino's on Zomato
+  [19:31:27] ASSISTANT: Executing Margherita pizza order from Domino's on Zomato.
+  [19:32:01] USER: What is teach mode?
+  [19:32:01] ASSISTANT: In TEACH mode, you demonstrate the actions on your phone screen while I record and learn each tap and input. In ORDER mode, I autonomously execute a previously learned workflow for you. Which would you prefer?
+======================================================================

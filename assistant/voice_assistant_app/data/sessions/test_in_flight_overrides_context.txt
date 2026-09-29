@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_in_flight_overrides)
+======================================================================
+Last Updated: 2026-09-29 20:36:11
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  • last_completed_plan: {'mode': 'TEACH', 'stage': 'STAGE_3_EXECUTION', 'app_name': 'Zomato', 'flow_id': 'order_dominos_zomato', 'slots': {'item': 'Farmhouse pizza', 'restaurant': "Domino's", 'app': 'Zomato', 'address': 'Work', 'quantity': 2}, 'summary': "Order 2 Farmhouse pizzas from Domino's on Zomato", 'confirmed': True, 'status': 'recording'}
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [20:16:58] ASSISTANT: Updated your plan: Order 2 Farmhouse pizzas from Domino's on Zomato. Ready to proceed?
+  [20:16:59] USER: Yes, go ahead
+  [20:17:08] ASSISTANT: Learned: Order 2 Farmhouse pizzas from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.
+  [20:34:32] USER: Order a Margherita pizza from Domino's on Zomato
+  [20:34:44] ASSISTANT: I've extracted your request: Order a Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:34:45] USER: Teach mode
+  [20:35:01] ASSISTANT: I've prepared your TEACH plan for Zomato: Order Margherita pizza from Domino's. Shall I proceed?
+  [20:35:02] USER: Actually Farmhouse pizza
+  [20:35:19] ASSISTANT: Updated your plan: Order Farmhouse pizza from Domino's on Zomato. Ready to proceed?
+  [20:35:20] USER: Deliver to work address
+  [20:35:36] ASSISTANT: Updated your plan: Order Farmhouse pizza from Domino's on Zomato, deliver to Work. Ready to proceed?
+  [20:35:37] USER: Make it two
+  [20:35:54] ASSISTANT: Updated your plan: Order 2 Farmhouse pizzas from Domino's on Zomato. Ready to proceed?
+  [20:35:55] USER: Yes, go ahead
+  [20:36:11] ASSISTANT: Learned: Order 2 Farmhouse pizzas from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.
+======================================================================

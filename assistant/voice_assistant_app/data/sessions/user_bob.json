@@ -1,0 +1,233 @@
+{
+  "session_id": "user_bob",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-27T21:37:28.666660",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode to demonstrate this on Amazon, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-27T21:37:28.722930",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-27T21:38:44.992272",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode to demonstrate this on Amazon, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-27T21:38:45.010273",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-27T21:39:51.781365",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode to demonstrate this on Amazon, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-27T21:39:51.822855",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-27T21:40:35.680234",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode to demonstrate this on Amazon, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-27T21:40:35.719187",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-27T21:41:23.790548",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode to demonstrate this on Amazon, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-27T21:41:23.825700",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-27T21:48:26.016559",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode to demonstrate this on Amazon, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-27T21:48:26.068143",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-29T18:56:19.638096",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T18:56:19.676834",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-29T19:00:54.032742",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T19:00:54.073743",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-29T19:02:38.447021",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T19:02:38.487418",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-29T19:10:41.422775",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T19:10:41.458777",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-29T19:21:24.332556",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T19:21:24.378555",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-29T19:41:43.382996",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T19:41:43.436031",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-29T20:09:16.981258",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon and add the first result to cart. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:09:26.171730",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-29T20:24:59.918474",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:25:00.744572",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Search for wireless earbuds on Amazon",
+      "timestamp": "2026-09-29T20:46:13.401795",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Search for wireless earbuds on Amazon. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:46:30.338582",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": null,
+  "draft_plan": {
+    "mode": "UNRESOLVED",
+    "stage": "STAGE_1_INTENT_MODE",
+    "app_name": "Amazon",
+    "flow_id": "search_amazon",
+    "slots": {
+      "search_term": "wireless earbuds",
+      "app": "Amazon",
+      "item": "wireless earbuds"
+    },
+    "summary": "Order wireless earbuds on Amazon",
+    "confirmed": false,
+    "status": "awaiting_mode"
+  },
+  "current_topic": null,
+  "created_at": "2026-09-27T18:26:10.595144"
+}

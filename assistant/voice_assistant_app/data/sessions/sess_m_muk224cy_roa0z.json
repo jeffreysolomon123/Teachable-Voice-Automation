@@ -1,0 +1,97 @@
+{
+  "session_id": "sess_m_muk224cy_roa0z",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Hi",
+      "timestamp": "2026-09-27T22:21:36.972939",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I'm Ava, your executive voice assistant. What workflow or task would you like to tackle today?",
+      "timestamp": "2026-09-27T22:21:36.982075",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I want to order something",
+      "timestamp": "2026-09-27T22:21:51.106172",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant or item would you like to order?",
+      "timestamp": "2026-09-27T22:21:52.746015",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I would like to order a biryani",
+      "timestamp": "2026-09-27T22:22:04.350359",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant or item would you like to order?",
+      "timestamp": "2026-09-27T22:22:10.405830",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I would like to order a biryani",
+      "timestamp": "2026-09-27T22:22:19.807988",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant or item would you like to order?",
+      "timestamp": "2026-09-27T22:22:21.375373",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Would like to order a biriyani",
+      "timestamp": "2026-09-27T22:22:33.876388",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant or item would you like to order?",
+      "timestamp": "2026-09-27T22:22:35.395506",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Biriyani",
+      "timestamp": "2026-09-27T22:22:44.501703",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant or item would you like to order?",
+      "timestamp": "2026-09-27T22:22:46.109211",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": {
+    "missing_parameter": "restaurant",
+    "candidate_flow_ids": []
+  },
+  "draft_plan": null,
+  "current_topic": null,
+  "created_at": "2026-09-27T22:21:36.958669"
+}

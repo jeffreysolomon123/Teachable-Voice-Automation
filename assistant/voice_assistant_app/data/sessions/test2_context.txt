@@ -1,0 +1,13 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test2)
+======================================================================
+Last Updated: 2026-09-29 18:55:17
+Stored Dialogue Turns: 2
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [18:55:17] USER: Order pizza
+  [18:55:17] ASSISTANT: Executing Zomato order for Order pizza.
+======================================================================

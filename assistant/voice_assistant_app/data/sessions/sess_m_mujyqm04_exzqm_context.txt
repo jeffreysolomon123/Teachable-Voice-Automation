@@ -1,0 +1,21 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: sess_m_mujyqm04_exzqm)
+======================================================================
+Last Updated: 2026-09-27 20:49:23
+Stored Dialogue Turns: 10
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [20:48:16] USER: Hello
+  [20:48:17] ASSISTANT: Hello! How can I help you today? I can teach me a new workflow or execute one of your learned orders.
+  [20:48:45] USER: I want to execute an order on Zomato
+  [20:48:45] ASSISTANT: I hear you! How can I help you teach a workflow or order something on your phone?
+  [20:48:58] USER: I wanna order something on Zomato
+  [20:48:58] ASSISTANT: I hear you! How can I help you teach a workflow or order something on your phone?
+  [20:49:10] USER: I want to order something on Zomato
+  [20:49:11] ASSISTANT: I hear you! How can I help you teach a workflow or order something on your phone?
+  [20:49:21] USER: Thank you
+  [20:49:23] ASSISTANT: You're welcome! Let me know if you need anything else.
+======================================================================

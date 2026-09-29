@@ -1,0 +1,252 @@
+{
+  "session_id": "test_in_flight_overrides",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Deliver to work address",
+      "timestamp": "2026-09-29T19:44:07.283044",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated delivery address to Work. Plan: Order Farmhouse pizza from Domino's on Zomato, deliver to Work. Ready to proceed?",
+      "timestamp": "2026-09-29T19:44:07.306002",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Make it two",
+      "timestamp": "2026-09-29T19:44:18.430705",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated quantity to 2. Plan: Order 2 Farmhouse pizzas from Domino's on Zomato. Ready to proceed?",
+      "timestamp": "2026-09-29T19:44:18.462210",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, go ahead",
+      "timestamp": "2026-09-29T19:44:19.298007",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Learned: Order 2 Farmhouse pizzas from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.",
+      "timestamp": "2026-09-29T19:44:19.338257",
+      "metadata": {
+        "intent": "TEACH"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T20:16:00.498442",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:16:04.263576",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach mode",
+      "timestamp": "2026-09-29T20:16:16.499549",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan for Zomato: Order Margherita pizza from Domino's on Zomato. Shall I proceed?",
+      "timestamp": "2026-09-29T20:16:23.121794",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Actually Farmhouse pizza",
+      "timestamp": "2026-09-29T20:16:24.076601",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated your plan: Order Farmhouse pizza from Domino's on Zomato. Ready to proceed?",
+      "timestamp": "2026-09-29T20:16:34.159212",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Deliver to work address",
+      "timestamp": "2026-09-29T20:16:35.035388",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated your plan: Order Farmhouse pizza from Domino's on Zomato, deliver to Work. Ready to proceed?",
+      "timestamp": "2026-09-29T20:16:44.804539",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Make it two",
+      "timestamp": "2026-09-29T20:16:48.701859",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated your plan: Order 2 Farmhouse pizzas from Domino's on Zomato. Ready to proceed?",
+      "timestamp": "2026-09-29T20:16:58.158736",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, go ahead",
+      "timestamp": "2026-09-29T20:16:59.057818",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Learned: Order 2 Farmhouse pizzas from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.",
+      "timestamp": "2026-09-29T20:17:08.817236",
+      "metadata": {
+        "intent": "TEACH"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T20:34:32.235680",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order a Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:34:44.192350",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach mode",
+      "timestamp": "2026-09-29T20:34:45.087755",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan for Zomato: Order Margherita pizza from Domino's. Shall I proceed?",
+      "timestamp": "2026-09-29T20:35:01.923467",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Actually Farmhouse pizza",
+      "timestamp": "2026-09-29T20:35:02.757625",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated your plan: Order Farmhouse pizza from Domino's on Zomato. Ready to proceed?",
+      "timestamp": "2026-09-29T20:35:19.660164",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Deliver to work address",
+      "timestamp": "2026-09-29T20:35:20.895707",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated your plan: Order Farmhouse pizza from Domino's on Zomato, deliver to Work. Ready to proceed?",
+      "timestamp": "2026-09-29T20:35:36.807658",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Make it two",
+      "timestamp": "2026-09-29T20:35:37.600630",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated your plan: Order 2 Farmhouse pizzas from Domino's on Zomato. Ready to proceed?",
+      "timestamp": "2026-09-29T20:35:54.471706",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, go ahead",
+      "timestamp": "2026-09-29T20:35:55.263704",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Learned: Order 2 Farmhouse pizzas from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.",
+      "timestamp": "2026-09-29T20:36:11.226905",
+      "metadata": {
+        "intent": "TEACH"
+      }
+    }
+  ],
+  "user_preferences": {
+    "last_completed_plan": {
+      "mode": "TEACH",
+      "stage": "STAGE_3_EXECUTION",
+      "app_name": "Zomato",
+      "flow_id": "order_dominos_zomato",
+      "slots": {
+        "item": "Farmhouse pizza",
+        "restaurant": "Domino's",
+        "app": "Zomato",
+        "address": "Work",
+        "quantity": 2
+      },
+      "summary": "Order 2 Farmhouse pizzas from Domino's on Zomato",
+      "confirmed": true,
+      "status": "recording"
+    }
+  },
+  "pending_clarification": null,
+  "draft_plan": {
+    "mode": "TEACH",
+    "stage": "STAGE_3_EXECUTION",
+    "app_name": "Zomato",
+    "flow_id": "order_dominos_zomato",
+    "slots": {
+      "item": "Farmhouse pizza",
+      "restaurant": "Domino's",
+      "app": "Zomato",
+      "address": "Work",
+      "quantity": 2
+    },
+    "summary": "Order 2 Farmhouse pizzas from Domino's on Zomato",
+    "confirmed": false,
+    "status": "recording"
+  },
+  "current_topic": null,
+  "created_at": "2026-09-27T21:38:09.633233"
+}

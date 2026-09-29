@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_q)
+======================================================================
+Last Updated: 2026-09-29 20:48:02
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [19:21:47] ASSISTANT: I can learn and replay automated workflows across apps on your phone! You can teach me new flows by demonstrating them on your screen, or tell me to run flows like ordering food on Zomato or shopping on Amazon.
+  [19:42:04] USER: What is teach mode?
+  [19:42:04] ASSISTANT: In TEACH mode, you demonstrate the actions on your phone screen while I record and learn each tap and input. In ORDER mode, I autonomously execute a previously learned workflow for you. Which would you prefer?
+  [19:42:05] USER: How does this work?
+  [19:42:05] ASSISTANT: I can learn and replay automated workflows across apps on your phone! You can teach me new flows by demonstrating them on your screen, or tell me to run flows like ordering food on Zomato or shopping on Amazon.
+  [20:10:24] USER: What is teach mode?
+  [20:10:25] ASSISTANT: Teach mode lets you show me exactly what you want to do on your phone—tap, swipe, type, and select—while I record each step. I then save that sequence so I can replay it later in ORDER mode without any further input.
+  [20:25:58] USER: What is teach mode?
+  [20:26:02] ASSISTANT: In teach mode, you demonstrate the steps on your screen while I record them, so I can replay the workflow later in order mode.
+  [20:26:08] USER: How does this work?
+  [20:26:18] ASSISTANT: I can learn and replay automated workflows on your phone. You can teach me new tasks by demonstrating them on your screen, or ask me to execute previously learned flows like ordering food or shopping.
+  [20:47:37] USER: What is teach mode?
+  [20:47:46] ASSISTANT: In teach mode, you demonstrate the steps on your screen while I record them, so I can replay the workflow later in order mode.
+  [20:47:47] USER: How does this work?
+  [20:48:02] ASSISTANT: I can learn and replay automated workflows on your phone. You can teach me new tasks by demonstrating them on your screen, or ask me to execute previously learned flows like ordering food or shopping.
+======================================================================

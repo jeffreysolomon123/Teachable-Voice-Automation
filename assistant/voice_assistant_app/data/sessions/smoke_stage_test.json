@@ -1,0 +1,134 @@
+{
+  "session_id": "smoke_stage_test",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Order pizza",
+      "timestamp": "2026-09-27T21:53:20.171120",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant would you like to order from, Domino's or somewhere else?",
+      "timestamp": "2026-09-27T21:53:20.240928",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach mode",
+      "timestamp": "2026-09-27T21:53:31.253989",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant would you like to order from, Domino's or somewhere else?",
+      "timestamp": "2026-09-27T21:53:31.304797",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Domino's",
+      "timestamp": "2026-09-27T21:53:40.040030",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan: Order pizza from Domino's on Zomato. Ready to start recording the demonstration?",
+      "timestamp": "2026-09-27T21:53:40.086869",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, start recording",
+      "timestamp": "2026-09-27T21:53:49.093238",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Learned: Order pizza from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.",
+      "timestamp": "2026-09-27T21:53:49.263658",
+      "metadata": {
+        "intent": "TEACH"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Finish demonstration",
+      "timestamp": "2026-09-27T21:54:01.034734",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Demonstration captured and saved! I've learned the steps for your app. You can now execute it anytime in ORDER mode.",
+      "timestamp": "2026-09-27T21:54:01.082905",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thank you Ava",
+      "timestamp": "2026-09-27T21:54:13.431921",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "You're very welcome! Let me know whenever you're ready for your next order or demonstration.",
+      "timestamp": "2026-09-27T21:54:13.448943",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Actually make it Farmhouse pizza",
+      "timestamp": "2026-09-27T21:54:21.212100",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated your order plan: Order Farmhouse pizza from Domino's on Zomato. Ready to proceed?",
+      "timestamp": "2026-09-27T21:54:21.243877",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    }
+  ],
+  "user_preferences": {
+    "last_completed_plan": {
+      "mode": "TEACH",
+      "stage": "STAGE_3_EXECUTION",
+      "app_name": "Zomato",
+      "flow_id": "order_dominos_zomato",
+      "slots": {
+        "item": "pizza",
+        "restaurant": "Domino's"
+      },
+      "summary": "Order pizza from Domino's on Zomato",
+      "confirmed": true,
+      "status": "recording"
+    }
+  },
+  "pending_clarification": null,
+  "draft_plan": {
+    "mode": "TEACH",
+    "stage": "STAGE_3_EXECUTION",
+    "app_name": "Zomato",
+    "flow_id": "order_dominos_zomato",
+    "slots": {
+      "item": "Farmhouse pizza",
+      "restaurant": "Domino's"
+    },
+    "summary": "Order Farmhouse pizza from Domino's on Zomato",
+    "confirmed": false,
+    "status": "awaiting_confirmation"
+  },
+  "current_topic": null,
+  "created_at": "2026-09-27T21:53:20.148495"
+}

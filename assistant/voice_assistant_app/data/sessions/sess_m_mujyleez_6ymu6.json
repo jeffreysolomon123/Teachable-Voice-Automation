@@ -1,0 +1,80 @@
+{
+  "session_id": "sess_m_mujyleez_6ymu6",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Hi",
+      "timestamp": "2026-09-27T20:44:33.282489",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I help you today? I can help you order food or manage your learned workflows.",
+      "timestamp": "2026-09-27T20:44:33.690727",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I wanna teach you something",
+      "timestamp": "2026-09-27T20:44:57.318804",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I hear you! How can I help you teach a workflow or order something on your phone?",
+      "timestamp": "2026-09-27T20:45:01.903472",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Let's order a meatball, Swedish meatball from Zomato",
+      "timestamp": "2026-09-27T20:45:17.887245",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order a Swedish meatball from Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-27T20:45:18.598188",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I order mode",
+      "timestamp": "2026-09-27T20:45:44.924922",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Great, ORDER mode selected for Zomato. Plan: Order a Swedish meatball from Zomato. Shall I proceed with the order?",
+      "timestamp": "2026-09-27T20:45:44.949953",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Proceed",
+      "timestamp": "2026-09-27T20:46:07.902853",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Confirmed. Executing Order a Swedish meatball from Zomato on Zomato now.",
+      "timestamp": "2026-09-27T20:46:07.938695",
+      "metadata": {
+        "intent": "REPLAY"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": null,
+  "draft_plan": null,
+  "current_topic": null,
+  "created_at": "2026-09-27T20:44:33.269755"
+}

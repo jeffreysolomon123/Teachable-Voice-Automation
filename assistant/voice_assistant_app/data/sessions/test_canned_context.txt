@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_canned)
+======================================================================
+Last Updated: 2026-09-29 20:50:33
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [20:12:06] USER: What is your favorite color?
+  [20:12:11] ASSISTANT: I don't have personal preferences, but if I could choose, I'd go with a calm blue—it's soothing and professional.
+  [20:28:28] USER: Good morning Ava
+  [20:28:33] ASSISTANT: Good morning! I hope your day is off to a great start. What can I help you with today?
+  [20:28:39] USER: Thank you so much
+  [20:28:48] ASSISTANT: You're very welcome! Let me know if you need anything else.
+  [20:28:53] USER: Who is the president of France?
+  [20:29:02] ASSISTANT: Emmanuel Macron is the current president of France.
+  [20:29:06] USER: What is your favorite color?
+  [20:29:17] ASSISTANT: I don't have personal preferences, but if I could choose, I'd go with a calm blue—it's soothing and professional.
+  [20:50:09] USER: Good morning Ava
+  [20:50:18] ASSISTANT: Hello! I'm Ava, your executive voice assistant. What workflow or task would you like to tackle today?
+  [20:50:19] USER: Thank you so much
+  [20:50:32] ASSISTANT: You're very welcome! Let me know whenever you're ready for your next order or demonstration.
+  [20:50:33] USER: Who is the president of France?
+======================================================================

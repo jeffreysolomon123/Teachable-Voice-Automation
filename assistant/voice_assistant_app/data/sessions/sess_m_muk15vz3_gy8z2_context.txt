@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: sess_m_muk15vz3_gy8z2)
+======================================================================
+Last Updated: 2026-09-27 21:59:08
+Stored Dialogue Turns: 22
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [21:57:19] ASSISTANT: Hello! I'm Ava, your executive voice assistant. What workflow or task would you like to tackle today?
+  [21:57:26] USER: Fuck you
+  [21:57:27] ASSISTANT: Got it: 'Fuck you'. Would you like to demonstrate this in TEACH mode, or execute an existing order?
+  [21:57:52] USER: Hi
+  [21:57:52] ASSISTANT: Hello! I'm Ava, your executive voice assistant. What workflow or task would you like to tackle today?
+  [21:58:07] USER: I want you to order
+  [21:58:07] ASSISTANT: Got it: 'I want you to order'. Would you like to demonstrate this in TEACH mode, or execute an existing order?
+  [21:58:29] USER: I want to teach you
+  [21:58:29] ASSISTANT: Got it: 'I want to teach you'. Would you like to demonstrate this in TEACH mode, or execute an existing order?
+  [21:58:47] USER: Teach more
+  [21:58:48] ASSISTANT: Got it: 'Teach more'. Would you like to demonstrate this in TEACH mode, or execute an existing order?
+  [21:59:05] USER: and say,
+  [21:59:05] ASSISTANT: Got it: 'and say,'. Would you like to demonstrate this in TEACH mode, or execute an existing order?
+  [21:59:07] USER: Fuck off you slutty whore
+  [21:59:07] ASSISTANT: Got it: 'Fuck off you slutty whore'. Would you like to demonstrate this in TEACH mode, or execute an existing order?
+======================================================================

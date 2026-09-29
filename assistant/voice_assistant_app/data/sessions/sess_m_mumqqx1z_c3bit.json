@@ -1,0 +1,109 @@
+{
+  "session_id": "sess_m_mumqqx1z_c3bit",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Hello",
+      "timestamp": "2026-09-29T19:27:53.777470",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I'm Ava, your executive voice assistant. What workflow or task would you like to tackle today?",
+      "timestamp": "2026-09-29T19:27:53.793472",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I'm gonna order something",
+      "timestamp": "2026-09-29T19:28:07.910858",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant or item would you like to order?",
+      "timestamp": "2026-09-29T19:28:09.250755",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I would like to order something from McDonald's",
+      "timestamp": "2026-09-29T19:28:21.268264",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant or item would you like to order?",
+      "timestamp": "2026-09-29T19:28:22.843659",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "something from McDonald's or Zomato",
+      "timestamp": "2026-09-29T19:28:34.390058",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant or item would you like to order?",
+      "timestamp": "2026-09-29T19:28:35.963874",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "From zomato, a biriyani",
+      "timestamp": "2026-09-29T19:28:49.413581",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Would you like to teach me this workflow by demonstrating it, or order it autonomously?",
+      "timestamp": "2026-09-29T19:28:50.969826",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thank you",
+      "timestamp": "2026-09-29T19:28:51.320348",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "You're very welcome! Let me know whenever you're ready for your next order or demonstration.",
+      "timestamp": "2026-09-29T19:28:51.333913",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": {
+    "missing_parameter": "restaurant",
+    "candidate_flow_ids": []
+  },
+  "draft_plan": {
+    "mode": "UNRESOLVED",
+    "stage": "STAGE_1_INTENT_MODE",
+    "app_name": "Zomato",
+    "flow_id": "order_biryani_zomato",
+    "slots": {
+      "item": "biryani",
+      "app": "Zomato"
+    },
+    "summary": "From zomato, a biriyani",
+    "confirmed": false,
+    "status": "awaiting_mode"
+  },
+  "current_topic": null,
+  "created_at": "2026-09-29T19:27:53.762844"
+}

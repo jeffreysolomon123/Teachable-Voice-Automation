@@ -1,0 +1,236 @@
+{
+  "session_id": "test_explicit_teach_missing_slot",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Teach: order pizza",
+      "timestamp": "2026-09-29T18:52:37.264921",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Great, TEACH mode selected for Zomato. Plan: Order pizza from Domino's on Zomato. Ready to start recording the demonstration?",
+      "timestamp": "2026-09-29T18:52:37.320958",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach: order pizza",
+      "timestamp": "2026-09-29T18:57:36.776093",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant would you like to order from, Domino's or somewhere else?",
+      "timestamp": "2026-09-29T18:57:36.876413",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "From Domino's on Zomato",
+      "timestamp": "2026-09-29T18:57:37.701449",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan: Order pizza from Domino's on Zomato. Ready to start recording the demonstration?",
+      "timestamp": "2026-09-29T18:57:37.761054",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach: order pizza",
+      "timestamp": "2026-09-29T19:04:28.464556",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant would you like to order from, Domino's or somewhere else?",
+      "timestamp": "2026-09-29T19:04:28.526931",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "From Domino's on Zomato",
+      "timestamp": "2026-09-29T19:04:29.268286",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan: Order pizza from Domino's on Zomato. Ready to start recording the demonstration?",
+      "timestamp": "2026-09-29T19:04:29.307769",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach: order pizza",
+      "timestamp": "2026-09-29T19:12:04.756508",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant would you like to order from, Domino's or somewhere else?",
+      "timestamp": "2026-09-29T19:12:04.801793",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "From Domino's on Zomato",
+      "timestamp": "2026-09-29T19:12:05.544018",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan: Order pizza from Domino's on Zomato. Ready to start recording the demonstration?",
+      "timestamp": "2026-09-29T19:12:05.571115",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach: order pizza",
+      "timestamp": "2026-09-29T19:23:00.214258",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant would you like to order from, Domino's or somewhere else?",
+      "timestamp": "2026-09-29T19:23:00.294392",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "From Domino's on Zomato",
+      "timestamp": "2026-09-29T19:23:01.390404",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan: Order pizza from Domino's on Zomato. Ready to start recording the demonstration?",
+      "timestamp": "2026-09-29T19:23:01.451131",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach: order pizza",
+      "timestamp": "2026-09-29T19:43:40.221636",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant would you like to order from, Domino's or somewhere else?",
+      "timestamp": "2026-09-29T19:43:40.255638",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "From Domino's on Zomato",
+      "timestamp": "2026-09-29T19:43:41.008617",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan: Order pizza from Domino's on Zomato. Ready to start recording the demonstration?",
+      "timestamp": "2026-09-29T19:43:41.042274",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach: order pizza",
+      "timestamp": "2026-09-29T20:13:26.832664",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant would you like to order from, Domino's or somewhere else?",
+      "timestamp": "2026-09-29T20:13:29.825177",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "From Domino's on Zomato",
+      "timestamp": "2026-09-29T20:13:30.695273",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Got it, Domino's. Ready to proceed with: Order pizza from Domino's on Zomato?",
+      "timestamp": "2026-09-29T20:13:32.384320",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach: order pizza",
+      "timestamp": "2026-09-29T20:31:09.593641",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant would you like to order from, Domino's or somewhere else?",
+      "timestamp": "2026-09-29T20:31:13.393695",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "From Domino's on Zomato",
+      "timestamp": "2026-09-29T20:31:14.139827",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan for Zomato: Order pizza from Domino's on Zomato. Ready to proceed?",
+      "timestamp": "2026-09-29T20:31:29.142264",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": {
+    "missing_parameter": "restaurant",
+    "candidate_flow_ids": []
+  },
+  "draft_plan": {
+    "mode": "TEACH",
+    "stage": "STAGE_3_EXECUTION",
+    "app_name": "Zomato",
+    "flow_id": "order_dominos_zomato",
+    "slots": {
+      "item": "pizza",
+      "restaurant": "Domino's",
+      "app": "Zomato"
+    },
+    "summary": "Order pizza from Domino's on Zomato",
+    "confirmed": false,
+    "status": "awaiting_confirmation"
+  },
+  "current_topic": null,
+  "created_at": "2026-09-27T21:37:15.886424"
+}

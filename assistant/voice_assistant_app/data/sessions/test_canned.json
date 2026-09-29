@@ -1,0 +1,220 @@
+{
+  "session_id": "test_canned",
+  "chat_history": [
+    {
+      "role": "assistant",
+      "content": "As an AI, I don't have personal preferences or favorite colors, but I'm quite fond of a clean interface! How can I help you today?",
+      "timestamp": "2026-09-29T19:22:25.706489",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Good morning Ava",
+      "timestamp": "2026-09-29T19:42:24.646306",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Good morning! It's a pleasure to start the day with you. How can I assist you with your tasks or automations today?",
+      "timestamp": "2026-09-29T19:42:33.237395",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thank you so much",
+      "timestamp": "2026-09-29T19:42:41.940097",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "You're very welcome! Let me know whenever you're ready for your next order or demonstration.",
+      "timestamp": "2026-09-29T19:42:41.951655",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Who is the president of France?",
+      "timestamp": "2026-09-29T19:42:42.793514",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "As I mentioned earlier, Emmanuel Macron is the president of France. Let me know if there's anything else I can help you with!",
+      "timestamp": "2026-09-29T19:42:53.903207",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is your favorite color?",
+      "timestamp": "2026-09-29T19:42:59.027725",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "As I mentioned before, I don't have personal preferences, but I do appreciate a clean and efficient digital workspace. Is there a task or workflow you'd like help with today?",
+      "timestamp": "2026-09-29T19:43:11.406576",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Good morning Ava",
+      "timestamp": "2026-09-29T20:11:50.185113",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Good morning! How can I assist you today?",
+      "timestamp": "2026-09-29T20:11:50.858599",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thank you so much",
+      "timestamp": "2026-09-29T20:11:53.167339",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "You're welcome! Let me know if there's anything else I can do for you.",
+      "timestamp": "2026-09-29T20:11:56.942025",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Who is the president of France?",
+      "timestamp": "2026-09-29T20:11:59.937621",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Emmanuel Macron is the president of France.",
+      "timestamp": "2026-09-29T20:12:03.225328",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is your favorite color?",
+      "timestamp": "2026-09-29T20:12:06.244430",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I don't have personal preferences, but if I could choose, I'd go with a calm blue—it's soothing and professional.",
+      "timestamp": "2026-09-29T20:12:11.664856",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Good morning Ava",
+      "timestamp": "2026-09-29T20:28:28.386572",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Good morning! I hope your day is off to a great start. What can I help you with today?",
+      "timestamp": "2026-09-29T20:28:33.937412",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thank you so much",
+      "timestamp": "2026-09-29T20:28:39.889483",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "You're very welcome! Let me know if you need anything else.",
+      "timestamp": "2026-09-29T20:28:48.522028",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Who is the president of France?",
+      "timestamp": "2026-09-29T20:28:53.282304",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Emmanuel Macron is the current president of France.",
+      "timestamp": "2026-09-29T20:29:02.983989",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is your favorite color?",
+      "timestamp": "2026-09-29T20:29:06.583308",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I don't have personal preferences, but if I could choose, I'd go with a calm blue—it's soothing and professional.",
+      "timestamp": "2026-09-29T20:29:17.189200",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Good morning Ava",
+      "timestamp": "2026-09-29T20:50:09.379299",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I'm Ava, your executive voice assistant. What workflow or task would you like to tackle today?",
+      "timestamp": "2026-09-29T20:50:18.564754",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thank you so much",
+      "timestamp": "2026-09-29T20:50:19.347188",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "You're very welcome! Let me know whenever you're ready for your next order or demonstration.",
+      "timestamp": "2026-09-29T20:50:32.165463",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Who is the president of France?",
+      "timestamp": "2026-09-29T20:50:33.000539",
+      "metadata": {}
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": null,
+  "draft_plan": null,
+  "current_topic": null,
+  "created_at": "2026-09-27T21:10:04.230390"
+}

@@ -1,0 +1,15 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test1)
+======================================================================
+Last Updated: 2026-09-29 18:55:16
+Stored Dialogue Turns: 4
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [18:54:34] USER: Teach: order pizza
+  [18:54:34] ASSISTANT: Which restaurant would you like to order from, Domino's or somewhere else?
+  [18:55:16] USER: Teach: order pizza
+  [18:55:16] ASSISTANT: Which restaurant would you like to order from, Domino's or somewhere else?
+======================================================================

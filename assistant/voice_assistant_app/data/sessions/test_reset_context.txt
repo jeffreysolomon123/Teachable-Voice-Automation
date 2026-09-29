@@ -1,0 +1,12 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_reset)
+======================================================================
+Last Updated: 2026-09-29 20:47:32
+Stored Dialogue Turns: 1
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [20:47:32] ASSISTANT: Session reset. Starting fresh! What would you like to do?
+======================================================================

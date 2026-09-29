@@ -1,0 +1,80 @@
+{
+  "session_id": "sess_m_mujyqm04_exzqm",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Hello",
+      "timestamp": "2026-09-27T20:48:16.760808",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I help you today? I can teach me a new workflow or execute one of your learned orders.",
+      "timestamp": "2026-09-27T20:48:17.183369",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I want to execute an order on Zomato",
+      "timestamp": "2026-09-27T20:48:45.200058",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I hear you! How can I help you teach a workflow or order something on your phone?",
+      "timestamp": "2026-09-27T20:48:45.790076",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I wanna order something on Zomato",
+      "timestamp": "2026-09-27T20:48:58.263653",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I hear you! How can I help you teach a workflow or order something on your phone?",
+      "timestamp": "2026-09-27T20:48:58.851632",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I want to order something on Zomato",
+      "timestamp": "2026-09-27T20:49:10.761745",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I hear you! How can I help you teach a workflow or order something on your phone?",
+      "timestamp": "2026-09-27T20:49:11.427318",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thank you",
+      "timestamp": "2026-09-27T20:49:21.760324",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "You're welcome! Let me know if you need anything else.",
+      "timestamp": "2026-09-27T20:49:23.176415",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": null,
+  "draft_plan": null,
+  "current_topic": null,
+  "created_at": "2026-09-27T20:48:06.777501"
+}
