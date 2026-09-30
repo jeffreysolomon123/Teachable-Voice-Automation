@@ -2,3 +2,5 @@
 .venv/
 runs/
 __pycache__/
+# Stage 1 calibration images are required at runtime (the repo root ignores *.png)
+!pipeline_stages/tap_extractor/calibration/*.png
