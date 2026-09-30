@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_teach_staged)
+======================================================================
+Last Updated: 2026-09-29 20:30:10
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  • last_completed_plan: {'mode': 'TEACH', 'stage': 'COMPLETED', 'app_name': 'Zomato', 'flow_id': 'order_dominos_zomato', 'slots': {'item': 'Margherita pizza', 'restaurant': "Domino's", 'app': 'Zomato'}, 'summary': "Order Margherita pizza from Domino's on Zomato", 'confirmed': False, 'status': 'completed'}
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [20:12:25] ASSISTANT: I've extracted your request: Order Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:12:26] USER: Teach mode
+  [20:12:31] ASSISTANT: I've prepared your TEACH plan for Zomato: Order a Margherita pizza from Domino's on Zomato. Shall I proceed?
+  [20:12:32] USER: Yes, start recording
+  [20:12:43] ASSISTANT: Learned: Order Margherita pizza from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.
+  [20:12:44] USER: Finish demonstration
+  [20:12:44] ASSISTANT: Demonstration captured and saved! I've learned the steps for Zomato. You can now execute it anytime in ORDER mode.
+  [20:29:23] USER: Order a Margherita pizza from Domino's on Zomato
+  [20:29:33] ASSISTANT: I've extracted your request: Order Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:29:34] USER: Teach mode
+  [20:29:51] ASSISTANT: I've prepared your TEACH plan for Zomato: Order a Margherita pizza from Domino's. Shall I proceed?
+  [20:29:52] USER: Yes, start recording
+  [20:30:09] ASSISTANT: Learned: Order Margherita pizza from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.
+  [20:30:10] USER: Finish demonstration
+  [20:30:10] ASSISTANT: Demonstration captured and saved! I've learned the steps for Zomato. You can now execute it anytime in ORDER mode.
+======================================================================

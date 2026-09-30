@@ -1,0 +1,18 @@
+{
+  "session_id": "test_reset",
+  "chat_history": [
+    {
+      "role": "assistant",
+      "content": "Session reset. Starting fresh! What would you like to do?",
+      "timestamp": "2026-09-29T20:47:32.057295",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": null,
+  "draft_plan": null,
+  "current_topic": null,
+  "created_at": "2026-09-27T18:26:36.211454"
+}

@@ -1,0 +1,27 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: default)
+======================================================================
+Last Updated: 2026-09-29 20:50:05
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  • last_completed_plan: {'mode': 'ORDER', 'stage': 'STAGE_3_EXECUTION', 'app_name': 'Zomato', 'flow_id': 'order_dominos_zomato', 'slots': {'item': 'pizza', 'restaurant': "Domino's", 'app': 'Zomato', 'quantity': 1}, 'summary': 'Executing pizza on Zomato', 'confirmed': True, 'status': 'executing'}
+  • office_address: Cyber City
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [18:09:41] ASSISTANT: I hear you! How can I help you teach a workflow or order something on your phone?
+  [18:09:55] USER: I want to order pizza from Zomato.
+  [18:09:56] ASSISTANT: I've extracted your request: Order pizza from Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [18:10:22] USER: Teach more
+  [18:10:22] ASSISTANT: Great, TEACH mode selected for Zomato. Plan: Order pizza from Zomato. Ready to start recording the demonstration?
+  [18:10:42] USER: Yes
+  [18:10:42] ASSISTANT: Learned: Order pizza from Zomato. Starting demonstration recording now, please perform the taps on your screen.
+  [18:11:05] USER: Hello
+  [18:11:06] ASSISTANT: Hello! I am still recording your demonstration for the Zomato pizza order. Please continue performing the taps on your screen when you are ready.
+  [18:11:28] USER: No cancel that
+  [18:11:28] ASSISTANT: Understood, I have cancelled the recording session for the Zomato pizza order. How can I help you next?
+  [18:11:50] USER: Just, I want to teach you something.
+  [18:11:51] ASSISTANT: I hear you! How can I help you teach a workflow or order something on your phone?
+  [19:55:16] USER: Order a Margherita pizza from Domino's on Zomato
+  [19:55:18] ASSISTANT: Executing pizza on Zomato.
+======================================================================

@@ -1,0 +1,250 @@
+{
+  "session_id": "test_mod",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Teach mode",
+      "timestamp": "2026-09-29T19:42:10.741923",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Great, TEACH mode selected for Zomato. Plan: Order a Margherita pizza from Domino's on Zomato. Ready to start recording the demonstration?",
+      "timestamp": "2026-09-29T19:42:10.774392",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Make it two pizzas",
+      "timestamp": "2026-09-29T19:42:11.641652",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated quantity to 2. Plan: Order 2 Margherita pizzas from Domino's on Zomato. Ready to proceed?",
+      "timestamp": "2026-09-29T19:42:11.680978",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, proceed",
+      "timestamp": "2026-09-29T19:42:12.544037",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Learned: Order 2 Margherita pizzas from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.",
+      "timestamp": "2026-09-29T19:42:12.586340",
+      "metadata": {
+        "intent": "TEACH"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T20:10:36.406291",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order a Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:10:41.143032",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach mode",
+      "timestamp": "2026-09-29T20:10:41.992703",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan for Zomato: Order Margherita pizza from Domino's on Zomato. Shall I proceed?",
+      "timestamp": "2026-09-29T20:10:46.819337",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Make it two pizzas",
+      "timestamp": "2026-09-29T20:10:47.669242",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated your plan: Order 2 Margherita pizzas from Domino's on Zomato. Ready to proceed?",
+      "timestamp": "2026-09-29T20:10:59.611758",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, proceed",
+      "timestamp": "2026-09-29T20:11:03.743299",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Learned: Order 2 Margherita pizzas from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.",
+      "timestamp": "2026-09-29T20:11:10.892504",
+      "metadata": {
+        "intent": "TEACH"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T20:26:32.283013",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:26:36.586416",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach mode",
+      "timestamp": "2026-09-29T20:26:37.561105",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan for Zomato: Order 2 Margherita pizzas from Domino's. Shall I proceed?",
+      "timestamp": "2026-09-29T20:26:53.817688",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Make it two pizzas",
+      "timestamp": "2026-09-29T20:26:59.159060",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated your plan: Order 2 Margherita pizzas from Domino's on Zomato. Ready to proceed?",
+      "timestamp": "2026-09-29T20:27:11.090960",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, proceed",
+      "timestamp": "2026-09-29T20:27:11.907961",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Learned: Order 2 Margherita pizzas from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.",
+      "timestamp": "2026-09-29T20:27:28.760021",
+      "metadata": {
+        "intent": "TEACH"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Order a Margherita pizza from Domino's on Zomato",
+      "timestamp": "2026-09-29T20:48:07.669120",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've extracted your request: Order Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?",
+      "timestamp": "2026-09-29T20:48:20.679675",
+      "metadata": {
+        "intent": "RESOLVE_MODE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach mode",
+      "timestamp": "2026-09-29T20:48:21.513776",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan for Zomato: Order 2 Margherita pizzas from Domino's. Shall I proceed?",
+      "timestamp": "2026-09-29T20:48:38.519858",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Make it two pizzas",
+      "timestamp": "2026-09-29T20:48:39.353433",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Updated your plan: Order 2 Margherita pizzas from Domino's on Zomato. Ready to proceed?",
+      "timestamp": "2026-09-29T20:49:02.801316",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, proceed",
+      "timestamp": "2026-09-29T20:49:03.602264",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Learned: Order 2 Margherita pizzas from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.",
+      "timestamp": "2026-09-29T20:49:46.070194",
+      "metadata": {
+        "intent": "TEACH"
+      }
+    }
+  ],
+  "user_preferences": {
+    "last_completed_plan": {
+      "mode": "TEACH",
+      "stage": "STAGE_3_EXECUTION",
+      "app_name": "Zomato",
+      "flow_id": "order_dominos_zomato",
+      "slots": {
+        "item": "Margherita pizza",
+        "restaurant": "Domino's",
+        "app": "Zomato",
+        "quantity": 2
+      },
+      "summary": "Order 2 Margherita pizzas from Domino's on Zomato",
+      "confirmed": true,
+      "status": "recording"
+    }
+  },
+  "pending_clarification": null,
+  "draft_plan": {
+    "mode": "TEACH",
+    "stage": "STAGE_3_EXECUTION",
+    "app_name": "Zomato",
+    "flow_id": "order_dominos_zomato",
+    "slots": {
+      "item": "Margherita pizza",
+      "restaurant": "Domino's",
+      "app": "Zomato",
+      "quantity": 2
+    },
+    "summary": "Order 2 Margherita pizzas from Domino's on Zomato",
+    "confirmed": false,
+    "status": "recording"
+  },
+  "current_topic": null,
+  "created_at": "2026-09-27T18:26:57.720584"
+}

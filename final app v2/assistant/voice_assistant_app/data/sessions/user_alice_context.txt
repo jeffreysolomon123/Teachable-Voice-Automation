@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: user_alice)
+======================================================================
+Last Updated: 2026-09-29 20:46:47
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [19:41:42] ASSISTANT: I've extracted your request: Order a Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [19:41:44] USER: Teach mode
+  [19:41:44] ASSISTANT: Great, TEACH mode selected for Zomato. Plan: Order a Margherita pizza from Domino's on Zomato. Ready to start recording the demonstration?
+  [20:09:13] USER: Order a Margherita pizza from Domino's on Zomato
+  [20:09:16] ASSISTANT: I've extracted your request: Order Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:09:27] USER: Teach mode
+  [20:09:43] ASSISTANT: I've prepared your TEACH plan for Zomato: Order Margherita pizza from Domino's on Zomato. Shall I proceed?
+  [20:24:33] USER: Order a Margherita pizza from Domino's on Zomato
+  [20:24:59] ASSISTANT: I've extracted your request: Order Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:25:12] USER: Teach mode
+  [20:25:13] ASSISTANT: I've prepared your TEACH plan for Zomato: Order Margherita pizza from Domino's on Zomato. Shall I proceed?
+  [20:46:00] USER: Order a Margherita pizza from Domino's on Zomato
+  [20:46:12] ASSISTANT: I've extracted your request: Order Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:46:31] USER: Teach mode
+  [20:46:47] ASSISTANT: I've prepared your TEACH plan for Zomato: Order Margherita pizza from Domino's on Zomato. Shall I proceed?
+======================================================================

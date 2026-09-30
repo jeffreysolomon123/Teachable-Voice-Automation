@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Teachable Assistant</string>
+    <string name="accessibility_label">Teachable Assistant visual automation</string>
+    <string name="accessibility_description">Takes screenshots and performs taps, swipes, Back and text entry chosen by your automation backend from those screenshots. It does not read the content of other apps\' windows.</string>
+</resources>

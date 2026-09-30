@@ -1,0 +1,836 @@
+:root {
+  --bg-color: #08090d;
+  --card-bg: rgba(18, 20, 29, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --text-main: #f0f3f8;
+  --text-muted: #8e95a5;
+  --cyan: #00f0ff;
+  --magenta: #ff007a;
+  --purple: #7928ca;
+  --amber: #ffb800;
+  --blue: #0070f3;
+  --green: #00df8f;
+  --radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   SIRI-STYLE IRIDESCENT PERIMETER & BOTTOM EDGE GLOW
+   ========================================================================== */
+.siri-edge-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.siri-edge-glow::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  background: conic-gradient(
+    from var(--glow-angle, 0deg),
+    var(--cyan),
+    var(--magenta),
+    var(--purple),
+    var(--blue),
+    var(--amber),
+    var(--cyan)
+  );
+  filter: blur(24px);
+  mask: radial-gradient(circle at center, transparent 78%, black 95%);
+  -webkit-mask: radial-gradient(circle at center, transparent 78%, black 95%);
+  animation: rotateGlow 6s linear infinite;
+  opacity: 0.85;
+}
+
+.siri-bottom-wave {
+  position: fixed;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: radial-gradient(
+    ellipse 85% 100% at 50% 100%,
+    rgba(0, 240, 255, 0.5) 0%,
+    rgba(255, 0, 122, 0.4) 35%,
+    rgba(121, 40, 202, 0.3) 65%,
+    transparent 85%
+  );
+  filter: blur(32px);
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@keyframes rotateGlow {
+  0% { --glow-angle: 0deg; }
+  100% { --glow-angle: 360deg; }
+}
+
+/* Dynamic State Classes */
+body.state-listening .siri-edge-glow,
+body.state-listening .siri-bottom-wave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.state-listening .siri-bottom-wave {
+  animation: wavePulse 1.8s ease-in-out infinite alternate;
+}
+
+body.state-thinking .siri-edge-glow {
+  opacity: 1;
+}
+
+body.state-thinking .siri-edge-glow::before {
+  animation: rotateGlow 1.8s linear infinite;
+  filter: blur(36px);
+}
+
+body.state-speaking .siri-bottom-wave {
+  opacity: 0.8;
+  transform: translateY(0);
+  background: radial-gradient(
+    ellipse 75% 100% at 50% 100%,
+    rgba(121, 40, 202, 0.6) 0%,
+    rgba(0, 112, 243, 0.5) 40%,
+    transparent 80%
+  );
+  animation: speakingBreath 2.2s ease-in-out infinite;
+}
+
+body.state-executing .siri-bottom-wave {
+  opacity: 0.5;
+  transform: translateY(10px);
+  background: radial-gradient(
+    ellipse 60% 100% at 50% 100%,
+    rgba(0, 223, 143, 0.4) 0%,
+    rgba(0, 112, 243, 0.3) 50%,
+    transparent 80%
+  );
+}
+
+body.state-handoff .siri-edge-glow {
+  opacity: 1;
+}
+
+body.state-handoff .siri-edge-glow::before {
+  background: conic-gradient(from 0deg, var(--amber), #ff5500, var(--amber));
+  filter: blur(28px);
+  animation: rotateGlow 3s linear infinite;
+}
+
+@keyframes wavePulse {
+  0% { transform: scaleY(0.9) translateY(0); filter: blur(28px); }
+  100% { transform: scaleY(1.25) translateY(-10px); filter: blur(40px); }
+}
+
+@keyframes speakingBreath {
+  0%, 100% { transform: scaleY(0.95); opacity: 0.6; }
+  50% { transform: scaleY(1.2); opacity: 0.95; }
+}
+
+/* ==========================================================================
+   APP CONTAINER & LAYOUT
+   ========================================================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px 14px;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.glow-orb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cyan), var(--magenta));
+  box-shadow: 0 0 16px var(--magenta);
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+}
+
+.status-badge.active .status-dot {
+  background: var(--green);
+  box-shadow: 0 0 8px var(--green);
+}
+
+/* Benchmark Simulator Bar */
+.testcase-bar {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.testcase-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.testcase-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tc-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tc-chip:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.tc-chip.active {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: var(--cyan);
+  color: var(--cyan);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.25);
+}
+
+/* Main Grid: Conversation Feed & Memory Inspector */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Conversation Feed */
+.chat-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+}
+
+.chat-messages {
+  flex: 1;
+  min-height: 0;
+  padding: 20px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overscroll-behavior-y: contain;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.25);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.5);
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 18px;
+}
+
+.typing-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+  animation: typingBounce 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typingBounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 8px var(--cyan); }
+}
+
+.msg-bubble {
+  max-width: 82%;
+  padding: 14px 18px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.msg-user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, rgba(0, 112, 243, 0.8), rgba(121, 40, 202, 0.8));
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.msg-assistant {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom-left-radius: 4px;
+}
+
+.msg-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+.badge-teach { background: rgba(0, 223, 143, 0.2); color: var(--green); }
+.badge-replay { background: rgba(0, 240, 255, 0.2); color: var(--cyan); }
+.badge-clarify { background: rgba(255, 184, 0, 0.2); color: var(--amber); }
+.badge-unknown { background: rgba(255, 0, 122, 0.2); color: var(--magenta); }
+
+.slot-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.slot-pill {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #d0d5dd;
+}
+
+/* Memory Inspector Sidebar */
+.memory-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 520px;
+}
+
+.memory-header {
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.memory-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.memory-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 13px;
+}
+
+.memory-item-title {
+  font-weight: 600;
+  color: var(--cyan);
+  margin-bottom: 4px;
+}
+
+.memory-item-details {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   SIRI VOICE HUD (ANCHORED IN LAYOUT - NEVER COVERS CHAT MESSAGES)
+   ========================================================================== */
+.siri-hud {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  align-self: center;
+  margin-top: 12px;
+  flex-shrink: 0;
+  background: rgba(14, 16, 24, 0.88);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 1001;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 240, 255, 0.15);
+}
+
+/* ==========================================================================
+   FLOATING TEACH MODE DEMONSTRATION HUD
+   ========================================================================== */
+.floating-teach-hud {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.95);
+  border: 1.5px solid var(--magenta);
+  box-shadow: 0 8px 32px rgba(255, 0, 122, 0.4), 0 0 24px rgba(255, 0, 122, 0.25);
+  border-radius: 40px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 2000;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  animation: teachHudFloat 3s ease-in-out infinite alternate;
+}
+
+@keyframes teachHudFloat {
+  0% { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(4px); }
+}
+
+.teach-pulse-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff0055;
+  box-shadow: 0 0 12px #ff0055;
+  animation: pulseDot 1s infinite alternate;
+  flex-shrink: 0;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.85); opacity: 0.7; }
+  100% { transform: scale(1.2); opacity: 1; }
+}
+
+.teach-hud-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.teach-hud-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.2px;
+}
+
+.teach-hud-sub {
+  font-size: 11px;
+  color: #cbd5e1;
+}
+
+.teach-hud-btn {
+  background: linear-gradient(135deg, #ff0055, #ff5500);
+  color: white;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 0 12px rgba(255, 0, 85, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.teach-hud-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255, 0, 85, 0.6);
+}
+
+/* Plan Decision Badges (Rendered when decision is locked/made) */
+.plan-decision-badge {
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.plan-decision-badge.mode-set {
+  background: rgba(0, 240, 255, 0.15);
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+}
+
+.plan-decision-badge.confirmed {
+  background: rgba(0, 223, 143, 0.15);
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+
+.plan-decision-badge.cancelled {
+  background: rgba(255, 0, 122, 0.15);
+  border: 1px solid var(--magenta);
+  color: var(--magenta);
+}
+
+.mic-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--cyan), var(--magenta));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 0, 122, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.mic-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 28px rgba(0, 240, 255, 0.6);
+}
+
+.mic-btn.listening {
+  animation: pulseMic 1.4s infinite;
+  background: linear-gradient(135deg, #ff0055, #ff7700);
+  box-shadow: 0 0 32px #ff0055;
+}
+
+@keyframes pulseMic {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+.mic-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.hud-input-group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.hud-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  padding: 8px 4px;
+}
+
+.hud-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.send-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.send-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ==========================================================================
+   STRUCTURED EXTRACTED PLAN CARD & CONFIRMATION WIDGET
+   ========================================================================== */
+.plan-card {
+  margin-top: 12px;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 16px rgba(0, 240, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.plan-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 8px;
+}
+
+.plan-mode-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+}
+
+.plan-mode-teach {
+  background: rgba(255, 0, 122, 0.2);
+  color: var(--magenta);
+  border: 1px solid rgba(255, 0, 122, 0.4);
+}
+
+.plan-mode-order {
+  background: rgba(0, 240, 255, 0.2);
+  color: var(--cyan);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+}
+
+.plan-mode-unresolved {
+  background: rgba(255, 184, 0, 0.2);
+  color: var(--amber);
+  border: 1px solid rgba(255, 184, 0, 0.4);
+}
+
+.plan-status-badge {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.plan-summary {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.plan-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.plan-slot-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-slot-key {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.plan-slot-val {
+  font-size: 12px;
+  color: #e2e8f0;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.plan-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.plan-btn-confirm {
+  flex: 1;
+  background: linear-gradient(135deg, #00df8f, #00b374);
+  color: #052e16;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.plan-btn-confirm:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.plan-btn-mode {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.plan-btn-mode:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.plan-btn-cancel {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.plan-btn-cancel:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}

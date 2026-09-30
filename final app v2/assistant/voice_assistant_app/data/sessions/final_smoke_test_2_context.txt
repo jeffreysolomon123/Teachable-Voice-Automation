@@ -1,0 +1,13 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: final_smoke_test_2)
+======================================================================
+Last Updated: 2026-09-29 19:24:28
+Stored Dialogue Turns: 2
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [19:24:26] USER: Order chicken biryani from Meghana Foods on Swiggy
+  [19:24:28] ASSISTANT: Would you like to teach me this workflow by demonstrating it, or order it autonomously?
+======================================================================

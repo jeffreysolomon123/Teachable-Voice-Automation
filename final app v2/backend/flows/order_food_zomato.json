@@ -1,0 +1,22 @@
+{
+  "flow_id": "order_food_zomato",
+  "app": "Zomato",
+  "package": "com.application.zomato",
+  "description": "Order a food item from a restaurant on Zomato",
+  "required_slots": ["restaurant", "item"],
+  "optional_slots": ["quantity", "address", "customizations"],
+  "source": "manual",
+  "steps": [
+    {"step": 1, "action": "LAUNCH_APP", "app": "Zomato"},
+    {"step": 2, "action": "TAP", "target": {"description": "search field", "semantic_role": "search_field", "region": "top"}},
+    {"step": 3, "action": "TYPE", "value": "{{restaurant}}"},
+    {"step": 4, "action": "TAP", "target": {"description": "restaurant matching {{restaurant}}", "semantic_role": "restaurant_result", "slot": "restaurant", "text": "{{restaurant}}", "scroll_search": true},
+     "verify": {"mode": "anchors", "anchors": ["{{restaurant}}"]}},
+    {"step": 5, "action": "TAP", "target": {"description": "search field inside the restaurant menu", "semantic_role": "search_field", "region": "top"}},
+    {"step": 6, "action": "TYPE", "value": "{{item}}"},
+    {"step": 7, "action": "TAP", "target": {"description": "Add button associated with {{item}}", "semantic_role": "add_item", "slot": "item", "text": "ADD", "scroll_search": true}},
+    {"step": 8, "action": "TAP", "optional": true, "target": {"description": "Add item button on the customization sheet", "text": "Add item", "region": "bottom"}},
+    {"step": 9, "action": "TAP", "target": {"description": "view cart / continue bar", "semantic_role": "cart", "text": "Continue", "region": "bottom"}},
+    {"step": 10, "action": "TAP", "final_confirmation": true, "target": {"description": "Place order / pay button", "semantic_role": "place_order", "region": "bottom"}}
+  ]
+}

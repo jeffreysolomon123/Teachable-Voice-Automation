@@ -1,0 +1,25 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: smoke_stage_test)
+======================================================================
+Last Updated: 2026-09-27 21:54:21
+Stored Dialogue Turns: 14
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  • last_completed_plan: {'mode': 'TEACH', 'stage': 'STAGE_3_EXECUTION', 'app_name': 'Zomato', 'flow_id': 'order_dominos_zomato', 'slots': {'item': 'pizza', 'restaurant': "Domino's"}, 'summary': "Order pizza from Domino's on Zomato", 'confirmed': True, 'status': 'recording'}
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [21:53:20] USER: Order pizza
+  [21:53:20] ASSISTANT: Which restaurant would you like to order from, Domino's or somewhere else?
+  [21:53:31] USER: Teach mode
+  [21:53:31] ASSISTANT: Which restaurant would you like to order from, Domino's or somewhere else?
+  [21:53:40] USER: Domino's
+  [21:53:40] ASSISTANT: I've prepared your TEACH plan: Order pizza from Domino's on Zomato. Ready to start recording the demonstration?
+  [21:53:49] USER: Yes, start recording
+  [21:53:49] ASSISTANT: Learned: Order pizza from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.
+  [21:54:01] USER: Finish demonstration
+  [21:54:01] ASSISTANT: Demonstration captured and saved! I've learned the steps for your app. You can now execute it anytime in ORDER mode.
+  [21:54:13] USER: Thank you Ava
+  [21:54:13] ASSISTANT: You're very welcome! Let me know whenever you're ready for your next order or demonstration.
+  [21:54:21] USER: Actually make it Farmhouse pizza
+  [21:54:21] ASSISTANT: Updated your order plan: Order Farmhouse pizza from Domino's on Zomato. Ready to proceed?
+======================================================================

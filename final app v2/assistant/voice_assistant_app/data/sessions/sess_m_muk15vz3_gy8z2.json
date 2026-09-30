@@ -1,0 +1,164 @@
+{
+  "session_id": "sess_m_muk15vz3_gy8z2",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Hi",
+      "timestamp": "2026-09-27T21:56:32.538794",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I'm Ava, your executive voice assistant. What workflow or task would you like to tackle today?",
+      "timestamp": "2026-09-27T21:56:32.549969",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I would like to order something else, Vicky",
+      "timestamp": "2026-09-27T21:56:47.317621",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I'm Ava, your executive voice assistant. What workflow or task would you like to tackle today?",
+      "timestamp": "2026-09-27T21:56:49.200429",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I would like to order something on Swiggy",
+      "timestamp": "2026-09-27T21:57:04.362453",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I'm Ava, your executive voice assistant. What workflow or task would you like to tackle today?",
+      "timestamp": "2026-09-27T21:57:04.841462",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I would like to order something on swiggy",
+      "timestamp": "2026-09-27T21:57:19.062344",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I'm Ava, your executive voice assistant. What workflow or task would you like to tackle today?",
+      "timestamp": "2026-09-27T21:57:19.570849",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Fuck you",
+      "timestamp": "2026-09-27T21:57:26.941324",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Got it: 'Fuck you'. Would you like to demonstrate this in TEACH mode, or execute an existing order?",
+      "timestamp": "2026-09-27T21:57:27.469020",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hi",
+      "timestamp": "2026-09-27T21:57:52.619952",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I'm Ava, your executive voice assistant. What workflow or task would you like to tackle today?",
+      "timestamp": "2026-09-27T21:57:52.632156",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I want you to order",
+      "timestamp": "2026-09-27T21:58:07.363123",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Got it: 'I want you to order'. Would you like to demonstrate this in TEACH mode, or execute an existing order?",
+      "timestamp": "2026-09-27T21:58:07.877802",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I want to teach you",
+      "timestamp": "2026-09-27T21:58:29.445878",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Got it: 'I want to teach you'. Would you like to demonstrate this in TEACH mode, or execute an existing order?",
+      "timestamp": "2026-09-27T21:58:29.942519",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach more",
+      "timestamp": "2026-09-27T21:58:47.548476",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Got it: 'Teach more'. Would you like to demonstrate this in TEACH mode, or execute an existing order?",
+      "timestamp": "2026-09-27T21:58:48.015100",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "and say,",
+      "timestamp": "2026-09-27T21:59:05.264726",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Got it: 'and say,'. Would you like to demonstrate this in TEACH mode, or execute an existing order?",
+      "timestamp": "2026-09-27T21:59:05.763926",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Fuck off you slutty whore",
+      "timestamp": "2026-09-27T21:59:07.539939",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Got it: 'Fuck off you slutty whore'. Would you like to demonstrate this in TEACH mode, or execute an existing order?",
+      "timestamp": "2026-09-27T21:59:07.987399",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": null,
+  "draft_plan": null,
+  "current_topic": null,
+  "created_at": "2026-09-27T21:56:32.526553"
+}

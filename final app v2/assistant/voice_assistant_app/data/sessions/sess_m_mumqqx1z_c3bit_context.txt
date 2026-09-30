@@ -1,0 +1,23 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: sess_m_mumqqx1z_c3bit)
+======================================================================
+Last Updated: 2026-09-29 19:28:51
+Stored Dialogue Turns: 12
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [19:27:53] USER: Hello
+  [19:27:53] ASSISTANT: Hello! I'm Ava, your executive voice assistant. What workflow or task would you like to tackle today?
+  [19:28:07] USER: I'm gonna order something
+  [19:28:09] ASSISTANT: Which restaurant or item would you like to order?
+  [19:28:21] USER: I would like to order something from McDonald's
+  [19:28:22] ASSISTANT: Which restaurant or item would you like to order?
+  [19:28:34] USER: something from McDonald's or Zomato
+  [19:28:35] ASSISTANT: Which restaurant or item would you like to order?
+  [19:28:49] USER: From zomato, a biriyani
+  [19:28:50] ASSISTANT: Would you like to teach me this workflow by demonstrating it, or order it autonomously?
+  [19:28:51] USER: Thank you
+  [19:28:51] ASSISTANT: You're very welcome! Let me know whenever you're ready for your next order or demonstration.
+======================================================================

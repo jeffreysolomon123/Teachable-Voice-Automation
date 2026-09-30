@@ -1,0 +1,15 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_t8_dbg)
+======================================================================
+Last Updated: 2026-09-29 18:46:28
+Stored Dialogue Turns: 4
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [18:46:20] USER: Teach: Search for wireless earbuds on Amazon and add the first result to cart
+  [18:46:22] ASSISTANT: I've prepared your TEACH plan for Amazon: search for wireless earbuds and add the first result to your cart. Shall I begin recording?
+  [18:46:28] USER: Yes, start recording
+  [18:46:28] ASSISTANT: Great, TEACH mode selected for Amazon. Plan: Search for wireless earbuds and add the first result to cart. Ready to start recording the demonstration?
+======================================================================

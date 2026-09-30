@@ -1,0 +1,13 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_llm_intelligence)
+======================================================================
+Last Updated: 2026-09-27 22:14:32
+Stored Dialogue Turns: 2
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [22:14:30] USER: Are you an LLM or predefined messages?
+  [22:14:32] ASSISTANT: I'm powered by a large language model, which allows me to understand you naturally and handle complex requests without relying on static, scripted responses. Think of me as an executive assistant that learns and adapts to your specific needs.
+======================================================================

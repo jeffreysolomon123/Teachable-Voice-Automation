@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_explicit_teach_missing_slot)
+======================================================================
+Last Updated: 2026-09-29 20:31:29
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [19:23:00] ASSISTANT: Which restaurant would you like to order from, Domino's or somewhere else?
+  [19:23:01] USER: From Domino's on Zomato
+  [19:23:01] ASSISTANT: I've prepared your TEACH plan: Order pizza from Domino's on Zomato. Ready to start recording the demonstration?
+  [19:43:40] USER: Teach: order pizza
+  [19:43:40] ASSISTANT: Which restaurant would you like to order from, Domino's or somewhere else?
+  [19:43:41] USER: From Domino's on Zomato
+  [19:43:41] ASSISTANT: I've prepared your TEACH plan: Order pizza from Domino's on Zomato. Ready to start recording the demonstration?
+  [20:13:26] USER: Teach: order pizza
+  [20:13:29] ASSISTANT: Which restaurant would you like to order from, Domino's or somewhere else?
+  [20:13:30] USER: From Domino's on Zomato
+  [20:13:32] ASSISTANT: Got it, Domino's. Ready to proceed with: Order pizza from Domino's on Zomato?
+  [20:31:09] USER: Teach: order pizza
+  [20:31:13] ASSISTANT: Which restaurant would you like to order from, Domino's or somewhere else?
+  [20:31:14] USER: From Domino's on Zomato
+  [20:31:29] ASSISTANT: I've prepared your TEACH plan for Zomato: Order pizza from Domino's on Zomato. Ready to proceed?
+======================================================================

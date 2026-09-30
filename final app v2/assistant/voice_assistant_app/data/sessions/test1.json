@@ -1,0 +1,52 @@
+{
+  "session_id": "test1",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Teach: order pizza",
+      "timestamp": "2026-09-29T18:54:34.446074",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant would you like to order from, Domino's or somewhere else?",
+      "timestamp": "2026-09-29T18:54:34.503326",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Teach: order pizza",
+      "timestamp": "2026-09-29T18:55:16.680199",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Which restaurant would you like to order from, Domino's or somewhere else?",
+      "timestamp": "2026-09-29T18:55:16.732441",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": {
+    "missing_parameter": "restaurant",
+    "candidate_flow_ids": []
+  },
+  "draft_plan": {
+    "mode": "TEACH",
+    "stage": "STAGE_2_SLOTS",
+    "app_name": "Zomato",
+    "flow_id": "order_dominos_zomato",
+    "slots": {
+      "item": "pizza"
+    },
+    "summary": "Order pizza",
+    "confirmed": false,
+    "status": "awaiting_slots"
+  },
+  "current_topic": null,
+  "created_at": "2026-09-29T18:54:34.427132"
+}

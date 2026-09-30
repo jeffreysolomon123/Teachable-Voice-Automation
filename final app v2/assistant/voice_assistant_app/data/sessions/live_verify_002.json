@@ -1,0 +1,24 @@
+{
+  "session_id": "live_verify_002",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Order pad thai from Blue Ginger on Swiggy",
+      "timestamp": "2026-09-29T19:13:37.302668",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I'm with you. Feel free to tell me what task you'd like to automate or order on your device, or ask me any question!",
+      "timestamp": "2026-09-29T19:13:38.636765",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": null,
+  "draft_plan": null,
+  "current_topic": null,
+  "created_at": "2026-09-29T19:13:37.285714"
+}

@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_mod)
+======================================================================
+Last Updated: 2026-09-29 20:49:46
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  • last_completed_plan: {'mode': 'TEACH', 'stage': 'STAGE_3_EXECUTION', 'app_name': 'Zomato', 'flow_id': 'order_dominos_zomato', 'slots': {'item': 'Margherita pizza', 'restaurant': "Domino's", 'app': 'Zomato', 'quantity': 2}, 'summary': "Order 2 Margherita pizzas from Domino's on Zomato", 'confirmed': True, 'status': 'recording'}
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [20:26:36] ASSISTANT: I've extracted your request: Order Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:26:37] USER: Teach mode
+  [20:26:53] ASSISTANT: I've prepared your TEACH plan for Zomato: Order 2 Margherita pizzas from Domino's. Shall I proceed?
+  [20:26:59] USER: Make it two pizzas
+  [20:27:11] ASSISTANT: Updated your plan: Order 2 Margherita pizzas from Domino's on Zomato. Ready to proceed?
+  [20:27:11] USER: Yes, proceed
+  [20:27:28] ASSISTANT: Learned: Order 2 Margherita pizzas from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.
+  [20:48:07] USER: Order a Margherita pizza from Domino's on Zomato
+  [20:48:20] ASSISTANT: I've extracted your request: Order Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:48:21] USER: Teach mode
+  [20:48:38] ASSISTANT: I've prepared your TEACH plan for Zomato: Order 2 Margherita pizzas from Domino's. Shall I proceed?
+  [20:48:39] USER: Make it two pizzas
+  [20:49:02] ASSISTANT: Updated your plan: Order 2 Margherita pizzas from Domino's on Zomato. Ready to proceed?
+  [20:49:03] USER: Yes, proceed
+  [20:49:46] ASSISTANT: Learned: Order 2 Margherita pizzas from Domino's on Zomato. Starting demonstration recording now, please perform the taps on your screen.
+======================================================================

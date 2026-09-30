@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_cancel)
+======================================================================
+Last Updated: 2026-09-29 20:47:18
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  (No specific user preferences saved yet)
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [20:09:53] ASSISTANT: Workflow cancelled. What would you like to do instead?
+  [20:09:54] USER: What can you do?
+  [20:10:01] ASSISTANT: I can help you automate tasks on your phone. You can teach me new workflows by demonstrating the steps on your screen, and later run them in ORDER mode. For example, I can place orders on Zomato, shop on Amazon, book rides, control settings, or any app you show me. Just let me know what you’d like to automate.
+  [20:25:19] USER: Order a Margherita pizza from Domino's on Zomato
+  [20:25:20] ASSISTANT: I've extracted your request: Order a Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:25:21] USER: Cancel
+  [20:25:21] ASSISTANT: Workflow cancelled. What would you like to do instead?
+  [20:25:22] USER: What can you do?
+  [20:25:33] ASSISTANT: I can learn and replay automated workflows on your phone. For example, I can help you order food on Zomato, shop on Amazon, or navigate other apps. You can teach me new tasks by demonstrating the steps on your screen, and then I can execute them for you later.
+  [20:46:50] USER: Order a Margherita pizza from Domino's on Zomato
+  [20:47:03] ASSISTANT: I've extracted your request: Order a Margherita pizza from Domino's on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?
+  [20:47:04] USER: Cancel
+  [20:47:04] ASSISTANT: Workflow cancelled. What would you like to do instead?
+  [20:47:05] USER: What can you do?
+  [20:47:18] ASSISTANT: I can learn and replay automated workflows on your phone. For example, I can help you order food on Zomato, shop on Amazon, or navigate other apps. You can teach me new tasks by demonstrating the steps on your screen, and then I can execute them for you later.
+======================================================================

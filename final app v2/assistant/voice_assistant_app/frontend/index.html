@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teachable Voice Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="state-idle">
+  <!-- Siri-style Iridescent Edge & Bottom Glow Elements -->
+  <div class="siri-edge-glow"></div>
+  <div class="siri-bottom-wave"></div>
+
+  <div class="container">
+    <header>
+      <div class="logo-group">
+        <div class="glow-orb"></div>
+        <h1>Teachable Voice Assistant</h1>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <!-- APK Download Button -->
+        <a href="/download/voice-assistant.apk" download="TeachableVoiceAssistant.apk" class="tc-chip" style="background: rgba(30, 144, 255, 0.25); border: 1px solid rgba(0, 242, 254, 0.6); color: #00f2fe; text-decoration: none; display: flex; align-items: center; gap: 6px; font-weight: 600; padding: 6px 12px; border-radius: 20px;">
+          <span>📱</span>
+          <span>Download Android APK</span>
+        </a>
+
+        <!-- New Session Button -->
+        <button class="tc-chip" onclick="startNewSession()" style="background: rgba(255, 0, 122, 0.15); border: 1px solid rgba(255, 0, 122, 0.4); color: #ff007a; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px;" title="Reset session and start completely fresh">
+          <span>🔄</span>
+          <span>New Session</span>
+        </button>
+
+        <!-- Voice Selector -->
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">VOICE:</span>
+          <select id="voiceSelect" class="tc-chip" style="background: rgba(255,255,255,0.08); color: white; outline: none; cursor: pointer;">
+            <option value="en-US-AvaMultilingualNeural" selected>Ava (Conversational - Natural)</option>
+            <option value="en-IN-NeerjaExpressiveNeural">Neerja Expressive (Indian)</option>
+            <option value="en-US-AndrewMultilingualNeural">Andrew (Conversational Male)</option>
+            <option value="en-IN-PrabhatNeural">Prabhat (Indian Male)</option>
+          </select>
+        </div>
+
+        <div class="status-badge" id="statusBadge">
+          <div class="status-dot"></div>
+          <span id="statusText">Assistant Ready</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Competition Testcase Benchmark Bar -->
+    <div class="testcase-bar">
+      <div class="testcase-header">
+        <span>Competition Benchmark Test Cases (Click to simulate or speak):</span>
+        <span id="lastTestResult" style="color: var(--green);">Ready</span>
+      </div>
+      <div class="testcase-chips">
+        <button class="tc-chip" onclick="simulateUtterance('Order a Margherita pizza from Domino\'s on Zomato')">
+          <strong>T1</strong> Teach Food
+        </button>
+        <button class="tc-chip" onclick="simulateUtterance('Order a Margherita pizza from Domino\'s on Zomato')">
+          <strong>T2</strong> Exact Replay
+        </button>
+        <button class="tc-chip" onclick="simulateUtterance('Get me a margherita from dominos')">
+          <strong>T3</strong> Paraphrase
+        </button>
+        <button class="tc-chip" onclick="simulateUtterance('Order a Farmhouse pizza from Domino\'s on Zomato')">
+          <strong>T4</strong> Slot: Item
+        </button>
+        <button class="tc-chip" onclick="simulateUtterance('Order two Margherita pizzas from Domino\'s')">
+          <strong>T5</strong> Slot: Qty
+        </button>
+        <button class="tc-chip" onclick="simulateUtterance('Order a Margherita from Domino\'s, deliver to work')">
+          <strong>T6</strong> Slot: Address
+        </button>
+        <button class="tc-chip" onclick="triggerEvent('screen_change_popup', 'There is a 20% promo pop-up. Close it or apply?')">
+          <strong>T7</strong> Popup Change
+        </button>
+        <button class="tc-chip" onclick="simulateUtterance('Search for wireless earbuds on Amazon and add the first result to cart')">
+          <strong>T8</strong> Teach E-com
+        </button>
+        <button class="tc-chip" onclick="simulateUtterance('Search for a phone case on Amazon and add the first result to cart')">
+          <strong>T9</strong> Cross-App Slot
+        </button>
+        <button class="tc-chip" onclick="triggerEvent('stuck_state', 'I cannot proceed because the screen language is in Hindi.')">
+          <strong>T10</strong> Stuck State
+        </button>
+        <button class="tc-chip" onclick="triggerEvent('credential_boundary', 'Reached payment screen.')">
+          <strong>T11</strong> Credential Hand-off
+        </button>
+        <button class="tc-chip" onclick="simulateUtterance('Book a cab to the airport')">
+          <strong>T12</strong> Unknown Intent
+        </button>
+        <button class="tc-chip" onclick="simulateUtterance('Order pizza')">
+          <strong>T13</strong> Ambiguity
+        </button>
+        <button class="tc-chip" onclick="simulateUtterance('Did the last run succeed?')">
+          <strong>T14</strong> Reporting
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="main-grid">
+      <!-- Conversation Feed -->
+      <div class="chat-card">
+        <div class="chat-messages" id="chatMessages">
+          <div class="msg-bubble msg-assistant">
+            <span class="msg-badge badge-replay">INTELLIGENT CONVERSATION ACTIVE</span>
+            <div>Hello! I'm your mobile voice assistant. Tell me what you'd like to do — I will extract the execution slots, verify whether you want <strong>TEACH mode</strong> (demonstrate on screen) or <strong>ORDER mode</strong> (autonomous execution), and confirm the plan with you before starting!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Memory & Preferences Drawer -->
+      <div class="memory-card">
+        <div class="memory-header">
+          <span>Learned Workflows & Memory</span>
+          <div style="display: flex; gap: 6px;">
+            <button class="tc-chip" style="padding: 3px 8px; font-size: 11px;" onclick="clearMemory()">Clear</button>
+            <button class="tc-chip" style="padding: 3px 8px; font-size: 11px;" onclick="loadWorkflows()">↻</button>
+          </div>
+        </div>
+
+        <div style="padding-bottom: 8px; font-size: 11px; text-transform: uppercase; color: var(--cyan); font-weight: 700;">
+          Remembered User Preferences:
+        </div>
+        <div id="preferencesList" style="margin-bottom: 12px; font-size: 12px; color: #cbd5e1; line-height: 1.4;">
+          <em>None saved yet. Try saying: "Remember that my work address is Cyber City"</em>
+        </div>
+
+        <div style="padding-bottom: 6px; font-size: 11px; text-transform: uppercase; color: var(--magenta); font-weight: 700;">
+          Registered Workflows:
+        </div>
+        <div class="memory-list" id="memoryList">
+          <div class="memory-item">
+            <div class="memory-item-title">Loading memory...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Siri Voice HUD (Anchored in Layout, Never Overlaps Content) -->
+    <div class="siri-hud">
+      <button class="mic-btn" id="micBtn" onclick="toggleMicrophone()" title="Tap to Speak (Siri Glow)">
+        <svg class="mic-icon" viewBox="0 0 24 24">
+          <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+          <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+        </svg>
+      </button>
+      <div class="hud-input-group">
+        <input type="text" id="textInput" class="hud-input" placeholder="Speak or type a command... (e.g. 'Order a Margherita pizza from Domino\'s')" onkeydown="if(event.key === 'Enter') handleTextSubmit()">
+      </div>
+      <button class="send-btn" onclick="handleTextSubmit()">Send</button>
+    </div>
+  </div>
+
+  <!-- Floating Teach Mode Demonstration HUD Widget -->
+  <div class="floating-teach-hud" id="floatingTeachHud" style="display: none;">
+    <div class="teach-pulse-dot"></div>
+    <div class="teach-hud-info">
+      <div class="teach-hud-title" id="teachHudTitle">Recording Screen Demonstration</div>
+      <div class="teach-hud-sub">Listening for voice: "Finish" / "Done"</div>
+    </div>
+    <button class="teach-hud-btn" onclick="finishTeachWorkflow()">
+      <span>⏹</span>
+      <span>Finish</span>
+    </button>
+  </div>
+
+  <!-- Live Speech Recognition Feedback Bubble -->
+  <div id="liveSpeechIndicator" style="display: none; position: fixed; bottom: 84px; left: 50%; transform: translateX(-50%); background: rgba(0, 240, 255, 0.15); border: 1px solid var(--cyan); backdrop-filter: blur(16px); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 13px; z-index: 1002; box-shadow: 0 0 16px rgba(0,240,255,0.3);">
+    <span style="color: var(--cyan); font-weight: 700;">● Listening: </span><span id="liveSpeechText">Speak now...</span>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

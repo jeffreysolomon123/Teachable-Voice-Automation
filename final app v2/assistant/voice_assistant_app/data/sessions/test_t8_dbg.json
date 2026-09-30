@@ -1,0 +1,51 @@
+{
+  "session_id": "test_t8_dbg",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Teach: Search for wireless earbuds on Amazon and add the first result to cart",
+      "timestamp": "2026-09-29T18:46:20.131672",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I've prepared your TEACH plan for Amazon: search for wireless earbuds and add the first result to your cart. Shall I begin recording?",
+      "timestamp": "2026-09-29T18:46:22.548632",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, start recording",
+      "timestamp": "2026-09-29T18:46:28.611971",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Great, TEACH mode selected for Amazon. Plan: Search for wireless earbuds and add the first result to cart. Ready to start recording the demonstration?",
+      "timestamp": "2026-09-29T18:46:28.723183",
+      "metadata": {
+        "intent": "CONFIRM_PLAN"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": null,
+  "draft_plan": {
+    "mode": "TEACH",
+    "stage": "STAGE_3_EXECUTION",
+    "app_name": "Amazon",
+    "flow_id": "",
+    "slots": {
+      "search_term": "wireless earbuds",
+      "action": "add to cart",
+      "index": 1
+    },
+    "summary": "Search for wireless earbuds and add the first result to cart",
+    "confirmed": false,
+    "status": "awaiting_confirmation"
+  },
+  "current_topic": null,
+  "created_at": "2026-09-29T18:46:04.104961"
+}

@@ -1,0 +1,223 @@
+{
+  "session_id": "test_q",
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "What is teach mode?",
+      "timestamp": "2026-09-29T19:01:19.889293",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "In TEACH mode, you demonstrate the actions on your phone screen while I record and learn each tap and input. In ORDER mode, I autonomously execute a previously learned workflow for you. Which would you prefer?",
+      "timestamp": "2026-09-29T19:01:19.942381",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "How does this work?",
+      "timestamp": "2026-09-29T19:01:20.844149",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows across apps on your phone! You can teach me new flows by demonstrating them on your screen, or tell me to run flows like ordering food on Zomato or shopping on Amazon.",
+      "timestamp": "2026-09-29T19:01:20.858537",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is teach mode?",
+      "timestamp": "2026-09-29T19:03:14.452563",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "In TEACH mode, you demonstrate the actions on your phone screen while I record and learn each tap and input. In ORDER mode, I autonomously execute a previously learned workflow for you. Which would you prefer?",
+      "timestamp": "2026-09-29T19:03:14.911997",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "How does this work?",
+      "timestamp": "2026-09-29T19:03:15.861268",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows across apps on your phone! You can teach me new flows by demonstrating them on your screen, or tell me to run flows like ordering food on Zomato or shopping on Amazon.",
+      "timestamp": "2026-09-29T19:03:15.891068",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is teach mode?",
+      "timestamp": "2026-09-29T19:11:02.466589",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "In TEACH mode, you demonstrate the actions on your phone screen while I record and learn each tap and input. In ORDER mode, I autonomously execute a previously learned workflow for you. Which would you prefer?",
+      "timestamp": "2026-09-29T19:11:02.528590",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "How does this work?",
+      "timestamp": "2026-09-29T19:11:03.440832",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows across apps on your phone! You can teach me new flows by demonstrating them on your screen, or tell me to run flows like ordering food on Zomato or shopping on Amazon.",
+      "timestamp": "2026-09-29T19:11:03.455806",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is teach mode?",
+      "timestamp": "2026-09-29T19:21:46.788092",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "In TEACH mode, you demonstrate the actions on your phone screen while I record and learn each tap and input. In ORDER mode, I autonomously execute a previously learned workflow for you. Which would you prefer?",
+      "timestamp": "2026-09-29T19:21:46.824722",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "How does this work?",
+      "timestamp": "2026-09-29T19:21:47.669804",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows across apps on your phone! You can teach me new flows by demonstrating them on your screen, or tell me to run flows like ordering food on Zomato or shopping on Amazon.",
+      "timestamp": "2026-09-29T19:21:47.685806",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is teach mode?",
+      "timestamp": "2026-09-29T19:42:04.082448",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "In TEACH mode, you demonstrate the actions on your phone screen while I record and learn each tap and input. In ORDER mode, I autonomously execute a previously learned workflow for you. Which would you prefer?",
+      "timestamp": "2026-09-29T19:42:04.124448",
+      "metadata": {
+        "intent": "AMBIGUITY_RESOLVE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "How does this work?",
+      "timestamp": "2026-09-29T19:42:05.058170",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows across apps on your phone! You can teach me new flows by demonstrating them on your screen, or tell me to run flows like ordering food on Zomato or shopping on Amazon.",
+      "timestamp": "2026-09-29T19:42:05.070170",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is teach mode?",
+      "timestamp": "2026-09-29T20:10:24.283341",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Teach mode lets you show me exactly what you want to do on your phone—tap, swipe, type, and select—while I record each step. I then save that sequence so I can replay it later in ORDER mode without any further input.",
+      "timestamp": "2026-09-29T20:10:25.198205",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is teach mode?",
+      "timestamp": "2026-09-29T20:25:58.602262",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "In teach mode, you demonstrate the steps on your screen while I record them, so I can replay the workflow later in order mode.",
+      "timestamp": "2026-09-29T20:26:02.192489",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "How does this work?",
+      "timestamp": "2026-09-29T20:26:08.590784",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows on your phone. You can teach me new tasks by demonstrating them on your screen, or ask me to execute previously learned flows like ordering food or shopping.",
+      "timestamp": "2026-09-29T20:26:18.543483",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is teach mode?",
+      "timestamp": "2026-09-29T20:47:37.009752",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "In teach mode, you demonstrate the steps on your screen while I record them, so I can replay the workflow later in order mode.",
+      "timestamp": "2026-09-29T20:47:46.761478",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    },
+    {
+      "role": "user",
+      "content": "How does this work?",
+      "timestamp": "2026-09-29T20:47:47.708231",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "I can learn and replay automated workflows on your phone. You can teach me new tasks by demonstrating them on your screen, or ask me to execute previously learned flows like ordering food or shopping.",
+      "timestamp": "2026-09-29T20:48:02.355638",
+      "metadata": {
+        "intent": "CONVERSE"
+      }
+    }
+  ],
+  "user_preferences": {},
+  "pending_clarification": {
+    "missing_parameter": "mode",
+    "candidate_flow_ids": []
+  },
+  "draft_plan": null,
+  "current_topic": null,
+  "created_at": "2026-09-27T18:26:45.121071"
+}

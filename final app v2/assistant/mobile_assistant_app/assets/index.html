@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Voice Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="state-idle">
+  <!-- Siri-style Iridescent Edge & Bottom Glow Elements -->
+  <div class="siri-edge-glow"></div>
+  <div class="siri-bottom-wave"></div>
+
+  <div class="app-container">
+    <header>
+      <div class="logo-group">
+        <div class="glow-orb"></div>
+        <h1>Voice Assistant</h1>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 6px;">
+        <div id="connBadge" style="font-size: 10px; padding: 2px 7px; border-radius: 10px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; gap: 5px; cursor: pointer;" onclick="openSettings()" title="Tap to change Server IP">
+          <span id="connDot" style="width: 6px; height: 6px; border-radius: 50%; background: #ffaa00;"></span>
+          <span id="connText" style="color: var(--text-muted); font-size: 10px;">Probing...</span>
+        </div>
+        <div class="status-badge" id="statusBadge">
+          <div class="status-dot"></div>
+          <span id="statusText">Ava Ready</span>
+        </div>
+        <button class="tc-chip" style="padding: 4px 8px; font-size: 11px; background: rgba(255, 0, 122, 0.2); border: 1px solid rgba(255, 0, 122, 0.4); color: #ff007a; font-weight: 700;" onclick="startNewSession()" title="New Session">🔄</button>
+        <button class="tc-chip" style="padding: 4px 7px; font-size: 13px;" onclick="openSettings()" title="Settings">⚙</button>
+      </div>
+    </header>
+
+    <!-- Benchmark Quick Chips -->
+    <div class="testcase-bar">
+      <button class="tc-chip" onclick="simulateUtterance('Order a Margherita pizza from Domino\'s on Zomato')">
+        <strong>T1</strong> Teach Food
+      </button>
+      <button class="tc-chip" onclick="simulateUtterance('Order a Margherita pizza from Domino\'s on Zomato')">
+        <strong>T2</strong> Replay
+      </button>
+      <button class="tc-chip" onclick="simulateUtterance('Get me a margherita from dominos')">
+        <strong>T3</strong> Paraphrase
+      </button>
+      <button class="tc-chip" onclick="simulateUtterance('Order a Farmhouse pizza from Domino\'s on Zomato')">
+        <strong>T4</strong> Farmhouse
+      </button>
+      <button class="tc-chip" onclick="simulateUtterance('Order two Margherita pizzas from Domino\'s')">
+        <strong>T5</strong> Qty 2
+      </button>
+      <button class="tc-chip" onclick="simulateUtterance('Order a Margherita from Domino\'s, deliver to work')">
+        <strong>T6</strong> Address: Work
+      </button>
+      <button class="tc-chip" onclick="simulateUtterance('Search for wireless earbuds on Amazon and add the first result to cart')">
+        <strong>T8</strong> Amazon
+      </button>
+      <button class="tc-chip" onclick="simulateUtterance('Book a cab to the airport')">
+        <strong>T12</strong> Unknown
+      </button>
+      <button class="tc-chip" onclick="simulateUtterance('Order pizza')">
+        <strong>T13</strong> Ambiguity
+      </button>
+      <button class="tc-chip" onclick="simulateUtterance('Did the last run succeed?')">
+        <strong>T14</strong> Status
+      </button>
+    </div>
+
+    <!-- Chat Messages Feed -->
+    <div class="chat-container" id="chatContainer">
+      <div class="msg-bubble msg-assistant">
+        <span class="msg-badge badge-replay">INTELLIGENT CONVERSATION ACTIVE</span>
+        <div>Hello! I'm your mobile voice assistant. Tell me what you'd like to do — I will extract the execution slots, verify whether you want <strong>TEACH mode</strong> (demonstrate on screen) or <strong>ORDER mode</strong> (autonomous execution), and confirm the plan with you before starting!</div>
+      </div>
+    </div>
+
+    <!-- Floating Siri HUD -->
+    <div class="siri-hud">
+      <button class="mic-btn" id="micBtn" onclick="toggleMicrophone()" title="Tap to Speak">
+        <svg class="mic-icon" viewBox="0 0 24 24">
+          <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+          <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+        </svg>
+      </button>
+      <div class="hud-input-group">
+        <input type="text" id="textInput" class="hud-input" placeholder="Speak or type command..." onkeydown="if(event.key === 'Enter') handleTextSubmit()">
+      </div>
+      <button class="send-btn" onclick="handleTextSubmit()">Send</button>
+    </div>
+  </div>
+
+  <!-- Floating Teach Mode Demonstration HUD Widget -->
+  <div class="floating-teach-hud" id="floatingTeachHud" style="display: none;">
+    <div class="teach-pulse-dot"></div>
+    <div class="teach-hud-info">
+      <div class="teach-hud-title" id="teachHudTitle">Recording Screen Demonstration</div>
+      <div class="teach-hud-sub">Listening for voice: "Finish" / "Done"</div>
+    </div>
+    <button class="teach-hud-btn" onclick="finishTeachWorkflow()">
+      <span>⏹</span>
+      <span>Finish</span>
+    </button>
+  </div>
+
+  <!-- Settings Modal -->
+  <div class="modal-overlay" id="settingsModal">
+    <div class="modal-card">
+      <h3 style="font-size: 16px; color: #fff;">Assistant Settings</h3>
+      <div>
+        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 6px;">Backend Server URL:</label>
+        <input type="text" id="serverUrlInput" style="width: 100%; background: rgba(255,255,255,0.06); border: 1px solid var(--card-border); color: #fff; padding: 10px; border-radius: 8px; font-size: 13px;" placeholder="http://10.0.2.2:8000">
+        <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Use <code>http://10.0.2.2:8000</code> for Android Emulator or your PC IP (e.g. <code>http://192.168.1.x:8000</code>) for a physical phone.</div>
+      </div>
+      <div style="display: flex; gap: 8px; margin-top: 10px;">
+        <button class="plan-btn-confirm" onclick="saveSettings()">Save & Connect</button>
+        <button class="plan-btn-cancel" onclick="closeSettings()">Close</button>
+      </div>
+      <!-- Android app only: backend URL, permissions, accessibility service -->
+      <button id="deviceSetupBtn" class="plan-btn-mode" style="display: none; margin-top: 8px; width: 100%;"
+              onclick="closeSettings(); openDeviceSetup()">📱 Device setup (server, permissions)</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

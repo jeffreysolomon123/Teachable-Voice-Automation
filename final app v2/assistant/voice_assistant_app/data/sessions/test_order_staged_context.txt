@@ -1,0 +1,26 @@
+======================================================================
+   TEACHABLE VOICE ASSISTANT - CONVERSATIONAL MEMORY (SESSION: test_order_staged)
+======================================================================
+Last Updated: 2026-09-29 20:30:42
+Stored Dialogue Turns: 30
+
+--- [LEARNED USER CONTEXT & PREFERENCES] ---
+  • last_completed_plan: {'mode': 'ORDER', 'stage': 'COMPLETED', 'app_name': 'Zomato', 'flow_id': 'order_dominos_zomato', 'slots': {'item': 'Margherita pizza', 'restaurant': "Domino's", 'app': 'Zomato'}, 'summary': "Order a Margherita pizza from Domino's on Zomato", 'confirmed': False, 'status': 'executing'}
+
+--- [RECENT CONVERSATION HISTORY] ---
+  [19:22:43] ASSISTANT: I've prepared your ORDER plan: Order Margherita pizza from Domino's on Zomato. Shall I proceed with the order?
+  [19:22:44] USER: Confirm and proceed
+  [19:22:44] ASSISTANT: Confirmed. Executing Order Margherita pizza from Domino's on Zomato on Zomato now.
+  [19:43:27] USER: Order mode: buy a Margherita pizza from Domino's on Zomato
+  [19:43:27] ASSISTANT: I've prepared your ORDER plan: Order Margherita pizza from Domino's on Zomato. Shall I proceed with the order?
+  [19:43:28] USER: Confirm and proceed
+  [19:43:28] ASSISTANT: Confirmed. Executing Order Margherita pizza from Domino's on Zomato on Zomato now.
+  [20:12:51] USER: Order mode: buy a Margherita pizza from Domino's on Zomato
+  [20:12:53] ASSISTANT: I've prepared your ORDER plan: Order a Margherita pizza from Domino's on Zomato. Ready to proceed?
+  [20:12:57] USER: Confirm and proceed
+  [20:13:04] ASSISTANT: Executing Order a Margherita pizza from Domino's on Zomato now.
+  [20:30:19] USER: Order mode: buy a Margherita pizza from Domino's on Zomato
+  [20:30:26] ASSISTANT: I've prepared your ORDER plan: Order a Margherita pizza from Domino's on Zomato. Ready to proceed?
+  [20:30:27] USER: Confirm and proceed
+  [20:30:42] ASSISTANT: Executing Order a Margherita pizza from Domino's on Zomato now.
+======================================================================
