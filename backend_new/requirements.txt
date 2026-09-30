@@ -1,0 +1,10 @@
+# API
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+# Stages 1-3 (tap extraction, flow builder, image handling). Headless OpenCV: no GUI libs on servers.
+opencv-python-headless>=4.8
+numpy>=1.24
+av>=12.0
+Pillow>=10.0
+# Stage 3 calls OpenRouter with the standard library (urllib); stage 4 needs nothing extra.

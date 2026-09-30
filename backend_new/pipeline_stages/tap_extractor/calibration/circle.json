@@ -1,0 +1,13 @@
+{
+  "radius_px": 27,
+  "frame_width": 1220,
+  "frame_height": 2712,
+  "center_x": 730,
+  "center_y": 2288,
+  "template_center": [
+    31,
+    31
+  ],
+  "video": "samples\\TapRec_20260925_000001.mp4",
+  "time_s": 25.131
+}

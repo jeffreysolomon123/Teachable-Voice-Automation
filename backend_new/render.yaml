@@ -1,0 +1,25 @@
+# Render Blueprint for backend_new (tap-to-flow pipeline with OpenRouter UI segmentation).
+# In Render: New > Blueprint, pick this repo, and set the Blueprint path to backend_new/render.yaml.
+services:
+  - type: web
+    name: tap-to-flow-backend
+    runtime: python
+    rootDir: backend_new
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    # One worker: jobs are tracked in memory by the process that started them.
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: SERVICE_API_KEY
+        generateValue: true
+      - key: SEG_MODEL
+        value: google/gemini-2.5-flash-lite
+      - key: SEG_CONCURRENCY
+        value: "8"
+      - key: MAX_CONCURRENT_JOBS
+        value: "1"
