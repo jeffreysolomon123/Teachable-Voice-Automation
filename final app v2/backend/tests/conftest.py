@@ -23,6 +23,10 @@ from app.main import create_app
 from app.services.llm_service import LLMService
 from app.services.segmentation.base import RawSegmentation, SegmentationError
 
+# app.main loads backend/.env into os.environ; tests must never use a developer's real keys.
+for _key in ("OPENROUTER_API_KEY", "GROQ_API_KEY", "GEMINI_API_KEY"):
+    os.environ.pop(_key, None)
+
 W, H = 1080, 2400
 FLOWS_SRC = Path(__file__).resolve().parents[1] / "flows"
 

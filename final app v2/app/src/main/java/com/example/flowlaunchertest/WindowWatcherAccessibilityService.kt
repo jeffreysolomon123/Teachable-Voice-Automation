@@ -21,10 +21,12 @@ import kotlinx.coroutines.withTimeoutOrNull
 import kotlin.coroutines.resume
 
 /**
- * Device-side capabilities for visual automation. This service never reads the accessibility tree
- * (canRetrieveWindowContent=false in its config); it only reports window-state changes by package,
- * takes screenshots, injects coordinate gestures, presses BACK, and commits text into whatever field
- * currently has input focus (the backend taps that field visually first).
+ * Device-side capabilities for visual automation. REPLAY never reads the accessibility tree: it
+ * only uses window-state changes by package, screenshots, coordinate gestures, BACK, and committing
+ * text into whatever field has input focus (the backend taps that field visually first).
+ *
+ * During a TEACH recording only, [TeachEventLogger] logs UI events (clicks, text changes, window
+ * changes, keyboard layout) so the tap-to-flow pipeline knows when and where each tap happened.
  */
 class WindowWatcherAccessibilityService : AccessibilityService() {
 
@@ -56,13 +58,16 @@ class WindowWatcherAccessibilityService : AccessibilityService() {
     private var lastWindowEventAt = 0L
     private var windowEventSeen: CompletableDeferred<Unit>? = null
     private var lastScreenshotAt = 0L
+    private val teachLogger by lazy { TeachEventLogger(this) }
 
     override fun onServiceConnected() {
         instance = this
+        TapLog.onServiceState(true, "connected", SystemClock.uptimeMillis())
         Log.i(TAG, "Accessibility service connected (SDK ${Build.VERSION.SDK_INT})")
     }
 
     override fun onAccessibilityEvent(event: AccessibilityEvent) {
+        teachLogger.onEvent(event) // no-op unless a TEACH recording is running
         if (event.eventType != AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) return
         val pkg = watchedPkg ?: return
         if (event.packageName?.toString() != pkg) return
@@ -207,6 +212,7 @@ class WindowWatcherAccessibilityService : AccessibilityService() {
 
     override fun onDestroy() {
         instance = null
+        TapLog.onServiceState(false, "destroyed", SystemClock.uptimeMillis())
         Log.i(TAG, "Accessibility service destroyed")
         super.onDestroy()
     }

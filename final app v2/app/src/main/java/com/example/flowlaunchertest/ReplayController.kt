@@ -29,6 +29,7 @@ object ReplayController {
     private var job: Job? = null
     private var sessionId: String? = null
     private var client: BackendClient? = null
+    private var appContext: Context? = null
     private var tts: TextToSpeech? = null
     private var ttsReady = false
 
@@ -53,11 +54,13 @@ object ReplayController {
             return "The accessibility service is enabled but not running. Turn it off and on in Settings."
         }
         if (isRunning) return "A task is already running."
+        if (TeachController.isBusy) return "I'm still learning your last demonstration. Try again in a moment."
         return null
     }
 
     fun start(context: Context, backendUrl: String, slotPayload: JSONObject) {
         if (isRunning) return
+        appContext = context.applicationContext
         initTts(context.applicationContext)
         OverlayService.start(context)
         job = scope.launch {
@@ -96,6 +99,17 @@ object ReplayController {
             ?: return finish("failed", "The accessibility service isn't running.")
         val executor = ActionExecutor(service)
         val slots = payload.optJSONObject("slots") ?: JSONObject()
+
+        // The phone holds the learned flows (LocalFlowStore); make sure the server has all of them.
+        val learned = LocalFlowStore.all(appContext ?: return finish("failed", "App context lost."))
+        if (learned.isNotEmpty()) {
+            status("Syncing ${learned.size} learned workflow(s)…")
+            for (rec in learned) {
+                val flow = rec.optJSONObject("flow") ?: continue
+                runCatching { io { api.saveFlow(flow) } }
+                    .onFailure { Log.w(TAG, "Could not sync flow ${flow.optString("flow_id")}: ${it.message}") }
+            }
+        }
 
         status("Finding the right workflow…")
         val match = io { api.matchFlow(payload) }

@@ -55,7 +55,7 @@ SYSTEM_PROMPT = """You are Ava, a highly capable, articulate, and natural execut
 
 4. PLAN EXECUTION / DEMONSTRATION START:
    - When the user confirms ("yes", "proceed", "go ahead", "confirm", "start", "sure", "sounds good", "start recording"):
-     * If mode was TEACH: Output intent="TEACH", spoken_confirmation="Learned: <action summary>. Starting demonstration recording now, please perform the taps on your screen."
+     * If mode was TEACH: Output intent="TEACH", spoken_confirmation="Got it: <action summary>. Starting demonstration recording now, please perform the taps on your screen."
      * If mode was ORDER: Output intent="REPLAY", spoken_acknowledgment="Executing <action summary> on <app_name> now."
 
 5. DEMONSTRATION COMPLETION (intent="CONVERSE"):
@@ -172,6 +172,32 @@ class VoiceOrchestrator:
             return self._wrap_response(decision, transcript, start_time, stage="IDLE")
 
         # =====================================================================
+        # PRIORITY STEP 0.25: bare "teach" -> ask what to teach before anything else.
+        # (Without this, "teach" became a TEACH plan for the task "teach" and was "learned".)
+        # =====================================================================
+        has_task = bool(draft_plan and (draft_plan.get("slots") or {}) and
+                        draft_plan.get("status") in ("awaiting_mode", "awaiting_confirmation"))
+        bare_teach = re.fullmatch(
+            r"(?:ok(?:ay)?,? |so,? |please )?(?:i (?:want|would like|wanna) to |let me |can i )?teach"
+            r"(?: mode| me| you| something| a (?:new )?(?:task|workflow|flow))*(?: please)?[.!?]*",
+            text_lower)
+        if bare_teach and not has_task:
+            active_mem.set_draft_plan({"mode": "TEACH", "status": "awaiting_task", "stage": "STAGE_0_TASK"})
+            decision = ConverseIntent(
+                intent="CONVERSE",
+                spoken_response="Sure! What task would you like to teach me? "
+                                "For example: order a chicken tikka pizza from Pizza Hut on Zomato."
+            )
+            return self._wrap_response(decision, transcript, start_time, stage="AWAITING_TASK")
+        if draft_plan and draft_plan.get("status") == "awaiting_task":
+            # The answer to "what task?": continue as an explicit teach request.
+            active_mem.set_draft_plan(None)
+            draft_plan = None
+            if not text_lower.startswith("teach"):
+                transcript = "Teach me to " + transcript.strip()
+                text_lower = transcript.lower()
+
+        # =====================================================================
         # PRIORITY STEP 0.5: Demonstration Completion ("Finish", "Done", "I'm done")
         # =====================================================================
         finish_triggers = [
@@ -188,24 +214,14 @@ class VoiceOrchestrator:
                     app_clean = draft_plan.get("app_name", "app").lower().replace("'", "").replace(" ", "_")
                     flow_id = f"order_dominos_{app_clean}" if "zomato" in app_clean else f"flow_{app_clean}"
                 draft_plan["flow_id"] = flow_id
-                self.memory.save_workflow(
-                    flow_id=flow_id,
-                    app_name=draft_plan.get("app_name", target_app),
-                    trigger_phrases=[
-                        draft_plan.get("summary", transcript),
-                        transcript,
-                        f"Order a Margherita pizza from Domino's on {draft_plan.get('app_name', 'Zomato')}",
-                        f"Get me a margherita from dominos"
-                    ],
-                    default_slots=draft_plan.get("slots", {}),
-                    description=draft_plan.get("summary", "")
-                )
+                # The workflow is registered when the server finishes learning the recording
+                # (POST /teach/recording -> flow saved -> VoiceBridge.register_flow), not here.
                 draft_plan["stage"] = "COMPLETED"
                 draft_plan["status"] = "completed"
                 active_mem.update_preference("last_completed_plan", draft_plan)
             active_mem.set_draft_plan(None)
 
-            spoken = f"Demonstration captured and saved! I've learned the steps for {target_app}. You can now execute it anytime in ORDER mode."
+            spoken = f"Demonstration finished. I'm learning the steps for {target_app} from your recording; I'll tell you when it's ready."
             decision = ConverseIntent(
                 intent="CONVERSE",
                 spoken_response=spoken
@@ -555,7 +571,7 @@ Respond with ONLY the JSON object representing the decision adhering strictly to
                             app_name=draft_plan.get("app_name", "Zomato"),
                             initial_trigger_phrase=draft_plan.get("summary", transcript),
                             extracted_slots=draft_plan.get("slots", {}),
-                            spoken_confirmation=f"Learned: {draft_plan.get('summary', 'workflow')}. Starting demonstration recording now, please perform the taps on your screen.",
+                            spoken_confirmation=f"Got it: {draft_plan.get('summary', 'workflow')}. Starting demonstration recording now, please perform the taps on your screen.",
                             extracted_plan=ExtractedPlan(**draft_plan)
                         )
                         return self._wrap_response(decision, transcript, start_time, stage="STAGE_3_EXECUTION")
@@ -857,7 +873,16 @@ Respond with ONLY the JSON object representing the decision adhering strictly to
         )
 
     def _call_llm(self, user_prompt: str, recent_history: List[Dict[str, str]], transcript: str) -> str:
-        """Call LLM provider: Groq first (blazing fast ~0.8s), fallback to Gemini, then local fallback."""
+        """Call LLM provider: OpenRouter, then Groq, then Gemini, then the local rule fallback."""
+        from voice_assistant_app import openrouter_client
+        if openrouter_client.enabled():
+            messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+            messages += [{"role": h["role"], "content": h["content"]} for h in recent_history]
+            messages.append({"role": "user", "content": user_prompt})
+            content = openrouter_client.chat_json(messages)
+            if content:
+                return content
+
         if self.groq_client:
             for model_name in ["openai/gpt-oss-120b", "meta-llama/llama-4-scout-17b-16e-instruct", "gemma2-9b-it", "qwen/qwen3.8-27b"]:
                 try:

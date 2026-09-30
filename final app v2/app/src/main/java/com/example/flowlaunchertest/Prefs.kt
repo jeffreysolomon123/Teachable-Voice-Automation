@@ -8,8 +8,9 @@ object Prefs {
     private const val KEY_SLOTS = "slot_json"
     private const val KEY_OLD_GROQ = "groq_api_key" // removed feature: the key now lives on the backend
 
-    // With `adb reverse tcp:8000 tcp:8000` the phone reaches a backend running on the PC here.
-    const val DEFAULT_BACKEND_URL = "http://127.0.0.1:8000"
+    // The demo server on the PC, reached over Wi-Fi (change it in Device setup if the PC's IP changes).
+    // Over USB instead: `adb reverse tcp:8000 tcp:8000` and use http://127.0.0.1:8000.
+    const val DEFAULT_BACKEND_URL = "http://192.168.1.10:8000"
 
     private fun prefs(context: Context) = context.getSharedPreferences(FILE, Context.MODE_PRIVATE)
 

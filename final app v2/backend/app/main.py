@@ -2,12 +2,20 @@
 from __future__ import annotations
 
 import logging
+from pathlib import Path
 from typing import Optional
+
+from dotenv import load_dotenv
+
+# backend/.env -> os.environ, so the mounted voice assistant (which reads os.environ) also gets
+# OPENROUTER_API_KEY. Real environment variables win.
+load_dotenv(Path(__file__).resolve().parents[1] / ".env")
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .api.routes import router
+from .api.teach_routes import router as teach_router
 from .config import Settings, get_settings
 from .container import build_container
 from .errors import install_error_handlers
@@ -32,6 +40,7 @@ def create_app(settings: Optional[Settings] = None, *, provider: Optional[Segmen
 
     install_error_handlers(app)
     app.include_router(router)
+    app.include_router(teach_router)
     if voice:
         container = app.state.container
         container.voice = mount_voice_assistant(app, settings, container.flows)

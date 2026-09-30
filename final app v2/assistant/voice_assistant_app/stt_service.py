@@ -2,6 +2,7 @@ import os
 import io
 import re
 from typing import Optional
+from voice_assistant_app import openrouter_client
 from voice_assistant_app.config import GROQ_API_KEY, GEMINI_API_KEY, WHISPER_PROMPT
 
 class STTService:
@@ -51,6 +52,16 @@ class STTService:
         safe_filename = filename
         if not any(safe_filename.endswith(ext) for ext in [".webm", ".wav", ".mp3", ".ogg", ".m4a", ".mp4"]):
             safe_filename = "voice_input.webm"
+
+        # 0. OpenRouter (Gemini audio input), when OPENROUTER_API_KEY is set
+        if openrouter_client.enabled():
+            fmt = safe_filename.rsplit(".", 1)[-1].replace("m4a", "mp4")
+            raw_text = openrouter_client.transcribe(audio_bytes, fmt, WHISPER_PROMPT)
+            if raw_text:
+                corrected = self.post_process_text(raw_text)
+                print(f"[STTService] OpenRouter Transcription: '{raw_text}' -> Corrected: '{corrected}'")
+                return corrected
+            print("[STTService] OpenRouter transcription returned nothing; trying other providers")
 
         # 1. Try Groq Whisper
         if self.client:

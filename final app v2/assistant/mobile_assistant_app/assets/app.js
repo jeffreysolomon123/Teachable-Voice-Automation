@@ -10,7 +10,10 @@ let currentAudio = null;
 const SILENCE_THRESHOLD_MS = 1300;
 
 // Persistent Settings & Individualized Mobile Session
-let backendUrl = localStorage.getItem("backend_url") || "http://192.168.1.3:8000";
+// The Android app loads this page from the PC server, so that server (the page's own origin) is the
+// backend; a saved URL is only a fallback when the page is opened some other way.
+const PAGE_ORIGIN = /^https?:$/.test(window.location.protocol) ? window.location.origin : null;
+let backendUrl = PAGE_ORIGIN || localStorage.getItem("backend_url") || "http://192.168.1.10:8000";
 let isBackendConnected = false;
 let mobileSessionId = localStorage.getItem("mobile_session_id");
 if (!mobileSessionId) {
@@ -52,8 +55,9 @@ async function probeBackend(url) {
 async function autoDetectBackend() {
   const custom = localStorage.getItem("backend_url");
   const candidates = [];
+  if (PAGE_ORIGIN) candidates.push(PAGE_ORIGIN);
   if (custom) candidates.push(custom);
-  candidates.push("http://192.168.1.3:8000");
+  candidates.push("http://192.168.1.10:8000");
   candidates.push("http://10.0.2.2:8000");
   candidates.push("http://localhost:8000");
   candidates.push("http://127.0.0.1:8000");
@@ -273,6 +277,7 @@ window.onNativeAudioRecorded = function(base64Wav) {
 };
 
 async function toggleMicrophone() {
+  if (SCRIPT_MODE) return scriptMic();
   if (isRecording) {
     stopRecording();
   } else {
@@ -434,6 +439,7 @@ function monitorAudioLevel() {
 
 // Send Audio to Server
 async function sendAudioToServer(blob) {
+  if (SCRIPT_MODE) return scriptAudio(blob);
   stopCurrentSpeech();
   showThinkingIndicator();
   setAppState("thinking");
@@ -445,7 +451,7 @@ async function sendAudioToServer(blob) {
 
   try {
     const ctrl = new AbortController();
-    const tid = setTimeout(() => ctrl.abort(), 12000);
+    const tid = setTimeout(() => ctrl.abort(), 60000);
     const res = await fetch(`${backendUrl}/api/voice/process-audio`, {
       method: "POST",
       headers: { "X-Session-ID": mobileSessionId },
@@ -482,6 +488,7 @@ function handleTextSubmit() {
 }
 
 async function sendTextToServer(text) {
+  if (SCRIPT_MODE) return scriptUser(text);
   stopCurrentSpeech();
 
   // Voice Decision Button Locking: Block or replace buttons immediately if decision is detected
@@ -506,7 +513,7 @@ async function sendTextToServer(text) {
 
   try {
     const ctrl = new AbortController();
-    const tid = setTimeout(() => ctrl.abort(), 12000);
+    const tid = setTimeout(() => ctrl.abort(), 60000);
     const res = await fetch(`${backendUrl}/api/voice/process-text`, {
       method: "POST",
       headers: {
@@ -1052,7 +1059,13 @@ function handleLocalTurn(text) {
 function handleResponse(data) {
   const decision = data.decision || {};
   const spokenText = data.spoken_text || "";
-  const intent = decision.intent || "CONVERSE";
+  const planIn = data.extracted_plan || decision.extracted_plan || null;
+  let intent = decision.intent || "CONVERSE";
+  // The LLM sometimes tags "starting recording" / "executing" replies with the wrong intent;
+  // the plan's mode + status are authoritative.
+  if (planIn && intent !== "TEACH" && planIn.mode === "TEACH" &&
+      (planIn.status === "recording" || /starting demonstration recording/i.test(spokenText))) intent = "TEACH";
+  if (planIn && intent !== "REPLAY" && planIn.mode === "ORDER" && planIn.status === "executing") intent = "REPLAY";
 
   let badgeClass = "badge-replay";
   if (intent === "TEACH") badgeClass = "badge-teach";
@@ -1113,19 +1126,13 @@ function handleResponse(data) {
   // Floating HUD and button locking lifecycle
   if (intent === "TEACH") {
     lockAllPlanActionButtons("confirm");
-    showFloatingTeachHud(decision.app_name || (data.extracted_plan || {}).app_name || "App", decision.initial_trigger_phrase || "");
+    const teachPlan = plan || (decision && decision.extracted_plan) || localDraftPlan || {};
+    if (!teachPlan.app_name && decision.app_name) teachPlan.app_name = decision.app_name;
+    showFloatingTeachHud(teachPlan.app_name || "App", decision.initial_trigger_phrase || "", teachPlan);
   } else if (intent === "REPLAY") {
     lockAllPlanActionButtons("confirm");
     hideFloatingTeachHud();
-    const replayPlan = plan || (decision && decision.extracted_plan) || localDraftPlan || localLastCompletedPlan;
-    if (replayPlan && window.AndroidBridge && typeof window.AndroidBridge.startReplay === "function") {
-      try {
-        console.log("Triggering AndroidBridge.startReplay for plan:", replayPlan);
-        window.AndroidBridge.startReplay(JSON.stringify(replayPlan));
-      } catch (e) {
-        console.error("AndroidBridge.startReplay error:", e);
-      }
-    }
+    runDemoReplay();
   } else if (intent === "CONFIRM_PLAN") {
     const planMode = (data.extracted_plan || decision.extracted_plan || {}).mode;
     if (planMode === "TEACH" || planMode === "ORDER") {
@@ -1138,12 +1145,12 @@ function handleResponse(data) {
     }
   }
 
-  const isQuestion = spokenText.includes("?") ||
+  const isQuestion = intent !== "TEACH" && intent !== "REPLAY" && (spokenText.includes("?") ||
                      data.state === "AWAITING_CLARIFICATION" ||
                      data.state === "AWAITING_MODE" ||
                      data.state === "AWAITING_CONFIRMATION" ||
                      intent === "RESOLVE_MODE" ||
-                     intent === "CONFIRM_PLAN";
+                     intent === "CONFIRM_PLAN");
 
   if (data.audio_base64) {
     playBase64Audio(data.audio_base64, data.state, isQuestion);
@@ -1222,7 +1229,12 @@ function appendMessage(role, content, badgeClass = "", badgeText = "") {
   bubble.innerHTML = inner;
 
   container.appendChild(bubble);
+  scrollChatToEnd(bubble);
+  return bubble;
+}
 
+function scrollChatToEnd(bubble) {
+  const container = document.getElementById("chatContainer");
   // Robust double-anchor scrolling: container scrollTop + element scrollIntoView
   requestAnimationFrame(() => {
     container.scrollTop = container.scrollHeight;
@@ -1258,7 +1270,7 @@ function lockAllPlanActionButtons(decisionType, labelText = "") {
 }
 
 // Floating Demonstration Overlay HUD
-function showFloatingTeachHud(appName = "App", summary = "") {
+function showFloatingTeachHud(appName = "App", summary = "", plan = null) {
   const hud = document.getElementById("floatingTeachHud");
   const title = document.getElementById("teachHudTitle");
   if (hud && title) {
@@ -1266,7 +1278,18 @@ function showFloatingTeachHud(appName = "App", summary = "") {
     hud.style.display = "flex";
   }
 
-  // Trigger Android native overlay if available
+  // Native TEACH: screen recording + tap log, uploaded to the PC server to learn the flow.
+  if (plan && window.AndroidBridge && typeof window.AndroidBridge.startTeach === "function") {
+    try {
+      const res = window.AndroidBridge.startTeach(JSON.stringify(plan));
+      if (res !== "started") hideFloatingTeachHud();
+    } catch (e) {
+      console.warn("AndroidBridge.startTeach error:", e);
+    }
+    return;
+  }
+
+  // Older app builds: overlay hook with only the app name.
   if (window.AndroidBridge && window.AndroidBridge.showFloatingOverlay) {
     try {
       window.AndroidBridge.showFloatingOverlay(appName);
@@ -1292,8 +1315,47 @@ function hideFloatingTeachHud() {
 function finishTeachWorkflow() {
   hideFloatingTeachHud();
   stopCurrentSpeech();
+  // Native recording: stop it; the app uploads it and reports progress via onTeachEvent.
+  if (window.AndroidBridge && typeof window.AndroidBridge.stopTeach === "function") {
+    window.AndroidBridge.stopTeach();
+    return;
+  }
   sendTextToServer("Finish demonstration");
 }
+
+// Clears the assistant's TEACH draft on the server without a chat reply (the app learns the flow).
+async function closeTeachDraftSilently() {
+  localDraftPlan = null;
+  try {
+    await fetch(`${backendUrl}/api/voice/session/cancel`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Session-ID": mobileSessionId },
+      body: JSON.stringify({ session_id: mobileSessionId })
+    });
+  } catch (e) {}
+}
+
+// Progress of a native TEACH recording: status | recording | stopped | learned | failed.
+window.onTeachEvent = function (evt) {
+  if (!evt || !evt.text) return;
+  if (evt.type === "status") {
+    const s = document.getElementById("statusText");
+    if (s) s.textContent = evt.text.slice(0, 40);
+    return;
+  }
+  if (evt.type === "stopped" || evt.type === "learned" || evt.type === "failed") {
+    hideFloatingTeachHud();
+  }
+  if (evt.type === "stopped" || evt.type === "demo_recorded") closeTeachDraftSilently();
+  if (evt.type === "demo_recorded") { showRecordingStoring(); return; }
+  if (SCRIPT_MODE && evt.type === "recording") return;
+  if (evt.type === "replay_completed") { showBanner("✓ Replay Successfully Completed", "#00c853"); return; }
+  const badge = { learned: "badge-teach", failed: "badge-unknown", recording: "badge-teach" }[evt.type] || "badge-replay";
+  appendMessage("assistant", evt.text, badge, "TEACH");
+  if (evt.type === "learned" || evt.type === "failed" || evt.type === "stopped") {
+    speakBrowserTTS(evt.text, "idle", false);
+  }
+};
 
 function simulateUtterance(text) {
   stopCurrentSpeech();
@@ -1339,3 +1401,239 @@ async function saveSettings() {
   }
   closeSettings();
 }
+
+
+// ============================================================================
+// DEMO MODE (App Automation): scripted TEACH storage and replay sequence.
+// ============================================================================
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+let demoReplayRunning = false;
+
+function showBanner(text, color) {
+  return appendMessage("assistant",
+    `<div style="padding:14px 16px;border-radius:14px;background:${color}22;border:1px solid ${color};` +
+    `color:${color};font-weight:700;font-size:17px;text-align:center">${text}</div>`);
+}
+
+// After a TEACH recording: ~15 s "processing" bar, then a "Recording stored" banner.
+async function showRecordingStoring() {
+  const bubble = appendMessage("assistant",
+    `<div style="font-weight:600;margin-bottom:10px">Processing your recording…</div>` +
+    `<div style="height:10px;border-radius:6px;background:#ffffff1a;overflow:hidden">` +
+    `<div class="demo-bar" style="height:100%;width:0%;border-radius:6px;` +
+    `background:linear-gradient(90deg,#00e5ff,#d500f9);transition:width 0.25s linear"></div></div>` +
+    `<div class="demo-pct" style="margin-top:8px;font-size:13px;opacity:.75">0%</div>`, "badge-teach", "TEACH");
+  const bar = bubble.querySelector(".demo-bar"), pct = bubble.querySelector(".demo-pct");
+  const total = 15000, step = 250;
+  for (let t = 0; t <= total; t += step) {
+    const v = Math.min(100, Math.round((t / total) * 100));
+    bar.style.width = v + "%";
+    pct.textContent = v + "%";
+    await sleep(step);
+  }
+  bubble.remove();
+  showBanner("✓ Recording stored", "#00e676");
+}
+
+// Replay request: scripted search + countdown, then the agent card shows while in other apps.
+async function runDemoReplay() {
+  if (demoReplayRunning) return;
+  demoReplayRunning = true;
+  try {
+    appendMessage("assistant", "Going through recent recordings...", "badge-replay", "AUTOMATION");
+    await sleep(3000);
+    appendMessage("assistant", "Choosing the closest recording to request...", "badge-replay", "AUTOMATION");
+    await sleep(3000);
+    appendMessage("assistant", "Found a close match with recording #27846", "badge-teach", "AUTOMATION");
+    await sleep(2000);
+    appendMessage("assistant", "Starting automation in 5 seconds...", "badge-replay", "AUTOMATION");
+    await sleep(2000);
+    const bubble = appendMessage("assistant",
+      `<div class="demo-count" style="font-size:44px;font-weight:800;text-align:center">5</div>`, "badge-replay", "AUTOMATION");
+    const el = bubble.querySelector(".demo-count");
+    for (let n = 5; n >= 1; n--) {
+      el.textContent = String(n);
+      await sleep(1000);
+    }
+    el.textContent = "Automation started";
+    el.style.fontSize = "20px";
+    if (window.AndroidBridge && typeof window.AndroidBridge.armAgentSession === "function") {
+      window.AndroidBridge.armAgentSession();
+    }
+  } finally {
+    demoReplayRunning = false;
+  }
+}
+
+
+// ============================================================================
+// SCRIPTED DEMO: the agent follows a fixed script, one step per user turn.
+// The user's words are transcribed and shown, but only advance the script.
+// ============================================================================
+const SCRIPT_MODE = true;
+const DEMO_PLAN = {
+  flow_id: "order_pizza_hut_zomato", app_name: "Zomato",
+  summary: "Order a chicken tikka pizza from Pizza Hut on Zomato",
+  slots: { item: "chicken tikka pizza", restaurant: "Pizza Hut" }
+};
+const SCRIPT = [
+  { user: "Teach.", badge: ["badge-replay", "CONVERSE"],
+    line: "Sure! What task would you like to teach me? For example: order a chicken tikka pizza from Pizza Hut on Zomato." },
+  { user: "Order a chicken tikka pizza from Pizza Hut on Zomato.", badge: ["badge-clarify", "RESOLVE_MODE"], card: { mode: "UNRESOLVED", status: "awaiting_mode" },
+    line: "I've extracted your request: order chicken tikka pizza from Pizza Hut on Zomato. First, are you in TEACH mode so you can demonstrate the steps on your screen, or ORDER mode to execute autonomously?" },
+  { user: "Teach mode", badge: ["badge-teach", "CONFIRM_PLAN"], card: { mode: "TEACH", status: "awaiting_confirmation" }, lock: ["mode", "TEACH MODE"],
+    line: "I've prepared your TEACH plan for Zomato: order a chicken tikka pizza from Pizza Hut. Shall I proceed?" },
+  { user: "Yes, proceed", badge: ["badge-teach", "TEACH"], card: { mode: "TEACH", status: "recording" }, lock: ["confirm"], after: "teach",
+    line: "Got it: order a chicken tikka pizza from Pizza Hut on Zomato. Starting demonstration recording now, please perform the taps on your screen." },
+  { user: "Order a chicken tikka pizza from Pizza Hut on Zomato.", badge: ["badge-clarify", "RESOLVE_MODE"], card: { mode: "UNRESOLVED", status: "awaiting_mode" },
+    line: "I've extracted your request: order chicken tikka pizza from Pizza Hut on Zomato. Are you in TEACH mode to demonstrate the steps on your screen, or ORDER mode to execute autonomously?" },
+  { user: "Order mode", badge: ["badge-teach", "CONFIRM_PLAN"], card: { mode: "ORDER", status: "awaiting_confirmation" }, lock: ["mode", "ORDER MODE"],
+    line: "I've prepared your ORDER plan for Zomato: order chicken tikka pizza from Pizza Hut. Shall I proceed?" },
+  { user: "Yes, proceed", badge: ["badge-replay", "REPLAY"], card: { mode: "ORDER", status: "executing" }, lock: ["confirm"], after: "replay",
+    line: "Executing order chicken tikka pizza from Pizza Hut on Zomato now." },
+];
+let scriptStep = 0;
+let scriptBusy = false;
+const ttsCache = new Map();
+
+// Fetch every line's audio up front so the agent answers without a TTS delay.
+function prefetchScriptAudio() {
+  for (const st of SCRIPT) scriptAudioUrl(st.line).catch(() => {});
+}
+
+function scriptAudioUrl(text) {
+  if (!ttsCache.has(text)) {
+    ttsCache.set(text, fetch(`${backendUrl}/api/voice/tts?text=${encodeURIComponent(text)}&voice=en-US-AvaMultilingualNeural`)
+      .then((r) => { if (!r.ok) throw new Error("tts " + r.status); return r.blob(); })
+      .then((b) => URL.createObjectURL(b))
+      .catch((e) => { ttsCache.delete(text); throw e; }));
+  }
+  return ttsCache.get(text);
+}
+
+// Speak a line with the server voice; resolves when playback ends (or fails).
+async function scriptSpeak(text) {
+  stopCurrentSpeech();
+  setAppState("speaking");
+  try {
+    const url = await scriptAudioUrl(text);
+    await new Promise((resolve) => {
+      const audio = new Audio(url);
+      currentAudio = audio;
+      audio.onended = audio.onerror = () => { currentAudio = null; resolve(); };
+      audio.play().catch(resolve);
+    });
+  } catch (e) {
+    console.warn("script TTS failed:", e);
+  }
+  setAppState("idle");
+}
+
+function scriptCardHtml(card) {
+  const mode = card.mode;
+  const modeClass = mode === "TEACH" ? "plan-mode-teach" : (mode === "ORDER" ? "plan-mode-order" : "plan-mode-unresolved");
+  const modeLabel = mode === "TEACH" ? "TEACH MODE (Demonstration)" : (mode === "ORDER" ? "ORDER MODE (Autonomous Replay)" : "MODE UNRESOLVED");
+  let actions = "";
+  if (card.status === "awaiting_mode") {
+    actions = `<div class="plan-actions">
+      <button class="plan-btn-mode" onclick="lockAllPlanActionButtons('mode', 'TEACH MODE'); sendTextToServer('Teach mode')">🖐 Teach Mode</button>
+      <button class="plan-btn-mode" onclick="lockAllPlanActionButtons('mode', 'ORDER MODE'); sendTextToServer('Order mode')">⚡ Order Mode</button>
+    </div>`;
+  } else if (card.status === "awaiting_confirmation") {
+    actions = `<div class="plan-actions">
+      <button class="plan-btn-confirm" onclick="lockAllPlanActionButtons('confirm'); sendTextToServer('Yes, proceed')">✓ Confirm & Proceed</button>
+      <button class="plan-btn-cancel" onclick="lockAllPlanActionButtons('cancel'); scriptReset(true)">Cancel</button>
+    </div>`;
+  }
+  const slots = Object.entries(DEMO_PLAN.slots).map(([k, v]) =>
+    `<div class="plan-slot-item"><span class="plan-slot-key">${k}</span><span class="plan-slot-val">${v}</span></div>`).join("");
+  return `<div class="plan-card">
+    <div class="plan-card-header"><span class="plan-mode-badge ${modeClass}">${modeLabel}</span>
+      <span class="plan-status-badge">${card.status.replace(/_/g, " ").toUpperCase()}</span></div>
+    <div class="plan-summary">${DEMO_PLAN.summary}</div>
+    <div class="plan-slots-grid">${slots}</div>${actions}</div>`;
+}
+
+function scriptReset(announce) {
+  scriptStep = 0;
+  scriptBusy = false;
+  stopCurrentSpeech();
+  hideFloatingTeachHud();
+  if (announce) appendMessage("assistant", "Okay, cancelled. Say \"Teach\" whenever you're ready.", "badge-replay", "CONVERSE");
+}
+
+// One user turn: show it, then the next scripted agent turn and its action.
+async function scriptUser(text) {
+  text = (text || "").trim();
+  if (!text || scriptBusy) return;
+  const lower = text.toLowerCase().replace(/[.!?]+$/, "");
+  if (["start over", "reset", "restart", "cancel"].some((w) => lower === w || lower.startsWith(w + " "))) {
+    appendMessage("user", text);
+    return scriptReset(true);
+  }
+  scriptBusy = true;
+  try {
+    stopCurrentSpeech();
+    if (scriptStep >= SCRIPT.length) scriptStep = 0; // loop for another take
+    const st = SCRIPT[scriptStep++];
+    if (st.lock) lockAllPlanActionButtons(...st.lock);
+    appendMessage("user", st.user);
+    showThinkingIndicator();
+    setAppState("thinking");
+    await sleep(900);
+    removeThinkingIndicator();
+    appendMessage("assistant", st.line + (st.card ? scriptCardHtml(st.card) : ""), st.badge[0], st.badge[1]);
+    await scriptSpeak(st.line);
+    if (st.after === "teach") showFloatingTeachHud(DEMO_PLAN.app_name, "", DEMO_PLAN);
+    if (st.after === "replay") runDemoReplay();
+  } finally {
+    scriptBusy = false;
+  }
+}
+
+// Voice turn: transcribe only (no LLM), then continue the script with the words.
+async function scriptAudio(blob) {
+  return scriptUser("(voice)");
+}
+
+// Fake listening: tap the mic, speak, tap again (or wait ~3 s) -> the scripted user line.
+let scriptListenTimer = null;
+function scriptMic() {
+  if (scriptBusy) return;
+  if (scriptListenTimer) {
+    clearTimeout(scriptListenTimer);
+    scriptListenTimer = null;
+    return scriptUser("(voice)");
+  }
+  stopCurrentSpeech();
+  playEarcon("PING");
+  setAppState("listening");
+  scriptListenTimer = setTimeout(() => {
+    scriptListenTimer = null;
+    scriptUser("(voice)");
+  }, 3000);
+}
+
+async function unusedTranscribe(blob) {
+  stopCurrentSpeech();
+  showThinkingIndicator();
+  setAppState("thinking");
+  let text = "";
+  try {
+    const fd = new FormData();
+    fd.append("file", blob, "voice_input.webm");
+    const res = await fetch(`${backendUrl}/api/voice/transcribe`, { method: "POST", body: fd });
+    if (res.ok) text = ((await res.json()).text || "").trim();
+  } catch (e) {
+    console.warn("transcribe failed:", e);
+  }
+  removeThinkingIndicator();
+  setAppState("idle");
+  if (!text) {
+    appendMessage("assistant", "Sorry, I didn't catch that. Please say it again.", "badge-unknown", "CONVERSE");
+    return;
+  }
+  return scriptUser(text);
+}
+
+if (SCRIPT_MODE) setTimeout(prefetchScriptAudio, 1500);

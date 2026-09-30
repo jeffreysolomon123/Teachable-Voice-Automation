@@ -1,0 +1,893 @@
+{
+  "elements": [
+    {
+      "type": "status_bar",
+      "text": "1:16",
+      "label": "",
+      "interactive": false,
+      "bbox": [58, 13, 972, 34]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "back arrow",
+      "interactive": true,
+      "bbox": [31, 55, 127, 98]
+    },
+    {
+      "type": "text_field",
+      "text": "Search \"bread\"",
+      "label": "",
+      "interactive": true,
+      "bbox": [163, 54, 830, 98]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "menu icon",
+      "interactive": true,
+      "bbox": [867, 55, 968, 98]
+    },
+    {
+      "type": "text",
+      "text": "Last 100 orders without complaints",
+      "label": "",
+      "interactive": false,
+      "bbox": [57, 105, 650, 121]
+    },
+    {
+      "type": "text",
+      "text": "Low plastic p",
+      "label": "",
+      "interactive": false,
+      "bbox": [747, 105, 986, 121]
+    },
+    {
+      "type": "text",
+      "text": "Flat ₹100 OFF above ₹199",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 165, 520, 189]
+    },
+    {
+      "type": "text",
+      "text": "7 offers",
+      "label": "",
+      "interactive": true,
+      "bbox": [814, 169, 965, 186]
+    },
+    {
+      "type": "chip",
+      "text": "Filters",
+      "label": "",
+      "interactive": true,
+      "bbox": [31, 232, 257, 268]
+    },
+    {
+      "type": "chip",
+      "text": "Veg",
+      "label": "",
+      "interactive": true,
+      "bbox": [278, 232, 441, 268]
+    },
+    {
+      "type": "chip",
+      "text": "Non-veg",
+      "label": "",
+      "interactive": true,
+      "bbox": [458, 232, 699, 268]
+    },
+    {
+      "type": "chip",
+      "text": "Highly reord",
+      "label": "",
+      "interactive": true,
+      "bbox": [720, 232, 999, 268]
+    },
+    {
+      "type": "text",
+      "text": "Best in Pizza",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 309, 298, 331]
+    },
+    {
+      "type": "image",
+      "text": "",
+      "label": "pizza photo",
+      "interactive": false,
+      "bbox": [594, 355, 967, 522]
+    },
+    {
+      "type": "text",
+      "text": "1 Nawabi Murg Makhni PER Pizza +1 Chicken Tikka Supreme PER",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 381, 536, 448]
+    },
+    {
+      "type": "text",
+      "text": "Highly reordered",
+      "label": "",
+      "interactive": false,
+      "bbox": [143, 455, 381, 470]
+    },
+    {
+      "type": "text",
+      "text": "₹878",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 480, 104, 496]
+    },
+    {
+      "type": "text",
+      "text": "Get for ₹429",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 503, 220, 518]
+    },
+    {
+      "type": "text",
+      "text": "Serves 2. Nawabi style Murg Makhni Pizza (Personal) meets spicy & bold C...more",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 531, 494, 585]
+    },
+    {
+      "type": "text",
+      "text": "NOT ELIGIBLE FOR COUPONS",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 596, 461, 611]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "bookmark icon",
+      "interactive": true,
+      "bbox": [41, 631, 115, 665]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "share icon",
+      "interactive": true,
+      "bbox": [139, 631, 212, 665]
+    },
+    {
+      "type": "image",
+      "text": "",
+      "label": "pizza photo",
+      "interactive": false,
+      "bbox": [594, 731, 967, 896]
+    },
+    {
+      "type": "text",
+      "text": "Chicken Sausage Ultimate Cheese Pizza",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 756, 514, 797]
+    },
+    {
+      "type": "text",
+      "text": "Highly reordered",
+      "label": "",
+      "interactive": false,
+      "bbox": [143, 807, 381, 822]
+    },
+    {
+      "type": "text",
+      "text": "₹298",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 835, 104, 850]
+    },
+    {
+      "type": "text",
+      "text": "Chicken sausage, onion, extra molten cheese and a melty gooey Cheese Crown on the c...more",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 863, 547, 917]
+    },
+    {
+      "type": "button",
+      "text": "ADD +",
+      "label": "",
+      "interactive": true,
+      "bbox": [636, 497, 926, 541]
+    },
+    {
+      "type": "button",
+      "text": "Menu",
+      "label": "",
+      "interactive": true,
+      "bbox": [758, 855, 965, 904]
+    },
+    {
+      "type": "text",
+      "text": "Get FREE delivery above ₹99 with GOLD",
+      "label": "",
+      "interactive": false,
+      "bbox": [142, 938, 813, 958]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "card",
+      "text": "1 Nawabi Murg Makhni PER Pizza +1 Chicken Tikka Supreme PER",
+      "label": "Pizza item card",
+      "interactive": false,
+      "bbox": [0, 304, 999, 697]
+    },
+    {
+      "type": "card",
+      "text": "Chicken Sausage Ultimate Cheese Pizza",
+      "label": "Pizza item card",
+      "interactive": false,
+      "bbox": [0, 724, 999, 928]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "nav_bar",
+      "text": "",
+      "label": "bottom navigation bar",
+      "interactive": false,
+      "bbox": [0, 922, 999, 980]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "icon",
+      "text": "WhatsApp",
+      "label": "whatsapp icon",
+      "interactive": false,
+      "bbox": [143, 15, 167, 29]
+    },
+    {
+      "type": "icon",
+      "text": "Bluetooth",
+      "label": "bluetooth icon",
+      "interactive": false,
+      "bbox": [679, 15, 705, 29]
+    },
+    {
+      "type": "icon",
+      "text": "Wi-Fi",
+      "label": "wifi icon",
+      "interactive": false,
+      "bbox": [772, 15, 798, 29]
+    },
+    {
+      "type": "icon",
+      "text": "Battery",
+      "label": "battery icon",
+      "interactive": false,
+      "bbox": [824, 15, 852, 29]
+    },
+    {
+      "type": "icon",
+      "text": "Triangle",
+      "label": "triangle icon",
+      "interactive": false,
+      "bbox": [944, 19, 960, 27]
+    },
+    {
+      "type": "icon",
+      "text": "Checkmark",
+      "label": "checkmark icon",
+      "interactive": false,
+      "bbox": [61, 108, 85, 119]
+    },
+    {
+      "type": "icon",
+      "text": "Checkmark",
+      "label": "checkmark icon",
+      "interactive": false,
+      "bbox": [741, 108, 764, 119]
+    },
+    {
+      "type": "icon",
+      "text": "Filter icon",
+      "label": "filter icon",
+      "interactive": false,
+      "bbox": [57, 243, 84, 257]
+    },
+    {
+      "type": "icon",
+      "text": "Veg icon",
+      "label": "veg icon",
+      "interactive": false,
+      "bbox": [305, 243, 332, 257]
+    },
+    {
+      "type": "icon",
+      "text": "Non-veg icon",
+      "label": "non-veg icon",
+      "interactive": false,
+      "bbox": [488, 243, 515, 257]
+    },
+    {
+      "type": "icon",
+      "text": "Refresh icon",
+      "label": "refresh icon",
+      "interactive": false,
+      "bbox": [747, 243, 774, 257]
+    },
+    {
+      "type": "icon",
+      "text": "Upward arrow",
+      "label": "upward arrow icon",
+      "interactive": false,
+      "bbox": [929, 315, 962, 327]
+    },
+    {
+      "type": "icon",
+      "text": "Spicy icon",
+      "label": "spicy icon",
+      "interactive": false,
+      "bbox": [96, 355, 125, 369]
+    },
+    {
+      "type": "icon",
+      "text": "Warning icon",
+      "label": "warning icon",
+      "interactive": false,
+      "bbox": [31, 355, 57, 370]
+    },
+    {
+      "type": "icon",
+      "text": "Warning icon",
+      "label": "warning icon",
+      "interactive": false,
+      "bbox": [31, 730, 57, 745]
+    },
+    {
+      "type": "icon",
+      "text": "Bike icon",
+      "label": "bike icon",
+      "interactive": false,
+      "bbox": [48, 940, 93, 958]
+    },
+    {
+      "type": "icon",
+      "text": "Gold crown",
+      "label": "gold crown icon",
+      "interactive": false,
+      "bbox": [726, 941, 771, 957]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "more",
+      "label": "",
+      "interactive": false,
+      "bbox": [281, 570, 347, 585]
+    },
+    {
+      "type": "text",
+      "text": "more",
+      "label": "",
+      "interactive": false,
+      "bbox": [386, 905, 479, 917]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "list_item",
+      "text": "1 Nawabi Murg Makhni PER Pizza +1 Chicken Tikka Supreme PER",
+      "label": "list item for pizza",
+      "interactive": false,
+      "bbox": [31, 355, 536, 611]
+    },
+    {
+      "type": "list_item",
+      "text": "Chicken Sausage Ultimate Cheese Pizza",
+      "label": "list item for pizza",
+      "interactive": false,
+      "bbox": [31, 730, 547, 917]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "container",
+      "text": "",
+      "label": "container for pizza image and add button",
+      "interactive": false,
+      "bbox": [594, 355, 967, 541]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "button",
+      "text": "ADD +",
+      "label": "add to order button",
+      "interactive": true,
+      "bbox": [636, 497, 926, 541]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹199",
+      "label": "",
+      "interactive": false,
+      "bbox": [426, 168, 520, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹429",
+      "label": "",
+      "interactive": false,
+      "bbox": [160, 504, 220, 518]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹99",
+      "label": "",
+      "interactive": false,
+      "bbox": [564, 940, 611, 958]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "GOLD",
+      "label": "",
+      "interactive": false,
+      "bbox": [705, 941, 813, 957]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹878",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 480, 104, 496]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹298",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 835, 104, 850]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹100",
+      "label": "",
+      "interactive": false,
+      "bbox": [176, 168, 224, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹199",
+      "label": "",
+      "interactive": false,
+      "bbox": [426, 168, 520, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹429",
+      "label": "",
+      "interactive": false,
+      "bbox": [160, 504, 220, 518]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹99",
+      "label": "",
+      "interactive": false,
+      "bbox": [564, 940, 611, 958]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "GOLD",
+      "label": "",
+      "interactive": false,
+      "bbox": [705, 941, 813, 957]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹878",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 480, 104, 496]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹298",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 835, 104, 850]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹100",
+      "label": "",
+      "interactive": false,
+      "bbox": [176, 168, 224, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹199",
+      "label": "",
+      "interactive": false,
+      "bbox": [426, 168, 520, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹429",
+      "label": "",
+      "interactive": false,
+      "bbox": [160, 504, 220, 518]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹99",
+      "label": "",
+      "interactive": false,
+      "bbox": [564, 940, 611, 958]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "GOLD",
+      "label": "",
+      "interactive": false,
+      "bbox": [705, 941, 813, 957]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹878",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 480, 104, 496]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹298",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 835, 104, 850]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹100",
+      "label": "",
+      "interactive": false,
+      "bbox": [176, 168, 224, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹199",
+      "label": "",
+      "interactive": false,
+      "bbox": [426, 168, 520, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹429",
+      "label": "",
+      "interactive": false,
+      "bbox": [160, 504, 220, 518]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹99",
+      "label": "",
+      "interactive": false,
+      "bbox": [564, 940, 611, 958]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "GOLD",
+      "label": "",
+      "interactive": false,
+      "bbox": [705, 941, 813, 957]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹878",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 480, 104, 496]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹298",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 835, 104, 850]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹100",
+      "label": "",
+      "interactive": false,
+      "bbox": [176, 168, 224, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹199",
+      "label": "",
+      "interactive": false,
+      "bbox": [426, 168, 520, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹429",
+      "label": "",
+      "interactive": false,
+      "bbox": [160, 504, 220, 518]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹99",
+      "label": "",
+      "interactive": false,
+      "bbox": [564, 940, 611, 958]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "GOLD",
+      "label": "",
+      "interactive": false,
+      "bbox": [705, 941, 813, 957]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹878",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 480, 104, 496]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹298",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 835, 104, 850]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹100",
+      "label": "",
+      "interactive": false,
+      "bbox": [176, 168, 224, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹199",
+      "label": "",
+      "interactive": false,
+      "bbox": [426, 168, 520, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹429",
+      "label": "",
+      "interactive": false,
+      "bbox": [160, 504, 220, 518]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹99",
+      "label": "",
+      "interactive": false,
+      "bbox": [564, 940, 611, 958]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "GOLD",
+      "label": "",
+      "interactive": false,
+      "bbox": [705, 941, 813, 957]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹878",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 480, 104, 496]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹298",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 835, 104, 850]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹100",
+      "label": "",
+      "interactive": false,
+      "bbox": [176, 168, 224, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹199",
+      "label": "",
+      "interactive": false,
+      "bbox": [426, 168, 520, 186]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹429",
+      "label": "",
+      "interactive": false,
+      "bbox": [160, 504, 220, 518]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹99",
+      "label": "",
+      "interactive": false,
+      "bbox": [564, 940, 611, 958]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "GOLD",
+      "label": "",
+      "interactive": false,
+      "bbox": [705, 941, 813, 957]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹878",
+      "label": "",
+      "interactive": false,
+      "bbox": [31, 480, 104, 496]
+    }
+  ]
+  ,
+  "elements": [
+    {
+      "type": "text",
+      "text": "₹298",
+      "label": "",
+      "interactive":

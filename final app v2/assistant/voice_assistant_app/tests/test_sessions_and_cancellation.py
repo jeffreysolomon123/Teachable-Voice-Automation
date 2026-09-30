@@ -123,7 +123,7 @@ async def test_demonstration_finish_lifecycle(session_mgr):
     # Finish demonstration via voice cue
     res_fin = await turn_mgr.process_user_text("Finish demonstration", session_id=sess_id)
     assert res_fin["decision"]["intent"] == "CONVERSE"
-    assert "demonstration captured and saved" in res_fin["spoken_text"].lower() or "saved" in res_fin["spoken_text"].lower()
+    assert "learning the steps" in res_fin["spoken_text"].lower()
 
     # Verify session draft plan is cleared
     sess_mem = sess_mgr.get_session(sess_id)

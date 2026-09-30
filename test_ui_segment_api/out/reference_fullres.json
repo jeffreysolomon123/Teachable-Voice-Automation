@@ -1,0 +1,1890 @@
+{
+  "image": "..\\tap-to-flow-pipeline\\runs\\zomato_new_test_v3\\taps\\tap_017_before.png",
+  "width": 1220,
+  "height": 2712,
+  "model": "google/gemini-2.5-flash-lite",
+  "latency_s": 13.8,
+  "usage": {
+    "prompt_tokens": 2598,
+    "completion_tokens": 2785,
+    "total_tokens": 5383,
+    "cost": 0.00121081,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 1811,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00121081,
+      "upstream_inference_prompt_cost": 9.681e-05,
+      "upstream_inference_completions_cost": 0.001114
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "elements": [
+    {
+      "type": "status_bar",
+      "text": "1:16\n\n74%",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        0,
+        0,
+        1219,
+        92
+      ],
+      "center": [
+        609,
+        46
+      ],
+      "size": [
+        1219,
+        92
+      ],
+      "bbox_norm": [
+        0.0,
+        0.0,
+        0.999,
+        0.034
+      ],
+      "center_norm": [
+        0.4992,
+        0.017
+      ],
+      "area_pct": 3.39,
+      "region": "top-center",
+      "source": "llm",
+      "id": 0,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "back arrow",
+      "interactive": true,
+      "bbox": [
+        61,
+        157,
+        122,
+        255
+      ],
+      "center": [
+        91,
+        206
+      ],
+      "size": [
+        61,
+        98
+      ],
+      "bbox_norm": [
+        0.05,
+        0.058,
+        0.1,
+        0.094
+      ],
+      "center_norm": [
+        0.0746,
+        0.076
+      ],
+      "area_pct": 0.18,
+      "region": "top-left",
+      "source": "llm",
+      "id": 1,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "text_field",
+      "text": "Search \"bread\"",
+      "label": "",
+      "interactive": true,
+      "bbox": [
+        216,
+        157,
+        1016,
+        255
+      ],
+      "center": [
+        616,
+        206
+      ],
+      "size": [
+        800,
+        98
+      ],
+      "bbox_norm": [
+        0.177,
+        0.058,
+        0.833,
+        0.094
+      ],
+      "center_norm": [
+        0.5049,
+        0.076
+      ],
+      "area_pct": 2.37,
+      "region": "top-center",
+      "source": "llm",
+      "id": 2,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "more options",
+      "interactive": true,
+      "bbox": [
+        1053,
+        157,
+        1114,
+        255
+      ],
+      "center": [
+        1083,
+        206
+      ],
+      "size": [
+        61,
+        98
+      ],
+      "bbox_norm": [
+        0.863,
+        0.058,
+        0.913,
+        0.094
+      ],
+      "center_norm": [
+        0.8877,
+        0.076
+      ],
+      "area_pct": 0.18,
+      "region": "top-right",
+      "source": "llm",
+      "id": 3,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "checkmark",
+      "interactive": false,
+      "bbox": [
+        41,
+        282,
+        78,
+        334
+      ],
+      "center": [
+        59,
+        308
+      ],
+      "size": [
+        37,
+        52
+      ],
+      "bbox_norm": [
+        0.034,
+        0.104,
+        0.064,
+        0.123
+      ],
+      "center_norm": [
+        0.0484,
+        0.1136
+      ],
+      "area_pct": 0.06,
+      "region": "top-left",
+      "source": "llm",
+      "id": 4,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Last 100 orders without complaints",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        127,
+        282,
+        788,
+        334
+      ],
+      "center": [
+        457,
+        308
+      ],
+      "size": [
+        661,
+        52
+      ],
+      "bbox_norm": [
+        0.104,
+        0.104,
+        0.646,
+        0.123
+      ],
+      "center_norm": [
+        0.3746,
+        0.1136
+      ],
+      "area_pct": 1.04,
+      "region": "top-center",
+      "source": "llm",
+      "id": 5,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "checkmark",
+      "interactive": false,
+      "bbox": [
+        903,
+        282,
+        939,
+        334
+      ],
+      "center": [
+        921,
+        308
+      ],
+      "size": [
+        36,
+        52
+      ],
+      "bbox_norm": [
+        0.74,
+        0.104,
+        0.77,
+        0.123
+      ],
+      "center_norm": [
+        0.7549,
+        0.1136
+      ],
+      "area_pct": 0.06,
+      "region": "top-right",
+      "source": "llm",
+      "id": 6,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Low plastic po",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        955,
+        282,
+        1219,
+        334
+      ],
+      "center": [
+        1087,
+        308
+      ],
+      "size": [
+        264,
+        52
+      ],
+      "bbox_norm": [
+        0.783,
+        0.104,
+        0.999,
+        0.123
+      ],
+      "center_norm": [
+        0.891,
+        0.1136
+      ],
+      "area_pct": 0.41,
+      "region": "top-right",
+      "source": "llm",
+      "id": 7,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "percentage icon",
+      "interactive": false,
+      "bbox": [
+        41,
+        450,
+        90,
+        507
+      ],
+      "center": [
+        65,
+        478
+      ],
+      "size": [
+        49,
+        57
+      ],
+      "bbox_norm": [
+        0.034,
+        0.166,
+        0.074,
+        0.187
+      ],
+      "center_norm": [
+        0.0533,
+        0.1763
+      ],
+      "area_pct": 0.08,
+      "region": "top-left",
+      "source": "llm",
+      "id": 8,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Flat ₹100 OFF above ₹199",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        115,
+        450,
+        632,
+        507
+      ],
+      "center": [
+        373,
+        478
+      ],
+      "size": [
+        517,
+        57
+      ],
+      "bbox_norm": [
+        0.094,
+        0.166,
+        0.518,
+        0.187
+      ],
+      "center_norm": [
+        0.3057,
+        0.1763
+      ],
+      "area_pct": 0.89,
+      "region": "top-left",
+      "source": "llm",
+      "id": 9,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "7 offers",
+      "label": "",
+      "interactive": true,
+      "bbox": [
+        992,
+        450,
+        1133,
+        507
+      ],
+      "center": [
+        1062,
+        478
+      ],
+      "size": [
+        141,
+        57
+      ],
+      "bbox_norm": [
+        0.813,
+        0.166,
+        0.929,
+        0.187
+      ],
+      "center_norm": [
+        0.8705,
+        0.1763
+      ],
+      "area_pct": 0.24,
+      "region": "top-right",
+      "source": "llm",
+      "id": 10,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "down arrow",
+      "interactive": true,
+      "bbox": [
+        1147,
+        450,
+        1183,
+        507
+      ],
+      "center": [
+        1165,
+        478
+      ],
+      "size": [
+        36,
+        57
+      ],
+      "bbox_norm": [
+        0.94,
+        0.166,
+        0.97,
+        0.187
+      ],
+      "center_norm": [
+        0.9549,
+        0.1763
+      ],
+      "area_pct": 0.06,
+      "region": "top-right",
+      "source": "llm",
+      "id": 11,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "container",
+      "text": "",
+      "label": "filters container",
+      "interactive": false,
+      "bbox": [
+        35,
+        610,
+        316,
+        746
+      ],
+      "center": [
+        175,
+        678
+      ],
+      "size": [
+        281,
+        136
+      ],
+      "bbox_norm": [
+        0.029,
+        0.225,
+        0.259,
+        0.275
+      ],
+      "center_norm": [
+        0.1434,
+        0.25
+      ],
+      "area_pct": 1.16,
+      "region": "top-left",
+      "source": "llm",
+      "id": 12,
+      "parent": null,
+      "children": [
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "filter icon",
+      "interactive": true,
+      "bbox": [
+        66,
+        648,
+        102,
+        702
+      ],
+      "center": [
+        84,
+        675
+      ],
+      "size": [
+        36,
+        54
+      ],
+      "bbox_norm": [
+        0.054,
+        0.239,
+        0.084,
+        0.259
+      ],
+      "center_norm": [
+        0.0689,
+        0.2489
+      ],
+      "area_pct": 0.06,
+      "region": "top-left",
+      "source": "llm",
+      "id": 13,
+      "parent": 12,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Filters",
+      "label": "",
+      "interactive": true,
+      "bbox": [
+        115,
+        648,
+        240,
+        702
+      ],
+      "center": [
+        177,
+        675
+      ],
+      "size": [
+        125,
+        54
+      ],
+      "bbox_norm": [
+        0.094,
+        0.239,
+        0.197,
+        0.259
+      ],
+      "center_norm": [
+        0.1451,
+        0.2489
+      ],
+      "area_pct": 0.2,
+      "region": "top-left",
+      "source": "llm",
+      "id": 14,
+      "parent": 12,
+      "children": []
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "down arrow",
+      "interactive": true,
+      "bbox": [
+        256,
+        648,
+        292,
+        702
+      ],
+      "center": [
+        274,
+        675
+      ],
+      "size": [
+        36,
+        54
+      ],
+      "bbox_norm": [
+        0.21,
+        0.239,
+        0.239,
+        0.259
+      ],
+      "center_norm": [
+        0.2246,
+        0.2489
+      ],
+      "area_pct": 0.06,
+      "region": "top-left",
+      "source": "llm",
+      "id": 15,
+      "parent": 12,
+      "children": []
+    },
+    {
+      "type": "checkbox",
+      "text": "Veg",
+      "label": "",
+      "interactive": true,
+      "bbox": [
+        362,
+        648,
+        418,
+        711
+      ],
+      "center": [
+        390,
+        679
+      ],
+      "size": [
+        56,
+        63
+      ],
+      "bbox_norm": [
+        0.297,
+        0.239,
+        0.343,
+        0.262
+      ],
+      "center_norm": [
+        0.3197,
+        0.2504
+      ],
+      "area_pct": 0.11,
+      "region": "top-left",
+      "source": "llm",
+      "id": 16,
+      "parent": null,
+      "children": [
+        17
+      ]
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "green circle",
+      "interactive": false,
+      "bbox": [
+        375,
+        648,
+        406,
+        711
+      ],
+      "center": [
+        390,
+        679
+      ],
+      "size": [
+        31,
+        63
+      ],
+      "bbox_norm": [
+        0.307,
+        0.239,
+        0.333,
+        0.262
+      ],
+      "center_norm": [
+        0.3197,
+        0.2504
+      ],
+      "area_pct": 0.06,
+      "region": "top-left",
+      "source": "llm",
+      "id": 17,
+      "parent": 16,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Veg",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        431,
+        648,
+        508,
+        702
+      ],
+      "center": [
+        469,
+        675
+      ],
+      "size": [
+        77,
+        54
+      ],
+      "bbox_norm": [
+        0.353,
+        0.239,
+        0.416,
+        0.259
+      ],
+      "center_norm": [
+        0.3844,
+        0.2489
+      ],
+      "area_pct": 0.13,
+      "region": "top-center",
+      "source": "llm",
+      "id": 18,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "chip",
+      "text": "Non-veg",
+      "label": "",
+      "interactive": true,
+      "bbox": [
+        584,
+        648,
+        642,
+        711
+      ],
+      "center": [
+        613,
+        679
+      ],
+      "size": [
+        58,
+        63
+      ],
+      "bbox_norm": [
+        0.479,
+        0.239,
+        0.526,
+        0.262
+      ],
+      "center_norm": [
+        0.5025,
+        0.2504
+      ],
+      "area_pct": 0.11,
+      "region": "top-center",
+      "source": "llm",
+      "id": 19,
+      "parent": null,
+      "children": [
+        20
+      ]
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "brown triangle",
+      "interactive": false,
+      "bbox": [
+        597,
+        648,
+        630,
+        711
+      ],
+      "center": [
+        613,
+        679
+      ],
+      "size": [
+        33,
+        63
+      ],
+      "bbox_norm": [
+        0.489,
+        0.239,
+        0.516,
+        0.262
+      ],
+      "center_norm": [
+        0.5025,
+        0.2504
+      ],
+      "area_pct": 0.06,
+      "region": "top-center",
+      "source": "llm",
+      "id": 20,
+      "parent": 19,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Non-veg",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        654,
+        648,
+        825,
+        702
+      ],
+      "center": [
+        739,
+        675
+      ],
+      "size": [
+        171,
+        54
+      ],
+      "bbox_norm": [
+        0.536,
+        0.239,
+        0.676,
+        0.259
+      ],
+      "center_norm": [
+        0.6057,
+        0.2489
+      ],
+      "area_pct": 0.28,
+      "region": "top-center",
+      "source": "llm",
+      "id": 21,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "chip",
+      "text": "Highly reord",
+      "label": "",
+      "interactive": true,
+      "bbox": [
+        911,
+        648,
+        948,
+        711
+      ],
+      "center": [
+        929,
+        679
+      ],
+      "size": [
+        37,
+        63
+      ],
+      "bbox_norm": [
+        0.747,
+        0.239,
+        0.777,
+        0.262
+      ],
+      "center_norm": [
+        0.7615,
+        0.2504
+      ],
+      "area_pct": 0.07,
+      "region": "top-right",
+      "source": "llm",
+      "id": 22,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "green refresh icon",
+      "interactive": false,
+      "bbox": [
+        911,
+        648,
+        948,
+        711
+      ],
+      "center": [
+        929,
+        679
+      ],
+      "size": [
+        37,
+        63
+      ],
+      "bbox_norm": [
+        0.747,
+        0.239,
+        0.777,
+        0.262
+      ],
+      "center_norm": [
+        0.7615,
+        0.2504
+      ],
+      "area_pct": 0.07,
+      "region": "top-right",
+      "source": "llm",
+      "id": 23,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Highly reord",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        967,
+        648,
+        1219,
+        702
+      ],
+      "center": [
+        1093,
+        675
+      ],
+      "size": [
+        252,
+        54
+      ],
+      "bbox_norm": [
+        0.793,
+        0.239,
+        0.999,
+        0.259
+      ],
+      "center_norm": [
+        0.8959,
+        0.2489
+      ],
+      "area_pct": 0.41,
+      "region": "top-right",
+      "source": "llm",
+      "id": 24,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Best in Pizza",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        35,
+        843,
+        144,
+        898
+      ],
+      "center": [
+        89,
+        870
+      ],
+      "size": [
+        109,
+        55
+      ],
+      "bbox_norm": [
+        0.029,
+        0.311,
+        0.118,
+        0.331
+      ],
+      "center_norm": [
+        0.073,
+        0.3208
+      ],
+      "area_pct": 0.18,
+      "region": "top-left",
+      "source": "llm",
+      "id": 25,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "card",
+      "text": "1 Nawabi Murg Makhni PER\nPizza +1 Chicken Tikka\nSupreme PER\n₹878\nHighly reordered\nGet for ₹429\nServes 2. Nawabi style Murg\nMakhni Pizza (Personal) meets\nspicy & bold C...more\nNOT ELIGIBLE FOR COUPONS",
+      "label": "pizza card",
+      "interactive": false,
+      "bbox": [
+        35,
+        952,
+        684,
+        1662
+      ],
+      "center": [
+        359,
+        1307
+      ],
+      "size": [
+        649,
+        710
+      ],
+      "bbox_norm": [
+        0.029,
+        0.351,
+        0.561,
+        0.613
+      ],
+      "center_norm": [
+        0.2943,
+        0.4819
+      ],
+      "area_pct": 13.93,
+      "region": "middle-left",
+      "source": "llm",
+      "id": 26,
+      "parent": null,
+      "children": [
+        27,
+        28,
+        30,
+        31,
+        32,
+        34,
+        35,
+        36
+      ]
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "brown triangle",
+      "interactive": false,
+      "bbox": [
+        41,
+        952,
+        70,
+        1003
+      ],
+      "center": [
+        55,
+        977
+      ],
+      "size": [
+        29,
+        51
+      ],
+      "bbox_norm": [
+        0.034,
+        0.351,
+        0.057,
+        0.37
+      ],
+      "center_norm": [
+        0.0451,
+        0.3603
+      ],
+      "area_pct": 0.04,
+      "region": "middle-left",
+      "source": "llm",
+      "id": 27,
+      "parent": 26,
+      "children": []
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "red pepper icon",
+      "interactive": false,
+      "bbox": [
+        115,
+        952,
+        144,
+        1003
+      ],
+      "center": [
+        129,
+        977
+      ],
+      "size": [
+        29,
+        51
+      ],
+      "bbox_norm": [
+        0.094,
+        0.351,
+        0.118,
+        0.37
+      ],
+      "center_norm": [
+        0.1057,
+        0.3603
+      ],
+      "area_pct": 0.04,
+      "region": "middle-left",
+      "source": "llm",
+      "id": 28,
+      "parent": 26,
+      "children": []
+    },
+    {
+      "type": "image",
+      "text": "",
+      "label": "two pizzas",
+      "interactive": false,
+      "bbox": [
+        727,
+        963,
+        1183,
+        1424
+      ],
+      "center": [
+        955,
+        1193
+      ],
+      "size": [
+        456,
+        461
+      ],
+      "bbox_norm": [
+        0.596,
+        0.355,
+        0.97,
+        0.525
+      ],
+      "center_norm": [
+        0.7828,
+        0.4399
+      ],
+      "area_pct": 6.35,
+      "region": "middle-right",
+      "source": "llm",
+      "id": 29,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "list_item",
+      "text": "1 Nawabi Murg Makhni PER\nPizza +1 Chicken Tikka\nSupreme PER",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        35,
+        1036,
+        656,
+        1212
+      ],
+      "center": [
+        345,
+        1124
+      ],
+      "size": [
+        621,
+        176
+      ],
+      "bbox_norm": [
+        0.029,
+        0.382,
+        0.538,
+        0.447
+      ],
+      "center_norm": [
+        0.2828,
+        0.4145
+      ],
+      "area_pct": 3.3,
+      "region": "middle-left",
+      "source": "llm",
+      "id": 30,
+      "parent": 26,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Highly reordered",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        176,
+        1231,
+        464,
+        1277
+      ],
+      "center": [
+        320,
+        1254
+      ],
+      "size": [
+        288,
+        46
+      ],
+      "bbox_norm": [
+        0.144,
+        0.454,
+        0.38,
+        0.471
+      ],
+      "center_norm": [
+        0.2623,
+        0.4624
+      ],
+      "area_pct": 0.4,
+      "region": "middle-left",
+      "source": "llm",
+      "id": 31,
+      "parent": 26,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "₹878",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        35,
+        1296,
+        127,
+        1348
+      ],
+      "center": [
+        81,
+        1322
+      ],
+      "size": [
+        92,
+        52
+      ],
+      "bbox_norm": [
+        0.029,
+        0.478,
+        0.104,
+        0.497
+      ],
+      "center_norm": [
+        0.0664,
+        0.4875
+      ],
+      "area_pct": 0.14,
+      "region": "middle-left",
+      "source": "llm",
+      "id": 32,
+      "parent": 26,
+      "children": []
+    },
+    {
+      "type": "button",
+      "text": "ADD +",
+      "label": "",
+      "interactive": true,
+      "bbox": [
+        776,
+        1348,
+        1136,
+        1475
+      ],
+      "center": [
+        956,
+        1411
+      ],
+      "size": [
+        360,
+        127
+      ],
+      "bbox_norm": [
+        0.636,
+        0.497,
+        0.931,
+        0.544
+      ],
+      "center_norm": [
+        0.7836,
+        0.5203
+      ],
+      "area_pct": 1.38,
+      "region": "middle-right",
+      "source": "llm",
+      "id": 33,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Get for ₹429",
+      "label": "",
+      "interactive": true,
+      "bbox": [
+        35,
+        1361,
+        268,
+        1413
+      ],
+      "center": [
+        151,
+        1387
+      ],
+      "size": [
+        233,
+        52
+      ],
+      "bbox_norm": [
+        0.029,
+        0.502,
+        0.22,
+        0.521
+      ],
+      "center_norm": [
+        0.1238,
+        0.5114
+      ],
+      "area_pct": 0.37,
+      "region": "middle-left",
+      "source": "llm",
+      "id": 34,
+      "parent": 26,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Serves 2. Nawabi style Murg\nMakhni Pizza (Personal) meets\nspicy & bold C...more",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        35,
+        1440,
+        606,
+        1592
+      ],
+      "center": [
+        320,
+        1516
+      ],
+      "size": [
+        571,
+        152
+      ],
+      "bbox_norm": [
+        0.029,
+        0.531,
+        0.497,
+        0.587
+      ],
+      "center_norm": [
+        0.2623,
+        0.559
+      ],
+      "area_pct": 2.62,
+      "region": "middle-left",
+      "source": "llm",
+      "id": 35,
+      "parent": 26,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "NOT ELIGIBLE FOR COUPONS",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        35,
+        1616,
+        564,
+        1662
+      ],
+      "center": [
+        299,
+        1639
+      ],
+      "size": [
+        529,
+        46
+      ],
+      "bbox_norm": [
+        0.029,
+        0.596,
+        0.462,
+        0.613
+      ],
+      "center_norm": [
+        0.2451,
+        0.6044
+      ],
+      "area_pct": 0.74,
+      "region": "middle-left",
+      "source": "llm",
+      "id": 36,
+      "parent": 26,
+      "children": []
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "bookmark icon",
+      "interactive": true,
+      "bbox": [
+        49,
+        1711,
+        139,
+        1831
+      ],
+      "center": [
+        94,
+        1771
+      ],
+      "size": [
+        90,
+        120
+      ],
+      "bbox_norm": [
+        0.04,
+        0.631,
+        0.114,
+        0.675
+      ],
+      "center_norm": [
+        0.077,
+        0.653
+      ],
+      "area_pct": 0.33,
+      "region": "middle-left",
+      "source": "llm",
+      "id": 37,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "share icon",
+      "interactive": true,
+      "bbox": [
+        163,
+        1711,
+        265,
+        1831
+      ],
+      "center": [
+        214,
+        1771
+      ],
+      "size": [
+        102,
+        120
+      ],
+      "bbox_norm": [
+        0.134,
+        0.631,
+        0.217,
+        0.675
+      ],
+      "center_norm": [
+        0.1754,
+        0.653
+      ],
+      "area_pct": 0.37,
+      "region": "middle-left",
+      "source": "llm",
+      "id": 38,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "brown triangle",
+      "interactive": false,
+      "bbox": [
+        41,
+        1966,
+        70,
+        2018
+      ],
+      "center": [
+        55,
+        1992
+      ],
+      "size": [
+        29,
+        52
+      ],
+      "bbox_norm": [
+        0.034,
+        0.725,
+        0.057,
+        0.744
+      ],
+      "center_norm": [
+        0.0451,
+        0.7345
+      ],
+      "area_pct": 0.05,
+      "region": "bottom-left",
+      "source": "llm",
+      "id": 39,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "card",
+      "text": "Chicken Sausage Ultimate\nCheese Pizza\n₹298\nHighly reordered\nChicken sausage, onion, extra\nmolten cheese and a melty gooey\nCheese Crown on the c...more",
+      "label": "pizza card",
+      "interactive": false,
+      "bbox": [
+        35,
+        1982,
+        684,
+        2495
+      ],
+      "center": [
+        359,
+        2238
+      ],
+      "size": [
+        649,
+        513
+      ],
+      "bbox_norm": [
+        0.029,
+        0.731,
+        0.561,
+        0.92
+      ],
+      "center_norm": [
+        0.2943,
+        0.8252
+      ],
+      "area_pct": 10.06,
+      "region": "bottom-left",
+      "source": "llm",
+      "id": 40,
+      "parent": null,
+      "children": [
+        42,
+        43,
+        44,
+        46
+      ]
+    },
+    {
+      "type": "image",
+      "text": "",
+      "label": "pizza with melted cheese",
+      "interactive": false,
+      "bbox": [
+        727,
+        1982,
+        1183,
+        2370
+      ],
+      "center": [
+        955,
+        2176
+      ],
+      "size": [
+        456,
+        388
+      ],
+      "bbox_norm": [
+        0.596,
+        0.731,
+        0.97,
+        0.874
+      ],
+      "center_norm": [
+        0.7828,
+        0.8024
+      ],
+      "area_pct": 5.35,
+      "region": "bottom-right",
+      "source": "llm",
+      "id": 41,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "list_item",
+      "text": "Chicken Sausage Ultimate\nCheese Pizza",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        35,
+        2050,
+        630,
+        2170
+      ],
+      "center": [
+        332,
+        2110
+      ],
+      "size": [
+        595,
+        120
+      ],
+      "bbox_norm": [
+        0.029,
+        0.756,
+        0.516,
+        0.8
+      ],
+      "center_norm": [
+        0.2721,
+        0.778
+      ],
+      "area_pct": 2.16,
+      "region": "bottom-left",
+      "source": "llm",
+      "id": 42,
+      "parent": 40,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Highly reordered",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        176,
+        2183,
+        464,
+        2229
+      ],
+      "center": [
+        320,
+        2206
+      ],
+      "size": [
+        288,
+        46
+      ],
+      "bbox_norm": [
+        0.144,
+        0.805,
+        0.38,
+        0.822
+      ],
+      "center_norm": [
+        0.2623,
+        0.8134
+      ],
+      "area_pct": 0.4,
+      "region": "bottom-left",
+      "source": "llm",
+      "id": 43,
+      "parent": 40,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "₹298",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        35,
+        2259,
+        131,
+        2311
+      ],
+      "center": [
+        83,
+        2285
+      ],
+      "size": [
+        96,
+        52
+      ],
+      "bbox_norm": [
+        0.029,
+        0.833,
+        0.107,
+        0.852
+      ],
+      "center_norm": [
+        0.068,
+        0.8426
+      ],
+      "area_pct": 0.15,
+      "region": "bottom-left",
+      "source": "llm",
+      "id": 44,
+      "parent": 40,
+      "children": []
+    },
+    {
+      "type": "button",
+      "text": "Menu",
+      "label": "",
+      "interactive": true,
+      "bbox": [
+        922,
+        2324,
+        1183,
+        2454
+      ],
+      "center": [
+        1052,
+        2389
+      ],
+      "size": [
+        261,
+        130
+      ],
+      "bbox_norm": [
+        0.756,
+        0.857,
+        0.97,
+        0.905
+      ],
+      "center_norm": [
+        0.8623,
+        0.8809
+      ],
+      "area_pct": 1.03,
+      "region": "bottom-right",
+      "source": "llm",
+      "id": 45,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Chicken sausage, onion, extra\nmolten cheese and a melty gooey\nCheese Crown on the c...more",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        35,
+        2346,
+        672,
+        2495
+      ],
+      "center": [
+        353,
+        2420
+      ],
+      "size": [
+        637,
+        149
+      ],
+      "bbox_norm": [
+        0.029,
+        0.865,
+        0.551,
+        0.92
+      ],
+      "center_norm": [
+        0.2893,
+        0.8923
+      ],
+      "area_pct": 2.87,
+      "region": "bottom-left",
+      "source": "llm",
+      "id": 46,
+      "parent": 40,
+      "children": []
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "scooter icon",
+      "interactive": false,
+      "bbox": [
+        57,
+        2547,
+        110,
+        2612
+      ],
+      "center": [
+        83,
+        2579
+      ],
+      "size": [
+        53,
+        65
+      ],
+      "bbox_norm": [
+        0.047,
+        0.939,
+        0.09,
+        0.963
+      ],
+      "center_norm": [
+        0.068,
+        0.951
+      ],
+      "area_pct": 0.1,
+      "region": "bottom-left",
+      "source": "llm",
+      "id": 47,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "text",
+      "text": "Get FREE delivery above ₹99 with",
+      "label": "",
+      "interactive": false,
+      "bbox": [
+        176,
+        2547,
+        845,
+        2612
+      ],
+      "center": [
+        510,
+        2579
+      ],
+      "size": [
+        669,
+        65
+      ],
+      "bbox_norm": [
+        0.144,
+        0.939,
+        0.693,
+        0.963
+      ],
+      "center_norm": [
+        0.418,
+        0.951
+      ],
+      "area_pct": 1.31,
+      "region": "bottom-center",
+      "source": "llm",
+      "id": 48,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "image",
+      "text": "",
+      "label": "gold logo",
+      "interactive": false,
+      "bbox": [
+        854,
+        2547,
+        992,
+        2612
+      ],
+      "center": [
+        923,
+        2579
+      ],
+      "size": [
+        138,
+        65
+      ],
+      "bbox_norm": [
+        0.7,
+        0.939,
+        0.813,
+        0.963
+      ],
+      "center_norm": [
+        0.7566,
+        0.951
+      ],
+      "area_pct": 0.27,
+      "region": "bottom-right",
+      "source": "llm",
+      "id": 49,
+      "parent": null,
+      "children": []
+    },
+    {
+      "type": "container",
+      "text": "",
+      "label": "scroll bar",
+      "interactive": false,
+      "bbox": [
+        606,
+        2631,
+        700,
+        2669
+      ],
+      "center": [
+        653,
+        2650
+      ],
+      "size": [
+        94,
+        38
+      ],
+      "bbox_norm": [
+        0.497,
+        0.97,
+        0.574,
+        0.984
+      ],
+      "center_norm": [
+        0.5352,
+        0.9771
+      ],
+      "area_pct": 0.11,
+      "region": "bottom-center",
+      "source": "llm",
+      "id": 50,
+      "parent": null,
+      "children": []
+    }
+  ]
+}

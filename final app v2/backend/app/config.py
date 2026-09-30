@@ -4,7 +4,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import Field, field_validator
+from pydantic import Field, field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -17,6 +17,15 @@ class Settings(BaseSettings):
     # CORS: comma-separated origins. Empty in production = no browser origins allowed
     # (the Android client is not a browser and is unaffected by CORS).
     cors_origins: str = ""
+
+    # --- OpenRouter: one key for everything (LLM tiers, segmentation, and the voice assistant).
+    # When set, it takes priority: the LLM tiers below are pointed at OpenRouter.
+    openrouter_api_key: str = ""
+    openrouter_base_url: str = "https://openrouter.ai/api/v1"
+    openrouter_model: str = "google/gemini-2.5-flash-lite"
+    # UI segmentation model (one call per screenshot: elements + text + boxes).
+    openrouter_seg_model: str = "google/gemini-2.5-flash-lite"
+    openrouter_seg_retries: int = 4
 
     # --- LLM (Groq, OpenAI-compatible API). Tiers that need a missing model are skipped.
     groq_api_key: str = ""
@@ -34,8 +43,9 @@ class Settings(BaseSettings):
 
     # --- Segmentation. The provider is pluggable: "pool" (Groq + Gemini multi-provider),
     # "gemini", "groq", "hf_space", "local", or "http".
-    segmentation_provider: Literal["pool", "gemini", "groq", "hf_space", "local", "http"] = "pool"
-    segmentation_timeout_seconds: float = 30.0
+    segmentation_provider: Literal["openrouter", "pool", "gemini", "groq", "hf_space", "local", "http"] = "openrouter"
+    # Whole call incl. retries; one OpenRouter attempt is ~8-20 s on a full-resolution screen.
+    segmentation_timeout_seconds: float = 90.0
     gemini_api_key: str = ""
     gemini_model: str = "gemini-3.1-flash-lite"
     gemini_timeout_seconds: float = 20.0
@@ -82,6 +92,15 @@ class Settings(BaseSettings):
     # --- Storage
     flows_dir: str = "flows"
 
+    # --- TEACH pipeline (screen recording + tap log -> grounded_flow.json -> semantic flow)
+    teach_runs_dir: str = "teach_runs"
+    # Stage 1 "Show taps" circle calibration for the demo phone.
+    teach_calibration_dir: str = "pipeline_stages/tap_extractor/calibration"
+    # Package of the Android app that records demonstrations (its own taps are ignored).
+    teach_recorder_package: str = "com.example.flowlaunchertest"
+    teach_seg_concurrency: int = 8
+    max_video_mb: int = 400
+
     # --- Voice assistant (assistant/voice_assistant_app) hosted in this service at /api/voice
     voice_assistant_enabled: bool = True
     voice_assistant_dir: str = "../assistant"
@@ -93,6 +112,16 @@ class Settings(BaseSettings):
         "Swiggy": "in.swiggy.android",
         "Flipkart": "com.flipkart.android",
     }
+
+    @model_validator(mode="after")
+    def _openrouter_llm(self) -> "Settings":
+        """An OpenRouter key runs the LLM tiers on OpenRouter (even if a Groq key is also set)."""
+        if self.openrouter_api_key:
+            self.groq_api_key = self.openrouter_api_key
+            self.groq_base_url = self.openrouter_base_url
+            self.text_model = self.text_model or self.openrouter_model
+            self.vision_model = self.vision_model or self.openrouter_model
+        return self
 
     @field_validator("log_level")
     @classmethod

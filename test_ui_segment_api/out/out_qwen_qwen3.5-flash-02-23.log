@@ -1,0 +1,48 @@
+ id  type         tap bbox                     text / label
+  0  status_bar       [0, 0, 1220, 141]        (Status bar showing time, network, and battery info)
+  1  icon_button  y   [37, 146, 154, 263]      (Back arrow button)
+  2  text_field   y   [196, 146, 1016, 263]    Search "bread"
+  3  icon_button  y   [1059, 146, 1181, 263]   (Three-dot menu button)
+  4  chip             [37, 266, 824, 347]      Last 100 orders without complaints
+  5  chip             [861, 266, 1219, 347]    Low plastic po
+  6  container        [0, 401, 1220, 542]      Flat ₹100 OFF above ₹199
+  7  text             [115, 450, 632, 502]     Flat ₹100 OFF above ₹199
+  8  link         y   [992, 456, 1183, 502]    7 offers
+  9  chip         y   [37, 629, 315, 727]      Filters
+ 10  chip         y   [340, 629, 539, 727]     Veg
+ 11  chip         y   [564, 629, 855, 727]     Non-veg
+ 12  chip         y   [880, 629, 1219, 727]    Highly reord
+ 13  card             [0, 808, 1220, 917]      Best in Pizza
+ 14  text             [37, 835, 364, 895]      Best in Pizza
+ 15  list_item    y   [0, 922, 1220, 1893]     1 Nawabi Murg Makhni PER
+Pizza +1 Chicken Tikka
+Supreme PER
+ 16  icon             [37, 960, 83, 1003]      (Non-veg icon)
+ 17  icon             [115, 960, 154, 1003]    (Spicy chili icon)
+ 18  image            [728, 965, 1181, 1421]   (Image of two pizzas on a red background)
+ 19  text             [37, 1031, 656, 1215]    1 Nawabi Murg Makhni PER
+Pizza +1 Chicken Tikka
+Supreme PER
+ 20  toggle           [37, 1231, 464, 1280]    Highly reordered
+ 21  text             [37, 1302, 124, 1345]    ₹878
+ 22  button       y   [775, 1356, 1135, 1475]  ADD
+ 23  text             [37, 1367, 268, 1405]    Get for ₹429
+ 24  text             [37, 1443, 606, 1589]    Serves 2. Nawabi style Murg
+Makhni Pizza (Personal) meets
+sp
+ 25  text             [37, 1622, 564, 1660]    NOT ELIGIBLE FOR COUPONS
+ 26  icon_button  y   [46, 1714, 144, 1812]    (Bookmark icon)
+ 27  icon_button  y   [166, 1714, 264, 1812]   (Share icon)
+ 28  list_item    y   [0, 1898, 1220, 2495]    Chicken Sausage Ultimate Cheese Pizza
+ 29  icon             [37, 1974, 83, 2023]     (Non-veg icon)
+ 30  image            [728, 1980, 1181, 2441]  (Image of a cheesy pizza being lifted)
+ 31  text             [37, 2050, 628, 2164]    Chicken Sausage Ultimate Cheese Pizza
+ 32  toggle           [37, 2186, 464, 2229]    Highly reordered
+ 33  text             [37, 2267, 129, 2305]    ₹298
+ 34  button       y   [922, 2327, 1181, 2457]  Menu
+ 35  text             [37, 2349, 671, 2490]    Chicken sausage, onion, extra molten cheese and a melty gooe
+ 36  nav_bar          [0, 2495, 1220, 2652]    Get FREE delivery above ₹99 with GOLD
+ 37  icon             [56, 2549, 115, 2604]    (Delivery scooter icon)
+ 38  text             [173, 2549, 992, 2604]   Get FREE delivery above ₹99 with GOLD
+
+qwen/qwen3.5-flash-02-23: 39 elements in 67.7s, tokens in/out 2753/4097, cost $0.00124 -> C:\Jeffrey\Projects\teachable-agentic-ai\test_ui_segment_api\out

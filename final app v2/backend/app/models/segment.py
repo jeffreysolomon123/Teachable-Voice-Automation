@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from typing import Literal, Optional
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, computed_field, field_validator
 
 from .flow import Target
 
@@ -11,6 +11,9 @@ from .flow import Target
 class Element(BaseModel):
     index: int = Field(ge=0)
     text: str = ""
+    # Short description for elements without text ("back arrow"), from LLM segmentation.
+    label: str = ""
+    interactive: bool = False
     type: str
     bbox: tuple[int, int, int, int]
     confidence: float = Field(0.0, ge=0.0, le=1.0)
@@ -25,6 +28,7 @@ class Element(BaseModel):
             raise ValueError(f"invalid bbox {b}")
         return b
 
+    @computed_field  # serialized: the tap point for this element
     @property
     def center(self) -> tuple[int, int]:
         x1, y1, x2, y2 = self.bbox

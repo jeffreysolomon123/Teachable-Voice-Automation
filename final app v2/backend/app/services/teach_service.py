@@ -109,6 +109,7 @@ async def teach(req: TeachRequest, llm: LLMService) -> TeachResponse:
 
         el = _visual_element(s) or {}
         text = " ".join(str(el.get("text") or "").split())
+        label = " ".join(str(el.get("label") or "").split())
         region = _region(el, height)
         slot = _slot_for(text, slot_values)
         role = _heuristic_role(text, region)
@@ -133,6 +134,9 @@ async def teach(req: TeachRequest, llm: LLMService) -> TeachResponse:
                           text=label)
         elif text:
             target.update(description=f"element labelled '{text[:60]}'", text=text[:80])
+        elif label:
+            # Text-less icon/image described by the segmentation model ("back arrow", "pizza photo").
+            target.update(description=f"{label[:80]} in the {region or 'screen'} area")
         else:
             target.update(description=f"unlabelled icon in the {region or 'screen'} area")
             warnings.append(f"step {idx}: tapped element has no text; replay will need the vision tier")
@@ -146,7 +150,7 @@ async def teach(req: TeachRequest, llm: LLMService) -> TeachResponse:
             step["verify"] = {"mode": "anchors", "anchors": [f"{{{{{slot}}}}}"]}
         out.append(step)
         tap_positions.append(len(out) - 1)
-        llm_inputs.append({"tapped_text": text or None, "region": region,
+        llm_inputs.append({"tapped_text": text or None, "tapped_visual_label": label or None, "region": region,
                            "current_description": target["description"],
                            "before_text": (s.get("before_text") or [])[:15],
                            "after_text": (after or [])[:15]})

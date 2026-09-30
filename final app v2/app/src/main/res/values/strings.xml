@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Teachable Assistant</string>
-    <string name="accessibility_label">Teachable Assistant visual automation</string>
-    <string name="accessibility_description">Takes screenshots and performs taps, swipes, Back and text entry chosen by your automation backend from those screenshots. It does not read the content of other apps\' windows.</string>
+    <string name="app_name">App Automation</string>
+    <string name="accessibility_label">App Automation</string>
+    <string name="accessibility_description">Automation: takes screenshots and performs the taps, swipes, Back and text entry your assistant server chooses from those screenshots. Teaching: while you record a demonstration, it logs which on-screen elements you tap so the server can learn the steps. Nothing is logged outside a recording, and password fields are never read.</string>
 </resources>

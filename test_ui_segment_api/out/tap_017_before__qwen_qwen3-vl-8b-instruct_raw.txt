@@ -1,0 +1,158 @@
+{
+  "elements": [
+    {
+      "type": "status_bar",
+      "text": "1:16  •  ...  *ll   74% ",
+      "label": "status bar with time, connectivity, and battery indicators",
+      "interactive": false,
+      "bbox": [0, 0, 999, 35]
+    },
+    {
+      "type": "nav_bar",
+      "text": "",
+      "label": "navigation bar with back button, search bar, and menu button",
+      "interactive": true,
+      "bbox": [0, 48, 999, 100]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "back arrow button",
+      "interactive": true,
+      "bbox": [27, 56, 127, 94]
+    },
+    {
+      "type": "text_field",
+      "text": "Search \"bread\"",
+      "label": "search bar",
+      "interactive": true,
+      "bbox": [161, 55, 835, 96]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "menu button (three dots)",
+      "interactive": true,
+      "bbox": [867, 55, 967, 96]
+    },
+    {
+      "type": "chip",
+      "text": "Last 100 orders without complaints",
+      "label": "verification chip",
+      "interactive": false,
+      "bbox": [30, 102, 677, 126]
+    },
+    {
+      "type": "chip",
+      "text": "Low plastic pc",
+      "label": "verification chip (truncated)",
+      "interactive": false,
+      "bbox": [703, 102, 999, 126]
+    },
+    {
+      "type": "text",
+      "text": "Flat ₹100 OFF above ₹199",
+      "label": "discount offer text",
+      "interactive": false,
+      "bbox": [30, 163, 520, 187]
+    },
+    {
+      "type": "text",
+      "text": "7 offers",
+      "label": "offers dropdown indicator",
+      "interactive": true,
+      "bbox": [812, 166, 967, 187]
+    },
+    {
+      "type": "chip",
+      "text": "Filters",
+      "label": "filters button",
+      "interactive": true,
+      "bbox": [30, 230, 255, 268]
+    },
+    {
+      "type": "chip",
+      "text": "Veg",
+      "label": "veg filter chip",
+      "interactive": true,
+      "bbox": [277, 230, 438, 268]
+    },
+    {
+      "type": "chip",
+      "text": "Non-veg",
+      "label": "non-veg filter chip",
+      "interactive": true,
+      "bbox": [460, 230, 700, 268]
+    },
+    {
+      "type": "chip",
+      "text": "Highly reord",
+      "label": "highly reordered filter chip (truncated)",
+      "interactive": true,
+      "bbox": [720, 230, 999, 268]
+    },
+    {
+      "type": "text",
+      "text": "Best in Pizza",
+      "label": "section header",
+      "interactive": false,
+      "bbox": [30, 305, 297, 330]
+    },
+    {
+      "type": "image",
+      "text": "",
+      "label": "pizza image",
+      "interactive": false,
+      "bbox": [597, 353, 970, 526]
+    },
+    {
+      "type": "list_item",
+      "text": "1 Nawabi Murg Makhni PER Pizza +1 Chicken Tikka Supreme PER\n₹878\nGet for ₹429\nServes 2. Nawabi style Murg Makhni Pizza (Personal) meets spicy & bold C...more\nNOT ELIGIBLE FOR COUPONS",
+      "label": "pizza list item",
+      "interactive": true,
+      "bbox": [30, 353, 970, 678]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "bookmark button",
+      "interactive": true,
+      "bbox": [30, 630, 116, 667]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "share button",
+      "interactive": true,
+      "bbox": [136, 630, 216, 667]
+    },
+    {
+      "type": "image",
+      "text": "",
+      "label": "pizza image",
+      "interactive": false,
+      "bbox": [597, 728, 970, 896]
+    },
+    {
+      "type": "list_item",
+      "text": "Chicken Sausage Ultimate Cheese Pizza\n₹298\nChicken sausage, onion, extra molten cheese and a melty gooey Cheese Crown on the c...more",
+      "label": "pizza list item",
+      "interactive": true,
+      "bbox": [30, 728, 970, 918]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "menu button",
+      "interactive": true,
+      "bbox": [763, 856, 970, 903]
+    },
+    {
+      "type": "text",
+      "text": "Get FREE delivery above ₹99 with GOLD",
+      "label": "delivery offer text",
+      "interactive": false,
+      "bbox": [136, 934, 817, 961]
+    }
+  ]
+}

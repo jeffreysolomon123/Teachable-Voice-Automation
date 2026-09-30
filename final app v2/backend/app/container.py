@@ -26,6 +26,8 @@ class Container:
     replay: ReplayService
     # Set when the voice assistant is mounted; stored flows are registered with it.
     voice: Optional[object] = None
+    # TEACH jobs (recording -> grounded_flow.json -> saved flow); built in build_container.
+    teach_jobs: Optional[object] = None
 
     def flow_saved(self, flow) -> None:
         if self.voice is not None:
@@ -41,8 +43,11 @@ def build_container(settings: Settings, provider: Optional[SegmentationProvider]
     seg = SegmentationService(provider or build_provider(settings), settings)
     llm = llm or LLMService(settings)
     sessions = SessionStore(settings)
-    return Container(settings, flows, seg, llm, Resolver(settings, llm), sessions,
-                     ReplayService(settings, flows, sessions, seg, llm))
+    c = Container(settings, flows, seg, llm, Resolver(settings, llm), sessions,
+                  ReplayService(settings, flows, sessions, seg, llm))
+    from .services.teach_jobs import TeachJobs  # imports OpenCV / PyAV (pipeline stage 1)
+    c.teach_jobs = TeachJobs(settings, flows, llm, c.flow_saved)
+    return c
 
 
 def get_container(request: Request) -> Container:

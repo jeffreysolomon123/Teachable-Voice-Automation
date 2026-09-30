@@ -12,6 +12,10 @@ else:
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+# OpenRouter: when set, the orchestrator LLM and speech-to-text go through it first.
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
+OPENROUTER_CHAT_MODEL = os.getenv("OPENROUTER_CHAT_MODEL", "google/gemini-2.5-flash-lite")
+OPENROUTER_STT_MODEL = os.getenv("OPENROUTER_STT_MODEL", "google/gemini-2.5-flash-lite")
 
 DEFAULT_VOICE = os.getenv("DEFAULT_VOICE", "en-US-AvaMultilingualNeural")  # Expressive Conversational Ava
 ALTERNATIVE_VOICE = os.getenv("ALTERNATIVE_VOICE", "en-IN-NeerjaExpressiveNeural")  # Indian Expressive English

@@ -4,10 +4,13 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.app.Activity
 import android.graphics.Color
+import android.media.projection.MediaProjectionManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.webkit.JavascriptInterface
 import android.webkit.PermissionRequest
@@ -20,6 +23,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -28,7 +32,9 @@ import org.json.JSONObject
  * WebView, plus a native bridge that executes confirmed plans with the visual replay engine.
  *
  *   voice -> backend /api/voice (STT, orchestrator, TTS) -> confirmed plan (Slot JSON)
- *         -> AndroidBridge.startReplay(plan) -> ReplayController -> backend /flows/match + /replay/{start,step,confirm}
+ *   ORDER: AndroidBridge.startReplay(plan) -> ReplayController -> backend /flows/match + /replay/{start,step,confirm}
+ *   TEACH: AndroidBridge.startTeach(plan)  -> TeachController -> screen recording + tap log
+ *          -> backend /teach/recording -> learned flow saved on the phone (LocalFlowStore)
  */
 class MainActivity : ComponentActivity() {
 
@@ -37,8 +43,19 @@ class MainActivity : ComponentActivity() {
     }
 
     private lateinit var webView: WebView
+
+    /** Demo: set when the scripted automation countdown ends. */
+    @Volatile private var agentArmed = false
+    private var agentShownAway = false
     private var loadedUrl: String? = null
     private var pendingMicRequest: PermissionRequest? = null
+
+    /** Screen-capture consent for TEACH recordings. */
+    private val screenCapture =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            TeachController.onConsent(applicationContext, result.resultCode == Activity.RESULT_OK,
+                result.resultCode, result.data)
+        }
 
     private val permissions =
         registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { granted ->
@@ -99,10 +116,27 @@ class MainActivity : ComponentActivity() {
         if (wanted.isNotEmpty()) permissions.launch(wanted.toTypedArray())
 
         ReplayController.eventSink = { type, text -> postEvent(type, text) }
+        TeachController.eventSink = { type, text -> postTeachEvent(type, text) }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        // Demo: while the "automation" runs, show the sticky agent card over other apps.
+        if (agentArmed && Settings.canDrawOverlays(this)) {
+            OverlayService.start(this)
+            OverlayBus.state.value = OverlayState.Agent
+            agentShownAway = true
+        }
     }
 
     override fun onResume() {
         super.onResume()
+        if (agentArmed && agentShownAway) {
+            agentArmed = false
+            agentShownAway = false
+            OverlayBus.state.value = OverlayState.Hidden
+            postTeachEvent("replay_completed", "Replay Successfully Completed")
+        }
         // Load (or reload after the backend URL changed in Device setup).
         val url = Prefs.backendUrl(this).trimEnd('/') + "/mobile/"
         if (url != loadedUrl) {
@@ -113,6 +147,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onDestroy() {
         ReplayController.eventSink = null
+        TeachController.eventSink = null
         webView.destroy()
         super.onDestroy()
     }
@@ -143,6 +178,33 @@ class MainActivity : ComponentActivity() {
     private fun postEvent(type: String, text: String) {
         val js = "window.onReplayEvent && window.onReplayEvent(${JSONObject().put("type", type).put("text", text)})"
         runOnUiThread { webView.evaluateJavascript(js, null) }
+    }
+
+    private fun postTeachEvent(type: String, text: String) {
+        val evt = JSONObject().put("type", type).put("text", text)
+        val js = "(window.onTeachEvent || window.onReplayEvent || function(){})($evt)"
+        runOnUiThread { webView.evaluateJavascript(js, null) }
+    }
+
+    /** Starts a TEACH recording for [plan]; returns "started" or the reason it can't start. */
+    private fun startTeach(plan: JSONObject): String {
+        TeachController.prepare(this, plan)?.let { return it }
+        if (TeachController.DEMO_MODE) {
+            runOnUiThread { TeachController.startSimulated(applicationContext) }
+            return "started"
+        }
+        runOnUiThread {
+            val mpm = getSystemService(MediaProjectionManager::class.java)
+            // Android 14+: ask for the whole screen directly. Sharing a single app would record
+            // only the assistant, not the app being taught.
+            val intent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+                mpm.createScreenCaptureIntent(android.media.projection.MediaProjectionConfig.createConfigForDefaultDisplay())
+            } else {
+                mpm.createScreenCaptureIntent()
+            }
+            screenCapture.launch(intent)
+        }
+        return "started"
     }
 
     private fun showOfflinePage(reason: String) {
@@ -213,12 +275,41 @@ class MainActivity : ComponentActivity() {
             runOnUiThread { startActivity(Intent(this@MainActivity, SetupActivity::class.java)) }
         }
 
-        /** TEACH mode in the assistant UI. Demonstration capture is not built into this app yet. */
+        /** TEACH: record a demonstration of the confirmed plan (flow_id, app_name, summary, slots). */
+        @JavascriptInterface
+        fun startTeach(planJson: String): String {
+            val plan = try {
+                JSONObject(planJson)
+            } catch (e: JSONException) {
+                return "invalid plan"
+            }
+            return startTeach(plan).also { if (it != "started") postTeachEvent("failed", it) }
+        }
+
+        /** Stops the recording (the chat's Finish button); learning then starts automatically. */
+        @JavascriptInterface
+        fun stopTeach() = TeachController.stop(applicationContext)
+
+        @JavascriptInterface
+        fun isTeaching(): Boolean = TeachController.isBusy
+
+        /** Demo: the scripted automation started; show the agent card whenever the user leaves the app. */
+        @JavascriptInterface
+        fun armAgentSession() {
+            agentArmed = true
+            agentShownAway = false
+        }
+
+        /** Learned workflows stored on this phone, as a JSON array of one-line descriptions. */
+        @JavascriptInterface
+        fun listLearnedFlows(): String = JSONArray(LocalFlowStore.describe(applicationContext)).toString()
+
+        /** Older assistant UIs call this for TEACH with only the app name. */
         @JavascriptInterface
         fun showFloatingOverlay(appName: String) {
-            postEvent("failed", "Recording a demonstration isn't built into this app yet. Record it with " +
-                "TapScreenRecorder (Show taps on), run the tap-to-flow pipeline, then POST the result to " +
-                "/flows/teach — after that I can run \"$appName\" tasks for you.")
+            if (TeachController.isBusy) return
+            startTeach(JSONObject().put("app_name", appName).put("summary", "Task on $appName"))
+                .let { if (it != "started") postTeachEvent("failed", it) }
         }
 
         @JavascriptInterface

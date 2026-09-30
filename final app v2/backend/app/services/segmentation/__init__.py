@@ -18,6 +18,9 @@ log = logging.getLogger("app.segmentation")
 
 def build_provider(s: Settings) -> SegmentationProvider:
     params = dict(conf=s.seg_conf, iou=s.seg_iou, min_conf=s.seg_ocr_min_conf, contain=s.seg_contain)
+    if s.segmentation_provider == "openrouter":
+        from .openrouter_vision import OpenRouterVisionProvider
+        return OpenRouterVisionProvider(s.openrouter_api_key, s.openrouter_seg_model, s.openrouter_seg_retries)
     if s.segmentation_provider == "gemini":
         from .gemini_vision import GeminiVisionProvider
         return GeminiVisionProvider(s.gemini_api_key, s.gemini_model, s.gemini_timeout_seconds)
@@ -83,6 +86,8 @@ def normalize(raw: RawSegmentation) -> list[Element]:
         out.append(Element(
             index=i,
             text=" ".join(str(e.get("text") or "").split()),
+            label=str(e.get("label") or ""),
+            interactive=bool(e.get("interactive", False)),
             type=str(e.get("type") or "unknown"),
             bbox=bbox,
             confidence=min(1.0, max(0.0, float(conf))) if isinstance(conf, (int, float)) else 0.0,

@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <!-- TEACH: screen recording of the demonstration (Android 14+ needs this type permission). -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <!-- Optional: lets the app switch Developer option "Show taps" on while recording. Granted only
+         over USB: adb shell pm grant com.example.flowlaunchertest android.permission.WRITE_SECURE_SETTINGS -->
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <!-- Voice assistant: the WebView records speech for /api/voice/process-audio. -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -15,6 +22,11 @@
         <package android:name="in.swiggy.android" />
         <package android:name="com.application.zomato" />
         <package android:name="com.flipkart.android" />
+        <!-- TEACH/ORDER any installed app the user names: find it by its launcher label. -->
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
     </queries>
 
     <application
@@ -45,6 +57,12 @@
                 android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
                 android:value="Hosts a floating status overlay showing automation progress and confirmation prompts" />
         </service>
+
+        <!-- TEACH: records the screen while the user demonstrates a task. -->
+        <service
+            android:name=".TeachRecorderService"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection" />
 
         <service
             android:name=".WindowWatcherAccessibilityService"

@@ -53,7 +53,7 @@ async def test_teach_mode_strict_three_stage_progression(staged_env):
     res4 = await turn_mgr.process_user_text("Finish demonstration", session_id=sess_id)
     assert res4["decision"]["intent"] == "CONVERSE"
     assert res4["current_stage"] == "COMPLETED"
-    assert "captured and saved" in res4["spoken_text"].lower()
+    assert "learning the steps" in res4["spoken_text"].lower()
 
     # Verify workflow is registered in persistent memory
     fid = res3["decision"]["flow_id"]

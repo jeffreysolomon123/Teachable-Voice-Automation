@@ -1,0 +1,63 @@
+ id  type         tap bbox                     text / label
+  0  status_bar       [71, 35, 1186, 92]       1:16
+  1  icon             [174, 41, 204, 79]       WhatsApp
+  2  icon             [828, 41, 860, 79]       Bluetooth
+  3  icon             [942, 41, 974, 79]       Wi-Fi
+  4  icon             [1005, 41, 1039, 79]     Battery
+  5  icon             [1152, 52, 1171, 73]     Triangle
+  6  text_field   y   [199, 146, 1013, 266]    Search "bread"
+  7  icon_button  y   [38, 149, 155, 266]      (back arrow)
+  8  icon_button  y   [1058, 149, 1181, 266]   (menu icon)
+  9  text             [70, 285, 793, 328]      Last 100 orders without complaints
+ 10  text             [911, 285, 1203, 328]    Low plastic p
+ 11  icon             [74, 293, 104, 323]      Checkmark
+ 12  icon             [904, 293, 932, 323]     Checkmark
+ 13  text             [38, 447, 634, 513]      Flat ₹100 OFF above ₹199
+ 14  text             [215, 456, 273, 504]     ₹100
+ 15  text             [520, 456, 634, 504]     ₹199
+ 16  text         y   [993, 458, 1177, 504]    7 offers
+ 17  chip         y   [38, 629, 314, 727]      Filters
+ 18  chip         y   [339, 629, 538, 727]     Veg
+ 19  chip         y   [559, 629, 853, 727]     Non-veg
+ 20  chip         y   [878, 629, 1219, 727]    Highly reord
+ 21  icon             [70, 659, 102, 697]      Filter icon
+ 22  icon             [372, 659, 405, 697]     Veg icon
+ 23  icon             [595, 659, 628, 697]     Non-veg icon
+ 24  icon             [911, 659, 944, 697]     Refresh icon
+ 25  card             [0, 824, 1219, 1890]     1 Nawabi Murg Makhni PER Pizza +1 Chicken Tikka Supreme PER
+ 26  text             [38, 838, 364, 898]      Best in Pizza
+ 27  icon             [1133, 854, 1174, 887]   Upward arrow
+ 28  icon             [38, 963, 70, 1003]      Warning icon
+ 29  list_item        [38, 963, 654, 1657]     1 Nawabi Murg Makhni PER Pizza +1 Chicken Tikka Supreme PER
+ 30  icon             [117, 963, 152, 1001]    Spicy icon
+ 31  image            [725, 963, 1180, 1416]   (pizza photo)
+ 32  container        [725, 963, 1180, 1467]   (container for pizza image and add button)
+ 33  text             [38, 1033, 654, 1215]    1 Nawabi Murg Makhni PER Pizza +1 Chicken Tikka Supreme PER
+ 34  text             [174, 1234, 465, 1275]   Highly reordered
+ 35  text             [38, 1302, 127, 1345]    ₹878
+ 36  button       y   [776, 1348, 1130, 1467]  ADD +
+ 37  text             [38, 1364, 268, 1405]    Get for ₹429
+ 38  text             [195, 1367, 268, 1405]   ₹429
+ 39  text             [38, 1440, 603, 1587]    Serves 2. Nawabi style Murg Makhni Pizza (Personal) meets sp
+ 40  text             [343, 1546, 423, 1587]   more
+ 41  text             [38, 1616, 562, 1657]    NOT ELIGIBLE FOR COUPONS
+ 42  icon_button  y   [50, 1711, 140, 1803]    (bookmark icon)
+ 43  icon_button  y   [170, 1711, 259, 1803]   (share icon)
+ 44  card             [0, 1963, 1219, 2517]    Chicken Sausage Ultimate Cheese Pizza
+ 45  icon             [38, 1980, 70, 2020]     Warning icon
+ 46  list_item        [38, 1980, 667, 2487]    Chicken Sausage Ultimate Cheese Pizza
+ 47  image            [725, 1982, 1180, 2430]  (pizza photo)
+ 48  text             [38, 2050, 627, 2161]    Chicken Sausage Ultimate Cheese Pizza
+ 49  text             [174, 2189, 465, 2229]   Highly reordered
+ 50  text             [38, 2265, 127, 2305]    ₹298
+ 51  button       y   [925, 2319, 1177, 2452]  Menu
+ 52  text             [38, 2340, 667, 2487]    Chicken sausage, onion, extra molten cheese and a melty gooe
+ 53  text             [471, 2454, 584, 2487]   more
+ 54  nav_bar          [0, 2500, 1219, 2658]    (bottom navigation bar)
+ 55  text             [173, 2544, 992, 2598]   Get FREE delivery above ₹99 with GOLD
+ 56  icon             [59, 2549, 113, 2598]    Bike icon
+ 57  text             [688, 2549, 745, 2598]   ₹99
+ 58  text             [860, 2552, 992, 2595]   GOLD
+ 59  icon             [886, 2552, 941, 2595]   Gold crown
+
+qwen/qwen3-vl-30b-a3b-instruct: 60 elements in 53.7s, tokens in/out 2746/6348, cost $0.00366 -> C:\Jeffrey\Projects\teachable-agentic-ai\test_ui_segment_api\out

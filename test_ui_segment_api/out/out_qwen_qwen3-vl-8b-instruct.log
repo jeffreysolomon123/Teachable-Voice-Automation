@@ -1,0 +1,28 @@
+ id  type         tap bbox                     text / label
+  0  status_bar       [0, 0, 1219, 95]         1:16  •  ...  *ll   74% 
+  1  nav_bar      y   [0, 130, 1219, 271]      (navigation bar with back button, search bar, and menu butto
+  2  text_field   y   [196, 149, 1019, 260]    Search "bread"
+  3  icon_button  y   [1058, 149, 1180, 260]   
+  4  icon_button  y   [33, 152, 155, 255]      
+  5  chip             [37, 277, 826, 342]      Last 100 orders without complaints
+  6  chip             [858, 277, 1219, 342]    Low plastic pc
+  7  text             [37, 442, 634, 507]      Flat ₹100 OFF above ₹199
+  8  text         y   [991, 450, 1180, 507]    7 offers
+  9  chip         y   [37, 624, 311, 727]      Filters
+ 10  chip         y   [338, 624, 534, 727]     Veg
+ 11  chip         y   [561, 624, 854, 727]     Non-veg
+ 12  chip         y   [878, 624, 1219, 727]    Highly reord
+ 13  text             [37, 827, 362, 895]      Best in Pizza
+ 14  list_item    y   [37, 957, 1183, 1839]    1 Nawabi Murg Makhni PER Pizza +1 Chicken Tikka Supreme PER
+
+ 15  image            [728, 957, 1183, 1427]   (pizza image)
+ 16  icon_button  y   [37, 1709, 142, 1809]    
+ 17  icon_button  y   [166, 1709, 264, 1809]   
+ 18  list_item    y   [37, 1974, 1183, 2490]   Chicken Sausage Ultimate Cheese Pizza
+₹298
+Chicken sausage, 
+ 19  image            [728, 1974, 1183, 2430]  (pizza image)
+ 20  icon_button  y   [931, 2321, 1183, 2449]  
+ 21  text             [166, 2533, 997, 2606]   Get FREE delivery above ₹99 with GOLD
+
+qwen/qwen3-vl-8b-instruct: 22 elements in 11.8s, tokens in/out 2746/1440, cost $0.00098 -> C:\Jeffrey\Projects\teachable-agentic-ai\test_ui_segment_api\out

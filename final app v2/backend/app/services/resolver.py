@@ -78,7 +78,7 @@ class Resolver:
         if shot is not None and self.s.vision_llm_enabled:
             jpeg, scale = shot.as_jpeg(80, self.s.vision_image_width)
             sw, sh = round(shot.width * scale), round(shot.height * scale)
-            marks = [{"index": e.index, "type": e.type, "text": e.text,
+            marks = [{"index": e.index, "type": e.type, "text": e.text, **({"label": e.label} if e.label else {}),
                       "bbox": [round(v * scale) for v in e.bbox]}
                      for e in screen.elements if e.index not in exclude][: self.s.vision_max_marks]
             out = await self.llm.vision_resolve_element(jpeg, sw, sh, self._describe(target, slots), marks)
@@ -103,11 +103,12 @@ class Resolver:
 
     def _candidates(self, det: MatchResult, screen: Screen) -> list[dict]:
         """Deterministic candidates if any, else every text element (bounded)."""
-        idxs = [c["index"] for c in det.candidates] or [e.index for e in screen.elements if e.text]
+        idxs = [c["index"] for c in det.candidates] or [e.index for e in screen.elements if e.text or e.label]
         out = []
         for i in idxs[: self.s.llm_max_candidates]:
             e = screen.elements[i]
-            out.append({"index": e.index, "text": e.text, "type": e.type, "region": _region(e.center[1], screen.height)})
+            out.append({"index": e.index, "text": e.text, "type": e.type, **({"label": e.label} if e.label else {}),
+                        "region": _region(e.center[1], screen.height)})
         return out
 
     @staticmethod

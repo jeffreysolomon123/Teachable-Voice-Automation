@@ -225,7 +225,8 @@ class LLMService:
         """Name each taught tap semantically (description + role) from its visual context."""
         prompt = (
             "A user demonstrated a task in a mobile app. For each tap below you get the tapped element's "
-            "text (from OCR), its screen region, and text visible before/after. Describe each tapped target "
+            "text (from OCR) or, for icons/images without text, a visual label, its screen region, and text "
+            "visible before/after. Describe each tapped target "
             "generically so it can be found again on a different day, and give a snake_case semantic_role "
             "(e.g. search_field, restaurant_result, food_item, add_item, cart, continue). Keep any "
             "{{slot}} placeholders exactly as written.\n\n"

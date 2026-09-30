@@ -1,0 +1,277 @@
+{
+  "elements": [
+    {
+      "type": "status_bar",
+      "text": "",
+      "label": "Status bar showing time, network, and battery info",
+      "interactive": false,
+      "bbox": [0, 0, 1000, 52]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "Back arrow button",
+      "interactive": true,
+      "bbox": [30, 54, 126, 97]
+    },
+    {
+      "type": "text_field",
+      "text": "Search \"bread\"",
+      "label": "Search input field",
+      "interactive": true,
+      "bbox": [161, 54, 833, 97]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "Three-dot menu button",
+      "interactive": true,
+      "bbox": [868, 54, 968, 97]
+    },
+    {
+      "type": "chip",
+      "text": "Last 100 orders without complaints",
+      "label": "Trust badge chip",
+      "interactive": false,
+      "bbox": [30, 98, 675, 128]
+    },
+    {
+      "type": "chip",
+      "text": "Low plastic po",
+      "label": "Sustainability badge chip",
+      "interactive": false,
+      "bbox": [706, 98, 999, 128]
+    },
+    {
+      "type": "container",
+      "text": "Flat ₹100 OFF above ₹199",
+      "label": "Promotional banner container",
+      "interactive": false,
+      "bbox": [0, 148, 1000, 200]
+    },
+    {
+      "type": "text",
+      "text": "Flat ₹100 OFF above ₹199",
+      "label": "Discount text",
+      "interactive": false,
+      "bbox": [94, 166, 518, 185]
+    },
+    {
+      "type": "link",
+      "text": "7 offers",
+      "label": "Offers link with dropdown",
+      "interactive": true,
+      "bbox": [813, 168, 970, 185]
+    },
+    {
+      "type": "chip",
+      "text": "Filters",
+      "label": "Filters dropdown chip",
+      "interactive": true,
+      "bbox": [30, 232, 258, 268]
+    },
+    {
+      "type": "chip",
+      "text": "Veg",
+      "label": "Vegetarian filter chip",
+      "interactive": true,
+      "bbox": [279, 232, 442, 268]
+    },
+    {
+      "type": "chip",
+      "text": "Non-veg",
+      "label": "Non-vegetarian filter chip",
+      "interactive": true,
+      "bbox": [462, 232, 701, 268]
+    },
+    {
+      "type": "chip",
+      "text": "Highly reord",
+      "label": "Highly reordered filter chip",
+      "interactive": true,
+      "bbox": [721, 232, 999, 268]
+    },
+    {
+      "type": "card",
+      "text": "Best in Pizza",
+      "label": "Category header card",
+      "interactive": false,
+      "bbox": [0, 298, 1000, 338]
+    },
+    {
+      "type": "text",
+      "text": "Best in Pizza",
+      "label": "Category title",
+      "interactive": false,
+      "bbox": [30, 308, 298, 330]
+    },
+    {
+      "type": "list_item",
+      "text": "1 Nawabi Murg Makhni PER\nPizza +1 Chicken Tikka\nSupreme PER",
+      "label": "First pizza item card",
+      "interactive": true,
+      "bbox": [0, 340, 1000, 698]
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "Non-veg icon",
+      "interactive": false,
+      "bbox": [30, 354, 68, 370]
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "Spicy chili icon",
+      "interactive": false,
+      "bbox": [94, 354, 126, 370]
+    },
+    {
+      "type": "text",
+      "text": "1 Nawabi Murg Makhni PER\nPizza +1 Chicken Tikka\nSupreme PER",
+      "label": "Item title",
+      "interactive": false,
+      "bbox": [30, 380, 538, 448]
+    },
+    {
+      "type": "toggle",
+      "text": "Highly reordered",
+      "label": "Reorder status indicator",
+      "interactive": false,
+      "bbox": [30, 454, 380, 472]
+    },
+    {
+      "type": "text",
+      "text": "₹878",
+      "label": "Original price",
+      "interactive": false,
+      "bbox": [30, 480, 102, 496]
+    },
+    {
+      "type": "text",
+      "text": "Get for ₹429",
+      "label": "Discounted price",
+      "interactive": false,
+      "bbox": [30, 504, 220, 518]
+    },
+    {
+      "type": "text",
+      "text": "Serves 2. Nawabi style Murg\nMakhni Pizza (Personal) meets\nspicy & bold C...more",
+      "label": "Item description",
+      "interactive": false,
+      "bbox": [30, 532, 497, 586]
+    },
+    {
+      "type": "text",
+      "text": "NOT ELIGIBLE FOR COUPONS",
+      "label": "Coupon eligibility notice",
+      "interactive": false,
+      "bbox": [30, 598, 462, 612]
+    },
+    {
+      "type": "image",
+      "text": "",
+      "label": "Image of two pizzas on a red background",
+      "interactive": false,
+      "bbox": [597, 356, 968, 524]
+    },
+    {
+      "type": "button",
+      "text": "ADD",
+      "label": "Add to cart button",
+      "interactive": true,
+      "bbox": [635, 500, 930, 544]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "Bookmark icon",
+      "interactive": true,
+      "bbox": [38, 632, 118, 668]
+    },
+    {
+      "type": "icon_button",
+      "text": "",
+      "label": "Share icon",
+      "interactive": true,
+      "bbox": [136, 632, 216, 668]
+    },
+    {
+      "type": "list_item",
+      "text": "Chicken Sausage Ultimate Cheese Pizza",
+      "label": "Second pizza item card",
+      "interactive": true,
+      "bbox": [0, 700, 1000, 920]
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "Non-veg icon",
+      "interactive": false,
+      "bbox": [30, 728, 68, 746]
+    },
+    {
+      "type": "text",
+      "text": "Chicken Sausage Ultimate Cheese Pizza",
+      "label": "Item title",
+      "interactive": false,
+      "bbox": [30, 756, 515, 798]
+    },
+    {
+      "type": "toggle",
+      "text": "Highly reordered",
+      "label": "Reorder status indicator",
+      "interactive": false,
+      "bbox": [30, 806, 380, 822]
+    },
+    {
+      "type": "text",
+      "text": "₹298",
+      "label": "Price",
+      "interactive": false,
+      "bbox": [30, 836, 106, 850]
+    },
+    {
+      "type": "text",
+      "text": "Chicken sausage, onion, extra molten cheese and a melty gooey Cheese Crown on the c...more",
+      "label": "Item description",
+      "interactive": false,
+      "bbox": [30, 866, 550, 918]
+    },
+    {
+      "type": "image",
+      "text": "",
+      "label": "Image of a cheesy pizza being lifted",
+      "interactive": false,
+      "bbox": [597, 730, 968, 900]
+    },
+    {
+      "type": "button",
+      "text": "Menu",
+      "label": "Menu button overlay",
+      "interactive": true,
+      "bbox": [756, 858, 968, 906]
+    },
+    {
+      "type": "nav_bar",
+      "text": "Get FREE delivery above ₹99 with GOLD",
+      "label": "Bottom navigation bar with promotion",
+      "interactive": false,
+      "bbox": [0, 920, 1000, 978]
+    },
+    {
+      "type": "icon",
+      "text": "",
+      "label": "Delivery scooter icon",
+      "interactive": false,
+      "bbox": [46, 940, 94, 960]
+    },
+    {
+      "type": "text",
+      "text": "Get FREE delivery above ₹99 with GOLD",
+      "label": "Promotional text",
+      "interactive": false,
+      "bbox": [142, 940, 813, 960]
+    }
+  ]
+}

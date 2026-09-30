@@ -81,6 +81,8 @@ class SetupActivity : ComponentActivity() {
     private var overlayGranted by mutableStateOf(false)
     private var accessibilityEnabled by mutableStateOf(false)
     private var micGranted by mutableStateOf(false)
+    private var showTaps by mutableStateOf<Boolean?>(null)
+    private var learned by mutableStateOf(listOf<Pair<String, String>>())
 
     private val micPermission =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted -> micGranted = granted }
@@ -111,6 +113,16 @@ class SetupActivity : ComponentActivity() {
         accessibilityEnabled = WindowWatcherAccessibilityService.isEnabledInSettings(this)
         micGranted = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) ==
             PackageManager.PERMISSION_GRANTED
+        showTaps = ShowTaps.isOn(this)
+        refreshLearned()
+    }
+
+    private fun refreshLearned() {
+        learned = LocalFlowStore.all(this).mapNotNull { rec ->
+            val flow = rec.optJSONObject("flow") ?: return@mapNotNull null
+            val steps = flow.optJSONArray("steps")?.length() ?: 0
+            flow.optString("flow_id") to "${flow.optString("app")} · $steps steps\n${flow.optString("description")}"
+        }
     }
 
     @Composable
@@ -152,6 +164,29 @@ class SetupActivity : ComponentActivity() {
             StatusRow(ok = accessibilityEnabled) {
                 OutlinedButton(onClick = { startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)) }) {
                     Text("Enable accessibility service")
+                }
+            }
+            StatusRow(ok = showTaps == true) {
+                OutlinedButton(onClick = { ShowTaps.openDeveloperOptions(this@SetupActivity) }) {
+                    Text(if (showTaps == null) "Show taps (check in Developer options)" else "Turn on \"Show taps\" (for teaching)")
+                }
+            }
+
+            HorizontalDivider(Modifier.padding(vertical = 8.dp))
+            Text("Learned workflows (stored on this phone)", style = MaterialTheme.typography.titleMedium)
+            if (learned.isEmpty()) {
+                Text("None yet. Ask the assistant to teach it something, e.g. \"Teach me to order a pizza on Zomato\".")
+            }
+            for ((flowId, info) in learned) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Column(Modifier.weight(1f)) {
+                        Text(flowId, style = MaterialTheme.typography.titleSmall)
+                        Text(info, style = MaterialTheme.typography.bodySmall)
+                    }
+                    OutlinedButton(onClick = {
+                        LocalFlowStore.delete(this@SetupActivity, flowId)
+                        refreshLearned()
+                    }) { Text("Delete") }
                 }
             }
 

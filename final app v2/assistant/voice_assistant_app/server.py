@@ -1,3 +1,4 @@
+import asyncio
 import io
 import time
 import uuid
@@ -137,6 +138,16 @@ async def process_audio(
         session_id=sid
     )
     return result
+
+@app.post("/api/voice/transcribe")
+async def transcribe_only(file: UploadFile = File(...)):
+    """Speech-to-text only (no orchestrator, no TTS): used by the app's scripted demo mode."""
+    audio_bytes = await file.read()
+    if not audio_bytes:
+        raise HTTPException(status_code=400, detail="Audio file is empty.")
+    text = await asyncio.to_thread(turn_manager.stt.transcribe_audio_bytes, audio_bytes,
+                                   file.filename or "voice_input.webm")
+    return {"text": text or ""}
 
 @app.post("/api/voice/trigger-event")
 async def trigger_event(req: EventTriggerRequest):

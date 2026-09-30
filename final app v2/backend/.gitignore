@@ -4,3 +4,9 @@ __pycache__/
 .pytest_cache/
 # The repo root ignores .env.*; the template has no secrets and must be committed.
 !.env.example
+teach_runs/
+# Stage 1 calibration images are needed at runtime (the repo root ignores *.png)
+!pipeline_stages/tap_extractor/calibration/*.png
+voice_data/
+local_flows/
+server.log

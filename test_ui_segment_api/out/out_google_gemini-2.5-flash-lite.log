@@ -1,0 +1,67 @@
+ id  type         tap bbox                     text / label
+  0  status_bar       [0, 0, 1219, 89]         1:16
+
+74%
+  1  text_field   y   [216, 155, 1015, 255]    Search "bread"
+  2  icon_button  y   [63, 160, 118, 247]      (back arrow)
+  3  icon_button  y   [1055, 163, 1155, 247]   (more options)
+  4  icon             [45, 282, 78, 331]       ✓
+  5  text             [127, 282, 788, 331]     Last 100 orders without complaints
+  6  icon             [905, 282, 937, 331]     ✓
+  7  text             [958, 282, 1219, 331]    Low plastic po
+  8  icon             [43, 450, 90, 507]       %
+  9  text             [115, 450, 632, 507]     Flat ₹100 OFF above ₹199
+ 10  text         y   [994, 456, 1133, 507]    7 offers
+ 11  icon_button  y   [1149, 456, 1186, 507]   (down arrow)
+ 12  container    y   [37, 626, 314, 727]      Filters
+ 13  checkbox     y   [360, 648, 418, 711]     Veg
+ 14  chip         y   [584, 648, 643, 711]     Non-veg
+ 15  chip         y   [911, 648, 950, 711]     Highly reord
+ 16  icon             [377, 654, 403, 702]     ✓
+ 17  text             [434, 654, 506, 705]     Veg
+ 18  icon             [601, 654, 627, 702]     ▲
+ 19  text             [655, 654, 824, 705]     Non-veg
+ 20  icon             [911, 654, 950, 702]     ↻
+ 21  text             [967, 654, 1219, 705]    Highly reord
+ 22  text             [37, 843, 143, 895]      Best in Pizza
+ 23  icon_button  y   [1137, 843, 1174, 895]   (down arrow)
+ 24  icon             [37, 952, 90, 1003]      ▲
+ 25  icon             [115, 952, 146, 1003]    🌶️
+ 26  card         y   [37, 960, 683, 1660]     1 Nawabi Murg Makhni PER
+Pizza +1 Chicken Tikka
+Supreme PER
+
+ 27  image            [728, 960, 1182, 1424]   (two pizzas)
+ 28  text             [37, 1039, 655, 1212]    1 Nawabi Murg Makhni PER
+Pizza +1 Chicken Tikka
+Supreme PER
+ 29  text             [173, 1234, 462, 1277]   Highly reordered
+ 30  text             [37, 1299, 127, 1348]    ₹878
+ 31  button       y   [777, 1348, 1135, 1475]  ADD
+ 32  text         y   [37, 1361, 268, 1410]    Get for ₹429
+ 33  text             [37, 1443, 606, 1592]    Serves 2. Nawabi style Murg
+Makhni Pizza (Personal) meets
+sp
+ 34  text             [37, 1619, 564, 1660]    NOT ELIGIBLE FOR COUPONS
+ 35  icon_button  y   [49, 1714, 139, 1825]    (bookmark icon)
+ 36  icon_button  y   [165, 1714, 265, 1825]   (share icon)
+ 37  icon             [37, 1966, 85, 2018]     ▲
+ 38  card         y   [37, 1982, 683, 2492]    Chicken Sausage Ultimate
+Cheese Pizza
+₹298
+Highly reordered
+
+ 39  image            [728, 1982, 1182, 2370]  (pizza with melted cheese)
+ 40  text             [37, 2053, 627, 2170]    Chicken Sausage Ultimate
+Cheese Pizza
+ 41  text             [173, 2186, 462, 2229]   Highly reordered
+ 42  text             [37, 2259, 129, 2308]    ₹298
+ 43  button       y   [924, 2324, 1182, 2454]  Menu
+ 44  text             [37, 2349, 672, 2492]    Chicken sausage, onion, extra
+molten cheese and a melty gooe
+ 45  icon             [893, 2362, 924, 2449]   A
+ 46  container    y   [57, 2547, 994, 2609]    Get FREE delivery above ₹99 with GOLD
+ 47  icon             [57, 2552, 110, 2609]    🛵
+ 48  text             [173, 2552, 994, 2609]   Get FREE delivery above ₹99 with GOLD
+
+google/gemini-2.5-flash-lite: 49 elements in 23.3s, tokens in/out 2598/2711, cost $0.00134 -> C:\Jeffrey\Projects\teachable-agentic-ai\test_ui_segment_api\out

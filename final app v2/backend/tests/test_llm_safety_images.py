@@ -199,8 +199,9 @@ def test_segment_endpoint(client, provider):
     assert r.status_code == 200
     body = r.json()
     assert body["width"] == W and body["height"] == H and body["provider"] == "fake"
-    assert body["elements"][1] == {"index": 1, "text": "Domino's", "type": "text", "bbox": [80, 450, 500, 530],
-                                   "confidence": 0.9, "source": "ocr", "parent": None}
+    assert body["elements"][1] == {"index": 1, "text": "Domino's", "label": "", "interactive": False,
+                                   "type": "text", "bbox": [80, 450, 500, 530], "confidence": 0.9,
+                                   "source": "ocr", "parent": None, "center": [290, 490]}
 
 
 def test_segment_rejects_bad_uploads(make_client, provider):

@@ -10,6 +10,7 @@ import android.content.Intent
 import android.content.pm.ServiceInfo
 import android.graphics.Color
 import android.graphics.PixelFormat
+import android.graphics.Rect
 import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import android.os.IBinder
@@ -53,6 +54,7 @@ class OverlayService : Service() {
     private lateinit var pill: LinearLayout
     private lateinit var label: TextView
     private lateinit var buttons: LinearLayout
+    private lateinit var stopRecording: Button
     private lateinit var close: TextView
     private lateinit var params: WindowManager.LayoutParams
     private var attached = false
@@ -136,12 +138,23 @@ class OverlayService : Service() {
                 setOnClickListener { ReplayController.answer(false) }
             })
         }
+        stopRecording = Button(this).apply {
+            text = "■  Stop"
+            visibility = View.GONE
+            setOnClickListener { v ->
+                // Screen bounds of the tap, so the server can drop this tap from the learned flow.
+                val loc = IntArray(2).also { v.getLocationOnScreen(it) }
+                TeachController.stopFromOverlay(this@OverlayService,
+                    Rect(loc[0], loc[1], loc[0] + v.width, loc[1] + v.height))
+            }
+        }
         pill = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             setPadding(dp(16), dp(10), dp(10), dp(10))
             elevation = dp(6).toFloat()
             addView(top)
             addView(buttons)
+            addView(stopRecording)
         }
         params = WindowManager.LayoutParams(
             WindowManager.LayoutParams.WRAP_CONTENT,
@@ -183,6 +196,9 @@ class OverlayService : Service() {
         val (text, bg, fg) = when (state) {
             is OverlayState.Status -> Triple(state.text, 0xFF3949AB.toInt(), Color.WHITE)
             is OverlayState.Asking -> Triple(state.reason, 0xFFFFB300.toInt(), Color.BLACK)
+            OverlayState.Agent -> Triple("●  Agent is accessing", 0xFF311B92.toInt(), Color.WHITE)
+            is OverlayState.Recording -> Triple("● REC  %d:%02d   Teaching…".format(state.elapsedSeconds / 60,
+                state.elapsedSeconds % 60), 0xFFD32F2F.toInt(), Color.WHITE)
             OverlayState.Ready -> Triple("Done ✓", 0xFF2E7D32.toInt(), Color.WHITE)
             is OverlayState.Blocked -> Triple("Stopped: ${state.reason}", 0xFFC62828.toInt(), Color.WHITE)
             OverlayState.Hidden -> error("handled above")
@@ -191,6 +207,8 @@ class OverlayService : Service() {
         label.setTextColor(fg)
         close.setTextColor(fg)
         buttons.visibility = if (state is OverlayState.Asking) View.VISIBLE else View.GONE
+        stopRecording.visibility = if (state is OverlayState.Recording) View.VISIBLE else View.GONE
+        close.visibility = if (state is OverlayState.Recording || state is OverlayState.Agent) View.GONE else View.VISIBLE
         pill.background = GradientDrawable().apply {
             cornerRadius = dp(24).toFloat()
             setColor(bg)
@@ -215,6 +233,10 @@ class OverlayService : Service() {
     }
 
     private fun dismiss() {
+        if (TeachController.isBusy) {
+            OverlayBus.state.value = OverlayState.Hidden // learning continues; progress stays in the chat
+            return
+        }
         Log.i(TAG, "Overlay dismissed by user; stopping replay")
         ReplayController.stop()
     }

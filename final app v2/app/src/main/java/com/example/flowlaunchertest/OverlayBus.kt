@@ -7,6 +7,10 @@ sealed class OverlayState {
     data class Status(val text: String) : OverlayState()
     /** ASK_USER from the backend: show the reason with Confirm / Stop buttons. */
     data class Asking(val reason: String) : OverlayState()
+    /** TEACH recording in progress: red pill with elapsed time and a Stop button. */
+    data class Recording(val elapsedSeconds: Long) : OverlayState()
+    /** Demo: sticky card shown while the user is in another app after an automation starts. */
+    data object Agent : OverlayState()
     data object Ready : OverlayState()
     data class Blocked(val reason: String) : OverlayState()
 }
